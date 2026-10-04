@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My PolyU Schedule</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; padding: 2rem; background: #0f172a; color: #e2e8f0; }
+    h1 { color: #a78bfa; margin-bottom: 0.5rem; }
+    .subtitle { color: #64748b; margin-bottom: 1.5rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .chip { background: #334155; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; }
+    .chip:hover, .chip.active { background: #3b82f6; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+    .day-column { border: 1px solid #334155; border-radius: 4px; padding: 0.5rem; min-height: 300px; }
+    .day-header { text-align: center; font-weight: bold; margin-bottom: 0.5rem; color: #94a3b8; font-size: 0.8rem; }
+    .class-block { background: #1e293b; padding: 0.5rem; margin-bottom: 0.5rem; border-radius: 4px; border-left: 3px solid #a78bfa; font-size: 0.7rem; cursor: pointer; transition: all 0.2s; position: relative; }
+    .class-block:hover { background: #334155; }
+    .class-block.highlighted { background: #1e3a5f; border-left-color: #3b82f6; box-shadow: 0 0 8px rgba(59, 130, 246, 0.5); }
+    .class-block .code { font-weight: bold; color: #e2e8f0; font-size: 0.65rem; }
+    .class-block .component, .class-block .time { font-size: 0.65rem; }
+    .class-block .venue { color: #94a3b8; font-size: 0.65rem; }
+    .no-class { color: #64748b; text-align: center; padding: 1rem; font-size: 0.8rem; }
+    .footer { margin-top: 2rem; color: #64748b; font-size: 0.75rem; }
+    
+    /* Tooltip */
+    #tooltip {
+      position: fixed;
+      background-color: #1e293b;
+      border: 1px solid #475569;
+      padding: 0.75rem;
+      border-radius: 8px;
+      z-index: 1000;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      pointer-events: none;
+      max-width: 250px;
+      display: none;
+      color: #e2e8f0;
+    }
+    #tooltip .title { font-weight: bold; margin-bottom: 4px; color: #38bdf8; font-size: 0.8rem; }
+    #tooltip .subtitle { font-size: 0.7rem; color: #94a3b8; margin: 0; }
+    
+    /* Modal Styles */
+    .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); display: flex; justify-content: center; align-items: center; z-index: 2000; backdrop-filter: blur(4px); opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+    .modal-overlay.open { opacity: 1; pointer-events: auto; }
+    .modal-content { background: #1e293b; padding: 2rem; border-radius: 12px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; border: 1px solid #475569; position: relative; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); transform: scale(0.95); transition: transform 0.2s; }
+    .modal-overlay.open .modal-content { transform: scale(1); }
+    .close-btn { position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.5rem; }
+    .link-btn { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: #0f172a; border-radius: 8px; color: #38bdf8; text-decoration: none; border: 1px solid #334155; font-size: 0.9rem; transition: background 0.2s; }
+    .link-btn:hover { background: #1e3a5f; }
+    .prof-link { padding: 0.5rem 0.75rem; background: #334155; border-radius: 6px; color: #e2e8f0; text-decoration: none; font-size: 0.85rem; display: block; transition: background 0.2s; }
+    .prof-link:hover { background: #475569; }
+    .ai-summary { background: #0f172a; padding: 1rem; border-radius: 8px; color: #94a3b8; font-size: 0.9rem; line-height: 1.6; border: 1px dashed #334155; }
+    /* Basic Markdown Styles for Summary */
+    .ai-summary ul, .ai-summary ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    .ai-summary li { margin-bottom: 0.25rem; }
+    .ai-summary strong { color: #e2e8f0; }
+    
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <h1>My Schedule</h1>
+  <p class="subtitle">Weekly Preview • Generated 2/2/2026, 7:31:32 AM</p>
+  <div class="chips"><span class="chip" data-code="ME41001">ME41001</span><span class="chip" data-code="ME41003">ME41003</span><span class="chip" data-code="ME42011">ME42011</span><span class="chip" data-code="ME42001">ME42001</span></div>
+  <div class="grid">
+        <div class="day-column">
+          <div class="day-header">Tue</div>
+          
+          <div class="class-block" data-code="ME41001" data-title="AUTOMATIC CONTROL SYSTEMS" data-group="2001" data-staff="FU, Yiqiang (Dr)">
+            <div class="code">ME41001</div>
+            <div class="component">LTL001</div>
+            <div class="time">12:30-15:20</div>
+            <div class="venue">PQ303</div>
+          </div>
+        </div>
+        <div class="day-column">
+          <div class="day-header">Thu</div>
+          
+          <div class="class-block" data-code="ME42001" data-title="ARTIFICIAL INTELLIGENCE IN PRODUCTS" data-group="2001" data-staff="CHU, Henry (Prof.)">
+            <div class="code">ME42001</div>
+            <div class="component">LAB001</div>
+            <div class="time">08:30-11:20</div>
+            <div class="venue">W402a</div>
+          </div>
+          <div class="class-block" data-code="ME41003" data-title="PRINCIPLES OF SOUND AND VIBRATION" data-group="2001" data-staff="YU, Xiang Lucien (Prof.)">
+            <div class="code">ME41003</div>
+            <div class="component">LTL001</div>
+            <div class="time">15:30-18:20</div>
+            <div class="venue">CD301</div>
+          </div>
+          <div class="class-block" data-code="ME42001" data-title="ARTIFICIAL INTELLIGENCE IN PRODUCTS" data-group="2001" data-staff="CHU, Henry (Prof.)">
+            <div class="code">ME42001</div>
+            <div class="component">LTL001</div>
+            <div class="time">15:30-18:20</div>
+            <div class="venue">BC302</div>
+          </div>
+        </div>
+        <div class="day-column">
+          <div class="day-header">Fri</div>
+          
+          <div class="class-block" data-code="ME42011" data-title="FUNDAMENTALS OF ROBOTICS" data-group="2001" data-staff="ZHANG, Dan (Prof.)">
+            <div class="code">ME42011</div>
+            <div class="component">LAB001</div>
+            <div class="time">08:30-11:20</div>
+            <div class="venue">BC302</div>
+          </div>
+          <div class="class-block" data-code="ME41001" data-title="AUTOMATIC CONTROL SYSTEMS" data-group="2001" data-staff="FU, Yiqiang (Dr)">
+            <div class="code">ME41001</div>
+            <div class="component">LAB001</div>
+            <div class="time">12:30-15:20</div>
+            <div class="venue">U204c</div>
+          </div>
+          <div class="class-block" data-code="ME42011" data-title="FUNDAMENTALS OF ROBOTICS" data-group="2001" data-staff="ZHANG, Dan (Prof.)">
+            <div class="code">ME42011</div>
+            <div class="component">LTL001</div>
+            <div class="time">15:30-18:20</div>
+            <div class="venue">BC302</div>
+          </div>
+        </div></div>
+  <p class="footer">Exported from PolyU Timetable Builder • Click subject chips to highlight • Click classes for details</p>
+  
+  <div id="tooltip">
+    <div class="title" id="tooltip-title"></div>
+    <div class="subtitle" id="tooltip-content"></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content" id="modal-content">
+      <button class="close-btn" id="close-modal">&times;</button>
+      <h2 style="color: #a78bfa; margin-bottom: 0.5rem; font-size: 1.5rem;" id="modal-code"></h2>
+      <h3 style="color: #e2e8f0; margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: normal;" id="modal-title"></h3>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <div style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Useful Links</div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;" id="modal-links"></div>
+      </div>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <div style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Professors</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem;" id="modal-profs"></div>
+      </div>
+      
+      <div>
+        <div style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">AI Summary</div>
+        <div class="ai-summary" id="modal-summary"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const resources = {"ME42004":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"Failed to generate summary: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1769126400000'}, 'provider_name': None}}, 'user_id': 'user_2siKsbUbBuJK00XMIlM6SjLdYHW'}","professor_links":[{"name":"ZHANG, Baoping (Prof.)","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ZHANG%2C%20Baoping%20%28Prof.%29"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ME42004+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ME42004"}},"ENG4001":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"\n\n- **Assessment Weightings:**  \n  – **60% Coursework:** Includes projects, presentations, reports, and participation in group/individual activities.  \n  – **40% Final Examination:** Tests theoretical knowledge and application of ePublic communication principles.  \n\n- **Key Learning Outcomes:**  \n  – Apply digital tools for strategic public communication and engagement.  \n  – Develop critical analysis skills for evaluating online public discourse and ethical challenges.  \n  – Design and implement effective ePublic campaigns using data-driven approaches.","professor_links":[{"name":"XU, Minn","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+XU%2C%20Minn"},{"name":"SUN, Chi Yin","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+SUN%2C%20Chi%20Yin"},{"name":"XU, Minn, YEE, Dewey Gee","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+XU%2C%20Minn%2C%20YEE%2C%20Dewey%20Gee"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ENG4001+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ENG4001"}},"ME42001":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"\n\n- **Assessment Weightings**:  \n  - **Exam**: 40% (final written examination).  \n  - **Coursework**: 60% (project work, presentations, reports).  \n\n- **Key Learning Outcomes**:  \n  - Analyze digital strategies for public engagement and stakeholder management.  \n  - Develop ePublic campaigns using digital tools and platforms.  \n  - Evaluate online communication effectiveness and crisis response.","professor_links":[{"name":"CHU, Henry (Prof.)","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+CHU%2C%20Henry%20%28Prof.%29"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ME42001+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ME42001"}},"ISE404":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"\n\n- **Assessment Weightings**: Typically split between **coursework (60-70%)** and a **final exam (30-40%)**, emphasizing project-based evaluations over exams.  \n- **Key Coursework**: Includes **group projects**, **individual assignments**, and **participation**, focusing on practical digital public service design and collaboration.  \n- **Learning Outcomes**: Develop skills in **digital service innovation**, **e-governance strategies**, and **user-centered design** for public sector challenges.  \n- **Exam Focus**: Tests theoretical understanding of **ePublic frameworks**, policy impacts, and critical analysis of case studies.  \n- **Overall Emphasis**: **Practical application** (via coursework) outweighs exam performance, aligning with real-world public service digital transformation.  \n\n*Note: Exact weightings may vary by instructor; always refer to the latest syllabus.*","professor_links":[{"name":"ZHANG, Xiaoge","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ZHANG%2C%20Xiaoge"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ISE404+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ISE404"}},"ME41001":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"- **Assessment Weightings:**  \n  - **Final Examination:** 50% (focused on theoretical understanding).  \n  - **Coursework:** 50% (includes digital PR project, participation, and assignments).  \n\n- **Key Learning Outcomes:**  \n  - Ability to design and execute digital public communication strategies.  \n  - Competence in analyzing e-campaigns using analytics/metrics tools.  \n  - Ethical awareness in digital stakeholder engagement.","professor_links":[{"name":"FU, Yiqiang (Dr)","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+FU%2C%20Yiqiang%20%28Dr%29"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ME41001+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ME41001"}},"ME41003":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"\n\n- **Assessment Weightings**: Primarily coursework-based (approx. 60–70%), including projects, presentations, and digital campaign assignments; final exam or assessment contributes 30–40%.  \n- **Key Learning Outcomes**: Develop skills in digital public communication strategy, social media analytics, and ethical e-public engagement practices.  \n- **Grading Focus**: Emphasizes applied learning (coursework) over theoretical exams, with evaluation centered on practical campaign design and critical evaluation of e-public initiatives.","professor_links":[{"name":"YU, Xiang Lucien (Prof.)","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+YU%2C%20Xiang%20Lucien%20%28Prof.%29"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ME41003+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ME41003"}},"ME42005":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"Failed to generate summary: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1769126400000'}, 'provider_name': None}}, 'user_id': 'user_2siKsbUbBuJK00XMIlM6SjLdYHW'}","professor_links":[{"name":"FU, Mingwang (Prof.), TANG, Elsa WF (Ir.)","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+FU%2C%20Mingwang%20%28Prof.%29%2C%20TANG%2C%20Elsa%20WF%20%28Ir.%29"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ME42005+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ME42005"}},"ME42007":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"Failed to generate summary: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1769126400000'}, 'provider_name': None}}, 'user_id': 'user_2siKsbUbBuJK00XMIlM6SjLdYHW'}","professor_links":[{"name":"MA, Yuan (Prof.)","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+MA%2C%20Yuan%20%28Prof.%29"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ME42007+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ME42007"}},"ME42011":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"\n\n- **Assessment Weightings:** Coursework dominates (around 60-70%), including projects, group work, and presentations; final exam typically accounts for 30-40%.  \n- **Key Learning Outcomes:**  \n  - Develop **strategic digital public relations campaigns** using e-tools (e.g., social media, data analytics).  \n  - Critically **evaluate online reputation** and engage stakeholders in digital environments.  \n- **Grading Focus:** Exam assesses theoretical/conceptual understanding; coursework emphasizes **practical application** and collaborative skills.","professor_links":[{"name":"ZHANG, Dan (Prof.)","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ZHANG%2C%20Dan%20%28Prof.%29"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ME42011+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ME42011"}},"ME43003":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"Failed to generate summary: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '16', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1769113680000'}, 'provider_name': None}}, 'user_id': 'user_2siKsbUbBuJK00XMIlM6SjLdYHW'}","professor_links":[{"name":"ZHANG, Xiao (Prof.)","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ZHANG%2C%20Xiao%20%28Prof.%29"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ME43003+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ME43003"}},"ME45002":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"Failed to generate summary: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '16', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1769113680000'}, 'provider_name': None}}, 'user_id': 'user_2siKsbUbBuJK00XMIlM6SjLdYHW'}","professor_links":[{"name":"SU, Zhongqing (Prof.)","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+SU%2C%20Zhongqing%20%28Prof.%29"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ME45002+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ME45002"}},"ME46003":{"title":"ePublic | The Hong Kong Polytechnic University","resources":{"assessment_summary":"Failed to generate summary: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1769126400000'}, 'provider_name': None}}, 'user_id': 'user_2siKsbUbBuJK00XMIlM6SjLdYHW'}","professor_links":[{"name":"TANG, Hui (Prof.)","url":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+TANG%2C%20Hui%20%28Prof.%29"}],"syllabus_link":"https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+ME46003+subject+description+form","exam_papers_link":"https://exam.lib.polyu.edu.hk/simple-search?query=ME46003"}}};
+    let activeChip = null;
+    
+    // Elements
+    const modal = document.getElementById('modal');
+    const closeModal = document.getElementById('close-modal');
+    const tooltip = document.getElementById('tooltip');
+    const tooltipTitle = document.getElementById('tooltip-title');
+    const tooltipContent = document.getElementById('tooltip-content');
+    
+    // Close Modal Logic
+    const hideModal = () => modal.classList.remove('open');
+    closeModal.addEventListener('click', hideModal);
+    modal.addEventListener('click', (e) => { if(e.target === modal) hideModal(); });
+    
+    // Tooltip Logic
+    const showTooltip = (e, title, code, group, staff) => {
+      tooltipTitle.textContent = title;
+      tooltipContent.innerHTML = code + ' - Group ' + group + (staff ? '<br/>Staff: ' + staff : '');
+      tooltip.style.display = 'block';
+      moveTooltip(e);
+    };
+
+    const hideTooltip = () => {
+      tooltip.style.display = 'none';
+    };
+
+    const moveTooltip = (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      const width = window.innerWidth;
+      
+      if (x > width * 0.66) {
+        tooltip.style.left = (x - 260) + 'px';
+      } else {
+        tooltip.style.left = (x + 15) + 'px';
+      }
+      tooltip.style.top = y + 'px';
+    };
+
+    // Click to highlight
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const code = chip.dataset.code;
+        if (activeChip === code) {
+          activeChip = null;
+          document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+          document.querySelectorAll('.class-block').forEach(b => b.classList.remove('highlighted'));
+        } else {
+          activeChip = code;
+          document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.code === code));
+          document.querySelectorAll('.class-block').forEach(b => b.classList.toggle('highlighted', b.dataset.code === code));
+        }
+      });
+    });
+    
+    // Class Block Events
+    document.querySelectorAll('.class-block').forEach(block => {
+      block.addEventListener('mousemove', (e) => {
+         moveTooltip(e);
+      });
+      
+      block.addEventListener('mouseenter', (e) => {
+         const code = block.dataset.code;
+         const title = block.dataset.title;
+         const group = block.dataset.group;
+         const staff = block.dataset.staff;
+         showTooltip(e, title, code, group, staff);
+      });
+      
+      block.addEventListener('mouseleave', () => {
+         hideTooltip();
+      });
+
+      block.addEventListener('click', () => {
+        const code = block.dataset.code;
+        const title = block.dataset.title;
+        const staff = block.dataset.staff;
+        
+        let data = resources[code];
+        
+        // Fallback generation if no data cached
+        if (!data) {
+           data = {
+             title: title,
+             resources: {
+               assessment_summary: "Details not available in export.",
+               professor_links: staff ? [{ name: staff, url: "https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+" + encodeURIComponent(staff) }] : [],
+               syllabus_link: "https://duckduckgo.com/?q=!ducky+site:polyu.edu.hk+" + encodeURIComponent(code) + "+subject+description+form",
+               exam_papers_link: "https://exam.lib.polyu.edu.hk/simple-search?query=" + encodeURIComponent(code)
+             }
+           };
+        }
+        
+        // Populate Modal
+        document.getElementById('modal-code').textContent = code;
+        document.getElementById('modal-title').textContent = data.title;
+        // USE MARKED FOR PARSING
+        document.getElementById('modal-summary').innerHTML = marked.parse(data.resources.assessment_summary);
+        
+        // Render Links
+        const linksContainer = document.getElementById('modal-links');
+        linksContainer.innerHTML = `
+          <a href="${data.resources.syllabus_link}" target="_blank" class="link-btn">📄 Syllabus (PDF)</a>
+          <a href="${data.resources.exam_papers_link}" target="_blank" class="link-btn">📝 Past Papers</a>
+        `;
+        
+        // Render Profs
+        const profsContainer = document.getElementById('modal-profs');
+        if (data.resources.professor_links.length > 0) {
+          profsContainer.innerHTML = data.resources.professor_links.map(p => `<a href="${p.url}" target="_blank" class="prof-link">👤 ${p.name}</a>`).join('');
+        } else {
+          profsContainer.innerHTML = '<div style="color: #64748b; font-size: 0.9rem; font-style: italic;">No staff information available</div>';
+        }
+        
+        modal.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>
+    

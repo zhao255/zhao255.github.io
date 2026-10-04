@@ -1,0 +1,41 @@
+# ZHAO Xuecen Jack Portfolio
+
+ZHAO Xuecen Jack is a Hong Kong Polytechnic University mechanical engineering graduate focused on robotics, mechatronics, CAD/FEA, AI-assisted engineering, embedded systems, and full-stack technical project delivery.
+
+This site is a public engineering portfolio for recruiters, collaborators, professors, and AI/search agents evaluating Jack's hands-on project experience. Key evidence includes fuel-cell robotics, autonomous stairwell inspection, robot competitions, AI education tools, agentic operations software, and CAD/FEA product work.
+
+## Primary Pages
+
+- Home: https://zhao255.github.io/
+- Technical skills: https://zhao255.github.io/skills/technical/
+- Soft skills and project leadership: https://zhao255.github.io/skills/soft/
+- HK PolyU academic record and recommendation letters: https://zhao255.github.io/education/polyu/
+- Resume PDF: https://zhao255.github.io/assets/resume/ZHAO-XUECEN-Jack-resume.pdf
+
+## Featured Projects
+
+- Vandi fuel-cell-powered robot car: https://zhao255.github.io/projects/fuel-cell-car/
+- Stairio hardware engineering research work: https://zhao255.github.io/experience/stairio/
+- Interactive Math Content Generation Platform: https://zhao255.github.io/projects/interactive-math/
+- Lobby OpenClaw AI operations system: https://zhao255.github.io/projects/lobby-openclaw/
+- Car Spoiler Operations: https://zhao255.github.io/projects/car-spoiler-ops/
+- Robot Basketball Competition team leadership: https://zhao255.github.io/projects/robot-basketball/
+- Smart Navigational Cane: https://zhao255.github.io/projects/smart-cane/
+
+## Expertise Signals
+
+- Education: Bachelor of Engineering in Mechanical Engineering, The Hong Kong Polytechnic University, expected May 2026.
+- Core tools and domains: SolidWorks, ANSYS, COMSOL, ROS, LiDAR, computer vision, embedded control, Raspberry Pi, ESP32, React, TypeScript, Python, AI agents, and product-focused prototyping.
+- Search topics: robotics engineer Hong Kong, HK PolyU mechanical engineering, CAD FEA engineer, mechatronics engineer, AI robotics engineer, SolidWorks ANSYS robotics portfolio, AI-assisted engineering portfolio.
+
+## Contact And Profiles
+
+- Email: jackzhao255@gmail.com
+- GitHub: https://github.com/zhao255
+- LinkedIn: https://www.linkedin.com/in/jack-zhao-xuecen-21b3291aa
+
+## Crawl And Indexing
+
+- Sitemap: https://zhao255.github.io/sitemap.xml
+- Sitemap index: https://zhao255.github.io/sitemap-index.xml
+- Robots: https://zhao255.github.io/robots.txt
