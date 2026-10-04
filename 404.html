@@ -3,6 +3,20 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script id="legacy-address-redirect">
+    (() => {
+      const prefix = '/ZHAOpersonal-website';
+      const current = window.location;
+      if (current.hostname === 'zhao255.github.io' &&
+          (current.pathname === prefix || current.pathname.startsWith(`${prefix}/`))) {
+        const destination = new URL('https://zhao255.github.io/');
+        destination.pathname = current.pathname.slice(prefix.length) || '/';
+        destination.search = current.search;
+        destination.hash = current.hash;
+        current.replace(destination.href);
+      }
+    })();
+  </script>
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="shortcut icon" type="image/png" href="/favicon-48.png" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -64,7 +78,7 @@
       ]
     }
   </script>
-  <script type="module" crossorigin src="/assets/index-DsUyIR4v.js"></script>
+  <script type="module" crossorigin src="/assets/index-DJGeZKWg.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-DDDPrlY5.css">
 </head>
 

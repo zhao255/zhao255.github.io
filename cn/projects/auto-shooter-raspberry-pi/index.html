@@ -3,12 +3,26 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script id="legacy-address-redirect">
+    (() => {
+      const prefix = '/ZHAOpersonal-website';
+      const current = window.location;
+      if (current.hostname === 'zhao255.github.io' &&
+          (current.pathname === prefix || current.pathname.startsWith(`${prefix}/`))) {
+        const destination = new URL('https://zhao255.github.io/');
+        destination.pathname = current.pathname.slice(prefix.length) || '/';
+        destination.search = current.search;
+        destination.hash = current.hash;
+        current.replace(destination.href);
+      }
+    })();
+  </script>
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="shortcut icon" type="image/png" href="/favicon-48.png" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>树莓派自动射击机器人｜趙雪岑 Jack Zhao</title>
+  <title>树莓派自动射击机器人｜赵雪岑 Jack Zhao</title>
   <meta name="description" content="为大学竞赛制作自动射击机器人，使用树莓派、OpenCV object detection（目标检测）、舵机瞄准和 GPIO 电机控制。" />
   <meta name="keywords"
     content="ZHAO Xuecen, ZHAO XUECEN Jack, Jack Zhao, robotics engineer Hong Kong, HK engineer, Hong Kong mechanical engineer, HK PolyU mechanical engineering, mechanical design engineer, mechatronics engineer, AI robotics engineer, CAD FEA engineer, SolidWorks ANSYS robotics portfolio, Vandi fuel cell robot car, Stairio stairwell inspection robot, Interactive Math Content Generation Platform, Lobby OpenClaw AI operations system" />
@@ -16,13 +30,13 @@
   <meta name="robots" content="noindex, nofollow" />
   <link rel="canonical" href="https://zhao255.github.io/cn/projects/auto-shooter-raspberry-pi/" />
   <meta property="og:site_name" content="ZHAO Xuecen Jack Portfolio" />
-  <meta property="og:title" content="树莓派自动射击机器人｜趙雪岑 Jack Zhao" />
+  <meta property="og:title" content="树莓派自动射击机器人｜赵雪岑 Jack Zhao" />
   <meta property="og:description" content="为大学竞赛制作自动射击机器人，使用树莓派、OpenCV object detection（目标检测）、舵机瞄准和 GPIO 电机控制。" />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://zhao255.github.io/cn/projects/auto-shooter-raspberry-pi/" />
   <meta property="og:image" content="https://zhao255.github.io/assets/projects/auto-shooter-raspberry-pi/auto-shooter-closeup.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="树莓派自动射击机器人｜趙雪岑 Jack Zhao" />
+  <meta name="twitter:title" content="树莓派自动射击机器人｜赵雪岑 Jack Zhao" />
   <meta name="twitter:description" content="为大学竞赛制作自动射击机器人，使用树莓派、OpenCV object detection（目标检测）、舵机瞄准和 GPIO 电机控制。" />
   <meta name="twitter:image" content="https://zhao255.github.io/assets/projects/auto-shooter-raspberry-pi/auto-shooter-closeup.jpg" />
   <script type="application/ld+json">
@@ -61,7 +75,7 @@
       ]
     }
   </script>
-  <script type="module" crossorigin src="/assets/index-DsUyIR4v.js"></script>
+  <script type="module" crossorigin src="/assets/index-DJGeZKWg.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-DDDPrlY5.css">
   <meta property="og:locale" content="zh_CN" />
 </head>

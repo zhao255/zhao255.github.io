@@ -3,6 +3,20 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script id="legacy-address-redirect">
+    (() => {
+      const prefix = '/ZHAOpersonal-website';
+      const current = window.location;
+      if (current.hostname === 'zhao255.github.io' &&
+          (current.pathname === prefix || current.pathname.startsWith(`${prefix}/`))) {
+        const destination = new URL('https://zhao255.github.io/');
+        destination.pathname = current.pathname.slice(prefix.length) || '/';
+        destination.search = current.search;
+        destination.hash = current.hash;
+        current.replace(destination.href);
+      }
+    })();
+  </script>
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="shortcut icon" type="image/png" href="/favicon-48.png" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -25,7 +39,7 @@
   <meta name="twitter:description" content="Robot Basketball competition project led by ZHAO Xuecen Jack, including an 8-member robotics team, SolidWorks mechanical design, Python sensor programming, and iterative prototyping." />
   <meta name="twitter:image" content="https://zhao255.github.io/assets/profile/jack-engineering-profile.png" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://zhao255.github.io/#person","@type":"Person","name":"ZHAO Xuecen Jack","alternateName":["ZHAO XUECEN","Jack Zhao","Zhao Xuecen"],"url":"https://zhao255.github.io/","image":"https://zhao255.github.io/assets/profile/jack-engineering-profile.png","jobTitle":"Robotics Systems Engineer","description":"Robotics systems engineer and Hong Kong PolyU mechanical engineering graduate focused on robotics, CAD/FEA, AI-assisted engineering, mechatronics, and full-stack project delivery.","alumniOf":{"@type":"CollegeOrUniversity","name":"The Hong Kong Polytechnic University","sameAs":"https://www.polyu.edu.hk/"},"knowsAbout":["Robotics","Mechanical Engineering","Mechatronics","CAD","FEA","AI-assisted engineering"],"sameAs":["https://github.com/zhao255","https://www.linkedin.com/in/jack-zhao-xuecen-21b3291aa"]},{"@id":"https://zhao255.github.io/#website","@type":"WebSite","name":"ZHAO Xuecen Jack Portfolio","alternateName":["Jack Zhao Portfolio","ZHAO Xuecen Jack","ZHAO XUECEN Portfolio"],"url":"https://zhao255.github.io/","inLanguage":"en","publisher":{"@id":"https://zhao255.github.io/#person"},"about":{"@id":"https://zhao255.github.io/#person"},"keywords":"ZHAO Xuecen, ZHAO XUECEN Jack, Jack Zhao, robotics engineer Hong Kong, HK engineer, Hong Kong mechanical engineer, HK PolyU mechanical engineering, mechanical design engineer, mechatronics engineer, AI robotics engineer, CAD FEA engineer, SolidWorks ANSYS robotics portfolio"},{"@id":"https://zhao255.github.io/projects/robot-basketball/#webpage","@type":"WebPage","url":"https://zhao255.github.io/projects/robot-basketball/","name":"Robot Basketball Competition Team Leader","headline":"Robot Basketball Competition Team Leader | ZHAO Xuecen Jack","description":"Robot Basketball competition project led by ZHAO Xuecen Jack, including an 8-member robotics team, SolidWorks mechanical design, Python sensor programming, and iterative prototyping.","image":"https://zhao255.github.io/assets/profile/jack-engineering-profile.png","inLanguage":"en","isPartOf":{"@id":"https://zhao255.github.io/#website"},"about":{"@id":"https://zhao255.github.io/#person"},"author":{"@id":"https://zhao255.github.io/#person"},"mainEntity":{"@id":"https://zhao255.github.io/#person"}},{"@id":"https://zhao255.github.io/projects/robot-basketball/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://zhao255.github.io/"},{"@type":"ListItem","position":2,"name":"projects","item":"https://zhao255.github.io/projects/"},{"@type":"ListItem","position":3,"name":"Robot Basketball Competition Team Leader","item":"https://zhao255.github.io/projects/robot-basketball/"}]},{"@id":"https://zhao255.github.io/projects/robot-basketball/#creative-work","@type":"CreativeWork","name":"Robot Basketball Competition Team Leader","url":"https://zhao255.github.io/projects/robot-basketball/","image":"https://zhao255.github.io/assets/profile/jack-engineering-profile.png","creator":{"@id":"https://zhao255.github.io/#person"},"keywords":"ZHAO Xuecen, ZHAO XUECEN Jack, Jack Zhao, robotics engineer Hong Kong, HK engineer, Hong Kong mechanical engineer, HK PolyU mechanical engineering, mechanical design engineer, mechatronics engineer, AI robotics engineer, CAD FEA engineer, SolidWorks ANSYS robotics portfolio, robot basketball competition, 8-member robotics team leader, university robotics competition, SolidWorks Python robot project","description":"Robot Basketball competition project led by ZHAO Xuecen Jack, including an 8-member robotics team, SolidWorks mechanical design, Python sensor programming, and iterative prototyping."}]}</script>
-  <script type="module" crossorigin src="/assets/index-DsUyIR4v.js"></script>
+  <script type="module" crossorigin src="/assets/index-DJGeZKWg.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-DDDPrlY5.css">
   <meta name="application-name" content="ZHAO Xuecen Jack Portfolio" />
   <meta name="theme-color" content="#0f172a" />
