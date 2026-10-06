@@ -1,6 +1,8 @@
 https://zhao255.github.io/
 https://zhao255.github.io/projects/fuel-cell-car/
 https://zhao255.github.io/experience/stairio/
+https://zhao255.github.io/projects/stairio-simulator/
+https://zhao255.github.io/projects/stairio-hr/
 https://zhao255.github.io/projects/interactive-math/
 https://zhao255.github.io/projects/lobby-openclaw/
 https://zhao255.github.io/projects/car-spoiler-ops/

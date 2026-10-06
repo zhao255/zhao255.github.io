@@ -16,6 +16,8 @@ This site is a public engineering portfolio for recruiters, collaborators, profe
 
 - Vandi fuel-cell-powered robot car: https://zhao255.github.io/projects/fuel-cell-car/
 - Stairio hardware engineering research work: https://zhao255.github.io/experience/stairio/
+- Stairio Simulator, a software twin of the Stairio robot in Unreal Engine 5: https://zhao255.github.io/projects/stairio-simulator/
+- Stairio HR hiring system: https://zhao255.github.io/projects/stairio-hr/
 - Interactive Math Content Generation Platform: https://zhao255.github.io/projects/interactive-math/
 - Lobby OpenClaw AI operations system: https://zhao255.github.io/projects/lobby-openclaw/
 - Car Spoiler Operations: https://zhao255.github.io/projects/car-spoiler-ops/
