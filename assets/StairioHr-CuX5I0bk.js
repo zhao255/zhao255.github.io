@@ -1,4 +1,4 @@
-import{r as l,j as e}from"./index-bHho0syT.js";import{G as ae,O as se,P as ie,S as D,F as H,D as I,C as ne,a as oe,M as re,b as le}from"./ViewSwitch-C-cfeDpe.js";import{C as de,F as f,I as B,T as ce}from"./media-BaoEefGX.js";import{u as he}from"./usePageText-D02Bpz7i.js";import{P as me}from"./ProjectLayout-CdT0ddML.js";const F=[{day:5,weekday:"Mon",time:"14:00"},{day:7,weekday:"Wed",time:"11:00"},{day:8,weekday:"Thu",time:"16:00"},{day:13,weekday:"Tue",time:"10:30"}],u=(t,r)=>({outgoing:!1,subject:`Application: ${t}`,body:`Dear Stairio team,
+import{r as l,j as e}from"./index-DFKhohhk.js";import{G as ae,O as se,P as ie,S as D,F as H,D as I,C as ne,a as oe,M as re,b as le}from"./ViewSwitch-BhQkjgIn.js";import{C as de,F as f,I as B,T as ce}from"./media-BLs9hXeG.js";import{u as he}from"./usePageText-BAAiz6Ca.js";import{P as me}from"./ProjectLayout-xehwAYwg.js";const F=[{day:5,weekday:"Mon",time:"14:00"},{day:7,weekday:"Wed",time:"11:00"},{day:8,weekday:"Thu",time:"16:00"},{day:13,weekday:"Tue",time:"10:30"}],u=(t,r)=>({outgoing:!1,subject:`Application: ${t}`,body:`Dear Stairio team,
 
 I would like to apply for the ${t} position. My CV is attached.
 
