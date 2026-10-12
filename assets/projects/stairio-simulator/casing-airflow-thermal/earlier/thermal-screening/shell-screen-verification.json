@@ -1,0 +1,290 @@
+{
+  "study": "Conditional PLA primary shell heat-rejection screening",
+  "source_results": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\shell-screen-results.json",
+  "source_run_status": "solved",
+  "scope": "Independent numerical verification of conditional casing-path screening, not physical validation.",
+  "method": "Parse actual MKS COMPACT NBLOCK/EBLOCK; integrate curved six-node SURF152 triangles and constant surface loads using 7-point Dunavant quadrature.",
+  "quadrature_self_check": "passed (unit right triangle with known linear temperature integral)",
+  "cases": [
+    {
+      "tag": "mesh3mm_h5",
+      "status": "pass",
+      "input": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mesh3mm_h5-solver.dat",
+      "nodal_temperature_file": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mesh3mm_h5-temperature.txt",
+      "temperature_export": {
+        "header": "Node Number\tTemperature (¡ãC)",
+        "unit": "C",
+        "nodes": 84293,
+        "assumed_export_rounding_bound_c": 0.0005
+      },
+      "solver_units": "MKS (node coordinates metres; thermal BC values Celsius)",
+      "input_sha256": "1733d6d562df914df4215e6377fae18d2973db6f9a575c0e3669005e9a048569",
+      "temperature_sha256": "c2af3c1e71aa3e5b06e1a52d3414e6d934cf22f7c1257bf4ee121c08bd1380de",
+      "exported_mesh_nodes": 84293,
+      "checks": {
+        "solver_reports_done": true,
+        "temperature_extrema_match_export": true,
+        "input_heat_within_0p2_percent_of_nominal": true,
+        "convection_matches_assumed_case_h": true,
+        "ambient_matches_assumed_case": true,
+        "heat_balance_within_0p1_percent_or_export_tolerance": true
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "hflux",
+          "flux_w_m2": 46.7555676264987,
+          "elements": 8287,
+          "integrated_area_m2": 0.02138782703446436,
+          "area_weighted_temperature_c": 36.171901640842286,
+          "heat_input_w": 0.9999999932937556
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 5,
+          "ambient_c": 25,
+          "elements": 7062,
+          "integrated_area_m2": 0.02462073919456724,
+          "area_weighted_temperature_c": 33.12322901621415,
+          "heat_output_w": 0.9999995151297475
+        }
+      ],
+      "heat_balance": {
+        "input_w": 0.9999999932937556,
+        "output_w": 0.9999995151297475,
+        "residual_output_minus_input_w": -4.781640080553373e-7,
+        "relative_residual_percent": -0.000047816401126202205,
+        "estimated_temperature_rounding_heat_bound_w": 0.0000615518479864181,
+        "pass_absolute_tolerance_w": 0.001,
+        "note": "Independent 7-point quadratic-face integration of exported nodal temperatures; not a solver reaction output."
+      },
+      "temperature_min_c": 25.161209106445312,
+      "temperature_max_c": 42.72132110595703,
+      "peak_rise_c": 17.72132110595703,
+      "peak_rise_k_per_nominal_w_through_walls": 17.72132110595703,
+      "peak_rise_k_per_integrated_w_through_walls": 17.721321224800544,
+      "inner_area_mean_rise_k_per_integrated_w": 11.17190171576379,
+      "outer_area_mean_rise_k_per_integrated_w": 8.123229070690506,
+      "outer_area_mean_expected_c_from_heat_balance": 33.123232900451775,
+      "nodes": 84293,
+      "solid_elements": 41732
+    },
+    {
+      "tag": "mesh3mm_h10",
+      "status": "pass",
+      "input": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mesh3mm_h10-solver.dat",
+      "nodal_temperature_file": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mesh3mm_h10-temperature.txt",
+      "temperature_export": {
+        "header": "Node Number\tTemperature (¡ãC)",
+        "unit": "C",
+        "nodes": 84293,
+        "assumed_export_rounding_bound_c": 0.0005
+      },
+      "solver_units": "MKS (node coordinates metres; thermal BC values Celsius)",
+      "input_sha256": "78099bbb4eba3498d724c8b1dc2d41c7cafb0f3bc975f91956e783fcba037382",
+      "temperature_sha256": "9ccdfb863b7839ecce1b79c8c2e0444d0260bae42d372e1b7b0fee3dd217361b",
+      "exported_mesh_nodes": 84293,
+      "checks": {
+        "solver_reports_done": true,
+        "temperature_extrema_match_export": true,
+        "input_heat_within_0p2_percent_of_nominal": true,
+        "convection_matches_assumed_case_h": true,
+        "ambient_matches_assumed_case": true,
+        "heat_balance_within_0p1_percent_or_export_tolerance": true
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "hflux",
+          "flux_w_m2": 46.7555676264987,
+          "elements": 8287,
+          "integrated_area_m2": 0.02138782703446436,
+          "area_weighted_temperature_c": 31.030583120700616,
+          "heat_input_w": 0.9999999932937556
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 10,
+          "ambient_c": 25,
+          "elements": 7062,
+          "integrated_area_m2": 0.02462073919456724,
+          "area_weighted_temperature_c": 29.061615653354608,
+          "heat_output_w": 0.9999997970981567
+        }
+      ],
+      "heat_balance": {
+        "input_w": 0.9999999932937556,
+        "output_w": 0.9999997970981567,
+        "residual_output_minus_input_w": -1.961955988782904e-7,
+        "relative_residual_percent": -0.000019619560019402606,
+        "estimated_temperature_rounding_heat_bound_w": 0.0001231036959728362,
+        "pass_absolute_tolerance_w": 0.001,
+        "note": "Independent 7-point quadratic-face integration of exported nodal temperatures; not a solver reaction output."
+      },
+      "temperature_min_c": 25.014589309692383,
+      "temperature_max_c": 34.81613540649414,
+      "peak_rise_c": 9.81613540649414,
+      "peak_rise_k_per_nominal_w_through_walls": 9.81613540649414,
+      "peak_rise_k_per_integrated_w_through_walls": 9.816135472323545,
+      "inner_area_mean_rise_k_per_integrated_w": 6.030583161143181,
+      "outer_area_mean_rise_k_per_integrated_w": 4.061615680592795,
+      "outer_area_mean_expected_c_from_heat_balance": 29.061616450225888,
+      "nodes": 84293,
+      "solid_elements": 41732
+    },
+    {
+      "tag": "mesh3mm_h20",
+      "status": "pass",
+      "input": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mesh3mm_h20-solver.dat",
+      "nodal_temperature_file": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mesh3mm_h20-temperature.txt",
+      "temperature_export": {
+        "header": "Node Number\tTemperature (¡ãC)",
+        "unit": "C",
+        "nodes": 84293,
+        "assumed_export_rounding_bound_c": 0.0005
+      },
+      "solver_units": "MKS (node coordinates metres; thermal BC values Celsius)",
+      "input_sha256": "8de76e1400b7d6834ff8a63c23bd133b78779f4430e8f139c8c87e9afd79af90",
+      "temperature_sha256": "6a083ff07bdb0ba4ab2b2075c7fbdb630af731cb499c08b7c7a7803cf9149bbd",
+      "exported_mesh_nodes": 84293,
+      "checks": {
+        "solver_reports_done": true,
+        "temperature_extrema_match_export": true,
+        "input_heat_within_0p2_percent_of_nominal": true,
+        "convection_matches_assumed_case_h": true,
+        "ambient_matches_assumed_case": true,
+        "heat_balance_within_0p1_percent_or_export_tolerance": true
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "hflux",
+          "flux_w_m2": 46.7555676264987,
+          "elements": 8287,
+          "integrated_area_m2": 0.02138782703446436,
+          "area_weighted_temperature_c": 28.370235122966406,
+          "heat_input_w": 0.9999999932937556
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 20,
+          "ambient_c": 25,
+          "elements": 7062,
+          "integrated_area_m2": 0.02462073919456724,
+          "area_weighted_temperature_c": 27.030805782190182,
+          "heat_output_w": 0.999998790362473
+        }
+      ],
+      "heat_balance": {
+        "input_w": 0.9999999932937556,
+        "output_w": 0.999998790362473,
+        "residual_output_minus_input_w": -0.0000012029312825845295,
+        "relative_residual_percent": -0.00012029312906516808,
+        "estimated_temperature_rounding_heat_bound_w": 0.0002462073919456724,
+        "pass_absolute_tolerance_w": 0.001,
+        "note": "Independent 7-point quadratic-face integration of exported nodal temperatures; not a solver reaction output."
+      },
+      "temperature_min_c": 25.00074577331543,
+      "temperature_max_c": 31.306400299072266,
+      "peak_rise_c": 6.306400299072266,
+      "peak_rise_k_per_nominal_w_through_walls": 6.306400299072266,
+      "peak_rise_k_per_integrated_w_through_walls": 6.306400341364528,
+      "inner_area_mean_rise_k_per_integrated_w": 3.3702351455680266,
+      "outer_area_mean_rise_k_per_integrated_w": 2.030805795809262,
+      "outer_area_mean_expected_c_from_heat_balance": 27.030808225112942,
+      "nodes": 84293,
+      "solid_elements": 41732
+    },
+    {
+      "tag": "mesh2mm_h10",
+      "status": "pass",
+      "input": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mesh2mm_h10-solver.dat",
+      "nodal_temperature_file": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mesh2mm_h10-temperature.txt",
+      "temperature_export": {
+        "header": "Node Number\tTemperature (¡ãC)",
+        "unit": "C",
+        "nodes": 135330,
+        "assumed_export_rounding_bound_c": 0.0005
+      },
+      "solver_units": "MKS (node coordinates metres; thermal BC values Celsius)",
+      "input_sha256": "c26e38a90509fc9147ae94baa0f7d12b7f9dafb4afb6163ccd349056c0e50d6c",
+      "temperature_sha256": "681353508b7a6440cae09209aaee38ef2897b29dcc39297718d5d8adedcfad4b",
+      "exported_mesh_nodes": 135330,
+      "checks": {
+        "solver_reports_done": true,
+        "temperature_extrema_match_export": true,
+        "input_heat_within_0p2_percent_of_nominal": true,
+        "convection_matches_assumed_case_h": true,
+        "ambient_matches_assumed_case": true,
+        "heat_balance_within_0p1_percent_or_export_tolerance": true
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "hflux",
+          "flux_w_m2": 46.7555841555773,
+          "elements": 12365,
+          "integrated_area_m2": 0.021387819578339413,
+          "area_weighted_temperature_c": 31.033076744775133,
+          "heat_input_w": 0.9999999981993523
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 10,
+          "ambient_c": 25,
+          "elements": 12612,
+          "integrated_area_m2": 0.024620263082282857,
+          "area_weighted_temperature_c": 29.06169434253708,
+          "heat_output_w": 0.9999998327308279
+        }
+      ],
+      "heat_balance": {
+        "input_w": 0.9999999981993523,
+        "output_w": 0.9999998327308279,
+        "residual_output_minus_input_w": -1.6546852432686165e-7,
+        "relative_residual_percent": -0.000016546852462481217,
+        "estimated_temperature_rounding_heat_bound_w": 0.00012310131541141427,
+        "pass_absolute_tolerance_w": 0.001,
+        "note": "Independent 7-point quadratic-face integration of exported nodal temperatures; not a solver reaction output."
+      },
+      "temperature_min_c": 25.014530181884766,
+      "temperature_max_c": 34.816097259521484,
+      "peak_rise_c": 9.816097259521484,
+      "peak_rise_k_per_nominal_w_through_walls": 9.816097259521484,
+      "peak_rise_k_per_integrated_w_through_walls": 9.816097277196818,
+      "inner_area_mean_rise_k_per_integrated_w": 6.03307675563858,
+      "outer_area_mean_rise_k_per_integrated_w": 4.061694349850761,
+      "outer_area_mean_expected_c_from_heat_balance": 29.06169501461976,
+      "nodes": 135330,
+      "solid_elements": 70058
+    }
+  ],
+  "limitations": [
+    "1 W deposited uniformly over selected upper-cavity inner walls",
+    "Only major exterior walls have convection; all other shell faces insulated",
+    "Other ten bodies suppressed; no lid contacts, components, radiation or fluid domain",
+    "Exterior h values are sensitivity assumptions, not measured fan performance",
+    "Watts through PLA walls are not total electronics heat; vented air can carry heat away",
+    "Constant homogeneous PLA k=0.2 W/mK is provisional",
+    "Numerical heat balance cannot establish correctness of boundary conditions or PLA material assumptions.",
+    "Nodal text temperatures have rounded export precision; full-precision Mechanical extrema retained separately.",
+    "Two mesh sizes only test local sensitivity of this specified model and quantity; they do not prove asymptotic convergence."
+  ],
+  "missing_cases": [],
+  "mesh_sensitivity": {
+    "comparison": "h=10 W/m2K, nominal 3 mm versus 2 mm",
+    "coarse_nodes": 84293,
+    "fine_nodes": 135330,
+    "coarse_peak_rise_c": 9.81613540649414,
+    "fine_peak_rise_c": 9.816097259521484,
+    "peak_change_c": -0.00003814697265625,
+    "peak_change_percent_of_fine_rise": -0.0003886164903189803,
+    "peak_change_below_2_percent": true,
+    "note": "A local two-mesh sensitivity check, not a proof of convergence or physical accuracy."
+  },
+  "status": "pass"
+}

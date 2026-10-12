@@ -1,0 +1,127 @@
+{
+  "review_date": "2026-10-10",
+  "purpose": "Provisional material inputs and heat-load methodology for Stairio V7 casing thermal screening",
+  "status": "Research only; no installed heat loads, fan airflow, or casing temperatures established",
+  "input_record_reviewed": "evidence/2026-10-09-ansys-terminal-check/stairio-thermal-inputs.json",
+  "confirmed": {
+    "casing": "PLA, exact filament grade and print structure unknown",
+    "fan": "fan-4007 confirmed by user; continuous operation; installed airflow and voltage unknown",
+    "motor_and_controller": "DJI RoboMaster M2006 P36 with C610",
+    "computer": "Raspberry Pi Zero 2 W from V7 commissioning records"
+  },
+  "pla": {
+    "provisional_solid_wall_material": {
+      "conductivity_w_m_k": 0.2,
+      "density_kg_m3": 1240,
+      "specific_heat_j_kg_k": 1800,
+      "basis": "Common constant-property PLA values used in the cited primary numerical/experimental printing study; density also agrees with manufacturer example grades. They are not measurements of the Stairio print.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10707973/",
+      "limitations": "Use only as explicitly provisional material properties. Cp and density affect transient storage, not linear steady conduction. Do not interpret bulk resin density as the envelope density of an infilled wall. Print porosity, bead orientation, colorants, crystallinity, temperature, and filament grade can change effective properties."
+    },
+    "conductivity_measurement_context": {
+      "source": "https://www.mdpi.com/1996-1944/18/17/3950",
+      "description": "Primary experiment, Table 5: this study's 100%-infill PLA had k=0.182 +/-0.006 W/(m K) at 22.12 C and 0.202 +/-0.006 at 49.84 C. Different infill structures were also tested. These are sample-specific findings, not universal PLA specifications.",
+      "analyst_sensitivity_conductivity_w_m_k": [
+        0.12,
+        0.2,
+        0.3
+      ],
+      "sensitivity_status": "Chosen exploratory bracket, not an experimentally guaranteed range for the installed casing"
+    },
+    "temperature_context": [
+      {
+        "source": "https://prusament.com/wp-content/uploads/2022/10/PLA_Prusament_TDS_2021_10_EN.pdf",
+        "grade": "Prusament PLA example, not confirmed Stairio filament",
+        "density_kg_m3": 1240,
+        "heat_deflection_temperature_c": 55,
+        "hdt_test_stresses_mpa": [
+          0.45,
+          1.8
+        ],
+        "method": "ISO 75"
+      },
+      {
+        "source": "https://www.natureworksllc.com/~/media/files/natureworks/technical-documents/technical-data-sheets/technicaldatasheet_4043d_3d-monofilament_pdf.pdf?la=en",
+        "grade": "NatureWorks Ingeo 4043D example, not confirmed Stairio filament",
+        "glass_transition_c": [
+          55,
+          60
+        ],
+        "density_kg_m3": 1240
+      }
+    ],
+    "interpretation": "Evaluate PLA stiffness, creep and dimensional stability well before melting. HDT and Tg are not interchangeable with a permissible continuous service temperature. A 50 C screening flag may be used as an analyst-chosen early review threshold, not a safety or failure limit. Grade, mechanical stress and exposure duration must set final acceptance."
+  },
+  "heat_sources": {
+    "raspberry_pi": {
+      "source": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#typical-power-requirements",
+      "manufacturer_typical_bare_board_active_current_a": 0.35,
+      "reference_voltage_v": 5,
+      "derived_typical_electrical_power_w": 1.75,
+      "recommended_psu_capacity_a": 2,
+      "interpretation": "The 1.75 W value is derived from the manufacturer's typical bare-board active current, not a measurement or maximum for the Stairio workload. PSU capacity is not consumption. Peripherals and power-conversion losses require separate accounting. Assigning bare-board electrical power as board heat is a first approximation."
+    },
+    "m2006_c610": {
+      "product_source": "https://www.robomaster.com/en-US/products/components/general/M2006",
+      "manual_source": "https://rm-static.djicdn.com/tem/17348/RoboMaster%20C610%20Brushless%20DC%20Motor%20Speed%20Controller%20User%20Guide.pdf",
+      "rated_voltage_v": 24,
+      "continuous_maximum_output_torque_nm": 1,
+      "maximum_speed_at_1_nm_rpm": 416,
+      "manufacturer_environment_c": [
+        0,
+        55
+      ],
+      "c610_max_continuous_output_current_a": 10,
+      "motor_geometry": {
+        "diameter_mm": 24.4,
+        "total_length_mm": 64.8,
+        "mass_g": 90,
+        "reduction_ratio": 36
+      },
+      "c610_geometry": {
+        "dimensions_mm": [
+          50,
+          22,
+          7.3
+        ],
+        "mass_g": 17
+      },
+      "performance_diagram": "C610 manual page 9 contains propulsion-system speed, current, output power and electrical-efficiency curves against torque. Test conditions: 24 V input, 25 C, normal dissipation; reference only. No separate motor/ESC heat-loss map was established.",
+      "current_warning": "CAN commands/feedback represent torque current, not battery/DC-bus current; 24 times CAN current is not motor heat.",
+      "loss_method": "In steady motoring, combined motor+ESC heat is approximately measured DC input power minus shaft torque times shaft angular speed. Average the instantaneous power difference over representative cycles, accounting for storage/regeneration where relevant. Separating motor and ESC losses needs additional data.",
+      "installed_heat_w": null
+    },
+    "camera_power_manager_lte_and_fan": {
+      "installed_heat_w": null,
+      "camera": "Sunplus USB VID/PID is not enough to identify a manufacturer thermal specification; measure the complete dual-camera module at the actual format/frame rate.",
+      "power_manager": "Determine board identity and measure sum(input electrical power) minus sum(output electrical power). Do not count delivered board power again as converter heat.",
+      "lte_usb": "Include USB hub/modem/controller losses if located inside the casing; workload and transmit activity matter.",
+      "fan": "Installed fan-4007 confirmed by user. CAD location available in V7 assembly record; pressure-flow curve, supply voltage and airflow direction not established. Manufacturer comparison catalogues show multiple 4007 variants, so size/name alone must not select performance."
+    }
+  },
+  "recommended_preliminary_analysis": {
+    "preferred": "After geometry and contacts are resolved, calculate temperature-rise response per 1 W applied separately at each heat-source region. This gives conditional thermal resistance/sensitivity without inventing real component dissipation.",
+    "optional_total_heat_sweep_w": [
+      5,
+      10,
+      20
+    ],
+    "optional_ambient_sweep_c": [
+      25,
+      35,
+      40
+    ],
+    "status_of_sweeps": "Analyst-selected what-if test cases only. Values neither represent measured operating modes nor guaranteed lower/upper physical bounds. Source placement/distribution must remain explicit.",
+    "fan_model": "A prescribed film-coefficient or fresh-air-flow sensitivity is a boundary-condition study, not prediction of actual fan-driven airflow. Recirculating air must not be modeled as an unlimited ambient-temperature sink.",
+    "linearity_limit": "Unit-load superposition applies only to a linear model with fixed properties/film coefficients and compatible boundary conditions; radiation and temperature/flow coupling require direct recomputation."
+  },
+  "measurements_needed": [
+    "PLA filament brand/grade, wall structure and infill; preferably printed shell mass",
+    "Separate Pi and dual-camera electrical power for actual processing/streaming mode",
+    "Motor+ESC DC input power plus shaft load/speed or measured loss over the operating cycle",
+    "Power-manager input/output power at simultaneous system load",
+    "Confirmed fan-4007 voltage, airflow direction and installed airflow with the casing assembled",
+    "Ambient, operating duration, component placement and whether LTE/USB hardware is inside",
+    "Thermocouple or suitable IR validation at the PLA near the motor/power board, casing exterior and intake/exhaust"
+  ]
+}

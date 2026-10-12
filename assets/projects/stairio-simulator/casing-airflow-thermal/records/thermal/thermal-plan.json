@@ -1,0 +1,178 @@
+{
+ "schema": "stairio-fluent-thermal-plan/1",
+ "date": "2026-10-11",
+ "basis": "Sealed-arch (side-shell fitted) 1 CFM solution: claude-run/sealed-arch/sealed-arch-1cfm-final.cas.h5/.dat.h5 (single precision, SIMPLEC)",
+ "method": "Phase A: unit-load thermal response. Energy equation enabled; flow equations frozen at the solved airflow (no buoyancy, constant properties), so temperature rise is linear in each source and any load set is a weighted sum. One energy-only solve per source with 1 W as a uniform wall heat flux over that source surface; every other wall adiabatic. Phase B (after Phase A, needs a user-chosen load set): one coupled run with gravity and Boussinesq buoyancy to measure how natural convection changes the superposed result.",
+ "sources": {
+  "pcb-front": {
+   "body": "Solid3 (generic archived PCB, y -29.1..-23.5 mm)",
+   "zones": [
+    "zone2:14984",
+    "zone2:14987",
+    "zone2:14993",
+    "zone2:14996",
+    "zone2:15002",
+    "zone2:15005",
+    "zone2:15008",
+    "zone2:15011",
+    "zone2:15014",
+    "zone2:15017",
+    "zone2:15020",
+    "zone2:15023",
+    "zone2:15026",
+    "zone2:15029",
+    "zone2:15032",
+    "zone2:15035",
+    "zone2:15038",
+    "zone2:15041",
+    "zone2:15044",
+    "zone2:15047",
+    "zone2:15050",
+    "zone2:15059",
+    "zone2:15062",
+    "zone2:15065",
+    "zone2:15068",
+    "zone2:15071",
+    "zone2:15074",
+    "zone2:15077",
+    "zone2:15080",
+    "zone2:15083",
+    "zone2:15086",
+    "zone2:15089",
+    "zone2:15596",
+    "zone2:15611"
+   ],
+   "rule": "wall zone bbox inside the body bbox +/- 0.2 mm (wall-inventory.json); plus zone2:15011, the board's rear face, whose bbox reaches 0.2-0.3 mm past the body bbox (found when 300 showed half the area of the identical back board)"
+  },
+  "pcb-middle": {
+   "body": "Solid8 (generic archived PCB, y -14.1..-8.5 mm)",
+   "zones": [
+    "zone2:15620",
+    "zone2:15692",
+    "zone2:16646",
+    "zone2:16649",
+    "zone2:16655",
+    "zone2:16658",
+    "zone2:16664",
+    "zone2:16667",
+    "zone2:16670",
+    "zone2:16673",
+    "zone2:16676",
+    "zone2:16679",
+    "zone2:16682",
+    "zone2:16685",
+    "zone2:16688",
+    "zone2:16691",
+    "zone2:16694",
+    "zone2:16697",
+    "zone2:16700",
+    "zone2:16703",
+    "zone2:16706",
+    "zone2:16709",
+    "zone2:16712",
+    "zone2:16721",
+    "zone2:16724",
+    "zone2:16727",
+    "zone2:16730",
+    "zone2:16733",
+    "zone2:16736",
+    "zone2:16739",
+    "zone2:16742",
+    "zone2:16745",
+    "zone2:16748",
+    "zone2:16751"
+   ],
+   "rule": "wall zone bbox inside the body bbox +/- 0.2 mm (wall-inventory.json); plus zone2:16673, the board's rear face, whose bbox reaches 0.2-0.3 mm past the body bbox (found when 300 showed half the area of the identical back board)"
+  },
+  "pcb-back": {
+   "body": "Solid11 (generic archived PCB, y 0.9..6.5 mm)",
+   "zones": [
+    "zone2:17162",
+    "zone2:17165",
+    "zone2:17171",
+    "zone2:17174",
+    "zone2:17180",
+    "zone2:17183",
+    "zone2:17186",
+    "zone2:17189",
+    "zone2:17192",
+    "zone2:17195",
+    "zone2:17198",
+    "zone2:17201",
+    "zone2:17204",
+    "zone2:17207",
+    "zone2:17210",
+    "zone2:17213",
+    "zone2:17216",
+    "zone2:17219",
+    "zone2:17222",
+    "zone2:17225",
+    "zone2:17228",
+    "zone2:17231",
+    "zone2:17234",
+    "zone2:17237",
+    "zone2:17240",
+    "zone2:17243",
+    "zone2:17246",
+    "zone2:17249",
+    "zone2:17252",
+    "zone2:17255",
+    "zone2:17258",
+    "zone2:17261",
+    "zone2:17264",
+    "zone2:17267"
+   ],
+   "rule": "wall zone bbox inside the body bbox +/- 0.2 mm (wall-inventory.json)"
+  },
+  "camera-minus-x": {
+   "body": "clean r 7.5 mm camera cylinder, x -40.51..-32.49 mm",
+   "zones": [
+    "zone2:16553",
+    "zone2:16556",
+    "zone2:16559"
+   ],
+   "rule": "wall zone bbox inside the body bbox +/- 0.2 mm (wall-inventory.json)"
+  },
+  "camera-plus-x": {
+   "body": "clean r 7.5 mm camera cylinder, x 32.49..40.51 mm",
+   "zones": [
+    "zone2:17069",
+    "zone2:17072",
+    "zone2:17075"
+   ],
+   "rule": "wall zone bbox inside the body bbox +/- 0.2 mm (wall-inventory.json)"
+  },
+  "motor": {
+   "body": "archived 36GY envelope: sealed cylinder r 18 mm about (x, y) = (0, 27.5) mm, z 35.2-106 mm (fluid-geometry-manifest.json)",
+   "zones": [
+    "zone2:25130",
+    "zone2:25124",
+    "zone2:25127"
+   ],
+   "rule": "manual: 25130 = cylinder side (z 37-106), 25124 = top cap exposed through the frame opening (z 106), 25127 = bottom cap exposed through the motor-mount hole (z 35.2). Excluded: 22760 (motor-mount strip), 23474 (36GY output shaft below the envelope)"
+  }
+ },
+ "camera_note": "The two cameras are one source: 1 W split by area (equal areas, so 0.5 W each). Their outer ends lie outside the casing.",
+ "assumptions_not_measurements": {
+  "ambient_c": 25.0,
+  "air_conductivity_w_m_k": 0.0261,
+  "air_cp_j_kg_k": 1007.0,
+  "air_density_kg_m3": 1.184,
+  "air_viscosity_pa_s": 1.849e-05,
+  "heat_per_source_w": 1.0,
+  "walls": "adiabatic except the source surfaces (conservative: all heat leaves with the air; no shell conduction, no radiation)",
+  "outer_box_backflow_temperature_c": 25.0
+ },
+ "not_established": [
+  "installed component heat loads",
+  "which archived board corresponds to the Pi Zero 2 W, the power manager or the C610",
+  "M2006 motor geometry (archived 36GY envelope used)",
+  "radiation and PLA shell conduction",
+  "buoyancy (Phase B)"
+ ],
+ "gates": {
+  "energy_balance_rel": 0.01,
+  "monitor_change_over_last_100_its_rel": 0.001,
+  "energy_residual_aim": 1e-07
+ }
+}

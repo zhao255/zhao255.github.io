@@ -210,6 +210,9 @@ function createProjectContent(section, sectionIndex) {
     video.id = 'video-' + sectionIndex;
     video.src = 'videos/' + projectId + '.mp4';
     video.playsInline = true;
+    video.addEventListener('loadedmetadata', () => {
+        video.controls = video.duration > 30;
+    });
     container.appendChild(video);
     
     const nav = document.createElement('div');

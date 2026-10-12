@@ -1,0 +1,149 @@
+{
+  "status": "pass",
+  "grid_audit": {
+    "status": "pass",
+    "checks": {
+      "basis_verification_passed": true,
+      "all_210_unique_expected_combinations": true,
+      "declared_counts_correct": true,
+      "air_property_and_unit_conversion_matches": true,
+      "all_independent_scenario_calculations_match": true,
+      "temperatures_decrease_with_fresh_air_at_fixed_films": true,
+      "ambient_shift_is_ten_kelvin": true,
+      "temperatures_scale_linearly_with_load": true,
+      "zero_exchange_heat_all_leaves_via_shell": true
+    },
+    "scenario_count": 210,
+    "max_energy_residual_w": 7.105427357601002e-15,
+    "max_temperature_formula_difference_c": 0.0,
+    "errors": [],
+    "zero_exchange_cases": 42,
+    "nonzero_exchange_cases": 168,
+    "ventilation_conductance_w_per_k_per_cfm": 0.5621384873852928
+  },
+  "representative_direct_fe_audit": {
+    "status": "pass",
+    "checks": {
+      "direct_fe_case_independent_verification_passes": true,
+      "representative_is_10W_1CFM_25C_fine_baseline": true,
+      "direct_peak_matches_linear_basis_within_0p0001C": true,
+      "direct_min_matches_linear_basis_within_0p0001C": true,
+      "direct_shell_heat_matches_scenario": true,
+      "direct_inner_heat_matches_scenario": true,
+      "ventilation_matches_scenario": true,
+      "air_node_balance_closes": true,
+      "whole_system_balance_closes": true,
+      "inner_flux_direction_is_into_shell": true,
+      "outer_flux_direction_is_out_of_shell": true
+    },
+    "direct_shell_input_w": 1.0423835836428252,
+    "direct_shell_output_w": 1.0423830161772711,
+    "ventilation_heat_w": 8.957617238979967,
+    "implied_bulk_air_input_w": 10.000000822622793,
+    "total_heat_to_room_w": 10.00000025515724,
+    "air_node_residual_w": 8.226227929952756e-07,
+    "whole_system_residual_w": 2.5515723933722256e-07,
+    "bulk_air_c": 40.9348940519,
+    "ambient_c": 25.0,
+    "direct_shell_peak_c": 38.111454010009766,
+    "predicted_shell_peak_c": 38.11145466872341,
+    "peak_scaling_difference_c": -6.587136454072606e-07,
+    "direct_shell_min_c": 25.22435760498047,
+    "predicted_shell_min_c": 25.224357551878818,
+    "energy_absolute_acceptance_w": 0.01,
+    "fe_integration": {
+      "tag": "representative",
+      "status": "pass",
+      "checks": {
+        "solver_reports_done": true,
+        "input_conductivity_matches_assumption": true,
+        "inside_film_matches_case": true,
+        "outside_film_matches_case": true,
+        "solid_node_count_matches": true,
+        "solid_element_count_matches": true,
+        "physical_dimensions_match_casing": true,
+        "inner_mesh_area_within_0p2_percent_of_cad": true,
+        "outer_mesh_area_within_0p2_percent_of_cad": true,
+        "temperature_extrema_match_export": true,
+        "temperatures_within_bulk_bounds": true,
+        "positive_heat_transfer": true,
+        "balance_within_0p1_percent_or_precision_bound": true
+      },
+      "internal_h_w_m2_k": 10,
+      "external_h_w_m2_k": 5,
+      "nominal_mesh_mm": 2,
+      "nodes": 135330,
+      "elements": 70058,
+      "g_shell_w_k": 0.06541512060132439,
+      "g_inner_w_k": 0.06541515621282906,
+      "G_from_outer_w_per_k": 0.06541512060132439,
+      "G_from_inner_w_per_k": 0.06541515621282906,
+      "theta_max": 0.8228140059964731,
+      "theta_min": 0.014079642089185522,
+      "theta_extrema_source": "Full precision Mechanical results JSON; not rounded nodal text",
+      "basis_balance_relative_percent": -5.4439225924780625e-05,
+      "basis_heat_balance": {
+        "input_w": 1.0423835836428252,
+        "output_w": 1.0423830161772711,
+        "residual_w": -5.674655541021423e-07,
+        "export_rounding_propagation_bound_w": 0.000228882172404215,
+        "acceptance_absolute_tolerance_w": 0.0010423835836428253,
+        "acceptance_rule": "max(0.1% of input heat, four times propagated nodal rounding bound)"
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "conv",
+          "h_w_m2_k": 10.0,
+          "ambient_c": 40.9348940519,
+          "role": "inner",
+          "elements": 12365,
+          "integrated_area_m2": 0.021387819578339413,
+          "area_weighted_temperature_c": 36.061168706383704,
+          "heat_out_of_shell_w": -1.0423835836428252,
+          "temperature_rounding_heat_bound_w": 0.00014526967425042034
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 5.0,
+          "ambient_c": 25.0,
+          "role": "outer",
+          "elements": 12612,
+          "integrated_area_m2": 0.024620263082282857,
+          "area_weighted_temperature_c": 33.467683815510384,
+          "heat_out_of_shell_w": 1.0423830161772711,
+          "temperature_rounding_heat_bound_w": 8.361249815379468e-05
+        }
+      ],
+      "export_precision": {
+        "header": "Node Number\tTemperature (\u00a1\u00e3C)",
+        "unit": "C",
+        "nodes": 135330,
+        "assumed_export_rounding_bound_c": 0.0005
+      },
+      "mesh_dimensions_m": [
+        0.072,
+        0.123,
+        0.12
+      ],
+      "solver_input_sha256": "10c08657336d50d6aae1c4f556036db9de72593c547425ca2ff7ae9bd8895271",
+      "temperature_export_sha256": "d2534373781c114e04e8d92b42736f401a8e7a393254e41b9ce387ec32884ea8"
+    },
+    "interpretation": "Direct shell FE solution at analytically coupled bulk-air temperature verifies linear scaling. Ventilation remains a lumped energy balance, not CFD."
+  },
+  "files_sha256": {
+    "airflow-scenario-results.json": "f2ce23b683db647166f0f7fd022792d609037f5c686dad7001941f484b363792",
+    "ventilation-basis-results.json": "8f26802d2cb48c9941f8d38ecaf52cf8b8ae5d9ac920df70b8310c6c6a6636bb",
+    "ventilation-basis-verification.json": "366323009762d3713668b5c0e54aa67d85e33535066cdbdaf1496a463e584bd0",
+    "representative-case-results.json": "6d76fdb0004da3bcd34fe137f8b7e5be27013cf1378fab565816a8c58227a4c2"
+  },
+  "scope": "Independent numerical and accounting verification, not physical validation or a safety determination.",
+  "limitations": [
+    "Hypothetical heat fully released into perfectly mixed air; no component temperature prediction.",
+    "No resolved airflow, fan curve, radiation, or direct component-to-shell contact hot spots.",
+    "Net fresh-air exchange and inside/outside film coefficients are separate analyst assumptions.",
+    "Perfect mixing can hide hot spots; the complete model is not a guaranteed conservative bound.",
+    "Zero-flow and high-temperature outputs are constant-property extrapolations, not physical failure predictions."
+  ]
+}

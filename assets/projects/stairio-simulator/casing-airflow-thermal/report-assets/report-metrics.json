@@ -1,0 +1,235 @@
+{
+  "version": 4,
+  "headline_case": "sealed arch (side-shell fitted)",
+  "metrics": [
+    [
+      "Horizontal side vents, share of air in",
+      "47 %",
+      "arch open: 22 %"
+    ],
+    [
+      "From under the casing",
+      "37 %",
+      "probably overstated (see Scope)"
+    ],
+    [
+      "Top grille beside the fan / camera gaps",
+      "12 % / 3.6 %",
+      "arch open: 9 % / 0.5 %"
+    ],
+    [
+      "Modelled static rise across the fan actuator",
+      "4.51 Pa",
+      "arch open: 4.27 Pa; not a fan rating"
+    ],
+    [
+      "Avg speed, motor-side plane (y = +30 mm)",
+      "0.062 m/s",
+      "2.3x the arch-open 0.027 m/s"
+    ],
+    [
+      "Plume speed just above the cap (median)",
+      "0.9 m/s",
+      "arch open: 0.9 m/s"
+    ],
+    [
+      "Modelled fan net flow",
+      "1.00 CFM",
+      "ASSUMED target, not measured"
+    ],
+    [
+      "Mesh",
+      "4.32 M polyhedra",
+      "no prism layers"
+    ]
+  ],
+  "table": [
+    [
+      "Horizontal side vents, -x wall",
+      11.022407259281087,
+      23.72212668712516
+    ],
+    [
+      "Horizontal side vents, +x wall",
+      11.036546457399892,
+      23.716787924611793
+    ],
+    [
+      "Arch on the fan-side face",
+      65.75989282984456,
+      0.0018725088787433087
+    ],
+    [
+      "From under the casing (open bottom and low side-wall edges, z < 21 mm)",
+      3.0014308880239065,
+      36.98543075444598
+    ],
+    [
+      "Top grille beside the fan (part probably loops straight back out)",
+      8.577020330543663,
+      11.745948957272095
+    ],
+    [
+      "Gaps around the camera bosses",
+      0.5334878755262185,
+      3.5771033928108866
+    ],
+    [
+      "Other (back face, front face above the arch, side cut-outs, unclassified)",
+      0.06921435938068043,
+      0.2507297748553441
+    ]
+  ],
+  "observations": [
+    "Intake. The horizontal side vents become the main intake: each of the seven slot rows on both walls draws air in, 23.7 % per side and 47 % together. 37 % rises in from under the casing: 98 % of that enters under the fan-side half and 62 % within about 20 mm of the fan-side face. On the robot the side-shell continues 90 mm below the casing there: in the CAD-derived robot model it spans z = -90 to +70 mm (../2026-10-10-ansys-video/robot-context-mesh.json). That part is not modelled, so this route is probably more open here than on the robot, and the vents' real share probably higher.",
+    "Inside the casing. On a vertical plane through the motor-side compartment (y = +30 mm; it cuts the archived 36GY motor envelope, so it samples the air beside and above the motor) the average speed rises from 0.027 m/s (arch open) to 0.062 m/s, and the maximum on the plane from 0.14 to 0.30 m/s. No flow rate through the compartment was computed. On the plane through the fan-side bay just below the fan (y = -30 mm) the average falls from 0.33 to 0.16 m/s and its mean upward component from +0.22 to -0.01 m/s: the stream from the arch that rose on this plane is gone, and the air rising from under the casing climbs along the inside of the closed arch, in front of the plane. Heat and gravity are off. About 1 K of heating would make buoyancy comparable to the motor-side speeds (a buoyant velocity scale of 0.05-0.06 m/s over the 70-122 mm height); the fan-side bay's 0.16 m/s would need several kelvin.",
+    "Fan. For the same ASSUMED 1 CFM the modelled actuator must raise the static pressure by 4.51 Pa (arch open: 4.27 Pa), with a body force of 4987 N/m3 instead of 4720 N/m3 (4.57 mN instead of 4.32 mN in total; spread over the 914.6 mm2 aperture these correspond to 4.99 and 4.73 Pa, and the plane-averaged static rise is about 10 % lower in both cases). Most of the rise is spent pushing the air out through the top grille: the static pressure is -0.61 Pa just below the actuator and +3.89 Pa just above it (arch open: -0.25 / +4.02 Pa). This is the modelled casing resistance for a laminar, swirl-free actuator, not a fan specification. Local reverse flow at the fan plane is 3.2 % of the target.",
+    "Exhaust. The top-grille slot jets merge into a plume: from 150 released plume pathlines the median speed is 0.95 m/s at z = 122-140 mm, just above the cap (arch open: 0.89 m/s), slowing to 0.58 m/s at the top of the model box. Net outflow through the top of the box is 1.57 g/s, 2.8x the fan flow; that ratio depends on the box height and is not a fresh-air quantity."
+  ],
+  "conditions": [
+    "ANSYS Fluent 2025 R2, steady, laminar and isothermal, constant air properties (inputs: 1.184 kg/m3, 1.849e-5 Pa s); energy and gravity off",
+    "Archived Stairio V7 casing with the 36GY motor geometry (user approved), hanging in an open 240 x 280 x 360 mm air box (input) with 0 Pa gauge pressure on the outer faces",
+    "Side-shell (sealed case): the arch is closed by a band of cells removed from the calculation (Fluent cell-zone deactivation; their faces with the live air become walls): radius 30.5-35.5 mm about the axis of the casing's rounded fan-side end (the fan axis, x = 0, y = -28.5 mm), |x| <= 20.6 mm, z -2 to 71.5 mm, 15786 mm3. It closes the arch over its full width and height and stands 2.5 mm proud of the casing surface (outer radius 33 mm). The side-shell's continuation below the casing (to z = -90 mm in the CAD-derived robot model) is not modelled",
+    "FAN-4007: the cell-selected (stepped) region inside a 1 mm thick, R 18 mm cylinder around the faceted hub (79,263 cells, 915.8 mm3 = 0.975 x the ideal r 5-18 mm annulus) with a uniform upward body force, calibrated so the net flow through the fan mid-plane (z = 112.5 mm, inside the actuator) equals the ASSUMED 1 CFM: 4987 N/m3 sealed, 4720 N/m3 arch open. At the actuator's inlet and outlet faces (z = 112.0 and 113.0 mm) the flow is 0.985 and 0.977 CFM sealed (1.003 and 0.995 CFM arch open)",
+    "Lower-memory solver set-up (sealed case): single precision and the pressure-based SIMPLEC solver with skewness correction; the discretization is unchanged (PRESTO! pressure, second-order upwind momentum with high-order term relaxation 0.25, least-squares gradients). Measured live, all Fluent processes together used about 22 GB of private memory while iterating instead of about 31 GB for the first run, which used double precision and the Coupled solver (CLAUDE-HANDOFF.md). Checked against the first run (see Verification)",
+    "Geometry approximations: sealed archived-36GY motor envelope, simplified camera envelopes, three generic PCB bodies; fan aperture 914.6 mm2, 2.63 % below the exact CAD annulus (import tessellation)",
+    "Mesh: 4,316,506 polyhedral cells converted from the cleaned tetrahedral mesh, no prism layers; minimum orthogonal quality 0.043, 53 cells below 0.1, maximum aspect ratio 230. A 1.53 mm3 crevice between solid parts at (2.5, -13.7, 30.1) mm, where the worst sliver cells caused a local blow-up, is frozen at zero velocity (arch open) or removed like the band (sealed); it was not verified as a physical contact"
+  ],
+  "checks": [
+    [
+      "Fixed-source final window",
+      "iterations 1161-1360 with the body force fixed at 4987 N/m3; 10 gate samples (every 20 its); native samples every 5 its in solve/claude-run/sealed-arch/reports_601.out"
+    ],
+    [
+      "Fan net flow vs assumed 1 CFM",
+      "0.9987 CFM at the mid plane (gate +/-1 %): pass; range over the window 0.009 % of target (gate 0.5 %): pass"
+    ],
+    [
+      "Bottom / mid / top fan plane",
+      "0.9849 / 0.9987 / 0.9771 CFM; bottom-top 0.78 % of target (gate 1 %): pass. The mid plane reads 1.4 % and 2.2 % of target above the planes 0.5 mm below and above it, so at the actuator's inlet and outlet faces the flow is 1.5-2.3 % below 1 CFM (first run 1.0027 / 0.9999 / 0.9953, mid between them, all within 0.74 %). The lower-memory check on the first-run solution shows the same pattern (0.9916 / 1.0042 / 0.9838), so the spread comes with that set-up, not with the seal"
+    ],
+    [
+      "Outer-box mass imbalance",
+      "at most 2.9e-05 of the fan mass flow over the window samples (gate 1e-3): pass"
+    ],
+    [
+      "Pressure-rise and peak-speed stability",
+      "pressure-rise range 1.1e-04 Pa (0.002 % of the mean) and peak-speed range 0.0036 m/s (0.12 % of the mean), both within the study gate of 0.5 %: pass"
+    ],
+    [
+      "Scaled residuals at end (aim 1e-5)",
+      "x 1.28e-05, y 1.17e-05, z 1.65e-05, continuity 7.3e-03, down from x 1.60e-05, y 1.65e-05, z 2.13e-05 and continuity 9.3e-03 at the start of the window. The velocity residuals are 1.2-1.6x the aim and the scaled continuity residual about 730x it (above Fluent's default 1e-3; first run 2.7e-03): GATE NOT MET, as in the first run. Used qualitatively under a documented waiver (solve/claude-run/sealed-arch/solution-acceptance-sealed-arch.json); the local-error review was not performed"
+    ],
+    [
+      "Per-opening flux balance",
+      "net flow into the casing summed over all openings: 1.6e-05 (sealed) and -1.6e-07 (arch open) of the fan flow"
+    ],
+    [
+      "Lower-memory set-up check",
+      "run for 200 iterations from the accepted first-run solution at its body force (solve/claude-run/lowram-check2/): every per-opening share within 0.1 percentage points of the first run (arch 65.76 % vs 65.76 %); fan flow at the mid plane 1.0042 vs 0.9999 CFM (bottom / top planes 0.9916 / 0.9838 vs 1.0027 / 0.9953); pressure rise 4.266 vs 4.267 Pa (area-corrected); peak speed 2.936 vs 2.937 m/s"
+    ],
+    [
+      "Arch band set-up",
+      "zones split before deactivation; wall area conserved to 2.7e-08; the drop in live air volume (15788 mm3) equals band plus crevice; a fresh set of report definitions reproduced the pre-split fan flows to 6e-08 before iterating (the original definitions point at surface IDs that shift when zones change)"
+    ],
+    [
+      "Body-force calibration",
+      "4720 -> 4946 -> 4987 N/m3 in 2 damped log-secant steps; at the first-run force the sealed casing passed 0.971 CFM"
+    ],
+    [
+      "Mesh quality",
+      "minimum orthogonal quality 0.043 (floor 0.01 met; preferred 0.1 NOT met), 53 cells below 0.1; gap and slot resolution not inspected"
+    ],
+    [
+      "Animation tracers",
+      "seeds placed 4 mm outside the openings in proportion to the solved inflow (solve/claude-tools/flux_weighted_seeds.py); verified to pass through the fan, per opening: vents -x 14 of 14, vents +x 14 of 14, underside 23 of 23, top grille beside the fan 2 of 7, camera gaps 2 of 2; 55 intake and 35 plume seeds animated; 10 % of tracer samples exceed the 1.2 m/s colour maximum. The standard seeding, on paths traced back from the fan, put 48 of its 60 seeds under the casing, because its route sampling is not flow-weighted. Fluent returns each back-traced path in fragments (1345 for about 300 releases); only the 204 fragments that leave the casing are usable, none of them starts at the fan, and the step weights each one by the air speed at its own starting point, a break along the route. The fragments that leave under the casing start where the air is fast (0.56 m/s on average, against 0.18 m/s for those on the -x wall), so they got 78 % of the weight from 54 % of the fragments. That seeding was therefore not animated (solve/claude-run/sealed-arch/post/110-pathlines/20261010T214450Z)"
+    ],
+    [
+      "Video encoding",
+      "h264, 1920x1080, 30 fps, 576 frames, 19.2 s; near-duplicate consecutive frames: 0; 8 distinct native pulse images repeat"
+    ],
+    [
+      "First run (arch open)",
+      "accepted under the same kind of waiver (solve/claude-run/solution-acceptance.json): 0.9999 CFM, pressure rise 4.267 Pa area-corrected, residual aim not met (continuity 2.7e-03)"
+    ]
+  ],
+  "limits": [
+    "The side-shell is modelled only where it closes the arch. On the robot it continues 90 mm below the casing (to z = -90 mm in the CAD-derived robot model); that part is not modelled, so the underside route at the fan-side end is probably more open here than on the robot. Model that part (this needs a deeper air box, see below), or measure, to pin down the vents' real share.",
+    "The FAN-4007 operating point is unknown: its pressure-flow curve is unverified, and the 4.5 Pa found here is the modelled casing resistance for an idealised actuator at 1 CFM. Rerun with the measured or datasheet curve.",
+    "Fan throughflow is not fresh-air exchange; the model does not give the fresh-air fraction.",
+    "Isothermal: no temperatures, heat transport, buoyancy, safe-PLA temperature or warm-up time (the follow-on thermal pilot on this airflow, with assumed heat loads, is in fluent-thermal-report.html). Video playback time is not physical time.",
+    "Steady laminar pilot: no turbulence model; the residual aim was not met in either case (velocity residuals up to 1.6x; scaled continuity residual about 270x in the first run and 730x in the sealed case); no mesh- or domain-independence study.",
+    "No prism layers; slot, grille and fan-frame-gap resolution not inspected; mesh quality below the preferred aim (minimum orthogonal quality 0.043, 53 cells below 0.1).",
+    "The outer box is small: its open bottom is 80 mm below the casing (22 mm below the lowest modelled part), less than the 90 mm the unmodelled side-shell reaches below the casing, so modelling that part also needs a deeper box; there is no floor or stair, and its top is 158 mm above the casing.",
+    "Geometry: archived CAD with the 36GY motor (not the M2006/C610 now fitted), simplified camera and PCB bodies.",
+    "The sealed case ran in single precision with the SIMPLEC solver to save memory. That set-up reproduced the first run's intake split within 0.1 percentage points, but it is not identical to it: the flow at the actuator's inlet and outlet planes is 1.4-2.2 % below the calibrated mid-plane value."
+  ],
+  "shares_sealed_pct": {
+    "top grille above the fan (exhaust)": null,
+    "top grille beside the fan": 11.745948957272095,
+    "underside and bottom openings (z < 21 mm)": 36.98543075444598,
+    "front arch (fan-side face, under the cameras)": 0.0018725088787433087,
+    "side vents, -x wall (horizontal slots)": 23.72212668712516,
+    "side vents, +x wall (horizontal slots)": 23.716787924611793,
+    "side wall cut-outs below the vents (z < 40 mm)": 0.11299565133553162,
+    "camera bosses / lens gaps": 3.5771033928108866,
+    "back face": 0.01487855793659868,
+    "front face above the arch": 0.007765611953346896,
+    "unclassified": 0.11508995362986915
+  },
+  "shares_open_pct": {
+    "top grille above the fan (exhaust)": null,
+    "top grille beside the fan": 8.577020330543663,
+    "underside and bottom openings (z < 21 mm)": 3.0014308880239065,
+    "front arch (fan-side face, under the cameras)": 65.75989282984456,
+    "side vents, -x wall (horizontal slots)": 11.022407259281087,
+    "side vents, +x wall (horizontal slots)": 11.036546457399892,
+    "side wall cut-outs below the vents (z < 40 mm)": null,
+    "camera bosses / lens gaps": 0.5334878755262185,
+    "back face": 0.0067637111951047635,
+    "front face above the arch": 0.03952688719278625,
+    "unclassified": 0.022923760992780248
+  },
+  "vent_row_net_in_kg_s_sealed": {
+    "side vents, -x wall (horizontal slots)": [
+      2.168802073261728e-05,
+      1.7459716312668062e-05,
+      2.1766036852731554e-05,
+      1.739715101900406e-05,
+      2.1152761431716713e-05,
+      1.7792339735521245e-05,
+      2.0181785782732382e-05
+    ],
+    "side vents, +x wall (horizontal slots)": [
+      2.165666864035172e-05,
+      1.7425392877549056e-05,
+      2.1733403217042224e-05,
+      1.7449794705975236e-05,
+      2.115070056336555e-05,
+      1.7769018470583745e-05,
+      2.02534703186897e-05
+    ]
+  },
+  "underside_front_half_pct": 98.27613808868429,
+  "underside_within_20mm_of_fan_side_face_pct": 62.13894613075828,
+  "intake_excess_over_fan_flow": {
+    "open": 0.06929868362218605,
+    "sealed": 0.05068117018343776
+  },
+  "dp_sealed_pa": 4.50675139427185,
+  "dp_open_area_corrected_pa": 4.267084949049303,
+  "S_sealed_n_m3": 4987.026313873012,
+  "S_open_n_m3": 4720.0,
+  "motor_side_speed_sealed_m_s": 0.06242448464035988,
+  "motor_side_speed_open_m_s": 0.02706169733252843,
+  "plume_median_122_140mm_sealed_m_s": 0.9464973509311676,
+  "lowram_validation_max_share_diff_pts": 0.10368886318597603,
+  "final_window_iterations": [
+    1161,
+    1360
+  ],
+  "cells": 4316506,
+  "min_oq": 0.0433516,
+  "cells_oq_below_0p1": 53,
+  "max_aspect_ratio": 229.88
+}

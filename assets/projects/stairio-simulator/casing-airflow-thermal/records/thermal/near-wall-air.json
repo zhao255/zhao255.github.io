@@ -1,0 +1,60 @@
+{
+ "method": "Air next to the housing where buoyancy changes it most: behind the motor and above the cameras, B0 vs B1.",
+ "note": "near-wall cells are inside the no-slip layer; compare cases",
+ "regions": {
+  "back wall behind the motor": {
+   "bounds": "|x| < 15, y > 52, z 33-55 mm",
+   "faces": 3078
+  },
+  "above the -x camera": {
+   "bounds": "x < -30, y -45..-29, z 93-105 mm",
+   "faces": 5830
+  },
+  "above the +x camera": {
+   "bounds": "x > 30, y -45..-29, z 93-105 mm",
+   "faces": 5808
+  }
+ },
+ "cases": {
+  "B0": {
+   "back wall behind the motor": {
+    "speed_mean_m_s": 0.00020390919953872352,
+    "speed_p90_m_s": 0.00045426289953562685,
+    "upward_mean_m_s": -6.800126256602737e-05,
+    "temperature_mean_c": 38.42701296762701
+   },
+   "above the -x camera": {
+    "speed_mean_m_s": 0.005811477838780961,
+    "speed_p90_m_s": 0.00662532493133937,
+    "upward_mean_m_s": -0.0011053004792225757,
+    "temperature_mean_c": 31.932506467985164
+   },
+   "above the +x camera": {
+    "speed_mean_m_s": 0.0059799610558178935,
+    "speed_p90_m_s": 0.006964085802829915,
+    "upward_mean_m_s": -0.0009183446780675959,
+    "temperature_mean_c": 31.305628934127864
+   }
+  },
+  "B1": {
+   "back wall behind the motor": {
+    "speed_mean_m_s": 0.00045071495093342966,
+    "speed_p90_m_s": 0.0009353683047427277,
+    "upward_mean_m_s": 0.00010857913062309817,
+    "temperature_mean_c": 29.368830933866512
+   },
+   "above the -x camera": {
+    "speed_mean_m_s": 0.005320051598514509,
+    "speed_p90_m_s": 0.006960969663383903,
+    "upward_mean_m_s": 0.0004457595343488931,
+    "temperature_mean_c": 41.18071712504687
+   },
+   "above the +x camera": {
+    "speed_mean_m_s": 0.005428473528622582,
+    "speed_p90_m_s": 0.007075063419210504,
+    "upward_mean_m_s": 0.0005119004715516443,
+    "temperature_mean_c": 41.08482846182093
+   }
+  }
+ }
+}

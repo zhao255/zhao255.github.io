@@ -16,17 +16,18 @@ This site is a public engineering portfolio for recruiters, collaborators, profe
 
 - Vandi fuel-cell-powered robot car: https://zhao255.github.io/projects/fuel-cell-car/
 - Stairio hardware engineering research work: https://zhao255.github.io/experience/stairio/
-- Stairio Simulator, a software twin of the Stairio robot in Unreal Engine 5: https://zhao255.github.io/projects/stairio-simulator/
+- Stairio Simulator, including the Unreal software twin, Stair Mapper rail reconstruction and camera-planning studies: https://zhao255.github.io/projects/stairio-simulator/
 - Stairio HR hiring system: https://zhao255.github.io/projects/stairio-hr/
 - Interactive Math Content Generation Platform: https://zhao255.github.io/projects/interactive-math/
 - Lobby OpenClaw AI operations system: https://zhao255.github.io/projects/lobby-openclaw/
-- Car Spoiler Operations: https://zhao255.github.io/projects/car-spoiler-ops/
+- Car Spoiler Operations, with an interactive original-CAD mechanism and actuator-load study: https://zhao255.github.io/projects/car-spoiler-ops/
+- Auto Sheet & Auto Class, with an interactive course planner and calendar export: https://zhao255.github.io/projects/ai-automation/
 - Robot Basketball Competition team leadership: https://zhao255.github.io/projects/robot-basketball/
 - Smart Navigational Cane: https://zhao255.github.io/projects/smart-cane/
 
 ## Expertise Signals
 
-- Education: Bachelor of Engineering in Mechanical Engineering, The Hong Kong Polytechnic University, expected May 2026.
+- Education: Bachelor of Engineering in Mechanical Engineering, The Hong Kong Polytechnic University, 2026.
 - Core tools and domains: SolidWorks, ANSYS, COMSOL, ROS, LiDAR, computer vision, embedded control, Raspberry Pi, ESP32, React, TypeScript, Python, AI agents, and product-focused prototyping.
 - Search topics: robotics engineer Hong Kong, HK PolyU mechanical engineering, CAD FEA engineer, mechatronics engineer, AI robotics engineer, SolidWorks ANSYS robotics portfolio, AI-assisted engineering portfolio.
 

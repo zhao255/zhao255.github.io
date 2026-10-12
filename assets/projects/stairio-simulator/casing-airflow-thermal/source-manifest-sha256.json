@@ -1,0 +1,348 @@
+{
+ "schema": "stairio.evidence-pack-manifest/1",
+ "pack": "2026-10-11-casing-airflow-thermal",
+ "generated_utc": "2026-10-11T16:48:17+00:00",
+ "files": {
+  "casing-airflow-thermal-summary.json": {
+   "sha256": "5f3fce9b2e19a4259748d373730e85ebee31706b844eb6ab9bbcc5868c804f23",
+   "bytes": 13450
+  },
+  "earlier/airflow-sensitivity/airflow-final-verification.json": {
+   "sha256": "6b1ec3b8ac60366e77c8b769f40cf7c4ced3574abd642c60e8bfee995f1e9ad4",
+   "bytes": 6683
+  },
+  "earlier/airflow-sensitivity/airflow-scenario-results.json": {
+   "sha256": "f2ce23b683db647166f0f7fd022792d609037f5c686dad7001941f484b363792",
+   "bytes": 173893
+  },
+  "earlier/airflow-sensitivity/airflow-sensitivity-report.html": {
+   "sha256": "848aa04983f8d5cf5f13b54e6aaf7f7ec9b718838a17d1e5d90cbfbc7ed064b8",
+   "bytes": 376342
+  },
+  "earlier/airflow-sensitivity/airflow-sensitivity.pdf": {
+   "sha256": "e448b58275d9661efbad03c212a36b8c3aeb80a2551f46a836d43aa2b7f51879",
+   "bytes": 33462
+  },
+  "earlier/airflow-sensitivity/fan-layout-audit.json": {
+   "sha256": "7b24bd5ae9d8b4c0f32b281f343a96c02307482238f859f465a8699266b0c8a8",
+   "bytes": 16015
+  },
+  "earlier/airflow-sensitivity/method-review.json": {
+   "sha256": "d96db510fe0fb3f24672c0aa6106ad76a7133c7fdae1fa25286287341fa7276b",
+   "bytes": 6465
+  },
+  "earlier/airflow-sensitivity/ventilation-basis-verification.json": {
+   "sha256": "366323009762d3713668b5c0e54aa67d85e33535066cdbdaf1496a463e584bd0",
+   "bytes": 23252
+  },
+  "earlier/ansys-thermal-video/ansys-thermal-video.html": {
+   "sha256": "4e01b6c54f19be4bf111124043972ac897cec40deda26642e3af6caa172cafac",
+   "bytes": 6579
+  },
+  "earlier/ansys-thermal-video/layout-preview-verification.json": {
+   "sha256": "4e69c28298b8775e6248ba2553dc7c29128bde328101c9dd536a6c6e2e168e85",
+   "bytes": 666
+  },
+  "earlier/ansys-thermal-video/native-frames/detail/frame_121.png": {
+   "sha256": "10642bb000066c9f6301b1793bae266cacafdeb216987547ec379ee9051a58ce",
+   "bytes": 127930
+  },
+  "earlier/ansys-thermal-video/native-frames-manifest.json": {
+   "sha256": "eede0e2b260066f3d12379a05f3ff7ca4b899f08013550d8829782713da48f9f",
+   "bytes": 58682
+  },
+  "earlier/ansys-thermal-video/native-frames-verification.json": {
+   "sha256": "f54dda9c2d12605c498c054fcbf952e5fa8b67959a98c067c91aea444357f4dc",
+   "bytes": 70471
+  },
+  "earlier/ansys-thermal-video/native-transient-history.png": {
+   "sha256": "6fae351ca49cfddceef8349eb8ef8a31aaa6c12902c8b33318968a1e1406e212",
+   "bytes": 111236
+  },
+  "earlier/ansys-thermal-video/native-transient-verification.json": {
+   "sha256": "29f22a3728534096a0e64583d20686edcd50dbc19fa3a5d067dd861cb73a89e6",
+   "bytes": 17240
+  },
+  "earlier/ansys-thermal-video/render_native_transient.py": {
+   "sha256": "63301e9a189405a7cbb550534569f0b99ea8b45bf2b39a43daef611f7e58cbdd",
+   "bytes": 6543
+  },
+  "earlier/ansys-thermal-video/robot-context-audit.json": {
+   "sha256": "a9295e134e3a550b548972995423ec8abd36a54b6e7b3e1de9f07098014d00e0",
+   "bytes": 30741
+  },
+  "earlier/ansys-thermal-video/stairio-ansys-thermal.mp4": {
+   "sha256": "c0fb231cae1f29a57d2897f0bcace9a2f49e011cf2a766c8aacaa76d25feabe8",
+   "bytes": 1544564
+  },
+  "earlier/ansys-thermal-video/transient-model-method.json": {
+   "sha256": "1da5c002696372ae69bd1b78c521368bd943d558239f660c984aed85f5a24b15",
+   "bytes": 7348
+  },
+  "earlier/ansys-thermal-video/transient_history.csv": {
+   "sha256": "6912bcfd8407509db665146dadb3526ca2bc5f9efe12cea0f8382fdc6af1a40f",
+   "bytes": 78229
+  },
+  "earlier/ansys-thermal-video/video-verification.json": {
+   "sha256": "3dcc719a4d5055f54fb46665c2090705c3c9e44e42e17d9260fe74f20bd60a1a",
+   "bytes": 1087
+  },
+  "earlier/thermal-screening/research-inputs.json": {
+   "sha256": "2464ec54ff50e6cd1531b4ad2dbf11f2800abded96bc7bc6e616877732871fac",
+   "bytes": 8312
+  },
+  "earlier/thermal-screening/shell-screen-results.json": {
+   "sha256": "76aa8be23ef565ea1b9760030ae1965cfbb8775388308e0ce755e6ed0c3d4b3a",
+   "bytes": 3031
+  },
+  "earlier/thermal-screening/shell-screen-verification.json": {
+   "sha256": "bfaa68a0e91a032ccadc847da9750d7189d78c7394df0c3f0e165646781a9c0e",
+   "bytes": 13601
+  },
+  "earlier/thermal-screening/thermal-screening-report.html": {
+   "sha256": "cafa3ae353e06086c2ef38ef342719e3fc06e14a382bfd8d49534c6388a06157",
+   "bytes": 502152
+  },
+  "fluent-airflow-report.html": {
+   "sha256": "a6a9130f3158a92e4a4234932105dc6cd9be06843674259e1cbf37e6c2d00ec5",
+   "bytes": 28282
+  },
+  "fluent-thermal-report.html": {
+   "sha256": "3c144b2920b72347687317a517932f222746ca547e6c2fd945e1ddcbc1ca4291",
+   "bytes": 22357
+  },
+  "README.md": {
+   "sha256": "f78c3c8fd15b95dd7bb9aefaf5dbe7f4984b1b395f17b2d9513229449b140d29",
+   "bytes": 14272
+  },
+  "records/airflow/compartment-speeds.json": {
+   "sha256": "6dc29841b30c3bbcd27da20ab63896e27ddabe81899e3f30159d7515110824a5",
+   "bytes": 995
+  },
+  "records/airflow/final-gates-sealed-arch.json": {
+   "sha256": "ca01ebb2d66933701413e5fd24a32b39141628caf3c3ae66eb9afff5ef365bff",
+   "bytes": 12391
+  },
+  "records/airflow/final-gates.json": {
+   "sha256": "9bb017e68ce80d3b489366deb7c54d2d105a0eb3ee6007749722624bed090b42",
+   "bytes": 4089
+  },
+  "records/airflow/lowram-validation2.json": {
+   "sha256": "16f552603946dfb1949cd25518e520cd3fb830c232a004c8b68d6f7dde2fc449",
+   "bytes": 5704
+  },
+  "records/airflow/monitor-ledger.csv": {
+   "sha256": "d4cf76b0813407aa97a6098c1f495b952219dfa48a365afecb9a51f3a2d4b29a",
+   "bytes": 18048
+  },
+  "records/airflow/opening-fluxes-sealed-arch.json": {
+   "sha256": "df618ead82dc552716ac354805ef30ec03bec2d432c2916c21cee85a9fbfa8f3",
+   "bytes": 7020
+  },
+  "records/airflow/opening-fluxes.json": {
+   "sha256": "2502e50d36b5d985e08c154019988a9b1ac13c26e365957a1db1c44b1257ab2b",
+   "bytes": 6710
+  },
+  "records/airflow/plug-record.json": {
+   "sha256": "981c47c8cdf89080c33eb16e5f95cd9cd8f19a72d022f2be204fcc01f288615b",
+   "bytes": 8584
+  },
+  "records/airflow/reports_601.out": {
+   "sha256": "76acd4f850c2eaf8ad33bc5aa0904261fd1a8ad71f3955fca67b269eb4909acd",
+   "bytes": 47867
+  },
+  "records/airflow/solution-acceptance-sealed-arch.json": {
+   "sha256": "b15a4818834e56a2d0a8370b7517eacf1dd447d82bb46b4bf72a067a074f4169",
+   "bytes": 4686
+  },
+  "records/airflow/solution-acceptance.json": {
+   "sha256": "d69885076c49fca5032a933956657e3f4fd84f3ff6b14bdb37414e22e6a681c5",
+   "bytes": 5461
+  },
+  "records/thermal/330-first-order-test.json": {
+   "sha256": "a9eca2cbce9e83cb86a5c2e2bb7a17f18cc15622306c0be7fecf4806b58617bc",
+   "bytes": 4319
+  },
+  "records/thermal/333-bounds-pmn-test.json": {
+   "sha256": "db6c5b856162bd293b20a19b09ea13c22e68ccfdfe52935c65e3a396cfc7aed9",
+   "bytes": 5527
+  },
+  "records/thermal/A-assumed.json": {
+   "sha256": "9330898fefabe63c47ef8c4101239ef9a2115721854c949a231cef84285e2c4e",
+   "bytes": 803
+  },
+  "records/thermal/B-flipped.json": {
+   "sha256": "0c15fbeb43a444dca82d5400884d5fb9c5dab695a8de1cf591bd9162725b73c9",
+   "bytes": 485
+  },
+  "records/thermal/bad-cell-clusters.json": {
+   "sha256": "ac1fed766117258eee8f53c3164773bf29f9c30b6d57ac5ace3f7b41a72ec91a",
+   "bytes": 308
+  },
+  "records/thermal/field-summary-B0.json": {
+   "sha256": "8ece1dc051b8872bb25ae2b374572f043648a661bc50f6d1191092323eda89ab",
+   "bytes": 902
+  },
+  "records/thermal/field-summary-B1.json": {
+   "sha256": "bf1f23da01ca81779412a3b522f1b64cb59c7c0e9dcef64f935bba7fe1fccfce",
+   "bytes": 894
+  },
+  "records/thermal/hot-patches.json": {
+   "sha256": "a098adcb8d7eb188dcd8da838990f0749d10471b6eddea07cace81e6f113386b",
+   "bytes": 4042
+  },
+  "records/thermal/near-wall-air.json": {
+   "sha256": "fc5590c244822ed32eae11d78a4e84d0419d902080d35c43e2cb470bd5cd6c02",
+   "bytes": 1903
+  },
+  "records/thermal/phaseB-B0-frozen.json": {
+   "sha256": "78e543f0ea93e0611ff50d4d3fdb209428b519961c757a0b7c13853f6c83697f",
+   "bytes": 17896
+  },
+  "records/thermal/phaseB-B0-refined.json": {
+   "sha256": "f679e9527321851cedbc6c1cd96161d2ac18978d3d404a7b3a9739537e97c2c9",
+   "bytes": 7895
+  },
+  "records/thermal/phaseB-B1-buoyant.json": {
+   "sha256": "045c40b800d7b8a2d5bb93ca029139775b43e5a0678300daf913d058e39bc105",
+   "bytes": 25104
+  },
+  "records/thermal/scenario-A-assumed-result.json": {
+   "sha256": "1d886562b8b5dedab6561044642c890f5dd960bb176537cea0ac5f85fc7f5f68",
+   "bytes": 603
+  },
+  "records/thermal/scenario-B-flipped-result.json": {
+   "sha256": "6eb962d4a49dbca8ab6ef98b29d5e12738762acb1938ddb9f76dadbf2b8cd070",
+   "bytes": 601
+  },
+  "records/thermal/thermal-plan.json": {
+   "sha256": "3777c0c02f0b012c7821edfe63b0028337cb6666bf973deda8963fc78d47098c",
+   "bytes": 5669
+  },
+  "records/thermal/unit-iso-cameras.json": {
+   "sha256": "af6dd61b7988aa75bfa3146cd0c3585f5ea30e9c2ec250f9a904c666e886fe50",
+   "bytes": 7404
+  },
+  "records/thermal/unit-iso-pcb-back.json": {
+   "sha256": "d6f406bd4c66ce797080f1b235968a9de60f8cd512712c089ca7e6da9e8c0937",
+   "bytes": 7387
+  },
+  "records/thermal/unit-iso-pcb-front.json": {
+   "sha256": "a38cb700ec38f939b1f150e674261b4c6b69487bc1f69f163c4182fb7948b68f",
+   "bytes": 9486
+  },
+  "records/thermal/unit-iso-pcb-middle.json": {
+   "sha256": "5f5179c2955fd5fb1b78215fb848137ea04bbc174eea999586487ac0e3473be2",
+   "bytes": 7409
+  },
+  "records/thermal/unit-response.json": {
+   "sha256": "2baa50ce1e17fa5bf06390f1ccde1e32002a0861dba25efd63bc2f4bffeb6674",
+   "bytes": 6204
+  },
+  "report-assets/diagnostic-reverse-traces-sealed-arch.png": {
+   "sha256": "885f311bc39e3df3b48f78a37aa71797ff960c0391b527a225ffaa1932bed0db",
+   "bytes": 588877
+  },
+  "report-assets/diagnostic-reverse-traces.png": {
+   "sha256": "1896e74d3f05bbe4e3702079533fc97ce7ae1686e48ecc21b884459134214490",
+   "bytes": 554502
+  },
+  "report-assets/flow-convergence-sealed-arch.png": {
+   "sha256": "08a82ca46e9ab1b05bfe6533c7694a25e3363030ff4b6cd194fee5218564af42",
+   "bytes": 167414
+  },
+  "report-assets/flow-convergence.png": {
+   "sha256": "cc8283b600a368d2a679e4786f77c641d0d2bd0bd851446e425f11c945fbc3a5",
+   "bytes": 234998
+  },
+  "report-assets/intake-paths-3d-sealed-arch.png": {
+   "sha256": "f8001fcd1f3aae10f5ba68127438acdb3fad1203733319100a26182879da6dd0",
+   "bytes": 286108
+  },
+  "report-assets/intake-paths-3d.png": {
+   "sha256": "5ed282da92a7fd4f8f0467af4ef9be1bbed0cfa9020277a717be621e8dcb408a",
+   "bytes": 267212
+  },
+  "report-assets/intake-paths-side-sealed-arch.png": {
+   "sha256": "0882f4685b29a1e6e8b081634049ab67b94325f292800f38d3517699aadabcf2",
+   "bytes": 145619
+  },
+  "report-assets/intake-paths-side.png": {
+   "sha256": "7c1a80e8c1d19f0b6b2ec55c77c51ccaf02e921fa3d008ad1b30ca09cb43025c",
+   "bytes": 124735
+  },
+  "report-assets/opening-intake-map-sealed-arch.png": {
+   "sha256": "1fff6dd41497ae0691fd7e5bb233ccb9f5ea9be05820a014dff58541eaeea65a",
+   "bytes": 153833
+  },
+  "report-assets/opening-intake-map-sealed-settled.png": {
+   "sha256": "e94224e942470572a1ecdd8f4db165609c1b13264900aecf38545a6ffb5ca8e9",
+   "bytes": 154622
+  },
+  "report-assets/opening-intake-map.png": {
+   "sha256": "e377947a7c7114e6c557a165fec291cccbe5ee8a84cf6ac39844ae31f57b4687",
+   "bytes": 170284
+  },
+  "report-assets/report-metrics.json": {
+   "sha256": "39165de4ab43702a97ac5d013434d47c23629f981da3fa2574a9abfe5bdf9e20",
+   "bytes": 16635
+  },
+  "report-assets/speed-section-front-sealed-arch.png": {
+   "sha256": "69dabf5bdc331beb734c4f9ae7766c954a450703cab05cc401af5e9732cb72e3",
+   "bytes": 408461
+  },
+  "report-assets/speed-section-front.png": {
+   "sha256": "77f6caa5dfce249edc404d0e744808328631cfe414b41cff94d4817c3f9777a5",
+   "bytes": 353594
+  },
+  "report-assets/speed-section-side-sealed-arch.png": {
+   "sha256": "e7c443f874538e3c3fce16b92bd6171b6414351d1dcd22c78b30061464b5dd02",
+   "bytes": 272148
+  },
+  "report-assets/speed-section-side.png": {
+   "sha256": "82a73d616b16a72ebacda24f8a18b248c22c51f7ed38f7e8d353127a81dcbf29",
+   "bytes": 260532
+  },
+  "report-assets/speed-sections-3d-sealed-arch.png": {
+   "sha256": "d7ee0cb08fa7607a9bf2e19705f19edf28f29272521ec1b383b10acc0f363c27",
+   "bytes": 363551
+  },
+  "report-assets/speed-sections-3d.png": {
+   "sha256": "9b8cb71befc1eb5271f9d1ba1b2c987d4e58b07723741a9e74b7620d40e9b7bf",
+   "bytes": 311002
+  },
+  "report-assets/stairio-fluent-airflow-open-arch.mp4": {
+   "sha256": "b1695d793acb5e79678cb18e74f723e9466fcbd6301f6a4f9626bc013e4753bc",
+   "bytes": 8298932
+  },
+  "report-assets/thermal-casing-maps.png": {
+   "sha256": "a02e1feaee7de435c7ba25c104bab31b0b10f0f8210851a1b3efb1f6e7694a6b",
+   "bytes": 305053
+  },
+  "report-assets/thermal-scenario-A-housing.png": {
+   "sha256": "cb59604cc2545499f82fcf36ce2f601ee4eadf3fa477a1bab79845c074055473",
+   "bytes": 256857
+  },
+  "report-assets/video-poster-open-arch.png": {
+   "sha256": "8317cc7e36185a1a38cfa0bc0f55dafb4caa28dd6c71b3adb227d9f6d9a37647",
+   "bytes": 668360
+  },
+  "report-assets/video-poster.png": {
+   "sha256": "6790a6886882da37e55f1be105a47415dff1965693358c654331c48e8dcf4ad5",
+   "bytes": 702912
+  },
+  "report-assets/video-verification-fluent-open-arch.json": {
+   "sha256": "8d9bd0f5baaf2b7e93297a0ee4b9e7f01ed0b4576263e65204865ab20f137f53",
+   "bytes": 10431
+  },
+  "report-assets/video-verification-fluent.json": {
+   "sha256": "19f9c792837d46999c359b7a2697e258f789eaf92ccc906f7bb3e17ee7d99b9c",
+   "bytes": 10592
+  },
+  "stairio-fluent-airflow.mp4": {
+   "sha256": "c384f4c732c403d496d0ace8e8ed74171f5f6b85aa6a36d269b16dcb377b2f1e",
+   "bytes": 9078476
+  }
+ },
+ "total_bytes": 27705021
+}

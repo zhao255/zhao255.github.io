@@ -1,0 +1,191 @@
+{
+  "purpose": "validate single precision + SIMPLEC with the crevice block deactivated (walls) against the accepted solution",
+  "volume_reports_without_crevice": {
+    "prepoly-volume": [
+      "air-fluid-tet-cells",
+      "fan-actuator"
+    ],
+    "split-parent-volume": [
+      "air-fluid-tet-cells"
+    ],
+    "split-total-volume": [
+      "air-fluid-tet-cells",
+      "fan-actuator"
+    ],
+    "stairio-air-mean-speed": [
+      "fan-actuator",
+      "air-fluid-tet-cells"
+    ],
+    "stairio-air-max-speed": [
+      "fan-actuator",
+      "air-fluid-tet-cells"
+    ],
+    "split-block-volume": null
+  },
+  "deactivate": {
+    "command": "deactivate_cell_zone",
+    "argument": "cell_deactivate_list"
+  },
+  "new_walls": [
+    "interior-891915:028-shadow",
+    "interior-891915:029-shadow"
+  ],
+  "fluid_zones_after": [
+    "fan-actuator",
+    "air-fluid-tet-cells"
+  ],
+  "volume_removed_mm3": 1.862645149230957,
+  "solver": {
+    "methods_before": {
+      "p_v_coupling": {
+        "flow_scheme": "Coupled",
+        "flux_type": "Rhie-Chow: momentum based",
+        "flux_auto_select": true
+      },
+      "spatial_discretization": {
+        "gradient_scheme": "least-square-cell-based",
+        "discretization_scheme": {
+          "mom": "second-order-upwind",
+          "pressure": "presto!"
+        }
+      },
+      "pseudo_time_method": {
+        "formulation": {
+          "coupled_solver": "global-time-step"
+        }
+      },
+      "expert": {
+        "implicit_bodyforce_treatment": false,
+        "velocity_formulation": "absolute",
+        "physical_velocity_formulation": false,
+        "disable_rhie_chow_flux": false,
+        "presto_pressure_scheme": false,
+        "first_to_second_order_blending": 1
+      },
+      "high_order_term_relaxation": {
+        "enable": true,
+        "relaxation_factor": 0.25,
+        "select_variables": "flow-variables",
+        "type": "standard"
+      },
+      "warped_face_gradient_correction": {
+        "enable": true,
+        "mode": "fast"
+      }
+    },
+    "methods_after": {
+      "p_v_coupling": {
+        "flow_scheme": "SIMPLEC",
+        "skewness_correction_itr_count": 1,
+        "flux_type": "Rhie-Chow: momentum based",
+        "flux_auto_select": true
+      },
+      "spatial_discretization": {
+        "gradient_scheme": "least-square-cell-based",
+        "discretization_scheme": {
+          "mom": "second-order-upwind",
+          "pressure": "presto!"
+        }
+      },
+      "pseudo_time_method": {
+        "formulation": {
+          "segregated_solver": "off"
+        }
+      },
+      "expert": {
+        "implicit_bodyforce_treatment": false,
+        "velocity_formulation": "absolute",
+        "physical_velocity_formulation": false,
+        "disable_rhie_chow_flux": false,
+        "presto_pressure_scheme": false,
+        "first_to_second_order_blending": 1
+      },
+      "high_order_term_relaxation": {
+        "enable": true,
+        "relaxation_factor": 0.25,
+        "select_variables": "flow-variables",
+        "type": "standard"
+      },
+      "warped_face_gradient_correction": {
+        "enable": true,
+        "mode": "fast"
+      }
+    },
+    "under_relaxation": {
+      "body-force": 1,
+      "density": 1,
+      "mom": 0.7,
+      "pressure": 0.3
+    },
+    "discretization_unchanged": true
+  },
+  "report_file": {
+    "name": "stairio-monitor-file",
+    "file_name": "[local archive]/Github\\\\stairio\\\\apps\\\\stairio simulator\\\\evidence\\\\2026-10-10-fluent-airflow\\\\solve\\\\claude-run\\\\lowram-check2\\\\reports_341.out",
+    "frequency_of": "iteration",
+    "frequency": 5,
+    "itr_index": "341",
+    "run_index": "0",
+    "report_defs": [
+      "stairio-fan-bottom-area",
+      "stairio-fan-bottom-forward",
+      "stairio-fan-bottom-net",
+      "stairio-fan-bottom-pressure",
+      "stairio-fan-bottom-reverse",
+      "stairio-fan-mid-area",
+      "stairio-fan-mid-forward",
+      "stairio-fan-mid-net",
+      "stairio-fan-mid-pressure",
+      "stairio-fan-mid-reverse",
+      "stairio-fan-top-area",
+      "stairio-fan-top-forward",
+      "stairio-fan-top-net",
+      "stairio-fan-top-pressure",
+      "stairio-fan-top-reverse",
+      "stairio-outer-mass-imbalance",
+      "stairio-actuator-mean-w",
+      "stairio-air-max-speed",
+      "stairio-air-mean-speed",
+      "stairio-outer-zone3-20-mflow",
+      "stairio-outer-zone3-23-mflow",
+      "stairio-outer-zone3-26-mflow",
+      "stairio-outer-zone3-29-mflow",
+      "stairio-outer-zone3-32-mflow",
+      "stairio-outer-zone3-35-mflow"
+    ],
+    "print": false,
+    "active": true,
+    "write_instantaneous_values": false
+  },
+  "start": {
+    "q_mid_cfm": 0.9998967271360453,
+    "dp_pa": 4.267079070210457,
+    "vmax": 2.937217235565186
+  },
+  "chunk": {
+    "status": "completed",
+    "iterations_run": 200,
+    "elapsed_s": 977.1
+  },
+  "s_per_iteration": 4.89,
+  "end": {
+    "q_mid_cfm": 1.0042132071721204,
+    "q_bottom_cfm": 0.9916488807536097,
+    "q_top_cfm": 0.9838019966146536,
+    "dp_pa": 4.266381546854973,
+    "vmax": 2.935989856719971,
+    "outer_imbalance_frac": 0.0005277677571627399,
+    "residuals": {
+      "res_continuity": 0.04128,
+      "res_x": 0.000045797,
+      "res_y": 0.000043706,
+      "res_z": 0.000071793
+    }
+  },
+  "accepted": {
+    "q_mid_cfm": 0.9999104706265299,
+    "dp_reported_pa": 4.242935632888776,
+    "vmax": 2.937350251237338
+  },
+  "saved": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-fluent-airflow\\solve\\claude-run\\lowram-check2\\stairio-airflow-1cfm-lowram-check2.cas.h5"
+}

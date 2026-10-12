@@ -1,0 +1,197 @@
+{
+ "method": "Unit-load thermal response of the side-shell-fitted casing (Phase A) from the saved Fluent fields - no Fluent session.",
+ "T_amb_c": 25.0,
+ "pla_flag_c": 50.0,
+ "casing_definition": "wall faces (not sources) within 4.0 mm of the casing envelope in their 1 mm band, plus the cap top",
+ "casing_faces": 633293,
+ "casing_area_m2": 0.0753130473979233,
+ "response": {
+  "motor": {
+   "q_at_10K_w": 0.617188572883606,
+   "source_rise_k_per_w": 16.202503480060177,
+   "exhaust_rise_k_per_w": 1.8462586576578162,
+   "other_sources_mean_rise_k_per_w": {
+    "pcb-front": 0.5681685908797784,
+    "pcb-middle": 0.7493666385465939,
+    "pcb-back": 2.160649191734406,
+    "cameras": 0.015319498182480754
+   },
+   "other_sources_max_rise_k_per_w": {
+    "pcb-front": 4.26348151265718,
+    "pcb-middle": 9.08462621729679,
+    "pcb-back": 14.9573909293031,
+    "cameras": 0.09537166965439496
+   },
+   "casing_max_rise_k_per_w": 11.764754074137922,
+   "casing_max_at_mm": [
+    -2.6,
+    57.4,
+    37.0
+   ],
+   "casing_p99_rise_k_per_w": 8.991519179781674,
+   "casing_mean_rise_k_per_w": 0.640815861473202,
+   "watts_to_pla_flag_alone": 2.1249912953944943,
+   "shell_max_rise_k_per_w": 7.60287444182388,
+   "shell_max_at_mm": [
+    -25.5,
+    45.7,
+    51.2
+   ],
+   "watts_to_pla_flag_shell": 3.2882300229073183,
+   "watts_to_pla_flag_at_source_contact": 1.542971432209015,
+   "status": "converged (333 test)",
+   "iterations": 400,
+   "record": "333-bounds-pmn-test.json"
+  },
+  "pcb-front": {
+   "q_at_10K_w": 0.9037465453147888,
+   "source_rise_k_per_w": 11.065049213014525,
+   "exhaust_rise_k_per_w": 1.092822188326951,
+   "other_sources_mean_rise_k_per_w": {
+    "motor": -0.00036959956822031794,
+    "pcb-middle": 1.3984222848909038,
+    "pcb-back": -0.00011717664284268284,
+    "cameras": 0.02808004430726164
+   },
+   "other_sources_max_rise_k_per_w": {
+    "motor": 0.0001283178314749124,
+    "pcb-middle": 4.279696835932659,
+    "pcb-back": 0.00022962138261945457,
+    "cameras": 0.20668625861519638
+   },
+   "casing_max_rise_k_per_w": 11.064096959633792,
+   "casing_max_at_mm": [
+    -29.8,
+    -23.5,
+    34.4
+   ],
+   "casing_p99_rise_k_per_w": 4.7864171987576585,
+   "casing_mean_rise_k_per_w": 0.15787936206514905,
+   "watts_to_pla_flag_alone": 2.2595608201202415,
+   "shell_max_rise_k_per_w": 11.036306018769805,
+   "shell_max_at_mm": [
+    31.0,
+    -24.2,
+    34.2
+   ],
+   "watts_to_pla_flag_shell": 2.265250705941072,
+   "watts_to_pla_flag_at_source_contact": 2.259366363286972,
+   "status": "converged",
+   "iterations": 300,
+   "record": "unit-iso-pcb-front.json"
+  },
+  "pcb-middle": {
+   "q_at_10K_w": 0.8903599977493286,
+   "source_rise_k_per_w": 11.231412041509296,
+   "exhaust_rise_k_per_w": 1.1159364836580192,
+   "other_sources_mean_rise_k_per_w": {
+    "motor": -0.0003443206580619936,
+    "pcb-front": 3.092905060035627,
+    "pcb-back": 0.5382727033733369,
+    "cameras": 0.02418869277498035
+   },
+   "other_sources_max_rise_k_per_w": {
+    "motor": 9.597153846616847e-05,
+    "pcb-front": 6.916456267009769,
+    "pcb-back": 4.88244233640892,
+    "cameras": 0.18425849869614883
+   },
+   "casing_max_rise_k_per_w": 11.146024792736716,
+   "casing_max_at_mm": [
+    -29.9,
+    -8.5,
+    34.5
+   ],
+   "casing_p99_rise_k_per_w": 4.927651786124346,
+   "casing_mean_rise_k_per_w": 0.18264913433974822,
+   "watts_to_pla_flag_alone": 2.2429521255229217,
+   "shell_max_rise_k_per_w": 10.52406067254254,
+   "shell_max_at_mm": [
+    -31.0,
+    -8.6,
+    34.3
+   ],
+   "watts_to_pla_flag_shell": 2.375508919786584,
+   "watts_to_pla_flag_at_source_contact": 2.2258999943733215,
+   "status": "converged",
+   "iterations": 200,
+   "record": "unit-iso-pcb-middle.json"
+  },
+  "pcb-back": {
+   "q_at_10K_w": 0.6816676259040833,
+   "source_rise_k_per_w": 14.669906006959305,
+   "exhaust_rise_k_per_w": 1.1836386442162454,
+   "other_sources_mean_rise_k_per_w": {
+    "motor": 1.087532325447695,
+    "pcb-front": 2.066154315514834,
+    "pcb-middle": 2.885374019756525,
+    "cameras": 0.05119364453866348
+   },
+   "other_sources_max_rise_k_per_w": {
+    "motor": 13.25362972976403,
+    "pcb-front": 5.393491584171219,
+    "pcb-middle": 9.112139053214372,
+    "cameras": 0.38021416545384196
+   },
+   "casing_max_rise_k_per_w": 14.646169483018635,
+   "casing_max_at_mm": [
+    -29.8,
+    5.8,
+    34.0
+   ],
+   "casing_p99_rise_k_per_w": 9.103856788165277,
+   "casing_mean_rise_k_per_w": 0.3971043775527033,
+   "watts_to_pla_flag_alone": 1.7069309507162276,
+   "shell_max_rise_k_per_w": 14.359603112319947,
+   "shell_max_at_mm": [
+    31.0,
+    6.2,
+    34.1
+   ],
+   "watts_to_pla_flag_shell": 1.740995193561515,
+   "watts_to_pla_flag_at_source_contact": 1.7041690647602081,
+   "status": "converged",
+   "iterations": 200,
+   "record": "unit-iso-pcb-back.json"
+  },
+  "cameras": {
+   "q_at_10K_w": 0.2274066209793091,
+   "source_rise_k_per_w": 43.9740934407968,
+   "exhaust_rise_k_per_w": 1.0912735993710454,
+   "other_sources_mean_rise_k_per_w": {
+    "motor": -0.0013522332919291514,
+    "pcb-front": 1.2577928563030683,
+    "pcb-middle": 0.022293325797136682,
+    "pcb-back": 0.003542985975988999
+   },
+   "other_sources_max_rise_k_per_w": {
+    "motor": 0.0006441517594866573,
+    "pcb-front": 7.9737667518512225,
+    "pcb-middle": 0.3050058580696891,
+    "pcb-back": 0.017016342310564567
+   },
+   "casing_max_rise_k_per_w": 39.04442686586734,
+   "casing_max_at_mm": [
+    34.2,
+    -37.8,
+    94.8
+   ],
+   "casing_p99_rise_k_per_w": 30.614224913177477,
+   "casing_mean_rise_k_per_w": 0.6715029195158091,
+   "watts_to_pla_flag_alone": 0.6402962472950273,
+   "shell_max_rise_k_per_w": 39.04442686586734,
+   "shell_max_at_mm": [
+    34.2,
+    -37.8,
+    94.8
+   ],
+   "watts_to_pla_flag_shell": 0.6402962472950273,
+   "watts_to_pla_flag_at_source_contact": 0.5685165524482727,
+   "status": "converged",
+   "iterations": 200,
+   "record": "unit-iso-cameras.json"
+  }
+ },
+ "shell_definition": "wall faces (not sources) within 2.0 mm of the casing envelope, plus the cap top",
+ "shell_faces": 276530
+}

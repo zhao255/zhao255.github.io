@@ -1,0 +1,177 @@
+{
+  "schema": "stairio.website-evidence-export/1",
+  "pack": "2026-10-11-casing-airflow-thermal",
+  "exported_utc": "2026-10-11T17:27:49.052Z",
+  "source_manifest_sha256": "155b393e9905bd8b8132eae13b1c4818eb0b78be3f649d645ca92529222d7c60",
+  "source_files_verified": 85,
+  "source_total_bytes": 27705021,
+  "source_pack_unmodified": true,
+  "source_summary_copied_verbatim_to": "src/data/stairio-thermal-research.json",
+  "adaptations": [
+    "Links to native archives and simulator index files outside this compact pack are rendered as plain text with a local-archive note.",
+    "Absolute workstation path prefixes in textual records are replaced with [local archive]/; numerical results are unchanged.",
+    "The earlier thermal video poster uses its bundled native endpoint because video-poster.png was not present in the compact source.",
+    "README export notes identify the hosted scope and distinguish source hashes from exported hashes.",
+    "The first-run arch-open video and its poster are intentionally omitted from the website; numerical records and comparison figures are retained."
+  ],
+  "changed_files": [
+    "earlier/airflow-sensitivity/airflow-scenario-results.json",
+    "earlier/airflow-sensitivity/airflow-sensitivity-report.html",
+    "earlier/airflow-sensitivity/fan-layout-audit.json",
+    "earlier/airflow-sensitivity/ventilation-basis-verification.json",
+    "earlier/ansys-thermal-video/ansys-thermal-video.html",
+    "earlier/ansys-thermal-video/layout-preview-verification.json",
+    "earlier/ansys-thermal-video/native-frames-manifest.json",
+    "earlier/ansys-thermal-video/render_native_transient.py",
+    "earlier/ansys-thermal-video/robot-context-audit.json",
+    "earlier/ansys-thermal-video/transient-model-method.json",
+    "earlier/ansys-thermal-video/video-verification.json",
+    "earlier/thermal-screening/shell-screen-results.json",
+    "earlier/thermal-screening/shell-screen-verification.json",
+    "earlier/thermal-screening/thermal-screening-report.html",
+    "fluent-airflow-report.html",
+    "fluent-thermal-report.html",
+    "README.md",
+    "records/airflow/lowram-validation2.json",
+    "report-assets/video-verification-fluent-open-arch.json",
+    "report-assets/video-verification-fluent.json"
+  ],
+  "intentionally_omitted_source_files": [
+    "report-assets/stairio-fluent-airflow-open-arch.mp4",
+    "report-assets/video-poster-open-arch.png"
+  ],
+  "workstation_path_replacements_by_file": {
+    "earlier/airflow-sensitivity/airflow-scenario-results.json": 1,
+    "earlier/airflow-sensitivity/fan-layout-audit.json": 7,
+    "earlier/airflow-sensitivity/ventilation-basis-verification.json": 1,
+    "earlier/ansys-thermal-video/layout-preview-verification.json": 1,
+    "earlier/ansys-thermal-video/native-frames-manifest.json": 245,
+    "earlier/ansys-thermal-video/render_native_transient.py": 1,
+    "earlier/ansys-thermal-video/robot-context-audit.json": 1,
+    "earlier/ansys-thermal-video/transient-model-method.json": 2,
+    "earlier/ansys-thermal-video/video-verification.json": 1,
+    "earlier/thermal-screening/shell-screen-results.json": 4,
+    "earlier/thermal-screening/shell-screen-verification.json": 9,
+    "records/airflow/lowram-validation2.json": 2,
+    "report-assets/video-verification-fluent-open-arch.json": 17,
+    "report-assets/video-verification-fluent.json": 12
+  },
+  "omitted_archive_links": [
+    {
+      "report": "earlier/airflow-sensitivity/airflow-sensitivity-report.html",
+      "target": "../../../2026-10-10-airflow-study/representative-10W-1CFM.mechdb"
+    },
+    {
+      "report": "earlier/ansys-thermal-video/ansys-thermal-video.html",
+      "target": "../../../2026-10-10-ansys-video/stairio_transient.inp"
+    },
+    {
+      "report": "earlier/ansys-thermal-video/ansys-thermal-video.html",
+      "target": "../../../2026-10-10-ansys-video/stairio_transient.rth"
+    },
+    {
+      "report": "earlier/ansys-thermal-video/ansys-thermal-video.html",
+      "target": "../../../2026-10-10-ansys-video/stairio_transient.out"
+    },
+    {
+      "report": "earlier/thermal-screening/thermal-screening-report.html",
+      "target": "../../../2026-10-10-thermal-study/mesh2mm_h10.mechdb"
+    },
+    {
+      "report": "earlier/thermal-screening/thermal-screening-report.html",
+      "target": "../../../2026-10-10-thermal-study/housing-v7.step"
+    },
+    {
+      "report": "earlier/thermal-screening/thermal-screening-report.html",
+      "target": "../../../2026-10-10-thermal-study/STAIRIO.step"
+    },
+    {
+      "report": "fluent-airflow-report.html",
+      "target": "report-assets/stairio-fluent-airflow-open-arch.mp4"
+    },
+    {
+      "report": "fluent-airflow-report.html",
+      "target": "report-assets/stairio-fluent-airflow-open-arch.mp4"
+    },
+    {
+      "report": "fluent-airflow-report.html",
+      "target": "../2026-10-10-fluent-airflow/solve/claude-run/sealed-arch/sealed-arch-1cfm-final.cas.h5"
+    },
+    {
+      "report": "fluent-airflow-report.html",
+      "target": "../2026-10-10-fluent-airflow/solve/claude-run/sealed-arch/sealed-arch-1cfm-final.dat.h5"
+    },
+    {
+      "report": "fluent-airflow-report.html",
+      "target": "../2026-10-10-fluent-airflow/solve/claude-run/stairio-airflow-1cfm-final.cas.h5"
+    },
+    {
+      "report": "fluent-airflow-report.html",
+      "target": "../2026-10-10-fluent-airflow/README.md"
+    },
+    {
+      "report": "fluent-airflow-report.html",
+      "target": "../2026-10-10-fluent-airflow/CLAUDE-HANDOFF.md"
+    },
+    {
+      "report": "fluent-thermal-report.html",
+      "target": "../2026-10-10-fluent-airflow/solve/claude-run/thermal/phaseB-B1-buoyant.cas.h5"
+    },
+    {
+      "report": "fluent-thermal-report.html",
+      "target": "../2026-10-10-fluent-airflow/solve/claude-run/thermal/phaseB-B1-buoyant.dat.h5"
+    },
+    {
+      "report": "fluent-thermal-report.html",
+      "target": "../2026-10-10-fluent-airflow/CLAUDE-HANDOFF.md"
+    },
+    {
+      "report": "README.md",
+      "target": "../../README.md"
+    },
+    {
+      "report": "README.md",
+      "target": "../README.md"
+    },
+    {
+      "report": "README.md",
+      "target": "../../VALIDATION-AND-LIMITS.md"
+    },
+    {
+      "report": "README.md",
+      "target": "report-assets/stairio-fluent-airflow-open-arch.mp4"
+    },
+    {
+      "report": "README.md",
+      "target": "../2026-10-10-fluent-airflow/README.md"
+    },
+    {
+      "report": "README.md",
+      "target": "../2026-10-10-fluent-airflow/CLAUDE-HANDOFF.md"
+    }
+  ],
+  "validation": {
+    "html_internal_resources_resolved": 70,
+    "embedded_resources": 4,
+    "missing_html_resources": 0,
+    "absolute_workstation_paths_in_text": 0,
+    "suspected_credentials_in_text": 0,
+    "external_references": [
+      "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_cmd/Hlp_C_KUSE.html",
+      "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_cmd/Hlp_C_TINTP.html",
+      "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_elem/Hlp_E_LINK33.html",
+      "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_elem/Hlp_E_SURF152.html",
+      "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_thry/thy_el152.html",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10707973/",
+      "https://prusament.com/wp-content/uploads/2022/10/PLA_Prusament_TDS_2021_10_EN.pdf",
+      "https://rm-static.djicdn.com/tem/17348/RoboMaster%20C610%20Brushless%20DC%20Motor%20Speed%20Controller%20User%20Guide.pdf",
+      "https://www.max-flow.com/products/datasheet/mfd4007.html",
+      "https://www.mdpi.com/1996-1944/18/17/3950",
+      "https://www.natureworksllc.com/~/media/files/natureworks/technical-documents/technical-data-sheets/technicaldatasheet_4043d_3d-monofilament_pdf.pdf?la=en",
+      "https://www.orientalmotor.com/products/pdfs/CoolingFans/SectionCIntro_C2-C27.pdf",
+      "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#typical-power-requirements",
+      "https://www.robomaster.com/en-US/products/components/general/M2006"
+    ],
+    "external_note": "Existing research references retained. Remote availability was not revalidated during this export."
+  }
+}

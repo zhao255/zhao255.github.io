@@ -1,0 +1,559 @@
+{
+  "schema": "stairio-fan-layout-audit/v1",
+  "source_paths": [
+    "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\housing-v7-geometry.json",
+    "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\STAIRIO-geometry.json",
+    "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mechanical-geometry.json",
+    "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\casing-mesh.png",
+    "[local archive]/Dropbox\\Stairio Software\\20_Work\\20260903_v7_mechanical_workbench\\analysis\\output\\v7_assembly_readonly_report.json"
+  ],
+  "current_model_recommendation": "Proceed with explicitly assumed net-air-exchange energy balance coupled to existing shell FE. Do not claim local air velocities,component junction temperatures,fan operating point,or validated CFD flow field.",
+  "fan": {
+    "full_origin_mm": [
+      0,
+      32.5,
+      -92
+    ],
+    "housing_rotor_axis": "parallel Z",
+    "cautions": [
+      "Origin derives from recorded part transform, not bounding-box centre; extra cable geometry shifts envelope centre by 1 mm in Y.",
+      "Flow direction, fan curve, voltage, rotating speed and net enclosure exchange are unconfirmed.",
+      "A 40x40 mm footprint is not the free-flow area; blade/hub blockage is unquantified here.",
+      "Net enclosure exchange scenarios should not be labelled measured fan output."
+    ],
+    "historical_component": "housing-v7-2/fan-4007-1",
+    "full_body": "Solid17",
+    "housing_bounds_mm": [
+      [
+        -20,
+        -48.5,
+        109
+      ],
+      [
+        20,
+        -6.5,
+        116
+      ]
+    ],
+    "full_bounds_mm": [
+      [
+        -20,
+        10.5,
+        -95.5
+      ],
+      [
+        20,
+        52.5,
+        -88.5
+      ]
+    ],
+    "housing_body": "Solid5",
+    "housing_origin_mm": [
+      0,
+      -28.5,
+      112.5
+    ],
+    "historical_part_envelope_mm": [
+      40,
+      7,
+      42
+    ],
+    "user_confirmed": "fan-4007 installed and continuously running"
+  },
+  "body_mapping": [
+    {
+      "housing_bounds_mm": [
+        [
+          -35.99999999999997,
+          -61.50037492276341,
+          -6.516439504337202e-15
+        ],
+        [
+          35.99999999999997,
+          61.500000000000014,
+          120
+        ]
+      ],
+      "inferred_component": "primary shell",
+      "volume_cm3": 68.83047591603355,
+      "expected_full_bounds_mm": [
+        [
+          -35.99999999999997,
+          -57.500000000000014,
+          -99.5
+        ],
+        [
+          35.99999999999997,
+          65.50037492276341,
+          20.500000000000007
+        ]
+      ],
+      "housing_body": "Solid1",
+      "full_matches": []
+    },
+    {
+      "housing_bounds_mm": [
+        [
+          -30.25,
+          -58.750003222875215,
+          111.99999999999999
+        ],
+        [
+          30.25000000000006,
+          58.750000000000014,
+          121.14999999999998
+        ]
+      ],
+      "inferred_component": "top cap",
+      "volume_cm3": 12.85198654438497,
+      "expected_full_bounds_mm": [
+        [
+          -30.25,
+          -54.750000000000014,
+          -100.64999999999998
+        ],
+        [
+          30.25000000000006,
+          62.750003222875215,
+          -91.49999999999999
+        ]
+      ],
+      "housing_body": "Solid2",
+      "full_matches": [
+        {
+          "relative_volume_difference": 1.4210854715202004e-14,
+          "max_bound_difference_mm": 4.973799150320701e-14,
+          "body": "Solid19"
+        }
+      ]
+    },
+    {
+      "housing_bounds_mm": [
+        [
+          -30.000000000000007,
+          -29.09999999999997,
+          34.000000000000036
+        ],
+        [
+          30.00000000000001,
+          -23.499999999999957,
+          108.00000000000007
+        ]
+      ],
+      "inferred_component": "generic PCB-3",
+      "volume_cm3": 7.607279385223378,
+      "expected_full_bounds_mm": [
+        [
+          -30.000000000000007,
+          27.499999999999957,
+          -87.50000000000007
+        ],
+        [
+          30.00000000000001,
+          33.099999999999966,
+          -13.500000000000036
+        ]
+      ],
+      "housing_body": "Solid3",
+      "full_matches": [
+        {
+          "relative_volume_difference": 1.4432899320127035e-15,
+          "max_bound_difference_mm": 3.907985046680551e-14,
+          "body": "Solid18"
+        }
+      ]
+    },
+    {
+      "housing_bounds_mm": [
+        [
+          -30.69999999999997,
+          -59.19999999999999,
+          106
+        ],
+        [
+          30.70000000000003,
+          59.20000000000002,
+          115.99999999999999
+        ]
+      ],
+      "inferred_component": "PCB fixture",
+      "volume_cm3": 17.863839704090747,
+      "expected_full_bounds_mm": [
+        [
+          -30.69999999999997,
+          -55.20000000000002,
+          -95.49999999999999
+        ],
+        [
+          30.70000000000003,
+          63.19999999999999,
+          -85.5
+        ]
+      ],
+      "housing_body": "Solid4",
+      "full_matches": [
+        {
+          "relative_volume_difference": 3.3306690738754696e-16,
+          "max_bound_difference_mm": 3.552713678800501e-14,
+          "body": "Solid16"
+        }
+      ]
+    },
+    {
+      "housing_bounds_mm": [
+        [
+          -19.999999999999964,
+          -48.5,
+          109
+        ],
+        [
+          20.00000000000004,
+          -6.499999999999999,
+          116
+        ]
+      ],
+      "inferred_component": "fan-4007",
+      "volume_cm3": 5.168128623966245,
+      "expected_full_bounds_mm": [
+        [
+          -19.999999999999964,
+          10.5,
+          -95.5
+        ],
+        [
+          20.00000000000004,
+          52.5,
+          -88.5
+        ]
+      ],
+      "housing_body": "Solid5",
+      "full_matches": [
+        {
+          "relative_volume_difference": 4.440892098500626e-16,
+          "max_bound_difference_mm": 3.907985046680551e-14,
+          "body": "Solid17"
+        }
+      ]
+    },
+    {
+      "housing_bounds_mm": [
+        [
+          -40.49999999999998,
+          -44.500000000000014,
+          77.49999999999999
+        ],
+        [
+          -32.49999999999998,
+          -29.50000000000001,
+          92.5
+        ]
+      ],
+      "inferred_component": "camera-mount cylindrical body negative X",
+      "volume_cm3": 1.1971406632002664,
+      "expected_full_bounds_mm": [
+        [
+          -40.49999999999998,
+          33.500000000000014,
+          -72
+        ],
+        [
+          -32.49999999999998,
+          48.500000000000014,
+          -56.999999999999986
+        ]
+      ],
+      "housing_body": "Solid6",
+      "full_matches": [
+        {
+          "relative_volume_difference": 4.440892098500626e-16,
+          "max_bound_difference_mm": 3.552713678800501e-14,
+          "body": "Solid14"
+        }
+      ]
+    },
+    {
+      "housing_bounds_mm": [
+        [
+          -38.49999999999998,
+          -51.500000000000014,
+          70.5
+        ],
+        [
+          -33.49999999999998,
+          -22.500000000000014,
+          99.49999999999999
+        ]
+      ],
+      "inferred_component": "camera-mount frame negative X",
+      "volume_cm3": 0.8729700586162636,
+      "expected_full_bounds_mm": [
+        [
+          -38.49999999999998,
+          26.500000000000014,
+          -78.99999999999999
+        ],
+        [
+          -33.49999999999998,
+          55.500000000000014,
+          -50
+        ]
+      ],
+      "housing_body": "Solid7",
+      "full_matches": [
+        {
+          "relative_volume_difference": 2.1094237467877974e-15,
+          "max_bound_difference_mm": 3.552713678800501e-14,
+          "body": "Solid15"
+        }
+      ]
+    },
+    {
+      "housing_bounds_mm": [
+        [
+          -30.000000000000007,
+          -14.09999999999997,
+          34.00000000000002
+        ],
+        [
+          30.00000000000001,
+          -8.49999999999996,
+          108.00000000000004
+        ]
+      ],
+      "inferred_component": "generic PCB-2",
+      "volume_cm3": 7.607279385223374,
+      "expected_full_bounds_mm": [
+        [
+          -30.000000000000007,
+          12.49999999999996,
+          -87.50000000000004
+        ],
+        [
+          30.00000000000001,
+          18.09999999999997,
+          -13.500000000000021
+        ]
+      ],
+      "housing_body": "Solid8",
+      "full_matches": [
+        {
+          "relative_volume_difference": 4.440892098500626e-16,
+          "max_bound_difference_mm": 4.085620730620576e-14,
+          "body": "Solid20"
+        }
+      ]
+    },
+    {
+      "housing_bounds_mm": [
+        [
+          32.49999999999998,
+          -44.500000000000014,
+          77.49999999999999
+        ],
+        [
+          40.49999999999998,
+          -29.50000000000001,
+          92.5
+        ]
+      ],
+      "inferred_component": "camera-mount cylindrical body positive X",
+      "volume_cm3": 1.1971406632002664,
+      "expected_full_bounds_mm": [
+        [
+          32.49999999999998,
+          33.500000000000014,
+          -72
+        ],
+        [
+          40.49999999999998,
+          48.500000000000014,
+          -56.999999999999986
+        ]
+      ],
+      "housing_body": "Solid9",
+      "full_matches": [
+        {
+          "relative_volume_difference": 4.440892098500626e-16,
+          "max_bound_difference_mm": 4.973799150320701e-14,
+          "body": "Solid21"
+        }
+      ]
+    },
+    {
+      "housing_bounds_mm": [
+        [
+          33.49999999999998,
+          -51.500000000000014,
+          70.5
+        ],
+        [
+          38.49999999999998,
+          -22.500000000000014,
+          99.49999999999999
+        ]
+      ],
+      "inferred_component": "camera-mount frame positive X",
+      "volume_cm3": 0.8729700586162636,
+      "expected_full_bounds_mm": [
+        [
+          33.49999999999998,
+          26.500000000000014,
+          -78.99999999999999
+        ],
+        [
+          38.49999999999998,
+          55.500000000000014,
+          -50
+        ]
+      ],
+      "housing_body": "Solid10",
+      "full_matches": [
+        {
+          "relative_volume_difference": 2.3314683517128287e-15,
+          "max_bound_difference_mm": 4.973799150320701e-14,
+          "body": "Solid22"
+        }
+      ]
+    },
+    {
+      "housing_bounds_mm": [
+        [
+          -30.000000000000007,
+          0.9000000000000283,
+          34.00000000000002
+        ],
+        [
+          30.00000000000001,
+          6.500000000000041,
+          108.00000000000004
+        ]
+      ],
+      "inferred_component": "generic PCB-1",
+      "volume_cm3": 7.607279385223376,
+      "expected_full_bounds_mm": [
+        [
+          -30.000000000000007,
+          -2.500000000000041,
+          -87.50000000000004
+        ],
+        [
+          30.00000000000001,
+          3.0999999999999717,
+          -13.500000000000021
+        ]
+      ],
+      "housing_body": "Solid11",
+      "full_matches": [
+        {
+          "relative_volume_difference": 2.220446049250313e-16,
+          "max_bound_difference_mm": 4.085620730620576e-14,
+          "body": "Solid13"
+        }
+      ]
+    }
+  ],
+  "vents": {
+    "evidence_level": "Candidate paths inferred from face inventory plus existing mesh image; no extracted fluid domain or validated open area.",
+    "top_cap": {
+      "bounds_mm": [
+        [
+          -30.25,
+          -58.750003,
+          112
+        ],
+        [
+          30.25,
+          58.75,
+          121.15
+        ]
+      ],
+      "description": "Vented cap overlaps fan region; long cylindrical slot-related surfaces repeat near X=+/-4,+/-8,+/-12,+/-16,+/-20,+/-24,+/-28 mm. Need fluid-connectivity and fan-to-cap clearance checks.",
+      "housing_body": "Solid2",
+      "example_face_ids": [
+        5428,
+        5429,
+        5473,
+        5456,
+        5751,
+        5752,
+        5755,
+        5757
+      ],
+      "full_body": "Solid19"
+    },
+    "side_features": {
+      "example_face_ids": [
+        2946,
+        2954,
+        2962,
+        2970,
+        2978,
+        2986,
+        2994,
+        3430,
+        3431,
+        3432,
+        3433,
+        3434,
+        3435,
+        3436
+      ],
+      "row_centres_z_mm": [
+        45,
+        51,
+        57,
+        63,
+        69,
+        75,
+        81
+      ],
+      "description": "Mirrored rows around X=+/-31 to +/-33 mm; exterior curved portions span Y=-9 to 28.5 mm, with small slot faces continuing into positive-Y curved end. Several surfaces are shallow exterior grooves; do not treat the whole visible groove length as open flow area."
+    },
+    "camera_and_mount_openings": "Camera mounts occupy lateral shell cutouts near Y=-37 mm,Z=85 mm. Leakage cannot be inferred from empty shell openings; include installed mounts and camera blockage."
+  },
+  "read_only_audit": true,
+  "missing_shell_audit": {
+    "repair_for_future_CFD": "Use standalone housing-v7 main shell. Apply transform above if combining with full assembly, and verify no duplicate/intersecting bodies before extracting fluid volume.",
+    "current_full_inventory_result": "No body matching main-shell volume or transformed bounds among 235 imported bodies. All other ten housing bodies match.",
+    "interpretation": "Current full-assembly import is not a closed housing. The omission cause is unknown; do not claim historical suppression.",
+    "source_identity_limit": "Historical report used [local archive]/.../20260713-Stairio-v7-archive; current import used [local archive]/Downloads/... . Same filename does not prove same bytes or active configuration.",
+    "historical_shell_record": {
+      "name": "housing-v7-2/housing-v7-1",
+      "suppressed": false,
+      "visible": 1
+    }
+  },
+  "generated_on": "2026-10-10",
+  "coordinate_transform": {
+    "validation": "All ten non-shell housing bodies uniquely match full inventory by transformed AABB and volume. Relative volume tolerance 1e-8; AABB tolerance .001 mm.",
+    "from": "housing-v7 standalone Discovery coordinates in mm",
+    "translation_mm": [
+      0,
+      4,
+      20.5
+    ],
+    "rotation_diagonal": [
+      1,
+      -1,
+      -1
+    ],
+    "formula": [
+      "X=x",
+      "Y=4-y",
+      "Z=20.5-z"
+    ],
+    "to": "STAIRIO full-assembly Discovery coordinates in mm"
+  },
+  "future_CFD_prep": [
+    "Assemble standalone shell,cap,PCB fixture,fan housing and explicitly assumed component surrogates; preserve openings.",
+    "Replace rotor blades with pressure-jump disk only once an assumed or measured curve and flow direction are specified; otherwise retain a lumped prescribed-net-exchange model.",
+    "Exclude exterior drivetrain hardware unless it affects openings; simplify screws and tiny fillets without closing vents.",
+    "Create internal air volume,cap openings for inlet/outlet boundaries,and check connected regions and free-flow areas. Add external air volume if fan/vent recirculation matters.",
+    "Resolve slots adequately,verify mass and heat balance,and test mesh and boundary sensitivity."
+  ],
+  "component_identity_limits": [
+    "Three CAD PCB bodies are identical generic 60x74x5.6 mm blocks. They are not proven Pi,C610 or power manager geometries; actual hardware temperatures cannot be assigned to them.",
+    "User-confirmed M2006/C610 differs from historical motor filename 36GY-3536 in archive. Current motor placement needs reconciliation before component CFD.",
+    "cam-mount-v2 bodies are mount geometry; installed camera electronics are not established by these bodies."
+  ]
+}

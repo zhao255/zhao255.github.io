@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-10",
+  "reviewer": "airflow_method_review",
+  "status": "Method proposal; no CFD or solver execution performed by reviewer",
+  "recommended_label": "ANSYS shell conduction coupled to a well-mixed ventilation energy balance",
+  "scope": {
+    "target": "Conditional bulk internal-air and PLA-shell temperatures versus net fresh-air flow and total enclosed heat",
+    "not_predicted": ["Actual fan operating point", "Local air velocity or recirculation", "Individual component temperatures", "Component-to-shell contact hot spots", "Validated normal/heavy operating modes"],
+    "conservatism": "Omitting lid/radiation cooling reduces modeled heat escape, but perfect air mixing can underpredict local hot spots. The combined model is not a guaranteed conservative temperature bound."
+  },
+  "assumptions": {
+    "fan": "Installed fan-4007 operates continuously, per user. Manufacturer, rated voltage, pressure-flow curve and installed fresh-air exchange remain unknown.",
+    "net_fresh_air_cfm": [0, 0.5, 1, 2, 3],
+    "flow_interpretation": "Analyst-selected scenarios, not installed-fan measurements or guaranteed bounds. Net fresh-air exchange excludes internal recirculation. Zero means no net fresh-air exchange, not necessarily a stopped fan.",
+    "heat_w": [5, 10, 20],
+    "heat_interpretation": "Analyst what-if totals dissipated inside enclosure, including fan/controller/converter losses without double counting. Do not label as measured idle/normal/heavy modes. Baseline deposits all heat into the well-mixed air; direct component contact to PLA is omitted.",
+    "inside_film_w_m2_k": [5, 10, 20],
+    "outside_film_w_m2_k": [5, 10],
+    "film_interpretation": "Assigned independent sensitivities, not calculated from fan flow. No universal one-to-one mapping from CFM to film coefficient.",
+    "ambient_c": [25, 35],
+    "provisional_air_density_kg_m3": 1.184,
+    "provisional_air_cp_j_kg_k": 1006,
+    "air_property_interpretation": "Constant approximate room-temperature, sea-level dry-air values; recompute if temperature/pressure departure becomes substantial.",
+    "cfm_to_m3_s": 0.0004719474432,
+    "pla_k_w_m_k": 0.2
+  },
+  "preferred_linear_basis_method": {
+    "step1": "Solve actual shell mesh with zero heat generation, outside air at 25 C, inside well-mixed bulk air at 26 C, assigned inside/outside film coefficients and existing provisional PLA conductivity.",
+    "step2": "Integrate outside convection Qshell. Since the air-to-ambient difference is 1 K, define Gshell=Qshell/(1 K). Independently integrate inside convection and confirm equal and opposite heat.",
+    "step3": "Define Gvent=rho*cp*Qfresh with Qfresh in m3/s. For total heat P, solve DeltaTair=P/(Gshell+Gvent).",
+    "step4": "For every shell node, Tnode=Tambient+(Tnode_basis-25 C)*DeltaTair/(1 K). This is exact for the stated linear boundary model with constant k and h.",
+    "energy_audit": "P=Gvent*DeltaTair+Gshell*DeltaTair. Also independently reintegrate scaled shell convection. Never fix inside air at ambient while claiming it receives all component heat.",
+    "benefit": "Requires few direct ANSYS solves; all airflow/heat/ambient sweeps follow mathematically without confusing numerical sweep points with additional CFD solves."
+  },
+  "simultaneous_apdl_option": {
+    "description": "SURF152 inner-surface elements with one common extra TEMP node represent the unknown well-mixed air. An ambient TEMP node and LINK33 conductance k*A/L=rho*cp*Qfresh represent ventilation sensible heat. Apply F,airnode,HEAT,P. External wall convection uses fixed room ambient.",
+    "surf152_options": {"KEYOPT_5": 1, "KEYOPT_6": 0, "KEYOPT_8": 2, "KEYOPT_9": 0},
+    "notes": ["Use noncoincident LINK33 nodes, SECTYPE/SECDATA area and material KXX in consistent MKS units.", "At Qfresh=0 omit the ventilation link; shell path still grounds air temperature.", "Ensure reciprocal wall/air energy exchange with SURF152 is retained. Verify small test before relying on extra-node formulation.", "This is a thermal network representation; LINK33 does not solve fluid momentum or pressure.", "Avoid duplicate convection on inner faces and heat-flux/convection conflicts on the same SURF152 element."]
+  },
+  "required_validation": [
+    "Verify all active solid elements retain PLA conductivity and dimensions are MKS in exported solver input.",
+    "Check actual interior/exterior face sets, area and spatial position; prior face count or names alone are insufficient.",
+    "For basis solution check temperatures stay between prescribed air temperatures within numerical tolerance.",
+    "Independent inner/exterior heat integrals balance within a stated numerical tolerance.",
+    "Repeat at least representative basis on finer mesh; earlier heat-flux mesh convergence does not automatically prove the new boundary case.",
+    "For sensitivity results verify P=ventilation heat+exterior shell heat, temperatures decrease as fresh-air exchange increases at fixed films, and P=0 yields ambient.",
+    "If inferred temperatures approach PLA softening or assumptions become implausible, label them as breakdown/review scenarios; do not infer physical steady shape or safety."
+  ],
+  "primary_sources": [
+    {"url": "https://www.max-flow.com/products/datasheet/mfd4007.html", "supports": "Comparison manufacturer 40x40x7 mm family lists 5 V and 12 V variants, maximum airflow 3.14 to 5.37 CFM. It does not identify the installed Stairio fan or its actual enclosure flow."},
+    {"url": "https://www.orientalmotor.com/products/pdfs/CoolingFans/SectionCIntro_C2-C27.pdf", "supports": "Fan delivered flow depends on static pressure/system impedance. Maximum catalogue flow corresponds to zero static pressure, so free-air flow must not be used as measured enclosure flow."},
+    {"url": "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_elem/Hlp_E_SURF152.html", "supports": "2025 R2 surface element has optional extra TEMP node for bulk temperature, convection coefficient via SFE, and one-extra-node KEYOPT(5)=1. One surface element face accepts convection or heat flux, not both simultaneously."},
+    {"url": "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_elem/Hlp_E_LINK33.html", "supports": "2025 R2 two-node thermal conduction link uses temperature DOFs, longitudinal KXX and section area, and must have nonzero length. Its energy-equivalent use for ventilation is the analyst's reduced-order model."}
+  ]
+}

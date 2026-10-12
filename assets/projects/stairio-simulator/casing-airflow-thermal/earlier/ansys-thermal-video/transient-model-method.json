@@ -1,0 +1,169 @@
+{
+  "status": "solved_and_numerically_verified",
+  "method": "Native MAPDL SOLID291 shell transient plus SURF152 common bulk-air node and massless LINK33 ventilation",
+  "source_input": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-airflow-study\\basis_m3_hi10_ho5-solver.dat",
+  "source_sha256": "6f20ee5279008c51fb4b5959540ec99df0a559cb4c050b5bc9a6f64413407a17",
+  "shell_nodes": 84293,
+  "shell_elements": 41732,
+  "inner_surface_elements": 8287,
+  "outer_surface_elements": 7062,
+  "air_node": 84294,
+  "ambient_node": 84295,
+  "ventilation_element": 84132,
+  "heat_into_bulk_air_w": 10,
+  "assumed_net_fresh_air_cfm": 1,
+  "ventilation_conductance_w_k": 0.5621384873852928,
+  "ambient_c": 25,
+  "initial_shell_c": 25,
+  "shell_density_kg_m3": 1240,
+  "shell_cp_j_kg_k": 1800,
+  "shell_k_w_m_k": 0.2,
+  "inside_film_w_m2_k": 10,
+  "outside_film_w_m2_k": 5,
+  "air_heat_capacity_j_k": 0,
+  "time_end_s": 1800,
+  "time_step_s": 5,
+  "time_integration": "Backward Euler theta=1",
+  "limitations": [
+    "Time axis describes this shell-only storage model, not measured robot warm-up.",
+    "Components, lid and other housing solids may appear only as unsolved contextual CAD unless separately modeled.",
+    "Zero air capacity is a quasi-steady mixing approximation; temperature can jump immediately after heat is applied.",
+    "Fixed assumed net exchange represents the continuously running fan but does not solve fan velocity, pressure or air streamlines.",
+    "No component thermal masses, contact paths, radiation, or measured per-component heat generation."
+  ],
+  "validation_required": [
+    "Native solve completes with no errors; investigate any warning.",
+    "Coupled steady check matches earlier coarse basis bulk and shell peaks.",
+    "Air node balance 10W = inner-shell heat + ventilation heat each saved step.",
+    "Shell storage rate = inner-shell heat - outer-shell heat; transient temperatures approach steady result.",
+    "Refine time step for warm-up convergence at representative times before quoting numerical time estimates."
+  ],
+  "sources": [
+    "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_thry/thy_el152.html",
+    "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_elem/Hlp_E_SURF152.html",
+    "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_elem/Hlp_E_LINK33.html",
+    "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_cmd/Hlp_C_TINTP.html"
+  ],
+  "verification_file": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-transient-verification.json",
+  "assumptions_not_measurements": [
+    "PLA density and heat capacity",
+    "10 W total heat to perfectly mixed air",
+    "1 CFM net fresh-air exchange",
+    "uniform convection coefficients"
+  ],
+  "steady_verification": {
+    "status": "pass",
+    "expected": {
+      "air_c": 40.93440796905362,
+      "shell_peak_c": 38.110832467983194,
+      "shell_min_c": 25.225124454618648,
+      "vent_w": 8.95734399310396,
+      "shell_output_w": 1.0426560068960389
+    },
+    "actual": {
+      "set": 1,
+      "time_s": 1,
+      "air_c": 40.934420494738,
+      "shell_peak_c": 38.111026797604,
+      "shell_min_c": 25.225143953909,
+      "vent_w": 8.9573510342732,
+      "shell_input_w": 1.0426489660661,
+      "shell_output_w": 1.0426489662846,
+      "storage_rate_w": -2.1850610210095e-10,
+      "air_residual_w": -3.3920954933819e-10
+    },
+    "actual_minus_expected": {
+      "air_c": 0.000012525684375930268,
+      "shell_peak_c": 0.0001943296208040124,
+      "shell_min_c": 0.00001949929035305331,
+      "vent_w": 0.000007041169240551426,
+      "shell_output_w": -0.000007040611438968725
+    },
+    "absolute_acceptance_tolerances": {
+      "air_c": 0.001,
+      "shell_peak_c": 0.001,
+      "shell_min_c": 0.001,
+      "vent_w": 0.0001,
+      "shell_output_w": 0.0001
+    },
+    "checks": {
+      "air_c_matches_prior_independent_basis": true,
+      "shell_peak_c_matches_prior_independent_basis": true,
+      "shell_min_c_matches_prior_independent_basis": true,
+      "vent_w_matches_prior_independent_basis": true,
+      "shell_output_w_matches_prior_independent_basis": true,
+      "steady_air_balance": true,
+      "steady_shell_balance": true
+    }
+  },
+  "integrated_shell_storage_properties": {
+    "volume_m3": 0.0000688841219379384,
+    "mass_kg": 0.08541631120304362,
+    "heat_capacity_j_k": 153.74936016547852,
+    "integration": "quadratic tetrahedral shapes; 5 x 5 x 5 Duffy/Gauss quadrature"
+  },
+  "startup_numerical_undershoot_c": 0.035628474258999177,
+  "startup_numerical_undershoot_note": "Small subambient nodal undershoot is a quadratic finite-element transient discretization artifact, not physical cooling. Raw data retained; accepted only when below 0.05 C.",
+  "time_step_sensitivity": {
+    "status": "pass",
+    "coarse_dt_s": 5,
+    "fine_dt_s": 2.5,
+    "max_peak_difference_all_shared_times_c": 0.030297366140001003,
+    "max_air_difference_all_shared_times_c": 0.007025247755002795,
+    "max_vent_heat_difference_all_shared_times_w": 0.003949162146600571,
+    "acceptance_peak_difference_c": 0.1,
+    "acceptance_air_difference_c": 0.05,
+    "acceptance_vent_heat_difference_w": 0.03,
+    "selected_times": [
+      {
+        "time_s": 5,
+        "shell_peak_5s_c": 25.468437119087,
+        "shell_peak_2p5s_c": 25.498734485227,
+        "shell_peak_difference_c": -0.030297366140001003,
+        "air_difference_c": -0.007025247755002795,
+        "vent_heat_difference_w": -0.003949162146600571
+      },
+      {
+        "time_s": 30,
+        "shell_peak_5s_c": 26.390206089344,
+        "shell_peak_2p5s_c": 26.398782011479,
+        "shell_peak_difference_c": -0.008575922134998137,
+        "air_difference_c": -0.0011711111529990603,
+        "vent_heat_difference_w": -0.0006583266523003672
+      },
+      {
+        "time_s": 60,
+        "shell_peak_5s_c": 27.250765819524,
+        "shell_peak_2p5s_c": 27.257838122279,
+        "shell_peak_difference_c": -0.007072302755002369,
+        "air_difference_c": -0.0013982155939942231,
+        "vent_heat_difference_w": -0.0007859907994998139
+      },
+      {
+        "time_s": 300,
+        "shell_peak_5s_c": 32.044812511566,
+        "shell_peak_2p5s_c": 32.058807889188,
+        "shell_peak_difference_c": -0.013995377622002536,
+        "air_difference_c": -0.0031815236760053267,
+        "vent_heat_difference_w": -0.001788456907201308
+      },
+      {
+        "time_s": 900,
+        "shell_peak_5s_c": 36.545057853777,
+        "shell_peak_2p5s_c": 36.554057137245,
+        "shell_peak_difference_c": -0.008999283468000385,
+        "air_difference_c": -0.0018825967670039745,
+        "vent_heat_difference_w": -0.0010582800991993935
+      },
+      {
+        "time_s": 1800,
+        "shell_peak_5s_c": 37.698109356863,
+        "shell_peak_2p5s_c": 37.699925115065,
+        "shell_peak_difference_c": -0.0018157582019995289,
+        "air_difference_c": -0.00047590500400218616,
+        "vent_heat_difference_w": -0.00026752451930001087
+      }
+    ],
+    "interpretation": "Numerical time-discretization sensitivity only, not validation of unknown physical inputs."
+  }
+}

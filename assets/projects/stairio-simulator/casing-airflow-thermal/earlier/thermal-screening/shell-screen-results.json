@@ -1,0 +1,81 @@
+{
+  "study": "Conditional PLA primary shell heat-rejection screening",
+  "limitations": [
+    "1 W deposited uniformly over selected upper-cavity inner walls",
+    "Only major exterior walls have convection; all other shell faces insulated",
+    "Other ten bodies suppressed; no lid contacts, components, radiation or fluid domain",
+    "Exterior h values are sensitivity assumptions, not measured fan performance",
+    "Watts through PLA walls are not total electronics heat; vented air can carry heat away",
+    "Constant homogeneous PLA k=0.2 W/mK is provisional"
+  ],
+  "ambient_c": 25,
+  "status": "solved",
+  "heat_w": 1,
+  "inner_faces": [
+    3414,
+    2919,
+    3004,
+    3005,
+    2920
+  ],
+  "conductivity_w_m_k": 0.2,
+  "outer_area_m2": 0.024625908750969917,
+  "inner_area_m2": 0.021392001219190656,
+  "outer_faces": [
+    3415,
+    3009,
+    3011,
+    3010,
+    2938
+  ],
+  "cases": [
+    {
+      "temperature_average": "35.80241826809474 [C]",
+      "elements": 41732,
+      "exterior_h_w_m2_k": 5,
+      "temperature_min": "25.161209106445313 [C]",
+      "nodes": 84293,
+      "solution_status": "Done",
+      "nominal_mesh_mm": 3,
+      "tag": "mesh3mm_h5",
+      "solver_directory": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\casing-prepared_Mech_Files\\SteadyStateThermal\\",
+      "temperature_max": "42.721321105957031 [C]"
+    },
+    {
+      "temperature_average": "30.846216772473031 [C]",
+      "elements": 41732,
+      "exterior_h_w_m2_k": 10,
+      "temperature_min": "25.014589309692383 [C]",
+      "nodes": 84293,
+      "solution_status": "Done",
+      "nominal_mesh_mm": 3,
+      "tag": "mesh3mm_h10",
+      "solver_directory": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mesh3mm_h5_Mech_Files\\SteadyStateThermal\\",
+      "temperature_max": "34.816135406494141 [C]"
+    },
+    {
+      "temperature_average": "28.23726583336946 [C]",
+      "elements": 41732,
+      "exterior_h_w_m2_k": 20,
+      "temperature_min": "25.00074577331543 [C]",
+      "nodes": 84293,
+      "solution_status": "Done",
+      "nominal_mesh_mm": 3,
+      "tag": "mesh3mm_h20",
+      "solver_directory": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mesh3mm_h10_Mech_Files\\SteadyStateThermal\\",
+      "temperature_max": "31.306400299072266 [C]"
+    },
+    {
+      "temperature_average": "30.532675699862462 [C]",
+      "elements": 70058,
+      "exterior_h_w_m2_k": 10,
+      "temperature_min": "25.014530181884766 [C]",
+      "nodes": 135330,
+      "solution_status": "Done",
+      "nominal_mesh_mm": 2,
+      "tag": "mesh2mm_h10",
+      "solver_directory": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-thermal-study\\mesh3mm_h20_Mech_Files\\SteadyStateThermal\\",
+      "temperature_max": "34.816097259521484 [C]"
+    }
+  ]
+}

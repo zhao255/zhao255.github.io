@@ -1,0 +1,236 @@
+{
+ "tui_pmn_menu": [
+  "cell_quality_based",
+  "enable",
+  "gradient_quality_based",
+  "orthogonality_enhancing_cell_centroids",
+  "print_poor_elements_count",
+  "register_based",
+  "reset_poor_elements",
+  "solution_and_quality_based"
+ ],
+ "register_th_T_above_source": {
+  "name": "th_T_above_source",
+  "python_name_1": "th_T_above_source",
+  "type": {
+   "option": "field-value",
+   "field_value": {
+    "field": "temperature",
+    "option": {
+     "option": "more-than",
+     "more_than": 308.2
+    },
+    "min": 0,
+    "max": 0,
+    "average": 0,
+    "std_dev": 0,
+    "scaling": "none",
+    "derivative": "none",
+    "size_ratio": 0.0
+   }
+  },
+  "display_options": {
+   "draw_mesh": false,
+   "filled": false,
+   "marker": true,
+   "marker_symbol": "o",
+   "marker_size": 0.1,
+   "wireframe": true,
+   "color": "green"
+  }
+ },
+ "register_th_T_below_ambient": {
+  "name": "th_T_below_ambient",
+  "python_name_1": "th_T_below_ambient",
+  "type": {
+   "option": "field-value",
+   "field_value": {
+    "field": "temperature",
+    "option": {
+     "option": "less-than",
+     "less_than": 297.65
+    },
+    "min": 0,
+    "max": 0,
+    "average": 0,
+    "std_dev": 0,
+    "scaling": "none",
+    "derivative": "none",
+    "size_ratio": 0.0
+   }
+  },
+  "display_options": {
+   "draw_mesh": false,
+   "filled": false,
+   "marker": true,
+   "marker_symbol": "o",
+   "marker_size": 0.1,
+   "wireframe": true,
+   "color": "light blue"
+  }
+ },
+ "pmn_th_T_above_source": {
+  "name": "pmn_th_T_above_source",
+  "register": "th_T_above_source",
+  "frequency": {
+   "option": "iterations",
+   "iterations": 1
+  },
+  "active": true,
+  "verbosity": 0,
+  "monitor": "pmn-monitor-2"
+ },
+ "pmn_th_T_below_ambient": {
+  "name": "pmn_th_T_below_ambient",
+  "register": "th_T_below_ambient",
+  "frequency": {
+   "option": "iterations",
+   "iterations": 1
+  },
+  "active": true,
+  "verbosity": 0,
+  "monitor": "pmn-monitor-3"
+ },
+ "pmn_all": {
+  "pmn_th_T_above_source": {
+   "name": "pmn_th_T_above_source",
+   "register": "th_T_above_source",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 0,
+   "monitor": "pmn-monitor-2"
+  },
+  "pmn_th_T_below_ambient": {
+   "name": "pmn_th_T_below_ambient",
+   "register": "th_T_below_ambient",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 0,
+   "monitor": "pmn-monitor-3"
+  },
+  "pmn_th_bad_cluster0": {
+   "name": "pmn_th_bad_cluster0",
+   "register": "th_bad_cluster0",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 1,
+   "monitor": "pmn-monitor-0"
+  },
+  "pmn_th_bad_cluster1": {
+   "name": "pmn_th_bad_cluster1",
+   "register": "th_bad_cluster1",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 1,
+   "monitor": "pmn-monitor-1"
+  }
+ },
+ "applied": {
+  "motor": {
+   "condition": "isothermal 308.150 K",
+   "zones": 3
+  },
+  "pcb-front": {
+   "condition": "adiabatic",
+   "zones": 34
+  },
+  "pcb-middle": {
+   "condition": "adiabatic",
+   "zones": 34
+  },
+  "pcb-back": {
+   "condition": "adiabatic",
+   "zones": 34
+  },
+  "cameras": {
+   "condition": "adiabatic",
+   "zones": 6
+  }
+ },
+ "history": [
+  {
+   "th-Q-motor": 0.6171888113021851,
+   "th-Tbulk-fanmid": 299.2894897460938,
+   "th-Tmax-air": 308.1498718261719,
+   "th-Tmin-air": 298.1322631835938,
+   "th-Q-outer": -0.6170703768730164,
+   "th-Tmax-passive": 308.1498107910156,
+   "its": 50
+  },
+  {
+   "th-Q-motor": 0.6171879768371582,
+   "th-Tbulk-fanmid": 299.2894897460938,
+   "th-Tmax-air": 308.1498718261719,
+   "th-Tmin-air": 298.1311645507812,
+   "th-Q-outer": -0.6170797944068909,
+   "th-Tmax-passive": 308.1498107910156,
+   "its": 100
+  },
+  {
+   "th-Q-motor": 0.6171879768371582,
+   "th-Tbulk-fanmid": 299.2894897460938,
+   "th-Tmax-air": 308.1498718261719,
+   "th-Tmin-air": 298.1326293945312,
+   "th-Q-outer": -0.6170995831489563,
+   "th-Tmax-passive": 308.1498107910156,
+   "its": 150
+  },
+  {
+   "th-Q-motor": 0.6171886920928955,
+   "th-Tbulk-fanmid": 299.2894897460938,
+   "th-Tmax-air": 308.1498718261719,
+   "th-Tmin-air": 298.1305236816406,
+   "th-Q-outer": -0.6171029210090637,
+   "th-Tmax-passive": 308.1498107910156,
+   "its": 200
+  },
+  {
+   "th-Q-motor": 0.6171892881393433,
+   "th-Tbulk-fanmid": 299.2894897460938,
+   "th-Tmax-air": 308.1498718261719,
+   "th-Tmin-air": 298.1329040527344,
+   "th-Q-outer": -0.6170928478240967,
+   "th-Tmax-passive": 308.1498107910156,
+   "its": 250
+  },
+  {
+   "th-Q-motor": 0.6171879172325134,
+   "th-Tbulk-fanmid": 299.2894897460938,
+   "th-Tmax-air": 308.1498718261719,
+   "th-Tmin-air": 298.13134765625,
+   "th-Q-outer": -0.6170884966850281,
+   "th-Tmax-passive": 308.28662109375,
+   "its": 300
+  },
+  {
+   "th-Q-motor": 0.6171879172325134,
+   "th-Tbulk-fanmid": 299.2894897460938,
+   "th-Tmax-air": 308.1498718261719,
+   "th-Tmin-air": 298.13330078125,
+   "th-Q-outer": -0.6171056628227234,
+   "th-Tmax-passive": 308.1498107910156,
+   "its": 350
+  },
+  {
+   "th-Q-motor": 0.617188572883606,
+   "th-Tbulk-fanmid": 299.2894897460938,
+   "th-Tmax-air": 308.1498718261719,
+   "th-Tmin-air": 298.1258850097656,
+   "th-Q-outer": -0.6170621514320374,
+   "th-Tmax-passive": 308.4501953125,
+   "its": 400
+  }
+ ]
+}

@@ -1,0 +1,282 @@
+{
+  "schema": "stairio-airflow-video-verification/1",
+  "utc": "2026-10-10T23:12:09Z",
+  "test_only": false,
+  "publication_constraint": "Composed only from native Fluent exports of step 120; requires visual review.",
+  "acceptance_status": "accepted",
+  "banner": null,
+  "video": {
+    "path": "solve\\claude-run\\sealed-arch\\post\\video\\20261010T231140Z\\stairio-fluent-airflow.mp4",
+    "sha256": "c384f4c732c403d496d0ace8e8ed74171f5f6b85aa6a36d269b16dcb377b2f1e",
+    "bytes": 9078476,
+    "duration_s": 19.2,
+    "frames": 576,
+    "fps": 30,
+    "loops": 4
+  },
+  "inputs": {
+    "pulse_frames": {
+      "count": 150,
+      "first": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-fluent-airflow\\solve\\claude-run\\sealed-arch\\post\\120-pulse-export\\20261010T230953Z\\pulse\\stairio-forward_0000.png",
+      "last": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-fluent-airflow\\solve\\claude-run\\sealed-arch\\post\\120-pulse-export\\20261010T230953Z\\pulse\\stairio-forward_0149.png",
+      "size": [
+        1600,
+        1200
+      ],
+      "sha256_first": "367bef5e7df9238ab4aec3721c930402ee6a3f436f5678e49dc4a24a58885f73",
+      "sha256_last": "a497b3a1fa83ff00f9b1b4ae54bccce284bc8592fba8039252eb96ee057da2d1"
+    },
+    "background": {
+      "path": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-fluent-airflow\\solve\\claude-run\\sealed-arch\\post\\120-pulse-export\\20261010T230953Z\\background-walls.png",
+      "sha256": "0015bb006c70bbf7df0ca304b990f2acd363703291f317820f446d577e237104",
+      "used": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-fluent-airflow\\solve\\claude-run\\sealed-arch\\post\\120-pulse-export\\20261010T230953Z\\background-walls.png"
+    },
+    "path_static": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-fluent-airflow\\solve\\claude-run\\sealed-arch\\post\\120-pulse-export\\20261010T230953Z\\reference-pathlines-static.png",
+    "scene_ref": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-fluent-airflow\\solve\\claude-run\\sealed-arch\\post\\120-pulse-export\\20261010T230953Z\\reference-scene.png",
+    "context": {
+      "path": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_000.png",
+      "sha256": "46064b8718c8238ebb89349e7f5f878d68fe77d0ea133a00bf92f883e63fa750",
+      "size": [
+        1161,
+        535
+      ],
+      "crop": {
+        "x": 341,
+        "y": 0,
+        "w": 453,
+        "h": 535,
+        "method": "robot pixels vs per-row background median",
+        "robot_bbox_px": [
+          499,
+          22,
+          624,
+          491
+        ]
+      }
+    },
+    "metadata": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-fluent-airflow\\solve\\claude-run\\sealed-arch\\post\\120-pulse-export\\20261010T230953Z\\pulse-metadata.json"
+  },
+  "composition": {
+    "blend": {
+      "mode": "darken",
+      "reason": "native hardcopy background measured [255, 255, 255] (white): per-channel min keeps white transparent and native tracer colours/antialiasing"
+    },
+    "loop": {
+      "loop_frames": 144,
+      "kind": "exact_repeat",
+      "frames_available": 150,
+      "detected_period_frames": 8,
+      "median_consecutive_difference": 0.8622806668281555,
+      "repeat_difference_at_loop": 0,
+      "seam_step_relative_to_typical": 0.9564525185445246
+    },
+    "layout": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "left_panel": [
+        0,
+        129,
+        720,
+        851
+      ],
+      "right_panel": [
+        720,
+        129,
+        1200,
+        851
+      ],
+      "flow_scaled_to": [
+        1135,
+        851
+      ]
+    },
+    "captions": "solve\\claude-run\\sealed-arch\\post\\video\\20261010T231140Z\\stairio-fluent-airflow-work\\captions.ass",
+    "labels": {
+      "assembly": "archived 36GY assembly + side-shell (arch sealed)",
+      "right_panel": "COMPUTED STEADY AIRFLOW, SIDE-SHELL FITTED: MODELLED FAN EXHAUSTING THROUGH THE TOP",
+      "tracer_note": "tracers seeded by each opening's solved inflow"
+    },
+    "filtergraph": "[0:v]crop=453:535:341:0,scale=720:851:flags=lanczos,setsar=1,format=rgb24[left];[1:v]format=gbrp,setsar=1[bg];[2:v]setpts=N/(30*TB),format=gbrp,setsar=1[fg];[bg][fg]blend=all_mode=darken:shortest=1,format=rgb24,scale=1135:851:flags=lanczos,pad=1200:851:(ow-iw)/2:0:color=white,setsar=1[right];[left][right]hstack=inputs=2:shortest=1,pad=1920:1080:0:129:color=0x141b25,drawbox=x=0:y=80:w=1920:h=49:color=white:t=fill,drawbox=x=718:y=80:w=3:h=900:color=0x52647a:t=fill,subtitles=captions.ass,format=yuv420p[out]",
+    "ffmpeg_command": [
+      "ffmpeg",
+      "-y",
+      "-hide_banner",
+      "-v",
+      "warning",
+      "-loop",
+      "1",
+      "-framerate",
+      "30",
+      "-i",
+      "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_000.png",
+      "-loop",
+      "1",
+      "-framerate",
+      "30",
+      "-i",
+      "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-fluent-airflow\\solve\\claude-run\\sealed-arch\\post\\120-pulse-export\\20261010T230953Z\\background-walls.png",
+      "-f",
+      "concat",
+      "-safe",
+      "0",
+      "-i",
+      "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-fluent-airflow\\solve\\claude-run\\sealed-arch\\post\\video\\20261010T231140Z\\stairio-fluent-airflow-work\\pulse-loop.ffconcat",
+      "-filter_complex",
+      "[0:v]crop=453:535:341:0,scale=720:851:flags=lanczos,setsar=1,format=rgb24[left];[1:v]format=gbrp,setsar=1[bg];[2:v]setpts=N/(30*TB),format=gbrp,setsar=1[fg];[bg][fg]blend=all_mode=darken:shortest=1,format=rgb24,scale=1135:851:flags=lanczos,pad=1200:851:(ow-iw)/2:0:color=white,setsar=1[right];[left][right]hstack=inputs=2:shortest=1,pad=1920:1080:0:129:color=0x141b25,drawbox=x=0:y=80:w=1920:h=49:color=white:t=fill,drawbox=x=718:y=80:w=3:h=900:color=0x52647a:t=fill,subtitles=captions.ass,format=yuv420p[out]",
+      "-map",
+      "[out]",
+      "-frames:v",
+      "576",
+      "-r",
+      "30",
+      "-an",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "medium",
+      "-crf",
+      "18",
+      "-pix_fmt",
+      "yuv420p",
+      "-movflags",
+      "+faststart",
+      "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-fluent-airflow\\solve\\claude-run\\sealed-arch\\post\\video\\20261010T231140Z\\stairio-fluent-airflow.mp4"
+    ],
+    "ffmpeg_warnings": ""
+  },
+  "analysis": {
+    "numpy_pillow_available": true,
+    "pulse_background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "pulse_background_border_share": 0.9910267857142857,
+    "still_background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "still_background_border_share": 0.9920089285714285,
+    "pulse_coloured_pixels_half_res": {
+      "min": 15996,
+      "median": 16144,
+      "max": 16198
+    },
+    "alignment": {
+      "pulse_union_inside_static_pathlines": 1,
+      "static_vs_scene_tracers": {
+        "dx": 0,
+        "dy": 0,
+        "iou_best": 0.912855401313461,
+        "iou_zero_shift": 0.912855401313461,
+        "pixels_a": 152574,
+        "pixels_b": 139278
+      },
+      "background_vs_scene_outline": {
+        "dx": 0,
+        "dy": 0,
+        "iou_best": 0.9880030977076069,
+        "iou_zero_shift": 0.9880030977076069,
+        "pixels_a": 223391,
+        "pixels_b": 220711
+      },
+      "passed": true
+    },
+    "background_outline_contrast": {
+      "applied": false,
+      "outline_darkness_p90": 63
+    }
+  },
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "576",
+        "nb_read_frames": "576"
+      }
+    ],
+    "format": {
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "duration": "19.200000",
+      "size": "9078476"
+    }
+  },
+  "decode": {
+    "returncode": 0,
+    "stderr": ""
+  },
+  "stills": {
+    "poster": {
+      "time_s": 2,
+      "path": "solve\\claude-run\\sealed-arch\\post\\video\\20261010T231140Z\\stairio-fluent-airflow-poster.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "6790a6886882da37e55f1be105a47415dff1965693358c654331c48e8dcf4ad5",
+      "std": 87.29641931741172,
+      "flow_panel_coloured_pixels_incl_legend_banner": 35107,
+      "tracer_region_coloured_pixels": 27380
+    },
+    "mid": {
+      "time_s": 9.6,
+      "path": "solve\\claude-run\\sealed-arch\\post\\video\\20261010T231140Z\\stairio-fluent-airflow-mid.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "b202e966915f265b89b0375465694b43c144a47a8f8d94f5ca0182965bdfe8f8",
+      "std": 87.3029736959695,
+      "flow_panel_coloured_pixels_incl_legend_banner": 34774,
+      "tracer_region_coloured_pixels": 27060
+    },
+    "end": {
+      "time_s": 18.7,
+      "path": "solve\\claude-run\\sealed-arch\\post\\video\\20261010T231140Z\\stairio-fluent-airflow-end.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "ca339ccfbb997735ad1c370b4e1169f447280b557d75813df2099ef2c2ce7a52",
+      "std": 87.3012790648856,
+      "flow_panel_coloured_pixels_incl_legend_banner": 34510,
+      "tracer_region_coloured_pixels": 26796
+    },
+    "_frame_cadence": {
+      "frames": 576,
+      "median_consecutive_diff": 0.46262577176094055,
+      "near_duplicate_consecutive_frames": 0
+    }
+  },
+  "checks": {
+    "codec_h264": true,
+    "size_1920x1080": true,
+    "yuv420p": true,
+    "fps": true,
+    "frame_count": true,
+    "duration": true,
+    "full_decode_clean": true,
+    "faststart_moov_first": true,
+    "stills_not_blank": true,
+    "stills_show_tracers": true,
+    "no_duplicate_consecutive_frames": true
+  },
+  "passed": true,
+  "tracer_check": {
+    "min_pixels": 200,
+    "region": "flow image minus legend strip (17 %), axis triad corner and banner box"
+  },
+  "interpretation": "Continuous native pathline pulse of a steady, isothermal, laminar CFD field at an assumed 1 CFM fan throughflow. Playback time is not physical, startup or thermal time; fan curve/RPM not measured.",
+  "elapsed_s": 28.4
+}

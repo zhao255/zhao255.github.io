@@ -1,0 +1,392 @@
+{
+  "status": "pass",
+  "scope": "Numerical verification of a conditional shell-only storage model; not measured robot thermal validation.",
+  "input_sha256": {
+    "stairio_coupled_steady_check.inp": "738d67fe794e74e928c62c43a5a42a069e08f41cf7cff442704691f0b5e1359a",
+    "stairio_transient.inp": "90bb05859cd49c5ea07c227a2285742b3f9b6d50f69ccecd7d4c696c971ad3dd",
+    "stairio_reuse_smoke.inp": "71a7bae8aede258d9f02894be13ae79cfdf899d9657d0566b1ada592908c9825",
+    "stairio_dt2p5.inp": "d817aa63d118662c12366baa0d3c3f5582d0f7fa2afc01080d366f357f84dcf7",
+    "verify_native_transient.py": "bfe8d092c9f94c11f906d5a0e98d0515895232e042817b07eab9759d0f8da273"
+  },
+  "quadrature_self_check": "pass: unit right tetrahedron; volume 1/6; corner and midside shape integrals exact",
+  "steady_solver": {
+    "completed": true,
+    "errors": 0,
+    "warnings": [
+      "*** WARNING ***                         CP =       1.328   TIME= 04:40:52\n Element shape checking is currently inactive.  Issue SHPP,ON or         \n SHPP,WARN to reactivate, if desired.                                    ",
+      "*** WARNING ***                         CP =       1.359   TIME= 04:40:52\n Real constant 1 referenced by at least element types 2 and 3, both of   \n which are (SURF152) elements.                                           ",
+      "*** WARNING ***                         CP =       1.422   TIME= 04:40:52\n Real constant set 1 has 6 real constants defined which is more than the \n 1 real constant used by element 84132 (LINK33).  This set may have      \n been defined for another element type.  Testing for this discontinues   \n for this model.                                                         "
+    ],
+    "all_warnings_reviewed": true,
+    "warning_review": "Input retains disabled shape checking and shared real-constant set warnings from the reconstructed mesh. LINK33 uses its section area; the numerical conductance is independently checked against Gvent. Independent volume integration checks all sampled tetrahedron Jacobian signs."
+  },
+  "steady_equilibrium": {
+    "status": "pass",
+    "expected": {
+      "air_c": 40.93440796905362,
+      "shell_peak_c": 38.110832467983194,
+      "shell_min_c": 25.225124454618648,
+      "vent_w": 8.95734399310396,
+      "shell_output_w": 1.0426560068960389
+    },
+    "actual": {
+      "set": 1.0,
+      "time_s": 1.0,
+      "air_c": 40.934420494738,
+      "shell_peak_c": 38.111026797604,
+      "shell_min_c": 25.225143953909,
+      "vent_w": 8.9573510342732,
+      "shell_input_w": 1.0426489660661,
+      "shell_output_w": 1.0426489662846,
+      "storage_rate_w": -2.1850610210095e-10,
+      "air_residual_w": -3.3920954933819e-10
+    },
+    "actual_minus_expected": {
+      "air_c": 1.2525684375930268e-05,
+      "shell_peak_c": 0.0001943296208040124,
+      "shell_min_c": 1.949929035305331e-05,
+      "vent_w": 7.041169240551426e-06,
+      "shell_output_w": -7.040611438968725e-06
+    },
+    "absolute_acceptance_tolerances": {
+      "air_c": 0.001,
+      "shell_peak_c": 0.001,
+      "shell_min_c": 0.001,
+      "vent_w": 0.0001,
+      "shell_output_w": 0.0001
+    },
+    "checks": {
+      "air_c_matches_prior_independent_basis": true,
+      "shell_peak_c_matches_prior_independent_basis": true,
+      "shell_min_c_matches_prior_independent_basis": true,
+      "vent_w_matches_prior_independent_basis": true,
+      "shell_output_w_matches_prior_independent_basis": true,
+      "steady_air_balance": true,
+      "steady_shell_balance": true
+    }
+  },
+  "transient": {
+    "status": "pass",
+    "checks": {
+      "native_completed_without_errors": true,
+      "only_reviewed_warnings": true,
+      "correct_uniform_saved_times": true,
+      "air_balance_each_step": true,
+      "reported_air_residual_matches": true,
+      "ventilation_conductance_matches": true,
+      "shell_storage_positive": true,
+      "shell_heat_balance_each_step": true,
+      "shell_peak_rises": true,
+      "air_temp_rises": true,
+      "temperature_bounds_within_reported_0p05c_discretization_tolerance": true,
+      "transient_below_steady_endpoint": true
+    },
+    "result_sets": 360,
+    "startup_undershoot_c": 0.035628474258999177,
+    "startup_undershoot_note": "Small subambient nodal undershoot is a quadratic finite-element transient discretization artifact, not physical cooling. Raw data retained; accepted only when below 0.05 C.",
+    "max_air_balance_residual_w": 1.7784000938547706e-09,
+    "selected_times": [
+      {
+        "set": 1.0,
+        "time_s": 5.0,
+        "air_c": 38.000825753688,
+        "shell_peak_c": 25.468437119087,
+        "shell_min_c": 24.964371525741,
+        "vent_w": 7.3082645239379,
+        "shell_input_w": 2.6917354759253,
+        "shell_output_w": 0.0048695783012229,
+        "storage_rate_w": 2.686865897624,
+        "air_residual_w": 1.3685852451317e-10
+      },
+      {
+        "set": 6.0,
+        "time_s": 30.0,
+        "air_c": 38.214960826936,
+        "shell_peak_c": 26.390206089344,
+        "shell_min_c": 24.984275149976,
+        "vent_w": 7.4286380901095,
+        "shell_input_w": 2.5713619090848,
+        "shell_output_w": 0.055029359399316,
+        "storage_rate_w": 2.5163325496855,
+        "air_residual_w": 8.0570661253887e-10
+      },
+      {
+        "set": 12.0,
+        "time_s": 60.0,
+        "air_c": 38.412169733608,
+        "shell_peak_c": 27.250765819524,
+        "shell_min_c": 24.999921542946,
+        "vent_w": 7.539496806605,
+        "shell_input_w": 2.4605031924339,
+        "shell_output_w": 0.12261616977217,
+        "storage_rate_w": 2.3378870226617,
+        "air_residual_w": 9.6114138870007e-10
+      },
+      {
+        "set": 60.0,
+        "time_s": 300.0,
+        "air_c": 39.504712808269,
+        "shell_peak_c": 32.044812511566,
+        "shell_min_c": 25.000000501632,
+        "vent_w": 8.1536573179982,
+        "shell_input_w": 1.8463426823955,
+        "shell_output_w": 0.50371121880189,
+        "storage_rate_w": 1.3426314635936,
+        "air_residual_w": -3.9370640081415e-10
+      },
+      {
+        "set": 180.0,
+        "time_s": 900.0,
+        "air_c": 40.506258659385,
+        "shell_peak_c": 36.545057853777,
+        "shell_min_c": 25.003850813601,
+        "vent_w": 8.7166647877916,
+        "shell_input_w": 1.2833352120683,
+        "shell_output_w": 0.86236679865193,
+        "storage_rate_w": 0.42096841341639,
+        "air_residual_w": 1.400835003551e-10
+      },
+      {
+        "set": 360.0,
+        "time_s": 1800.0,
+        "air_c": 40.814992971185,
+        "shell_peak_c": 37.698109356863,
+        "shell_min_c": 25.056889000803,
+        "vent_w": 8.8902162268308,
+        "shell_input_w": 1.1097837738278,
+        "shell_output_w": 0.98455739447132,
+        "storage_rate_w": 0.12522637935643,
+        "air_residual_w": -6.5857186370977e-10
+      }
+    ],
+    "solver": {
+      "completed": true,
+      "errors": 0,
+      "warnings": [
+        "*** WARNING ***                         CP =       1.078   TIME= 06:39:12\n Element shape checking is currently inactive.  Issue SHPP,ON or         \n SHPP,WARN to reactivate, if desired.                                    ",
+        "*** WARNING ***                         CP =       1.094   TIME= 06:39:12\n Real constant 1 referenced by at least element types 2 and 3, both of   \n which are (SURF152) elements.                                           ",
+        "*** WARNING ***                         CP =       1.125   TIME= 06:39:12\n Real constant set 1 has 6 real constants defined which is more than the \n 1 real constant used by element 84132 (LINK33).  This set may have      \n been defined for another element type.  Testing for this discontinues   \n for this model.                                                         "
+      ],
+      "all_warnings_reviewed": true,
+      "warning_review": "Input retains disabled shape checking and shared real-constant set warnings from the reconstructed mesh. LINK33 uses its section area; the numerical conductance is independently checked against Gvent. Independent volume integration checks all sampled tetrahedron Jacobian signs."
+    }
+  },
+  "shell_storage_integral": {
+    "volume_m3": 6.88841219379384e-05,
+    "mass_kg": 0.08541631120304362,
+    "heat_capacity_j_k": 153.74936016547852,
+    "integration": "quadratic tetrahedral shapes; 5 x 5 x 5 Duffy/Gauss quadrature"
+  },
+  "independent_endpoint_integrals": {
+    "status": "pass",
+    "checks": {
+      "inner_flux_matches_smisc2": true,
+      "outer_flux_matches_smisc2": true,
+      "nodal_peak_matches_history": true,
+      "nodal_min_matches_history": true,
+      "storage_integral_matches_shell_internal_energy": true
+    },
+    "surfaces": {
+      "inner": {
+        "area_m2": 0.02138782703446436,
+        "heat_out_of_shell_w": -1.1097837731522342
+      },
+      "outer": {
+        "area_m2": 0.02462073919456724,
+        "heat_out_of_shell_w": 0.9845573944980351
+      }
+    },
+    "shell_stored_energy_j": 1248.313083421906,
+    "backward_euler_integral_of_storage_heat_j": 1248.3149720783956,
+    "energy_difference_j": -0.0018886564896547497,
+    "node_export_sha256": "034f3625593fb90d20a04c856e7059d2038abe6a874a445c9390952753de6cd8"
+  },
+  "factor_reuse_check": {
+    "status": "pass",
+    "description": "Identical 5s time step repeated for first 30s with KUSE,1 versus original automatic factorization policy.",
+    "max_absolute_difference_by_column": {
+      "set": 0.0,
+      "time_s": 0.0,
+      "air_c": 0.0,
+      "shell_peak_c": 0.0,
+      "shell_min_c": 0.0,
+      "vent_w": 0.0,
+      "shell_input_w": 0.0,
+      "shell_output_w": 0.0,
+      "storage_rate_w": 0.0,
+      "air_residual_w": 4.440892099999891e-15
+    },
+    "reference": "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/ans_cmd/Hlp_C_KUSE.html"
+  },
+  "refined_transient": {
+    "status": "pass",
+    "checks": {
+      "native_completed_without_errors": true,
+      "only_reviewed_warnings": true,
+      "correct_uniform_saved_times": true,
+      "air_balance_each_step": true,
+      "reported_air_residual_matches": true,
+      "ventilation_conductance_matches": true,
+      "shell_storage_positive": true,
+      "shell_heat_balance_each_step": true,
+      "shell_peak_rises": true,
+      "air_temp_rises": true,
+      "temperature_bounds_within_reported_0p05c_discretization_tolerance": true,
+      "transient_below_steady_endpoint": true
+    },
+    "result_sets": 360,
+    "startup_undershoot_c": 0.036539754785000156,
+    "startup_undershoot_note": "Small subambient nodal undershoot is a quadratic finite-element transient discretization artifact, not physical cooling. Raw data retained; accepted only when below 0.05 C.",
+    "max_air_balance_residual_w": 2.0850006166028834e-09,
+    "selected_times": [
+      {
+        "set": 1.0,
+        "time_s": 5.0,
+        "air_c": 38.007851001443,
+        "shell_peak_c": 25.498734485227,
+        "shell_min_c": 24.963460245215,
+        "vent_w": 7.3122136860845,
+        "shell_input_w": 2.6877863137806,
+        "shell_output_w": 0.0035083360493795,
+        "storage_rate_w": 2.6842779777313,
+        "air_residual_w": 1.3485124128465e-10
+      },
+      {
+        "set": 6.0,
+        "time_s": 30.0,
+        "air_c": 38.216131938089,
+        "shell_peak_c": 26.398782011479,
+        "shell_min_c": 24.983433067408,
+        "vent_w": 7.4292964167618,
+        "shell_input_w": 2.5707035824626,
+        "shell_output_w": 0.055155870395354,
+        "storage_rate_w": 2.5155477120672,
+        "air_residual_w": 7.7565154299464e-10
+      },
+      {
+        "set": 12.0,
+        "time_s": 60.0,
+        "air_c": 38.413567949202,
+        "shell_peak_c": 27.257838122279,
+        "shell_min_c": 24.999871957753,
+        "vent_w": 7.5402827974045,
+        "shell_input_w": 2.459717202616,
+        "shell_output_w": 0.12307185394586,
+        "storage_rate_w": 2.3366453486702,
+        "air_residual_w": -2.0530244171368e-11
+      },
+      {
+        "set": 60.0,
+        "time_s": 300.0,
+        "air_c": 39.507894331945,
+        "shell_peak_c": 32.058807889188,
+        "shell_min_c": 25.000000305567,
+        "vent_w": 8.1554457749054,
+        "shell_input_w": 1.8445542257882,
+        "shell_output_w": 0.50480516726413,
+        "storage_rate_w": 1.3397490585241,
+        "air_residual_w": -6.9357852794383e-10
+      },
+      {
+        "set": 180.0,
+        "time_s": 900.0,
+        "air_c": 40.508141256152,
+        "shell_peak_c": 36.554057137245,
+        "shell_min_c": 25.003752360265,
+        "vent_w": 8.7177230678908,
+        "shell_input_w": 1.2822769315098,
+        "shell_output_w": 0.86302300670743,
+        "storage_rate_w": 0.41925392480241,
+        "air_residual_w": 5.99349903041e-10
+      },
+      {
+        "set": 360.0,
+        "time_s": 1800.0,
+        "air_c": 40.815468876189,
+        "shell_peak_c": 37.699925115065,
+        "shell_min_c": 25.056851001067,
+        "vent_w": 8.8904837513501,
+        "shell_input_w": 1.1095162483482,
+        "shell_output_w": 0.9847420191258,
+        "storage_rate_w": 0.1247742292224,
+        "air_residual_w": 3.0173019638369e-10
+      }
+    ],
+    "solver": {
+      "completed": true,
+      "errors": 0,
+      "warnings": [
+        "*** WARNING ***                         CP =       0.984   TIME= 06:51:22\n Element shape checking is currently inactive.  Issue SHPP,ON or         \n SHPP,WARN to reactivate, if desired.                                    ",
+        "*** WARNING ***                         CP =       1.000   TIME= 06:51:22\n Real constant 1 referenced by at least element types 2 and 3, both of   \n which are (SURF152) elements.                                           ",
+        "*** WARNING ***                         CP =       1.047   TIME= 06:51:22\n Real constant set 1 has 6 real constants defined which is more than the \n 1 real constant used by element 84132 (LINK33).  This set may have      \n been defined for another element type.  Testing for this discontinues   \n for this model.                                                         "
+      ],
+      "all_warnings_reviewed": true,
+      "warning_review": "Input retains disabled shape checking and shared real-constant set warnings from the reconstructed mesh. LINK33 uses its section area; the numerical conductance is independently checked against Gvent. Independent volume integration checks all sampled tetrahedron Jacobian signs."
+    },
+    "integration_time_step_s": 2.5,
+    "saved_state_interval_s": 5
+  },
+  "time_step_sensitivity": {
+    "status": "pass",
+    "coarse_dt_s": 5,
+    "fine_dt_s": 2.5,
+    "max_peak_difference_all_shared_times_c": 0.030297366140001003,
+    "max_air_difference_all_shared_times_c": 0.007025247755002795,
+    "max_vent_heat_difference_all_shared_times_w": 0.003949162146600571,
+    "acceptance_peak_difference_c": 0.1,
+    "acceptance_air_difference_c": 0.05,
+    "acceptance_vent_heat_difference_w": 0.03,
+    "selected_times": [
+      {
+        "time_s": 5.0,
+        "shell_peak_5s_c": 25.468437119087,
+        "shell_peak_2p5s_c": 25.498734485227,
+        "shell_peak_difference_c": -0.030297366140001003,
+        "air_difference_c": -0.007025247755002795,
+        "vent_heat_difference_w": -0.003949162146600571
+      },
+      {
+        "time_s": 30.0,
+        "shell_peak_5s_c": 26.390206089344,
+        "shell_peak_2p5s_c": 26.398782011479,
+        "shell_peak_difference_c": -0.008575922134998137,
+        "air_difference_c": -0.0011711111529990603,
+        "vent_heat_difference_w": -0.0006583266523003672
+      },
+      {
+        "time_s": 60.0,
+        "shell_peak_5s_c": 27.250765819524,
+        "shell_peak_2p5s_c": 27.257838122279,
+        "shell_peak_difference_c": -0.007072302755002369,
+        "air_difference_c": -0.0013982155939942231,
+        "vent_heat_difference_w": -0.0007859907994998139
+      },
+      {
+        "time_s": 300.0,
+        "shell_peak_5s_c": 32.044812511566,
+        "shell_peak_2p5s_c": 32.058807889188,
+        "shell_peak_difference_c": -0.013995377622002536,
+        "air_difference_c": -0.0031815236760053267,
+        "vent_heat_difference_w": -0.001788456907201308
+      },
+      {
+        "time_s": 900.0,
+        "shell_peak_5s_c": 36.545057853777,
+        "shell_peak_2p5s_c": 36.554057137245,
+        "shell_peak_difference_c": -0.008999283468000385,
+        "air_difference_c": -0.0018825967670039745,
+        "vent_heat_difference_w": -0.0010582800991993935
+      },
+      {
+        "time_s": 1800.0,
+        "shell_peak_5s_c": 37.698109356863,
+        "shell_peak_2p5s_c": 37.699925115065,
+        "shell_peak_difference_c": -0.0018157582019995289,
+        "air_difference_c": -0.00047590500400218616,
+        "vent_heat_difference_w": -0.00026752451930001087
+      }
+    ],
+    "interpretation": "Checks 5s against 2.5s discretization only; does not validate unknown physical inputs or model simplifications."
+  },
+  "missing_checks": []
+}

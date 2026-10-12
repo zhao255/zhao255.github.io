@@ -1,0 +1,38 @@
+{
+ "name": "B0",
+ "data": "claude-run/thermal/phaseB-B0-frozen-refined.dat.h5",
+ "housing_max_c": 64.19924316406252,
+ "housing_max_at_mm": [
+  -33.7,
+  -34.9,
+  75.4
+ ],
+ "shell_max_c": 64.18825683593752,
+ "shell_max_at_mm": [
+  34.2,
+  -37.8,
+  94.8
+ ],
+ "housing_area_above_50c_mm2": 1471.5716688995758,
+ "sources_area_mm2": {
+  "motor": 9041.17062766165,
+  "pcb-front": 8743.448700284507,
+  "pcb-middle": 8744.071948061319,
+  "pcb-back": 8750.77889492204,
+  "cameras": 1429.4263353297254
+ },
+ "sources_mean_c": {
+  "motor": 64.5903259277344,
+  "pcb-front": 46.7651306152344,
+  "pcb-middle": 50.77666625976565,
+  "pcb-back": 39.04235229492189,
+  "cameras": 69.12819824218752
+ },
+ "sources_max_c": {
+  "motor": 64.5903259277344,
+  "pcb-front": 46.7651306152344,
+  "pcb-middle": 50.77666625976565,
+  "pcb-back": 39.0423522949219,
+  "cameras": 69.12819824218752
+ }
+}

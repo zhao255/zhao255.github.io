@@ -1,0 +1,38 @@
+{
+ "name": "B1",
+ "data": "claude-run/thermal/phaseB-B1-buoyant.dat.h5",
+ "housing_max_c": 66.44869384765627,
+ "housing_max_at_mm": [
+  33.8,
+  -37.4,
+  94.9
+ ],
+ "shell_max_c": 66.4448181152344,
+ "shell_max_at_mm": [
+  34.2,
+  -37.0,
+  94.9
+ ],
+ "housing_area_above_50c_mm2": 1738.6927096559073,
+ "sources_area_mm2": {
+  "motor": 9041.17062766165,
+  "pcb-front": 8743.448700284507,
+  "pcb-middle": 8744.071948061319,
+  "pcb-back": 8750.77889492204,
+  "cameras": 1429.4263353297254
+ },
+ "sources_mean_c": {
+  "motor": 61.1685729980469,
+  "pcb-front": 47.98958740234377,
+  "pcb-middle": 51.25795898437502,
+  "pcb-back": 38.6205993652344,
+  "cameras": 69.11629638671877
+ },
+ "sources_max_c": {
+  "motor": 61.1685729980469,
+  "pcb-front": 47.98958740234377,
+  "pcb-middle": 51.25795898437502,
+  "pcb-back": 38.6205993652344,
+  "cameras": 69.11629638671877
+ }
+}

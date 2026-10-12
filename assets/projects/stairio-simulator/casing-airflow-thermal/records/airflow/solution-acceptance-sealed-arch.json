@@ -1,0 +1,75 @@
+{
+  "schema": "stairio.solution-acceptance/3",
+  "accepted": true,
+  "acceptance_type": "DOCUMENTED ANALYST WAIVER for qualitative use - not a gate pass (same single exception as the accepted open-arch run)",
+  "case": "sealed arch: side-shell.SLDPRT fitted over the fan-side arch (user confirmed 2026-10-11), modelled as a deactivated (wall) band",
+  "gate_status": "all conservation, target and monitor-stability gates pass; velocity_residuals_le_1e-5_at_end NOT MET (x 1.28e-05, y 1.17e-05, z 1.65e-05 at the end of the window, down from 1.60/1.65/2.13e-05 at its start)",
+  "source_record": "claude-run/sealed-arch/final-gates-sealed-arch.json (all_passed=false because of the velocity-residual check only)",
+  "q_mid_mean_cfm": 0.9987158125445424,
+  "source_n_m3": 4987.026313873012,
+  "window": {
+    "iterations": "1161-1360 (fixed source)",
+    "samples": 10,
+    "ranges": {
+      "q_mid_frac": 9.200794636596708e-05,
+      "q_bottom_frac": 0.0001137149149456932,
+      "q_top_frac": 0.0001100765310075185,
+      "dp_pa": 0.00010859966278076172,
+      "max_speed_m_s": 0.0036487579345698684,
+      "max_abs_outer_imbalance_frac_of_fan_mass": 2.9141030310130566e-05,
+      "max_gross_net_mismatch_frac": 5.974041400748192e-08
+    },
+    "dp_actuator_mean_pa": 4.50675139427185,
+    "q_bottom_mean_cfm": 0.9849148857600194,
+    "q_top_mean_cfm": 0.9771378215921592,
+    "air_max_speed_m_s": 3.007624101638794
+  },
+  "checks_from_final_gates": {
+    "min_100_unchanged_iterations": true,
+    "min_10_samples": true,
+    "target_error_le_1pct": true,
+    "q_mid_range_le_0p5pct": true,
+    "q_bottom_range_le_0p5pct": true,
+    "q_top_range_le_0p5pct": true,
+    "bottom_top_diff_le_1pct": true,
+    "outer_mass_imbalance_lt_0p1pct_all_samples": true,
+    "gross_net_identity_le_0p5pct": true,
+    "dp_range_le_1pct_or_0p01pa": true,
+    "max_speed_range_le_2pct": true,
+    "velocity_residuals_le_1e-5_at_end": false,
+    "residuals_end_le_1p05x_first_window_sample": true
+  },
+  "configuration": "single precision, SIMPLEC (skewness correction 1), crevice block and arch band deactivated (walls); fresh seal-* report definitions after the topology change",
+  "configuration_validation": {
+    "record": "claude-run/lowram-check2/lowram-validation2.json and claude-run/opening-fluxes-lowram-check2.json",
+    "result": "the same configuration run from the accepted open-arch solution reproduced its per-opening intake within 0.1 percentage points (arch 65.76 % in both), dp within 0.01 % (area-corrected 4.267 Pa) and peak speed within 0.05 %"
+  },
+  "per_opening_intake_pct_of_net": {
+    "top grille beside the fan": 11.75,
+    "underside and bottom openings (z < 21 mm)": 36.99,
+    "front arch (fan-side face, under the cameras)": 0.0,
+    "side vents, -x wall (horizontal slots)": 23.72,
+    "side vents, +x wall (horizontal slots)": 23.72,
+    "side wall cut-outs below the vents (z < 40 mm)": 0.11,
+    "camera bosses / lens gaps": 3.58,
+    "back face": 0.01,
+    "front face above the arch": 0.01,
+    "unclassified": 0.12
+  },
+  "opening_flux_balance_frac_of_fan": 1.637798997339861e-05,
+  "exceptions": [
+    "Velocity residuals end at 1.2-1.6e-05 (aim 1e-05), decreasing steadily over the window; continuity 7.3e-03 (scaled), decreasing. The local-error review was not performed (as for the open-arch run).",
+    "Single precision and SIMPLEC instead of double precision and Coupled (memory); validated as above.",
+    "The crevice block is deactivated (walls) instead of frozen at zero velocity: a 1.53 mm3 pocket between touching parts."
+  ],
+  "geometry_approximations": "As the open-arch run (archived 36GY motor envelope, simplified cameras, generic PCBs, fan aperture 2.63 % below CAD) plus: the side-shell is modelled only where it covers the casing (a 5 mm band r 30.5-35.5 mm about (0,-28.5) mm, |x| <= 20.6 mm, z -2..71.5 mm, deactivated so its faces are walls; it stands about 2.5 mm proud of the casing surface). Its ~90 mm extension below the casing, in front of the drive-wheel module, is NOT modelled, so the route from under the casing at the fan-side end is likely more open in the model than on the robot (98 % of the 37 % underside intake enters under the fan-side half, 62 % right below the cover).",
+  "not_established": [
+    "real FAN-4007 operating point (flow ASSUMED 1 CFM)",
+    "temperatures, safe PLA temperature, warm-up time",
+    "turbulence/unsteadiness",
+    "mesh/domain independence",
+    "fresh-air fraction",
+    "the effect of the side-shell lower extension"
+  ],
+  "history": "v1 2026-10-11, after the sealed-arch final window (flow-commands 200-204)."
+}

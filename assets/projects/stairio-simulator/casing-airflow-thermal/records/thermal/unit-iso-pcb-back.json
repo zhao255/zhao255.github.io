@@ -1,0 +1,240 @@
+{
+ "source": "pcb-back",
+ "model": "isothermal source (+10.0 K), others adiabatic, bounds-based PMN stabilisation",
+ "rise_k": 10.0,
+ "q_source_w": 0.6816676259040833,
+ "conductance_w_per_k": 0.06816676259040833,
+ "source_rise_per_watt_k": 14.669906006959305,
+ "status": "converged",
+ "iterations": 200,
+ "bounded": true,
+ "tmin_air_rise_k": -0.04852905273435226,
+ "final": {
+  "its": 200,
+  "elapsed_s": 555.7,
+  "th-Tavg-motor": 298.8913269042969,
+  "th-Tmax-motor": 307.1845703125,
+  "th-Q-motor": 0.0,
+  "th-Tavg-pcb-front": 299.5584411621094,
+  "th-Tmax-pcb-front": 301.8265686035156,
+  "th-Q-pcb-front": 0.0,
+  "th-Tavg-pcb-middle": 300.1168518066406,
+  "th-Tmax-pcb-middle": 304.3614501953125,
+  "th-Q-pcb-middle": 0.0,
+  "th-Tavg-pcb-back": 308.1499938964844,
+  "th-Tmax-pcb-back": 308.1499938964844,
+  "th-Q-pcb-back": 0.6816676259040833,
+  "th-Tavg-cameras": 298.1849060058594,
+  "th-Tmax-cameras": 298.4091796875,
+  "th-Q-cameras": 0.0,
+  "th-Tmax-air": 308.1489562988281,
+  "th-Tbulk-fanmid": 298.9568481445312,
+  "th-Q-outer": -0.6816120147705078,
+  "th-Q-walls": 0.6816676259040833,
+  "th-Tmax-passive": 308.1478881835938,
+  "q_sources_w": 0.6816676259040833,
+  "q_all_walls_w": 0.6816676259040833,
+  "q_outer_w": -0.6816120147705078,
+  "imbalance_rel": 8.158101024921556e-05,
+  "max_rel_change_last_2_chunks": 3.051757806815658e-05
+ },
+ "rise_per_watt_k": {
+  "th-Tavg-motor": 1.0875196006465606,
+  "th-Tmax-motor": 13.25362972976403,
+  "th-Tavg-pcb-front": 2.06616994644774,
+  "th-Tmax-pcb-front": 5.393491584171219,
+  "th-Tavg-pcb-middle": 2.88535311330364,
+  "th-Tmax-pcb-middle": 9.112139053214372,
+  "th-Tavg-pcb-back": 14.669897053159286,
+  "th-Tmax-pcb-back": 14.669897053159286,
+  "th-Tavg-cameras": 0.05120678250357356,
+  "th-Tmax-cameras": 0.38021416545384196,
+  "th-Tmax-air": 14.668374907150264,
+  "th-Tbulk-fanmid": 1.1836386442162454,
+  "th-Tmax-passive": 14.66680799214106
+ },
+ "history": [
+  {
+   "its": 50,
+   "elapsed_s": 138.0,
+   "th-Tavg-motor": 298.8913879394531,
+   "th-Tmax-motor": 307.1845703125,
+   "th-Q-motor": 0.0,
+   "th-Tavg-pcb-front": 299.5580749511719,
+   "th-Tmax-pcb-front": 301.8263244628906,
+   "th-Q-pcb-front": 0.0,
+   "th-Tavg-pcb-middle": 300.1170043945312,
+   "th-Tmax-pcb-middle": 304.3614501953125,
+   "th-Q-pcb-middle": 0.0,
+   "th-Tavg-pcb-back": 308.1499938964844,
+   "th-Tmax-pcb-back": 308.1499938964844,
+   "th-Q-pcb-back": 0.6816686987876892,
+   "th-Tavg-cameras": 298.1848754882812,
+   "th-Tmax-cameras": 298.4089660644531,
+   "th-Q-cameras": 0.0,
+   "th-Tmax-air": 308.1489562988281,
+   "th-Tbulk-fanmid": 298.9568786621094,
+   "th-Q-outer": -0.6816328763961792,
+   "th-Q-walls": 0.6816686987876892,
+   "th-Tmax-passive": 308.1478881835938,
+   "q_sources_w": 0.6816686987876892,
+   "q_all_walls_w": 0.6816686987876892,
+   "q_outer_w": -0.6816328763961792,
+   "imbalance_rel": 5.255102892903539e-05
+  },
+  {
+   "its": 100,
+   "elapsed_s": 278.4,
+   "th-Tavg-motor": 298.8912963867188,
+   "th-Tmax-motor": 307.1845703125,
+   "th-Q-motor": 0.0,
+   "th-Tavg-pcb-front": 299.5584106445312,
+   "th-Tmax-pcb-front": 301.8265380859375,
+   "th-Q-pcb-front": 0.0,
+   "th-Tavg-pcb-middle": 300.1168823242188,
+   "th-Tmax-pcb-middle": 304.3614501953125,
+   "th-Q-pcb-middle": 0.0,
+   "th-Tavg-pcb-back": 308.1499938964844,
+   "th-Tmax-pcb-back": 308.1499938964844,
+   "th-Q-pcb-back": 0.681667685508728,
+   "th-Tavg-cameras": 298.1849060058594,
+   "th-Tmax-cameras": 298.4091796875,
+   "th-Q-cameras": 0.0,
+   "th-Tmax-air": 308.1489562988281,
+   "th-Tbulk-fanmid": 298.9568481445312,
+   "th-Q-outer": -0.6815910339355469,
+   "th-Q-walls": 0.681667685508728,
+   "th-Tmax-passive": 308.1478881835938,
+   "q_sources_w": 0.681667685508728,
+   "q_all_walls_w": 0.681667685508728,
+   "q_outer_w": -0.6815910339355469,
+   "imbalance_rel": 0.00011244712755299137
+  },
+  {
+   "its": 150,
+   "elapsed_s": 418.6,
+   "th-Tavg-motor": 298.8912963867188,
+   "th-Tmax-motor": 307.1845703125,
+   "th-Q-motor": 0.0,
+   "th-Tavg-pcb-front": 299.5584106445312,
+   "th-Tmax-pcb-front": 301.8265380859375,
+   "th-Q-pcb-front": 0.0,
+   "th-Tavg-pcb-middle": 300.1168823242188,
+   "th-Tmax-pcb-middle": 304.3614501953125,
+   "th-Q-pcb-middle": 0.0,
+   "th-Tavg-pcb-back": 308.1499938964844,
+   "th-Tmax-pcb-back": 308.1499938964844,
+   "th-Q-pcb-back": 0.6816672682762146,
+   "th-Tavg-cameras": 298.1848754882812,
+   "th-Tmax-cameras": 298.4091186523438,
+   "th-Q-cameras": 0.0,
+   "th-Tmax-air": 308.1489562988281,
+   "th-Tbulk-fanmid": 298.9568481445312,
+   "th-Q-outer": -0.6816105842590332,
+   "th-Q-walls": 0.6816672682762146,
+   "th-Tmax-passive": 308.1478881835938,
+   "q_sources_w": 0.6816672682762146,
+   "q_all_walls_w": 0.6816672682762146,
+   "q_outer_w": -0.6816105842590332,
+   "imbalance_rel": 8.315496404094302e-05
+  },
+  {
+   "its": 200,
+   "elapsed_s": 555.7,
+   "th-Tavg-motor": 298.8913269042969,
+   "th-Tmax-motor": 307.1845703125,
+   "th-Q-motor": 0.0,
+   "th-Tavg-pcb-front": 299.5584411621094,
+   "th-Tmax-pcb-front": 301.8265686035156,
+   "th-Q-pcb-front": 0.0,
+   "th-Tavg-pcb-middle": 300.1168518066406,
+   "th-Tmax-pcb-middle": 304.3614501953125,
+   "th-Q-pcb-middle": 0.0,
+   "th-Tavg-pcb-back": 308.1499938964844,
+   "th-Tmax-pcb-back": 308.1499938964844,
+   "th-Q-pcb-back": 0.6816676259040833,
+   "th-Tavg-cameras": 298.1849060058594,
+   "th-Tmax-cameras": 298.4091796875,
+   "th-Q-cameras": 0.0,
+   "th-Tmax-air": 308.1489562988281,
+   "th-Tbulk-fanmid": 298.9568481445312,
+   "th-Q-outer": -0.6816120147705078,
+   "th-Q-walls": 0.6816676259040833,
+   "th-Tmax-passive": 308.1478881835938,
+   "q_sources_w": 0.6816676259040833,
+   "q_all_walls_w": 0.6816676259040833,
+   "q_outer_w": -0.6816120147705078,
+   "imbalance_rel": 8.158101024921556e-05,
+   "max_rel_change_last_2_chunks": 3.051757806815658e-05
+  }
+ ],
+ "applied": {
+  "motor": {
+   "condition": "adiabatic",
+   "zones": 3
+  },
+  "pcb-front": {
+   "condition": "adiabatic",
+   "zones": 34
+  },
+  "pcb-middle": {
+   "condition": "adiabatic",
+   "zones": 34
+  },
+  "pcb-back": {
+   "condition": "isothermal 308.150 K",
+   "zones": 34
+  },
+  "cameras": {
+   "condition": "adiabatic",
+   "zones": 6
+  }
+ },
+ "stabilisation": {
+  "pmn_th_T_above_source": {
+   "name": "pmn_th_T_above_source",
+   "register": "th_T_above_source",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 0,
+   "monitor": "pmn-monitor-2"
+  },
+  "pmn_th_T_below_ambient": {
+   "name": "pmn_th_T_below_ambient",
+   "register": "th_T_below_ambient",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 0,
+   "monitor": "pmn-monitor-3"
+  },
+  "pmn_th_bad_cluster0": {
+   "name": "pmn_th_bad_cluster0",
+   "register": "th_bad_cluster0",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 0,
+   "monitor": "pmn-monitor-0"
+  },
+  "pmn_th_bad_cluster1": {
+   "name": "pmn_th_bad_cluster1",
+   "register": "th_bad_cluster1",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 0,
+   "monitor": "pmn-monitor-1"
+  }
+ },
+ "T_amb_K": 298.15
+}

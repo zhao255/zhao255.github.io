@@ -1,0 +1,155 @@
+{
+ "tag": "final-1cfm",
+ "case": "claude-run\\stairio-airflow-1cfm-final.cas.h5",
+ "data": "claude-run\\stairio-airflow-1cfm-final.dat.h5",
+ "method": "A cell is \"in the casing\" when its centroid lies inside the casing's outer envelope (convex hull of the shell\nsection in its 1 mm height band). Openings in the shell lie inside that hull, so every path from room air into the\ncasing crosses the envelope at an opening. The net mass flow INTO the casing through each opening is the sum of the\nstored face fluxes SV_FLUX (positive c0 -> c1; outward on boundaries) over the interior faces with one cell inside and\none outside, signed positive into the casing. This is an exact discrete flux balance of the solved field, so the sum\nover all openings must be ~0 and the fan-exhaust term must equal the fan flow; both are checked and recorded.\nFaces are attributed to an opening by their centroid position (rules in CATEGORIES). Cell centroids are taken as the\nmean of their face centroids.",
+ "cells_in_casing": 3538107,
+ "envelope_faces": 503592,
+ "checks": {
+  "sum_all_openings_kg_s": -9.148513934256752e-11,
+  "sum_all_openings_frac_of_fan": -1.6372131110735047e-07,
+  "exhaust_above_fan_kg_s": 0.0005968192869110255,
+  "exhaust_above_fan_cfm": 1.068064571463818,
+  "outer_box_net_kg_s": 4.724815980084937e-09,
+  "note": "exhaust above the fan disk exceeds the calibrated 1 CFM through the fan aperture: that much air leaves above the fan without crossing the aperture. It is probably air drawn in through the grille slots beside the fan and carried straight out by the jet under the cap; this was not traced as a flux, and flow through the ~1 mm gap around the fan frame was not evaluated",
+  "note_revised": "2026-10-11: wording only (cause stated as probable after review); numbers unchanged"
+ },
+ "openings": [
+  {
+   "opening": "top grille above the fan (exhaust)",
+   "faces": 21402,
+   "net_in_kg_s": -0.0005968192869110255,
+   "gross_in_kg_s": 0.00018380943046888368,
+   "gross_out_kg_s": 0.0007806287173799092,
+   "net_in_pct_of_fan": -106.8064571463818,
+   "p_inside_pa_flux_weighted": -0.4631384181146576,
+   "p_outside_pa_flux_weighted": -0.42846346261248014,
+   "share_of_net_intake_pct": null
+  },
+  {
+   "opening": "top grille beside the fan",
+   "faces": 156488,
+   "net_in_kg_s": 5.124387083492169e-05,
+   "gross_in_kg_s": 0.00013080323403045948,
+   "gross_out_kg_s": 7.955936319553777e-05,
+   "net_in_pct_of_fan": 9.170575439464201,
+   "p_inside_pa_flux_weighted": -0.009484844382354217,
+   "p_outside_pa_flux_weighted": -0.009289703206467404,
+   "share_of_net_intake_pct": 8.577020330543663
+  },
+  {
+   "opening": "underside and bottom openings (z < 21 mm)",
+   "faces": 39494,
+   "net_in_kg_s": 1.793221081663127e-05,
+   "gross_in_kg_s": 3.203678036309951e-05,
+   "gross_out_kg_s": 1.4104569546468241e-05,
+   "net_in_pct_of_fan": 3.2091387596392202,
+   "p_inside_pa_flux_weighted": -0.0010601477829914208,
+   "p_outside_pa_flux_weighted": -0.0009727966412459502,
+   "share_of_net_intake_pct": 3.0014308880239065
+  },
+  {
+   "opening": "front arch (fan-side face, under the cameras)",
+   "faces": 15530,
+   "net_in_kg_s": 0.00039288602853028914,
+   "gross_in_kg_s": 0.0004275253474174974,
+   "gross_out_kg_s": 3.463931888720829e-05,
+   "net_in_pct_of_fan": 70.31067140410349,
+   "p_inside_pa_flux_weighted": -0.059335074971801724,
+   "p_outside_pa_flux_weighted": -0.05099961557750521,
+   "share_of_net_intake_pct": 65.75989282984456
+  },
+  {
+   "opening": "side vents, -x wall (horizontal slots)",
+   "faces": 76080,
+   "net_in_kg_s": 6.58539670091584e-05,
+   "gross_in_kg_s": 7.531940718147571e-05,
+   "gross_out_kg_s": 9.465440172317322e-06,
+   "net_in_pct_of_fan": 11.785190357515205,
+   "p_inside_pa_flux_weighted": -0.008438610427477105,
+   "p_outside_pa_flux_weighted": -0.004970768625110604,
+   "share_of_net_intake_pct": 11.022407259281087
+  },
+  {
+   "opening": "side vents, +x wall (horizontal slots)",
+   "faces": 75770,
+   "net_in_kg_s": 6.593844241135946e-05,
+   "gross_in_kg_s": 7.547241445365633e-05,
+   "gross_out_kg_s": 9.533972042296864e-06,
+   "net_in_pct_of_fan": 11.800308029854195,
+   "p_inside_pa_flux_weighted": -0.008408982351699868,
+   "p_outside_pa_flux_weighted": -0.0049251444212847105,
+   "share_of_net_intake_pct": 11.036546457399892
+  },
+  {
+   "opening": "side wall cut-outs below the vents (z < 40 mm)",
+   "faces": 12016,
+   "net_in_kg_s": -6.362012045372519e-07,
+   "gross_in_kg_s": 1.1926742572090716e-06,
+   "gross_out_kg_s": 1.8288754617463235e-06,
+   "net_in_pct_of_fan": -0.11385422384818909,
+   "p_inside_pa_flux_weighted": -0.0004978984024051152,
+   "p_outside_pa_flux_weighted": -0.0005129400016845542,
+   "share_of_net_intake_pct": null
+  },
+  {
+   "opening": "camera bosses / lens gaps",
+   "faces": 32721,
+   "net_in_kg_s": 3.187352102700388e-06,
+   "gross_in_kg_s": 7.896194411488209e-06,
+   "gross_out_kg_s": 4.7088423087878206e-06,
+   "net_in_pct_of_fan": 0.5704068102917234,
+   "p_inside_pa_flux_weighted": -0.032764493583094176,
+   "p_outside_pa_flux_weighted": -0.03231055265274764,
+   "share_of_net_intake_pct": 0.5334878755262185
+  },
+  {
+   "opening": "back face",
+   "faces": 27564,
+   "net_in_kg_s": 4.041015754764951e-08,
+   "gross_in_kg_s": 1.9887035495114928e-07,
+   "gross_out_kg_s": 1.5846019740349974e-07,
+   "net_in_pct_of_fan": 0.007231779962625453,
+   "p_inside_pa_flux_weighted": -4.885753035243317e-06,
+   "p_outside_pa_flux_weighted": -5.121002223534435e-06,
+   "share_of_net_intake_pct": 0.0067637111951047635
+  },
+  {
+   "opening": "front face above the arch",
+   "faces": 17469,
+   "net_in_kg_s": 2.3615552065332114e-07,
+   "gross_in_kg_s": 2.690791150640202e-06,
+   "gross_out_kg_s": 2.454635629986881e-06,
+   "net_in_pct_of_fan": 0.04226226439009283,
+   "p_inside_pa_flux_weighted": -0.0012488183331592678,
+   "p_outside_pa_flux_weighted": -0.0012642660191763337,
+   "share_of_net_intake_pct": 0.03952688719278625
+  },
+  {
+   "opening": "unclassified",
+   "faces": 29058,
+   "net_in_kg_s": 1.3695924716202552e-07,
+   "gross_in_kg_s": 1.753063609371848e-06,
+   "gross_out_kg_s": 1.6161043622098224e-06,
+   "net_in_pct_of_fan": 0.024510152878139763,
+   "p_inside_pa_flux_weighted": -0.00012152874074739857,
+   "p_outside_pa_flux_weighted": -0.0001246322435809556,
+   "share_of_net_intake_pct": 0.022923760992780248
+  }
+ ],
+ "net_intake_total_kg_s": 0.0005974553966304234,
+ "crevice_and_actuator_cells": {
+  "air-fluid-tet-cells": [
+   1,
+   4235306
+  ],
+  "crevice-block": [
+   4235307,
+   4237243
+  ],
+  "fan-actuator": [
+   4237244,
+   4316506
+  ]
+ }
+}

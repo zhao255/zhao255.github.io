@@ -1,0 +1,292 @@
+{
+  "variant": "sealed-arch",
+  "basis": "user confirmed 2026-10-11: side-shell.SLDPRT covers the fan-side arch on the real robot",
+  "start_state": "accepted open-arch case+data (claude-run/stairio-airflow-1cfm-final), read in single precision",
+  "configuration": "single precision, SIMPLEC (skewness correction 1), crevice block and arch band deactivated (walls); fresh seal-* report definitions after the topology change",
+  "S_start_n_m3": 4720.0,
+  "plug_definition_mm": {
+    "axis_xy": [
+      0.0,
+      -28.5
+    ],
+    "r_min": 30.5,
+    "r_max": 35.5,
+    "x_abs_max": 20.6,
+    "z": [
+      -2.0,
+      71.5
+    ],
+    "casing_outer_r": 33.0,
+    "model": "cells deactivated: their faces with the live air become walls"
+  },
+  "baseline_original_reports": {
+    "stairio-fan-mid-net": 0.0004718987329397351,
+    "stairio-fan-bottom-net": 0.000473225605674088,
+    "stairio-fan-top-net": 0.0004697101248893887,
+    "stairio-fan-top-pressure": 3.997990131378174,
+    "stairio-fan-bottom-pressure": -0.2449398338794708,
+    "stairio-air-max-speed": 2.937217235565186
+  },
+  "baseline_q_mid_cfm": 0.9998967888035697,
+  "baseline_dp_pa": 4.242929965257645,
+  "registers": {
+    "hex": {
+      "name": "arch_plug_hex",
+      "python_name_1": "arch_plug_hex",
+      "type": {
+        "option": "hexahedron",
+        "hexahedron": {
+          "min_point": [
+            -0.0206,
+            -0.066,
+            -0.002
+          ],
+          "max_point": [
+            0.0206,
+            -0.044,
+            0.0715
+          ],
+          "inside": true
+        }
+      },
+      "display_options": {
+        "draw_mesh": false,
+        "filled": false,
+        "marker": true,
+        "marker_symbol": "o",
+        "marker_size": 0.1,
+        "wireframe": true,
+        "color": "cyan"
+      }
+    },
+    "outer": {
+      "name": "arch_plug_outer",
+      "python_name_1": "arch_plug_outer",
+      "type": {
+        "option": "cylinder",
+        "cylinder": {
+          "axis_begin": [
+            0.0,
+            -0.0285,
+            -0.005
+          ],
+          "axis_end": [
+            0.0,
+            -0.0285,
+            0.075
+          ],
+          "radius": 0.0355,
+          "inside": false
+        }
+      },
+      "display_options": {
+        "draw_mesh": false,
+        "filled": false,
+        "marker": true,
+        "marker_symbol": "o",
+        "marker_size": 0.1,
+        "wireframe": true,
+        "color": "dark blue"
+      }
+    },
+    "inner": {
+      "name": "arch_plug_inner",
+      "python_name_1": "arch_plug_inner",
+      "type": {
+        "option": "cylinder",
+        "cylinder": {
+          "axis_begin": [
+            0.0,
+            -0.0285,
+            -0.005
+          ],
+          "axis_end": [
+            0.0,
+            -0.0285,
+            0.075
+          ],
+          "radius": 0.0305,
+          "inside": true
+        }
+      },
+      "display_options": {
+        "draw_mesh": false,
+        "filled": false,
+        "marker": true,
+        "marker_symbol": "o",
+        "marker_size": 0.1,
+        "wireframe": true,
+        "color": "dark gray"
+      }
+    }
+  },
+  "wall_area_after_split_m2": 0.1935424208641052,
+  "wall_area_rel_change_vs_accepted": 2.6634704886063787e-08,
+  "total_volume_m3": 0.02386376820504665,
+  "plug_volume_mm3": 15786.410585860718,
+  "crevice_volume_mm3": 1.531755278172398,
+  "fluid_zones_after": [
+    "arch-band-inside",
+    "arch-band-outside",
+    "fan-actuator",
+    "air-fluid-tet-cells"
+  ],
+  "walls_created_by_deactivation": [
+    "interior-891915:028-shadow",
+    "interior-891915:029-shadow",
+    "interior-891915:070-shadow",
+    "interior-891915:071-shadow",
+    "interior-891915:072:074",
+    "interior-891915:072:075",
+    "interior-891915:072:086",
+    "interior-891915:072:087"
+  ],
+  "live_volume_m3": 0.02384798042476177,
+  "live_volume_drop_mm3": 15787.780284881592,
+  "plane_areas_mm2": {
+    "stairio-fan-disk-z112000": 914.9446818079862,
+    "stairio-fan-disk-z112500": 914.6143904926874,
+    "stairio-fan-disk-z113000": 914.6335085731027
+  },
+  "plane_gate": true,
+  "fresh_reports": {
+    "stairio-fan-mid-net": 0.0004718987038359046,
+    "stairio-fan-bottom-net": 0.0004732255765702575,
+    "stairio-fan-top-net": 0.0004697100957855582,
+    "stairio-fan-top-pressure": 4.020752429962158,
+    "stairio-fan-bottom-pressure": -0.2463266402482986,
+    "stairio-air-max-speed": 2.937217235565186
+  },
+  "fresh_vs_baseline_rel": {
+    "stairio-fan-mid-net": -6.167388988398415e-08,
+    "stairio-fan-bottom-net": -6.150096309998077e-08,
+    "stairio-fan-top-net": -6.196125845736589e-08,
+    "stairio-fan-top-pressure": 0.005693435410291547,
+    "stairio-fan-bottom-pressure": 0.005661824566722817,
+    "stairio-air-max-speed": 0.0
+  },
+  "fresh_q_mid_cfm": 0.9998967271360453,
+  "fresh_dp_pa": 4.267079070210457,
+  "report_file": {
+    "name": "seal-monitor-file",
+    "file_name": "claude-run\\\\sealed-arch\\\\reports.out",
+    "frequency_of": "iteration",
+    "frequency": 5,
+    "itr_index": "1",
+    "run_index": "0",
+    "report_defs": [
+      "seal-actuator-mean-w",
+      "seal-air-max-speed",
+      "seal-air-mean-speed",
+      "seal-fan-bottom-area",
+      "seal-fan-bottom-forward",
+      "seal-fan-bottom-net",
+      "seal-fan-bottom-pressure",
+      "seal-fan-bottom-reverse",
+      "seal-fan-mid-area",
+      "seal-fan-mid-forward",
+      "seal-fan-mid-net",
+      "seal-fan-mid-pressure",
+      "seal-fan-mid-reverse",
+      "seal-fan-top-area",
+      "seal-fan-top-forward",
+      "seal-fan-top-net",
+      "seal-fan-top-pressure",
+      "seal-fan-top-reverse",
+      "seal-outer-mass-imbalance",
+      "seal-outer-zone3-20-mflow",
+      "seal-outer-zone3-23-mflow",
+      "seal-outer-zone3-26-mflow",
+      "seal-outer-zone3-29-mflow",
+      "seal-outer-zone3-32-mflow",
+      "seal-outer-zone3-35-mflow"
+    ],
+    "print": false,
+    "active": true,
+    "write_instantaneous_values": false
+  },
+  "solver": {
+    "methods_before": {
+      "p_v_coupling": {
+        "flow_scheme": "Coupled",
+        "flux_type": "Rhie-Chow: momentum based",
+        "flux_auto_select": true
+      },
+      "spatial_discretization": {
+        "gradient_scheme": "least-square-cell-based",
+        "discretization_scheme": {
+          "mom": "second-order-upwind",
+          "pressure": "presto!"
+        }
+      },
+      "pseudo_time_method": {
+        "formulation": {
+          "coupled_solver": "global-time-step"
+        }
+      },
+      "expert": {
+        "implicit_bodyforce_treatment": false,
+        "velocity_formulation": "absolute",
+        "physical_velocity_formulation": false,
+        "disable_rhie_chow_flux": false,
+        "presto_pressure_scheme": false,
+        "first_to_second_order_blending": 1.0
+      },
+      "high_order_term_relaxation": {
+        "enable": true,
+        "relaxation_factor": 0.25,
+        "select_variables": "flow-variables",
+        "type": "standard"
+      },
+      "warped_face_gradient_correction": {
+        "enable": true,
+        "mode": "fast"
+      }
+    },
+    "methods_after": {
+      "p_v_coupling": {
+        "flow_scheme": "SIMPLEC",
+        "skewness_correction_itr_count": 1,
+        "flux_type": "Rhie-Chow: momentum based",
+        "flux_auto_select": true
+      },
+      "spatial_discretization": {
+        "gradient_scheme": "least-square-cell-based",
+        "discretization_scheme": {
+          "mom": "second-order-upwind",
+          "pressure": "presto!"
+        }
+      },
+      "pseudo_time_method": {
+        "formulation": {
+          "segregated_solver": "off"
+        }
+      },
+      "expert": {
+        "implicit_bodyforce_treatment": false,
+        "velocity_formulation": "absolute",
+        "physical_velocity_formulation": false,
+        "disable_rhie_chow_flux": false,
+        "presto_pressure_scheme": false,
+        "first_to_second_order_blending": 1.0
+      },
+      "high_order_term_relaxation": {
+        "enable": true,
+        "relaxation_factor": 0.25,
+        "select_variables": "flow-variables",
+        "type": "standard"
+      },
+      "warped_face_gradient_correction": {
+        "enable": true,
+        "mode": "fast"
+      }
+    },
+    "under_relaxation": {
+      "body-force": 1.0,
+      "density": 1,
+      "mom": 0.7,
+      "pressure": 0.3
+    },
+    "discretization_unchanged": true
+  }
+}

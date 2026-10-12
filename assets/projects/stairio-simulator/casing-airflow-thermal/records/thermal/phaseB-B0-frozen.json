@@ -1,0 +1,545 @@
+{
+ "step": "B0 frozen airflow, all sources isothermal, calibrated to scenario A",
+ "scenario": {
+  "name": "A-assumed",
+  "basis": "ASSUMED loads (no measurements): Pi Zero 2 W 1.75 W (manufacturer typical bare-board 0.35 A x 5 V), cameras 1.0 W, power manager 1.0 W, motor 2.5 W + C610 0.5 W (3 W together; split by Claude). Board identities: the user said the Pi is on the centre board and the other two are interchangeable; Claude put the power manager on the front board (under the fan, best cooled) and the C610 on the back board (next to the motor).",
+  "assignment": {
+   "pcb-front": "power manager",
+   "pcb-middle": "Raspberry Pi Zero 2 W",
+   "pcb-back": "C610 motor controller",
+   "motor": "motor (archived 36GY envelope)",
+   "cameras": "dual fisheye camera"
+  },
+  "loads_w": {
+   "motor": 2.5,
+   "pcb-front": 1.0,
+   "pcb-middle": 1.75,
+   "pcb-back": 0.5,
+   "cameras": 1.0
+  }
+ },
+ "start_rises_k": {
+  "motor": 41.047700468862516,
+  "pcb-front": 20.18892455933681,
+  "pcb-middle": 24.391790289574054,
+  "pcb-back": 13.681979023052158,
+  "cameras": 44.10839926518581
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "rises_k": {
+    "motor": 41.047700468862516,
+    "pcb-front": 20.18892455933681,
+    "pcb-middle": 24.391790289574054,
+    "pcb-back": 13.681979023052158,
+    "cameras": 44.10839926518581
+   },
+   "q_w": {
+    "motor": 2.598611354827881,
+    "pcb-front": 0.8916928768157959,
+    "pcb-middle": 1.634887337684631,
+    "pcb-back": 0.4595573246479034,
+    "cameras": 0.9996897578239441
+   },
+   "err": {
+    "motor": 0.03944454193115243,
+    "pcb-front": -0.1083071231842041,
+    "pcb-middle": -0.06577866418021094,
+    "pcb-back": -0.08088535070419323,
+    "cameras": -0.0003102421760559082
+   },
+   "imbalance_rel": 2.0422101667450116e-05,
+   "tmax_air_rise_k": 43.79641113281252,
+   "tmin_air_rise_k": -0.018011474609352263,
+   "fan_inlet_rise_k": 9.196252441406216,
+   "monitors": {
+    "th-Tavg-motor": 339.1976928710938,
+    "th-Tmax-motor": 339.1976928710938,
+    "th-Q-motor": 2.598611354827881,
+    "th-Tavg-pcb-front": 318.3389282226562,
+    "th-Tmax-pcb-front": 318.3389282226562,
+    "th-Q-pcb-front": 0.8916928768157959,
+    "th-Tavg-pcb-middle": 322.5417785644531,
+    "th-Tmax-pcb-middle": 322.5417785644531,
+    "th-Q-pcb-middle": 1.634887337684631,
+    "th-Tavg-pcb-back": 311.8319702148438,
+    "th-Tmax-pcb-back": 311.8319702148438,
+    "th-Q-pcb-back": 0.4595573246479034,
+    "th-Tavg-cameras": 342.2583923339844,
+    "th-Tmax-cameras": 342.2583923339844,
+    "th-Q-cameras": 0.9996897578239441,
+    "th-Tmax-air": 341.9464111328125,
+    "th-Tbulk-fanmid": 307.3462524414062,
+    "th-Q-outer": -6.584304332733154,
+    "th-Q-walls": 6.584438800811768,
+    "th-Tmax-passive": 339.1967163085938,
+    "th-Tmin-air": 298.1319885253906
+   },
+   "elapsed_s": 412.6
+  },
+  {
+   "round": 1,
+   "rises_k": {
+    "motor": 39.49003416055391,
+    "pcb-front": 22.641119026800748,
+    "pcb-middle": 26.1092198971992,
+    "pcb-back": 14.886041728890742,
+    "cameras": 44.122087797716304
+   },
+   "q_w": {
+    "motor": 2.488084077835083,
+    "pcb-front": 1.064701080322266,
+    "pcb-middle": 1.759126663208008,
+    "pcb-back": 0.5623046159744263,
+    "cameras": 0.9997525811195374
+   },
+   "err": {
+    "motor": -0.004766368865966819,
+    "pcb-front": 0.06470108032226607,
+    "pcb-middle": 0.005215236118861766,
+    "pcb-back": 0.12460923194885254,
+    "cameras": -0.0002474188804626465
+   },
+   "imbalance_rel": 2.379340718677436e-05,
+   "tmax_air_rise_k": 43.811486816406216,
+   "tmin_air_rise_k": -0.018743896484352263,
+   "fan_inlet_rise_k": 9.450646972656216,
+   "monitors": {
+    "th-Tavg-motor": 337.6400451660156,
+    "th-Tmax-motor": 337.6400451660156,
+    "th-Q-motor": 2.488084077835083,
+    "th-Tavg-pcb-front": 320.7911071777344,
+    "th-Tmax-pcb-front": 320.7911071777344,
+    "th-Q-pcb-front": 1.064701080322266,
+    "th-Tavg-pcb-middle": 324.2592163085938,
+    "th-Tmax-pcb-middle": 324.2592163085938,
+    "th-Q-pcb-middle": 1.759126663208008,
+    "th-Tavg-pcb-back": 313.0360412597656,
+    "th-Tmax-pcb-back": 313.0360412597656,
+    "th-Q-pcb-back": 0.5623046159744263,
+    "th-Tavg-cameras": 342.2720947265625,
+    "th-Tmax-cameras": 342.2720947265625,
+    "th-Q-cameras": 0.9997525811195374,
+    "th-Tmax-air": 341.9614868164062,
+    "th-Tbulk-fanmid": 307.6006469726562,
+    "th-Q-outer": -6.873805522918701,
+    "th-Q-walls": 6.873969078063965,
+    "th-Tmax-passive": 340.2468566894531,
+    "th-Tmin-air": 298.1312561035156
+   },
+   "elapsed_s": 767.6
+  },
+  {
+   "round": 2,
+   "rises_k": {
+    "motor": 39.679159671841504,
+    "pcb-front": 21.26523532778579,
+    "pcb-middle": 25.97376060276101,
+    "pcb-back": 13.236634829232633,
+    "cameras": 44.13300713693357
+   },
+   "q_w": {
+    "motor": 2.511904716491699,
+    "pcb-front": 0.957304835319519,
+    "pcb-middle": 1.789533615112305,
+    "pcb-back": 0.4397149384021759,
+    "cameras": 1.000183343887329
+   },
+   "err": {
+    "motor": 0.004761886596679643,
+    "pcb-front": -0.04269516468048096,
+    "pcb-middle": 0.022590637207031472,
+    "pcb-back": -0.1205701231956482,
+    "cameras": 0.00018334388732910156
+   },
+   "imbalance_rel": 2.9754979136278445e-05,
+   "tmax_air_rise_k": 43.82143554687502,
+   "tmin_air_rise_k": -0.018865966796852263,
+   "fan_inlet_rise_k": 9.258935546875023,
+   "monitors": {
+    "th-Tavg-motor": 337.8291625976562,
+    "th-Tmax-motor": 337.8291625976562,
+    "th-Q-motor": 2.511904716491699,
+    "th-Tavg-pcb-front": 319.4152221679688,
+    "th-Tmax-pcb-front": 319.4152221679688,
+    "th-Q-pcb-front": 0.957304835319519,
+    "th-Tavg-pcb-middle": 324.1237487792969,
+    "th-Tmax-pcb-middle": 324.1237487792969,
+    "th-Q-pcb-middle": 1.789533615112305,
+    "th-Tavg-pcb-back": 311.3866271972656,
+    "th-Tmax-pcb-back": 311.3866271972656,
+    "th-Q-pcb-back": 0.4397149384021759,
+    "th-Tavg-cameras": 342.2830200195312,
+    "th-Tmax-cameras": 342.2830200195312,
+    "th-Q-cameras": 1.000183343887329,
+    "th-Tmax-air": 341.971435546875,
+    "th-Tbulk-fanmid": 307.408935546875,
+    "th-Q-outer": -6.698441982269287,
+    "th-Q-walls": 6.698641300201416,
+    "th-Tmax-passive": 338.582275390625,
+    "th-Tmin-air": 298.1311340332031
+   },
+   "elapsed_s": 1124.6
+  },
+  {
+   "round": 3,
+   "rises_k": {
+    "motor": 39.491107496366524,
+    "pcb-front": 22.213650807151836,
+    "pcb-middle": 25.399959336320837,
+    "pcb-back": 15.05138178535798,
+    "cameras": 44.12491710310381
+   },
+   "q_w": {
+    "motor": 2.48700213432312,
+    "pcb-front": 1.041979551315308,
+    "pcb-middle": 1.693143367767334,
+    "pcb-back": 0.5759571194648743,
+    "cameras": 0.9998545050621033
+   },
+   "err": {
+    "motor": -0.005199146270751909,
+    "pcb-front": 0.04197955131530806,
+    "pcb-middle": -0.03248950413295204,
+    "pcb-back": 0.15191423892974854,
+    "cameras": -0.00014549493789672852
+   },
+   "imbalance_rel": 2.202534092632411e-05,
+   "tmax_air_rise_k": 43.81398925781252,
+   "tmin_air_rise_k": -0.01968994140617042,
+   "fan_inlet_rise_k": 9.367120361328148,
+   "monitors": {
+    "th-Tavg-motor": 337.64111328125,
+    "th-Tmax-motor": 337.64111328125,
+    "th-Q-motor": 2.48700213432312,
+    "th-Tavg-pcb-front": 320.3636474609375,
+    "th-Tmax-pcb-front": 320.3636474609375,
+    "th-Q-pcb-front": 1.041979551315308,
+    "th-Tavg-pcb-middle": 323.5499572753906,
+    "th-Tmax-pcb-middle": 323.5499572753906,
+    "th-Q-pcb-middle": 1.693143367767334,
+    "th-Tavg-pcb-back": 313.2013854980469,
+    "th-Tmax-pcb-back": 313.2013854980469,
+    "th-Q-pcb-back": 0.5759571194648743,
+    "th-Tavg-cameras": 342.27490234375,
+    "th-Tmax-cameras": 342.27490234375,
+    "th-Q-cameras": 0.9998545050621033,
+    "th-Tmax-air": 341.9639892578125,
+    "th-Tbulk-fanmid": 307.5171203613281,
+    "th-Q-outer": -6.797786712646484,
+    "th-Q-walls": 6.79793643951416,
+    "th-Tmax-passive": 342.96240234375,
+    "th-Tmin-air": 298.1303100585938
+   },
+   "elapsed_s": 1495.2
+  },
+  {
+   "round": 4,
+   "rises_k": {
+    "motor": 39.69750060861397,
+    "pcb-front": 21.31870129227697,
+    "pcb-middle": 26.25290314143653,
+    "pcb-back": 13.06640831121449,
+    "cameras": 44.13133798938388
+   },
+   "q_w": {
+    "motor": 2.514274835586548,
+    "pcb-front": 0.9566882848739624,
+    "pcb-middle": 1.8184654712677,
+    "pcb-back": 0.4264267086982727,
+    "cameras": 1.000140070915222
+   },
+   "err": {
+    "motor": 0.005709934234619185,
+    "pcb-front": -0.0433117151260376,
+    "pcb-middle": 0.03912312643868576,
+    "pcb-back": -0.1471465826034546,
+    "cameras": 0.00014007091522194592
+   },
+   "imbalance_rel": 2.201006882561746e-05,
+   "tmax_air_rise_k": 43.81984863281252,
+   "tmin_air_rise_k": -0.018347167968784106,
+   "fan_inlet_rise_k": 9.278375244140648,
+   "monitors": {
+    "th-Tavg-motor": 337.8475036621094,
+    "th-Tmax-motor": 337.8475036621094,
+    "th-Q-motor": 2.514274835586548,
+    "th-Tavg-pcb-front": 319.4686889648438,
+    "th-Tmax-pcb-front": 319.4686889648438,
+    "th-Q-pcb-front": 0.9566882848739624,
+    "th-Tavg-pcb-middle": 324.4028930664062,
+    "th-Tmax-pcb-middle": 324.4028930664062,
+    "th-Q-pcb-middle": 1.8184654712677,
+    "th-Tavg-pcb-back": 311.2164001464844,
+    "th-Tmax-pcb-back": 311.2164001464844,
+    "th-Q-pcb-back": 0.4264267086982727,
+    "th-Tavg-cameras": 342.2813415527344,
+    "th-Tmax-cameras": 342.2813415527344,
+    "th-Q-cameras": 1.000140070915222,
+    "th-Tmax-air": 341.9698486328125,
+    "th-Tbulk-fanmid": 307.4283752441406,
+    "th-Q-outer": -6.715847492218018,
+    "th-Q-walls": 6.715995311737061,
+    "th-Tmax-passive": 339.6589050292969,
+    "th-Tmin-air": 298.1316528320312
+   },
+   "elapsed_s": 1879.0
+  },
+  {
+   "round": 5,
+   "rises_k": {
+    "motor": 39.47211741407842,
+    "pcb-front": 22.283853193713533,
+    "pcb-middle": 25.264477782735216,
+    "pcb-back": 15.320813688126538,
+    "cameras": 44.1251573382112
+   },
+   "q_w": {
+    "motor": 2.48389720916748,
+    "pcb-front": 1.04934024810791,
+    "pcb-middle": 1.674701571464539,
+    "pcb-back": 0.5961999297142029,
+    "cameras": 0.9998460412025452
+   },
+   "err": {
+    "motor": -0.0064411163330080345,
+    "pcb-front": 0.049340248107909934,
+    "pcb-middle": -0.04302767344883485,
+    "pcb-back": 0.19239985942840576,
+    "cameras": -0.00015395879745483398
+   },
+   "imbalance_rel": 3.5181184149601046e-05,
+   "tmax_air_rise_k": 43.8143249511719,
+   "tmin_air_rise_k": -0.01749267578117042,
+   "fan_inlet_rise_k": 9.374017333984398,
+   "monitors": {
+    "th-Tavg-motor": 337.6221313476562,
+    "th-Tmax-motor": 337.6221313476562,
+    "th-Q-motor": 2.48389720916748,
+    "th-Tavg-pcb-front": 320.4338684082031,
+    "th-Tmax-pcb-front": 320.4338684082031,
+    "th-Q-pcb-front": 1.04934024810791,
+    "th-Tavg-pcb-middle": 323.4144897460938,
+    "th-Tmax-pcb-middle": 323.4144897460938,
+    "th-Q-pcb-middle": 1.674701571464539,
+    "th-Tavg-pcb-back": 313.4708251953125,
+    "th-Tmax-pcb-back": 313.4708251953125,
+    "th-Q-pcb-back": 0.5961999297142029,
+    "th-Tavg-cameras": 342.275146484375,
+    "th-Tmax-cameras": 342.275146484375,
+    "th-Q-cameras": 0.9998460412025452,
+    "th-Tmax-air": 341.9643249511719,
+    "th-Tbulk-fanmid": 307.5240173339844,
+    "th-Q-outer": -6.803745746612549,
+    "th-Q-walls": 6.803985118865967,
+    "th-Tmax-passive": 339.3719177246094,
+    "th-Tmin-air": 298.1325073242188
+   },
+   "elapsed_s": 2236.8
+  },
+  {
+   "round": 6,
+   "rises_k": {
+    "motor": 39.72801014912787,
+    "pcb-front": 21.23606069041388,
+    "pcb-middle": 26.400426722668072,
+    "pcb-back": 12.848721481291346,
+    "cameras": 44.13195184044589
+   },
+   "q_w": {
+    "motor": 2.517782926559448,
+    "pcb-front": 0.9473679661750793,
+    "pcb-middle": 1.837104320526123,
+    "pcb-back": 0.4098184704780579,
+    "cameras": 1.000166654586792
+   },
+   "err": {
+    "motor": 0.00711317062377903,
+    "pcb-front": -0.052632033824920654,
+    "pcb-middle": 0.049773897443498916,
+    "pcb-back": -0.18036305904388417,
+    "cameras": 0.0001666545867919922
+   },
+   "imbalance_rel": 1.747582581801783e-05,
+   "tmax_air_rise_k": 43.82036743164065,
+   "tmin_air_rise_k": -0.016790771484352263,
+   "fan_inlet_rise_k": 9.274835205078148,
+   "monitors": {
+    "th-Tavg-motor": 337.8780212402344,
+    "th-Tmax-motor": 337.8780212402344,
+    "th-Q-motor": 2.517782926559448,
+    "th-Tavg-pcb-front": 319.3860473632812,
+    "th-Tmax-pcb-front": 319.3860473632812,
+    "th-Q-pcb-front": 0.9473679661750793,
+    "th-Tavg-pcb-middle": 324.5504150390625,
+    "th-Tmax-pcb-middle": 324.5504150390625,
+    "th-Q-pcb-middle": 1.837104320526123,
+    "th-Tavg-pcb-back": 310.9987182617188,
+    "th-Tmax-pcb-back": 310.9987182617188,
+    "th-Q-pcb-back": 0.4098184704780579,
+    "th-Tavg-cameras": 342.2819519042969,
+    "th-Tmax-cameras": 342.2819519042969,
+    "th-Q-cameras": 1.000166654586792,
+    "th-Tmax-air": 341.9703674316406,
+    "th-Tbulk-fanmid": 307.4248352050781,
+    "th-Q-outer": -6.712122917175293,
+    "th-Q-walls": 6.712240219116211,
+    "th-Tmax-passive": 341.936279296875,
+    "th-Tmin-air": 298.1332092285156
+   },
+   "elapsed_s": 2592.7
+  },
+  {
+   "round": 7,
+   "rises_k": {
+    "motor": 39.44741396294261,
+    "pcb-front": 22.415852602819932,
+    "pcb-middle": 25.148678955497655,
+    "pcb-back": 15.676113214593727,
+    "cameras": 44.12459827375322
+   },
+   "q_w": {
+    "motor": 2.479817867279053,
+    "pcb-front": 1.061054825782776,
+    "pcb-middle": 1.655929207801819,
+    "pcb-back": 0.6227457523345947,
+    "cameras": 0.9998086094856262
+   },
+   "err": {
+    "motor": -0.008072853088378684,
+    "pcb-front": 0.0610548257827761,
+    "pcb-middle": -0.0537547383989605,
+    "pcb-back": 0.24549150466918945,
+    "cameras": -0.0001913905143737793
+   },
+   "imbalance_rel": 3.559135170709478e-05,
+   "tmax_air_rise_k": 43.81380615234383,
+   "tmin_air_rise_k": -0.019018554687477263,
+   "fan_inlet_rise_k": 9.391351318359398,
+   "monitors": {
+    "th-Tavg-motor": 337.597412109375,
+    "th-Tmax-motor": 337.597412109375,
+    "th-Q-motor": 2.479817867279053,
+    "th-Tavg-pcb-front": 320.5658569335938,
+    "th-Tmax-pcb-front": 320.5658569335938,
+    "th-Q-pcb-front": 1.061054825782776,
+    "th-Tavg-pcb-middle": 323.2986755371094,
+    "th-Tmax-pcb-middle": 323.2986755371094,
+    "th-Q-pcb-middle": 1.655929207801819,
+    "th-Tavg-pcb-back": 313.8261108398438,
+    "th-Tmax-pcb-back": 313.8261108398438,
+    "th-Q-pcb-back": 0.6227457523345947,
+    "th-Tavg-cameras": 342.2745971679688,
+    "th-Tmax-cameras": 342.2745971679688,
+    "th-Q-cameras": 0.9998086094856262,
+    "th-Tmax-air": 341.9638061523438,
+    "th-Tbulk-fanmid": 307.5413513183594,
+    "th-Q-outer": -6.819113731384277,
+    "th-Q-walls": 6.819356441497803,
+    "th-Tmax-passive": 338.7646484375,
+    "th-Tmin-air": 298.1309814453125
+   },
+   "elapsed_s": 2946.8
+  }
+ ],
+ "stabilisation": {
+  "pmn_th_T_above_source": {
+   "name": "pmn_th_T_above_source",
+   "register": "th_T_above_source",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 0,
+   "monitor": "pmn-monitor-2"
+  },
+  "pmn_th_T_below_ambient": {
+   "name": "pmn_th_T_below_ambient",
+   "register": "th_T_below_ambient",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 0,
+   "monitor": "pmn-monitor-3"
+  },
+  "pmn_th_bad_cluster0": {
+   "name": "pmn_th_bad_cluster0",
+   "register": "th_bad_cluster0",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 0,
+   "monitor": "pmn-monitor-0"
+  },
+  "pmn_th_bad_cluster1": {
+   "name": "pmn_th_bad_cluster1",
+   "register": "th_bad_cluster1",
+   "frequency": {
+    "option": "iterations",
+    "iterations": 1
+   },
+   "active": true,
+   "verbosity": 0,
+   "monitor": "pmn-monitor-1"
+  }
+ },
+ "final": {
+  "round": 7,
+  "rises_k": {
+   "motor": 39.44741396294261,
+   "pcb-front": 22.415852602819932,
+   "pcb-middle": 25.148678955497655,
+   "pcb-back": 15.676113214593727,
+   "cameras": 44.12459827375322
+  },
+  "q_w": {
+   "motor": 2.479817867279053,
+   "pcb-front": 1.061054825782776,
+   "pcb-middle": 1.655929207801819,
+   "pcb-back": 0.6227457523345947,
+   "cameras": 0.9998086094856262
+  },
+  "err": {
+   "motor": -0.008072853088378684,
+   "pcb-front": 0.0610548257827761,
+   "pcb-middle": -0.0537547383989605,
+   "pcb-back": 0.24549150466918945,
+   "cameras": -0.0001913905143737793
+  },
+  "imbalance_rel": 3.559135170709478e-05,
+  "tmax_air_rise_k": 43.81380615234383,
+  "tmin_air_rise_k": -0.019018554687477263,
+  "fan_inlet_rise_k": 9.391351318359398,
+  "monitors": {
+   "th-Tavg-motor": 337.597412109375,
+   "th-Tmax-motor": 337.597412109375,
+   "th-Q-motor": 2.479817867279053,
+   "th-Tavg-pcb-front": 320.5658569335938,
+   "th-Tmax-pcb-front": 320.5658569335938,
+   "th-Q-pcb-front": 1.061054825782776,
+   "th-Tavg-pcb-middle": 323.2986755371094,
+   "th-Tmax-pcb-middle": 323.2986755371094,
+   "th-Q-pcb-middle": 1.655929207801819,
+   "th-Tavg-pcb-back": 313.8261108398438,
+   "th-Tmax-pcb-back": 313.8261108398438,
+   "th-Q-pcb-back": 0.6227457523345947,
+   "th-Tavg-cameras": 342.2745971679688,
+   "th-Tmax-cameras": 342.2745971679688,
+   "th-Q-cameras": 0.9998086094856262,
+   "th-Tmax-air": 341.9638061523438,
+   "th-Tbulk-fanmid": 307.5413513183594,
+   "th-Q-outer": -6.819113731384277,
+   "th-Q-walls": 6.819356441497803,
+   "th-Tmax-passive": 338.7646484375,
+   "th-Tmin-air": 298.1309814453125
+  },
+  "elapsed_s": 2946.8
+ },
+ "converged": false
+}

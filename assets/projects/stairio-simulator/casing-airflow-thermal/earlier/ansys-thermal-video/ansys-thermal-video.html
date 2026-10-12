@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stairio · Native ANSYS thermal video</title>
+<script src="../../../../../scroll-video-player.js" defer></script>
+<style>
+:root{color-scheme:dark;font-family:Segoe UI,Arial,sans-serif;background:#111820;color:#eef3f7}
+body{max-width:1200px;margin:auto;padding:38px 28px 70px}h1{font-size:36px;letter-spacing:-1px;margin:8px 0 10px}
+.eyebrow{color:#79c4e9;letter-spacing:2px;font-size:12px}p{line-height:1.65;color:#c3cfda;max-width:920px}
+video{width:100%;margin-top:20px;border-radius:12px;background:#050709}a{color:#8fd4fa}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}
+.card{padding:22px;background:#1b2734;border:1px solid #334558;border-radius:12px}.number{font-size:29px;color:white}.label{color:#9facbc;margin-top:6px;font-size:14px}
+.note{border-left:3px solid #f1bd6c;padding:12px 20px;background:#242622;margin:24px 0;line-height:1.7}
+img{width:100%;background:white;border-radius:12px;margin:15px 0}h2{font-size:22px;margin-top:36px}table{border-collapse:collapse;width:100%;margin:20px 0}th,td{text-align:left;padding:12px;border-bottom:1px solid #334558}li{margin:9px 0;line-height:1.55;color:#c3cfda}
+@media(max-width:700px){body{padding:24px 16px}.cards{grid-template-columns:1fr}h1{font-size:29px}}
+</style>
+<div class="eyebrow">STAIRIO V7 · ANSYS 2025 R2 · 10 OCTOBER 2026</div>
+<h1>Upright robot. Casing warm-up. Continuous cooling.</h1>
+<p>The temperature field is calculated and rendered by ANSYS. The complete robot is shown upright, with a closer view of the solved PLA casing. Video captions report the heat carried to the room by the continuously operating ventilation model.</p>
+<video controls playsinline preload="metadata" poster="native-frames/detail/frame_121.png"><source src="stairio-ansys-thermal.mp4" type="video/mp4"></video>
+<p><a href="stairio-ansys-thermal.mp4" download>Download MP4</a> · <a href="native-frames/detail/frame_121.png">Uncropped ANSYS endpoint</a> · <a href="transient_history.csv">Native result history (CSV)</a> · <a href="transient-model-method.json">Model definition</a></p>
+<div class="cards"><div class="card"><div class="number">37.7 °C</div><div class="label">Peak shell at 30 model minutes</div></div><div class="card"><div class="number">8.89 W</div><div class="label">Ventilation heat removal at 30 minutes</div></div><div class="card"><div class="number">10 W / 1 CFM</div><div class="label">Assumed heat load / net fresh airflow</div></div></div>
+<div class="note"><b>Conditional engineering study.</b> Only the primary PLA shell has a solved temperature field. Gray robot parts provide CAD context. The exhaust arrow illustrates the assumed fan direction; it is not a computed air-velocity field. Heat loads, fan flow and component thermal masses have not been measured, so this is not a prediction of the robot's real warm-up time.</div>
+<h2>What the calculation includes</h2>
+<p>The native transient model starts the PLA shell at 25 °C, applies 10 W to a perfectly mixed air node, and removes heat continuously through an assumed 1 CFM exchange with a 25 °C room. Shell conduction and heat storage use k = 0.2 W/(m·K), density = 1240 kg/m³ and heat capacity = 1800 J/(kg·K). Inside and outside film coefficients are 10 and 5 W/(m²·K). The 84,293-node casing mesh uses 41,732 quadratic thermal solid elements.</p>
+<p>The fan is on from startup. The air node has zero heat capacity, so its temperature adjusts immediately when power is applied. Only the shell stores heat; the electronics, motor, lids, contacts and radiation are omitted from the thermal model. The historical full-robot CAD still contains the archived motor geometry; the confirmed physical hardware is M2006 with C610.</p>
+<img src="native-transient-history.png" alt="Computed ANSYS transient temperature and heat-rate history">
+<table><thead><tr><th>Model time</th><th>Peak shell</th><th>Mixed air</th><th>Ventilation</th></tr></thead><tbody><tr><td>1 min</td><td>27.25 °C</td><td>38.41 °C</td><td>7.54 W</td></tr><tr><td>5 min</td><td>32.04 °C</td><td>39.50 °C</td><td>8.15 W</td></tr><tr><td>15 min</td><td>36.55 °C</td><td>40.51 °C</td><td>8.72 W</td></tr><tr><td>30 min</td><td>37.70 °C</td><td>40.81 °C</td><td>8.89 W</td></tr></tbody></table>
+<p>At 30 model minutes the casing is still warming slightly: 0.125 W continues to enter shell storage. The final video frame represents that transient state, rather than the fully settled steady solution.</p>
+<h2>Steady check and reproducibility</h2>
+<p><b>Independent numerical checks passed.</b> Air-node heat balance, shell heat storage, surface heat integrals, and native frame temperatures were checked. Halving the integration step from 5 to 2.5 seconds changed peak shell temperatures by at most 0.0303 °C across the saved states. This verifies numerical consistency, not the unmeasured physical inputs.</p>
+<p>The coupled steady model reproduces the earlier casing/ventilation calculation: 38.1110 °C peak shell, 40.9344 °C mixed air and 8.95735 W ventilation. The transient stores 360 result sets at 5-second intervals over 30 model minutes. Video assembly adds captions and combines native ANSYS views; it does not generate the temperature contours.</p>
+<p>The early transient has a small numerical minimum of 24.964 °C, about 0.036 °C below the prescribed initial temperature. This is an element/time-discretization artifact, not physical cooling. Raw result histories retain it; the video uses a fixed 25–40 °C display scale.</p>
+<ul><li><span>Native MAPDL transient input <small>(local archive; not included in this website export)</small></span></li><li><span>Native thermal result file <small>(local archive; not included in this website export)</small></span></li><li><span>Solver log <small>(local archive; not included in this website export)</small></span></li><li><a href="robot-context-audit.json">Whole-robot CAD mapping</a></li><li><a href="render_native_transient.py">Native Mechanical frame-export script</a></li><li><a href="native-frames-manifest.json">Rendered frame times and native temperatures</a></li><li><a href="layout-preview-verification.json">layout-preview-verification.json</a></li><li><a href="native-frames-verification.json">native-frames-verification.json</a></li><li><a href="native-transient-verification.json">native-transient-verification.json</a></li><li><a href="video-verification.json">video-verification.json</a></li></ul>
+<p><a href="../airflow-sensitivity/airflow-sensitivity-report.html">Earlier airflow sensitivity report</a></p>
+</html>

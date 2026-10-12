@@ -1,0 +1,582 @@
+{
+  "status": "pass",
+  "source_run_status": "solved",
+  "source_results": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-airflow-study\\ventilation-basis-results.json",
+  "cases": [
+    {
+      "tag": "basis_m3_hi5_ho5",
+      "status": "pass",
+      "checks": {
+        "solver_reports_done": true,
+        "input_conductivity_matches_assumption": true,
+        "inside_film_matches_case": true,
+        "outside_film_matches_case": true,
+        "solid_node_count_matches": true,
+        "solid_element_count_matches": true,
+        "physical_dimensions_match_casing": true,
+        "inner_mesh_area_within_0p2_percent_of_cad": true,
+        "outer_mesh_area_within_0p2_percent_of_cad": true,
+        "temperature_extrema_match_export": true,
+        "temperatures_within_bulk_bounds": true,
+        "positive_heat_transfer": true,
+        "balance_within_0p1_percent_or_precision_bound": true
+      },
+      "internal_h_w_m2_k": 5,
+      "external_h_w_m2_k": 5,
+      "nominal_mesh_mm": 3,
+      "nodes": 84293,
+      "elements": 41732,
+      "g_shell_w_k": 0.04969419170875264,
+      "g_inner_w_k": 0.04969419773099614,
+      "G_from_outer_w_per_k": 0.04969419170875264,
+      "G_from_inner_w_per_k": 0.04969419773099614,
+      "theta_max": 0.6745243668556213,
+      "theta_min": 0.009787851013243198,
+      "theta_extrema_source": "Full precision Mechanical results JSON; not rounded nodal text",
+      "basis_balance_relative_percent": -0.00001211860494275384,
+      "basis_heat_balance": {
+        "input_w": 0.04969419773099614,
+        "output_w": 0.04969419170875264,
+        "residual_w": -6.022243502490365e-9,
+        "export_rounding_propagation_bound_w": 0.0000015624865201838776,
+        "acceptance_absolute_tolerance_w": 0.00004969419773099614,
+        "acceptance_rule": "max(0.1% of input heat, four times propagated nodal rounding bound)"
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "conv",
+          "h_w_m2_k": 5,
+          "ambient_c": 1,
+          "role": "inner",
+          "elements": 8287,
+          "integrated_area_m2": 0.02138782703446436,
+          "area_weighted_temperature_c": 0.5353039123523968,
+          "heat_out_of_shell_w": -0.04969419773099614,
+          "temperature_rounding_heat_bound_w": 7.263470990492189e-7
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 5,
+          "ambient_c": 0,
+          "role": "outer",
+          "elements": 7062,
+          "integrated_area_m2": 0.02462073919456724,
+          "area_weighted_temperature_c": 0.40367749575705714,
+          "heat_out_of_shell_w": 0.04969419170875264,
+          "temperature_rounding_heat_bound_w": 8.361394211346587e-7
+        }
+      ],
+      "export_precision": {
+        "header": "Node Number\tTemperature (¡ãC)",
+        "unit": "C",
+        "nodes": 84293,
+        "assumed_export_rounding_bound_c": 0.000005
+      },
+      "mesh_dimensions_m": [
+        0.072,
+        0.12299998389,
+        0.12
+      ],
+      "solver_input_sha256": "b0195f27637a91f032f524b4fe71dfb40f19ab0f0e86d9201a68ae57fb037a94",
+      "temperature_export_sha256": "6ae11e12b49d06a782a1646e17010d8e077349f5eb395f46f299a4699866a304"
+    },
+    {
+      "tag": "basis_m3_hi10_ho5",
+      "status": "pass",
+      "checks": {
+        "solver_reports_done": true,
+        "input_conductivity_matches_assumption": true,
+        "inside_film_matches_case": true,
+        "outside_film_matches_case": true,
+        "solid_node_count_matches": true,
+        "solid_element_count_matches": true,
+        "physical_dimensions_match_casing": true,
+        "inner_mesh_area_within_0p2_percent_of_cad": true,
+        "outer_mesh_area_within_0p2_percent_of_cad": true,
+        "temperature_extrema_match_export": true,
+        "temperatures_within_bulk_bounds": true,
+        "positive_heat_transfer": true,
+        "balance_within_0p1_percent_or_precision_bound": true
+      },
+      "internal_h_w_m2_k": 10,
+      "external_h_w_m2_k": 5,
+      "nominal_mesh_mm": 3,
+      "nodes": 84293,
+      "elements": 41732,
+      "g_shell_w_k": 0.06543424825829687,
+      "g_inner_w_k": 0.0654342440154277,
+      "G_from_outer_w_per_k": 0.06543424825829687,
+      "G_from_inner_w_per_k": 0.0654342440154277,
+      "theta_max": 0.8228000998497009,
+      "theta_min": 0.014128196984529495,
+      "theta_extrema_source": "Full precision Mechanical results JSON; not rounded nodal text",
+      "basis_balance_relative_percent": 0.00000648417236411327,
+      "basis_heat_balance": {
+        "input_w": 0.0654342440154277,
+        "output_w": 0.06543424825829687,
+        "residual_w": 4.2428691671148044e-9,
+        "export_rounding_propagation_bound_w": 0.0000022888336192330964,
+        "acceptance_absolute_tolerance_w": 0.00006543424401542771,
+        "acceptance_rule": "max(0.1% of input heat, four times propagated nodal rounding bound)"
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "conv",
+          "h_w_m2_k": 10,
+          "ambient_c": 1,
+          "role": "inner",
+          "elements": 8287,
+          "integrated_area_m2": 0.02138782703446436,
+          "area_weighted_temperature_c": 0.6940584758330666,
+          "heat_out_of_shell_w": -0.0654342440154277,
+          "temperature_rounding_heat_bound_w": 0.0000014526941980984377
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 5,
+          "ambient_c": 0,
+          "role": "outer",
+          "elements": 7062,
+          "integrated_area_m2": 0.02462073919456724,
+          "area_weighted_temperature_c": 0.5315376418327477,
+          "heat_out_of_shell_w": 0.06543424825829687,
+          "temperature_rounding_heat_bound_w": 8.361394211346587e-7
+        }
+      ],
+      "export_precision": {
+        "header": "Node Number\tTemperature (¡ãC)",
+        "unit": "C",
+        "nodes": 84293,
+        "assumed_export_rounding_bound_c": 0.000005
+      },
+      "mesh_dimensions_m": [
+        0.072,
+        0.12299998389,
+        0.12
+      ],
+      "solver_input_sha256": "6f20ee5279008c51fb4b5959540ec99df0a559cb4c050b5bc9a6f64413407a17",
+      "temperature_export_sha256": "8e0e2f23f4544fa739b5269182190522e34a4de19e655cafb73c0f22bd756f30"
+    },
+    {
+      "tag": "basis_m3_hi20_ho5",
+      "status": "pass",
+      "checks": {
+        "solver_reports_done": true,
+        "input_conductivity_matches_assumption": true,
+        "inside_film_matches_case": true,
+        "outside_film_matches_case": true,
+        "solid_node_count_matches": true,
+        "solid_element_count_matches": true,
+        "physical_dimensions_match_casing": true,
+        "inner_mesh_area_within_0p2_percent_of_cad": true,
+        "outer_mesh_area_within_0p2_percent_of_cad": true,
+        "temperature_extrema_match_export": true,
+        "temperatures_within_bulk_bounds": true,
+        "positive_heat_transfer": true,
+        "balance_within_0p1_percent_or_precision_bound": true
+      },
+      "internal_h_w_m2_k": 20,
+      "external_h_w_m2_k": 5,
+      "nominal_mesh_mm": 3,
+      "nodes": 84293,
+      "elements": 41732,
+      "g_shell_w_k": 0.07822708613776927,
+      "g_inner_w_k": 0.07822709326467163,
+      "G_from_outer_w_per_k": 0.07822708613776927,
+      "G_from_inner_w_per_k": 0.07822709326467163,
+      "theta_max": 0.9231852293014526,
+      "theta_min": 0.018564531579613686,
+      "theta_extrema_source": "Full precision Mechanical results JSON; not rounded nodal text",
+      "basis_balance_relative_percent": -0.000009110529437441803,
+      "basis_heat_balance": {
+        "input_w": 0.07822709326467163,
+        "output_w": 0.07822708613776927,
+        "residual_w": -7.126902359932963e-9,
+        "export_rounding_propagation_bound_w": 0.0000037415278173315343,
+        "acceptance_absolute_tolerance_w": 0.00007822709326467163,
+        "acceptance_rule": "max(0.1% of input heat, four times propagated nodal rounding bound)"
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "conv",
+          "h_w_m2_k": 20,
+          "ambient_c": 1,
+          "role": "inner",
+          "elements": 8287,
+          "integrated_area_m2": 0.02138782703446436,
+          "area_weighted_temperature_c": 0.8171223913055393,
+          "heat_out_of_shell_w": -0.07822709326467163,
+          "temperature_rounding_heat_bound_w": 0.0000029053883961968754
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 5,
+          "ambient_c": 0,
+          "role": "outer",
+          "elements": 7062,
+          "integrated_area_m2": 0.02462073919456724,
+          "area_weighted_temperature_c": 0.635456844082331,
+          "heat_out_of_shell_w": 0.07822708613776927,
+          "temperature_rounding_heat_bound_w": 8.361394211346587e-7
+        }
+      ],
+      "export_precision": {
+        "header": "Node Number\tTemperature (¡ãC)",
+        "unit": "C",
+        "nodes": 84293,
+        "assumed_export_rounding_bound_c": 0.000005
+      },
+      "mesh_dimensions_m": [
+        0.072,
+        0.12299998389,
+        0.12
+      ],
+      "solver_input_sha256": "d848e20e33840b7bd81a7806662354e2e0880f97adc212e39445e6860f3e7cd7",
+      "temperature_export_sha256": "4a2cd9bfea1fc97653aa1e6b4637e6f5fe8af92eaa1cd9c77193016afa40c0bc"
+    },
+    {
+      "tag": "basis_m3_hi5_ho10",
+      "status": "pass",
+      "checks": {
+        "solver_reports_done": true,
+        "input_conductivity_matches_assumption": true,
+        "inside_film_matches_case": true,
+        "outside_film_matches_case": true,
+        "solid_node_count_matches": true,
+        "solid_element_count_matches": true,
+        "physical_dimensions_match_casing": true,
+        "inner_mesh_area_within_0p2_percent_of_cad": true,
+        "outer_mesh_area_within_0p2_percent_of_cad": true,
+        "temperature_extrema_match_export": true,
+        "temperatures_within_bulk_bounds": true,
+        "positive_heat_transfer": true,
+        "balance_within_0p1_percent_or_precision_bound": true
+      },
+      "internal_h_w_m2_k": 5,
+      "external_h_w_m2_k": 10,
+      "nominal_mesh_mm": 3,
+      "nodes": 84293,
+      "elements": 41732,
+      "g_shell_w_k": 0.06576160535645495,
+      "g_inner_w_k": 0.06576159010743488,
+      "G_from_outer_w_per_k": 0.06576160535645495,
+      "G_from_inner_w_per_k": 0.06576159010743488,
+      "theta_max": 0.5412063598632812,
+      "theta_min": 0.0011266206856817007,
+      "theta_extrema_source": "Full precision Mechanical results JSON; not rounded nodal text",
+      "basis_balance_relative_percent": 0.000023188338435133195,
+      "basis_heat_balance": {
+        "input_w": 0.06576159010743488,
+        "output_w": 0.06576160535645495,
+        "residual_w": 1.524902007443707e-8,
+        "export_rounding_propagation_bound_w": 0.0000023986259413185362,
+        "acceptance_absolute_tolerance_w": 0.00006576159010743488,
+        "acceptance_rule": "max(0.1% of input heat, four times propagated nodal rounding bound)"
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "conv",
+          "h_w_m2_k": 5,
+          "ambient_c": 1,
+          "role": "inner",
+          "elements": 8287,
+          "integrated_area_m2": 0.02138782703446436,
+          "area_weighted_temperature_c": 0.3850559011771827,
+          "heat_out_of_shell_w": -0.06576159010743488,
+          "temperature_rounding_heat_bound_w": 7.263470990492189e-7
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 10,
+          "ambient_c": 0,
+          "role": "outer",
+          "elements": 7062,
+          "integrated_area_m2": 0.02462073919456724,
+          "area_weighted_temperature_c": 0.2670984199002675,
+          "heat_out_of_shell_w": 0.06576160535645495,
+          "temperature_rounding_heat_bound_w": 0.0000016722788422693175
+        }
+      ],
+      "export_precision": {
+        "header": "Node Number\tTemperature (¡ãC)",
+        "unit": "C",
+        "nodes": 84293,
+        "assumed_export_rounding_bound_c": 0.000005
+      },
+      "mesh_dimensions_m": [
+        0.072,
+        0.12299998389,
+        0.12
+      ],
+      "solver_input_sha256": "168ed0df4c4571f746fcfe77387f2ba4bc032554205870ffb0ca5edb16c3367c",
+      "temperature_export_sha256": "5adb23cb69052fac5c1de48c902fa763856bd3479930920c73bb9f23fbb6ef9e"
+    },
+    {
+      "tag": "basis_m3_hi10_ho10",
+      "status": "pass",
+      "checks": {
+        "solver_reports_done": true,
+        "input_conductivity_matches_assumption": true,
+        "inside_film_matches_case": true,
+        "outside_film_matches_case": true,
+        "solid_node_count_matches": true,
+        "solid_element_count_matches": true,
+        "physical_dimensions_match_casing": true,
+        "inner_mesh_area_within_0p2_percent_of_cad": true,
+        "outer_mesh_area_within_0p2_percent_of_cad": true,
+        "temperature_extrema_match_export": true,
+        "temperatures_within_bulk_bounds": true,
+        "positive_heat_transfer": true,
+        "balance_within_0p1_percent_or_precision_bound": true
+      },
+      "internal_h_w_m2_k": 10,
+      "external_h_w_m2_k": 10,
+      "nominal_mesh_mm": 3,
+      "nodes": 84293,
+      "elements": 41732,
+      "g_shell_w_k": 0.09576026267178944,
+      "g_inner_w_k": 0.09576026010989902,
+      "G_from_outer_w_per_k": 0.09576026267178944,
+      "G_from_inner_w_per_k": 0.09576026010989902,
+      "theta_max": 0.730480968952179,
+      "theta_min": 0.0017933468334376812,
+      "theta_extrema_source": "Full precision Mechanical results JSON; not rounded nodal text",
+      "basis_balance_relative_percent": 0.0000026753168998139504,
+      "basis_heat_balance": {
+        "input_w": 0.09576026010989902,
+        "output_w": 0.09576026267178944,
+        "residual_w": 2.5618904220259253e-9,
+        "export_rounding_propagation_bound_w": 0.000003124973040367755,
+        "acceptance_absolute_tolerance_w": 0.00009576026010989902,
+        "acceptance_rule": "max(0.1% of input heat, four times propagated nodal rounding bound)"
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "conv",
+          "h_w_m2_k": 10,
+          "ambient_c": 1,
+          "role": "inner",
+          "elements": 8287,
+          "integrated_area_m2": 0.02138782703446436,
+          "area_weighted_temperature_c": 0.5522674652474473,
+          "heat_out_of_shell_w": -0.09576026010989902,
+          "temperature_rounding_heat_bound_w": 0.0000014526941980984377
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 10,
+          "ambient_c": 0,
+          "role": "outer",
+          "elements": 7062,
+          "integrated_area_m2": 0.02462073919456724,
+          "area_weighted_temperature_c": 0.3889414607540284,
+          "heat_out_of_shell_w": 0.09576026267178944,
+          "temperature_rounding_heat_bound_w": 0.0000016722788422693175
+        }
+      ],
+      "export_precision": {
+        "header": "Node Number\tTemperature (¡ãC)",
+        "unit": "C",
+        "nodes": 84293,
+        "assumed_export_rounding_bound_c": 0.000005
+      },
+      "mesh_dimensions_m": [
+        0.072,
+        0.12299998389,
+        0.12
+      ],
+      "solver_input_sha256": "af83436b16af8e9fa91cefcdca69d16a33bd6c07808b9f62103869858c91dca6",
+      "temperature_export_sha256": "ab5f46094e618916020846639eb882737e854adb94e9d1dec6b67057aa433119"
+    },
+    {
+      "tag": "basis_m3_hi20_ho10",
+      "status": "pass",
+      "checks": {
+        "solver_reports_done": true,
+        "input_conductivity_matches_assumption": true,
+        "inside_film_matches_case": true,
+        "outside_film_matches_case": true,
+        "solid_node_count_matches": true,
+        "solid_element_count_matches": true,
+        "physical_dimensions_match_casing": true,
+        "inner_mesh_area_within_0p2_percent_of_cad": true,
+        "outer_mesh_area_within_0p2_percent_of_cad": true,
+        "temperature_extrema_match_export": true,
+        "temperatures_within_bulk_bounds": true,
+        "positive_heat_transfer": true,
+        "balance_within_0p1_percent_or_precision_bound": true
+      },
+      "internal_h_w_m2_k": 20,
+      "external_h_w_m2_k": 10,
+      "nominal_mesh_mm": 3,
+      "nodes": 84293,
+      "elements": 41732,
+      "g_shell_w_k": 0.12482969358817622,
+      "g_inner_w_k": 0.12482967249379309,
+      "G_from_outer_w_per_k": 0.12482969358817622,
+      "G_from_inner_w_per_k": 0.12482967249379309,
+      "theta_max": 0.8718763589859009,
+      "theta_min": 0.0025892117992043495,
+      "theta_extrema_source": "Full precision Mechanical results JSON; not rounded nodal text",
+      "basis_balance_relative_percent": 0.00001689853278289077,
+      "basis_heat_balance": {
+        "input_w": 0.12482967249379309,
+        "output_w": 0.12482969358817622,
+        "residual_w": 2.1094383129138805e-8,
+        "export_rounding_propagation_bound_w": 0.000004577667238466193,
+        "acceptance_absolute_tolerance_w": 0.0001248296724937931,
+        "acceptance_rule": "max(0.1% of input heat, four times propagated nodal rounding bound)"
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "conv",
+          "h_w_m2_k": 20,
+          "ambient_c": 1,
+          "role": "inner",
+          "elements": 8287,
+          "integrated_area_m2": 0.02138782703446436,
+          "area_weighted_temperature_c": 0.7081758883390947,
+          "heat_out_of_shell_w": -0.12482967249379309,
+          "temperature_rounding_heat_bound_w": 0.0000029053883961968754
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 10,
+          "ambient_c": 0,
+          "role": "outer",
+          "elements": 7062,
+          "integrated_area_m2": 0.02462073919456724,
+          "area_weighted_temperature_c": 0.5070103403545287,
+          "heat_out_of_shell_w": 0.12482969358817622,
+          "temperature_rounding_heat_bound_w": 0.0000016722788422693175
+        }
+      ],
+      "export_precision": {
+        "header": "Node Number\tTemperature (¡ãC)",
+        "unit": "C",
+        "nodes": 84293,
+        "assumed_export_rounding_bound_c": 0.000005
+      },
+      "mesh_dimensions_m": [
+        0.072,
+        0.12299998389,
+        0.12
+      ],
+      "solver_input_sha256": "e9ce4c1948a4a598188631e304207a4f481b6004a06a14655cf8d6506c3f8c82",
+      "temperature_export_sha256": "2d33927dfbfe73659b8c943a065d42a102186faba15205f2f9adacd0bef1e172"
+    },
+    {
+      "tag": "basis_m2_hi10_ho5",
+      "status": "pass",
+      "checks": {
+        "solver_reports_done": true,
+        "input_conductivity_matches_assumption": true,
+        "inside_film_matches_case": true,
+        "outside_film_matches_case": true,
+        "solid_node_count_matches": true,
+        "solid_element_count_matches": true,
+        "physical_dimensions_match_casing": true,
+        "inner_mesh_area_within_0p2_percent_of_cad": true,
+        "outer_mesh_area_within_0p2_percent_of_cad": true,
+        "temperature_extrema_match_export": true,
+        "temperatures_within_bulk_bounds": true,
+        "positive_heat_transfer": true,
+        "balance_within_0p1_percent_or_precision_bound": true
+      },
+      "internal_h_w_m2_k": 10,
+      "external_h_w_m2_k": 5,
+      "nominal_mesh_mm": 2,
+      "nodes": 135330,
+      "elements": 70058,
+      "g_shell_w_k": 0.06541510458727301,
+      "g_inner_w_k": 0.06541510941051766,
+      "G_from_outer_w_per_k": 0.06541510458727301,
+      "G_from_inner_w_per_k": 0.06541510941051766,
+      "theta_max": 0.8228140473365784,
+      "theta_min": 0.014079638756811619,
+      "theta_extrema_source": "Full precision Mechanical results JSON; not rounded nodal text",
+      "basis_balance_relative_percent": -0.000007373288364663787,
+      "basis_heat_balance": {
+        "input_w": 0.06541510941051766,
+        "output_w": 0.06541510458727301,
+        "residual_w": -4.8232446508977844e-9,
+        "export_rounding_propagation_bound_w": 0.0000022888217240421505,
+        "acceptance_absolute_tolerance_w": 0.00006541510941051766,
+        "acceptance_rule": "max(0.1% of input heat, four times propagated nodal rounding bound)"
+      },
+      "surfaces": [
+        {
+          "type_id": 2,
+          "kind": "conv",
+          "h_w_m2_k": 10,
+          "ambient_c": 1,
+          "role": "inner",
+          "elements": 12365,
+          "integrated_area_m2": 0.021387819578339413,
+          "area_weighted_temperature_c": 0.6941478341402925,
+          "heat_out_of_shell_w": -0.06541510941051766,
+          "temperature_rounding_heat_bound_w": 0.0000014526967425042035
+        },
+        {
+          "type_id": 3,
+          "kind": "conv",
+          "h_w_m2_k": 5,
+          "ambient_c": 0,
+          "role": "outer",
+          "elements": 12612,
+          "integrated_area_m2": 0.024620263082282857,
+          "area_weighted_temperature_c": 0.5313924093227645,
+          "heat_out_of_shell_w": 0.06541510458727301,
+          "temperature_rounding_heat_bound_w": 8.361249815379468e-7
+        }
+      ],
+      "export_precision": {
+        "header": "Node Number\tTemperature (¡ãC)",
+        "unit": "C",
+        "nodes": 135330,
+        "assumed_export_rounding_bound_c": 0.000005
+      },
+      "mesh_dimensions_m": [
+        0.072,
+        0.123,
+        0.12
+      ],
+      "solver_input_sha256": "13cd5ca1e50ef30ef5f0787505ca42c70dd0303b2d55311e780b6a549997ba20",
+      "temperature_export_sha256": "f94b7cad5f28b3208e25af0b8480ebab664fbfb4305b50fa75346d4699249adb"
+    }
+  ],
+  "method": "Independently integrate actual quadratic SURF152 convection surfaces from MKS input mesh and nodal Celsius temperatures; seven-point Dunavant rule.",
+  "quadrature_self_check": "pass: flat triangle of known area and temperature integral",
+  "basis_internal_bulk_c": 1,
+  "basis_external_ambient_c": 0,
+  "scope": "Numerical verification only; not measured cooling or physical validation.",
+  "limitations": [
+    "The two-mesh check tests local sensitivity, not proof of asymptotic convergence.",
+    "Film coefficients, mixing, PLA properties and airflow assumptions remain unvalidated.",
+    "Nodal exported temperatures are rounded; the balance includes propagated precision bounds."
+  ],
+  "missing_cases": [],
+  "mesh_sensitivity": {
+    "coarse_tag": "basis_m3_hi10_ho5",
+    "fine_tag": "basis_m2_hi10_ho5",
+    "theta_max_coarse": 0.8228000998497009,
+    "theta_max_fine": 0.8228140473365784,
+    "theta_max_change_percent_of_fine": 0.001695095863104058,
+    "g_shell_coarse_w_k": 0.06543424825829687,
+    "g_shell_fine_w_k": 0.06541510458727301,
+    "g_shell_change_percent_of_fine": -0.029264909296782295,
+    "both_changes_below_2_percent": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "name": "B-flipped",
+ "basis": "As A-assumed with the two interchangeable boards flipped: front board = C610, back board = power manager.",
+ "assignment": {
+  "pcb-front": "C610 motor controller",
+  "pcb-middle": "Raspberry Pi Zero 2 W",
+  "pcb-back": "power manager",
+  "motor": "motor (archived 36GY envelope)",
+  "cameras": "dual fisheye camera"
+ },
+ "loads_w": {
+  "motor": 2.5,
+  "pcb-front": 0.5,
+  "pcb-middle": 1.75,
+  "pcb-back": 1.0,
+  "cameras": 1.0
+ }
+}

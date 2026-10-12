@@ -1,0 +1,1017 @@
+{
+  "schema": "stairio.ansys-robot-context/1",
+  "source": "[local archive]/Github\\stairio\\apps\\stairio simulator\\stair-models\\operator-blender-v1\\robot.glb",
+  "source_sha256": "6581c2aa3beea69e783772e45a34d5ede297e819b3001649172db015080c2df2",
+  "unit": "m",
+  "frame": "Native ANSYS housing frame; +Z is upright, shell spans z=0..0.120m, hanging battery extends in -Z",
+  "excluded": "Robot_housing_v7_1 (native ANSYS solved shell)",
+  "context_only": "These robot parts are presentation graphics, not meshed analysis bodies and have no solved temperature. Historical CAD motor is unchanged in design; user physical hardware is M2006/C610.",
+  "coordinate_formula": "p_ansys=(x_blender+offset_x,y_blender+offset_z,z_blender-offset_y), equivalent to glTF transform documented in source mapping",
+  "translation_blender_to_ansys_m": [
+    0.000001430511474609375,
+    0.003999948501586914,
+    -0.033499717712402344
+  ],
+  "vertex_count": 391984,
+  "triangle_count": 248492,
+  "original_triangle_count": 1017436,
+  "mesh_count": 97,
+  "source_bounds_m": {
+    "min": [
+      -0.11989855766296387,
+      -0.06349992752075195,
+      -0.4649970531463623
+    ],
+    "max": [
+      0.10989928245544434,
+      0.061499834060668945,
+      0.12115097045898438
+    ]
+  },
+  "exported_bounds_m": {
+    "min": [
+      -0.11989855766296387,
+      -0.06349992752075195,
+      -0.4649970531463623
+    ],
+    "max": [
+      0.10989928245544434,
+      0.061499834060668945,
+      0.12115097045898438
+    ]
+  },
+  "normal_convention": "XYZ unit vector per vertex, same right-handed frame as positions",
+  "connectivity_convention": "Flat zero-based triangle connectivity [i0,i1,i2,...] into flat XYZ vertices; 3*vertex_count normals",
+  "components": [
+    {
+      "name": "Robot_battery_1550mAh_24V_1",
+      "original_triangles": 3436,
+      "exported_triangles": 3436,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 0,
+      "vertex_count": 4958,
+      "triangle_start": 0
+    },
+    {
+      "name": "Robot_battery_cover_1",
+      "original_triangles": 5180,
+      "exported_triangles": 5180,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 4958,
+      "vertex_count": 7684,
+      "triangle_start": 3436
+    },
+    {
+      "name": "Robot_bumper_v2_1",
+      "original_triangles": 10378,
+      "exported_triangles": 10352,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 26,
+      "vertex_start": 12642,
+      "vertex_count": 14287,
+      "triangle_start": 8616
+    },
+    {
+      "name": "Robot_carbon_fibre_tube_12mm_v2_1",
+      "original_triangles": 612,
+      "exported_triangles": 612,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 26929,
+      "vertex_count": 782,
+      "triangle_start": 18968
+    },
+    {
+      "name": "Robot_28T_m1_0_10_6D5_5_1",
+      "original_triangles": 2708,
+      "exported_triangles": 2708,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 27711,
+      "vertex_count": 5189,
+      "triangle_start": 19580
+    },
+    {
+      "name": "Robot_36GY_3536_L_32_5__1",
+      "original_triangles": 491456,
+      "exported_triangles": 13675,
+      "decimation_ratio": 0.06,
+      "removed_degenerate_triangles": 15812,
+      "vertex_start": 32900,
+      "vertex_count": 29120,
+      "triangle_start": 22288
+    },
+    {
+      "name": "Robot_bearing_689_9_X17_X4_3",
+      "original_triangles": 10092,
+      "exported_triangles": 2523,
+      "decimation_ratio": 0.25,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 62020,
+      "vertex_count": 5024,
+      "triangle_start": 35963
+    },
+    {
+      "name": "Robot_bearing_689_9_X17_X4_4",
+      "original_triangles": 10092,
+      "exported_triangles": 2523,
+      "decimation_ratio": 0.25,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 67044,
+      "vertex_count": 5127,
+      "triangle_start": 38486
+    },
+    {
+      "name": "Robot_bearing_695_5_X13_X4_1",
+      "original_triangles": 9564,
+      "exported_triangles": 2391,
+      "decimation_ratio": 0.25,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 72171,
+      "vertex_count": 4638,
+      "triangle_start": 41009
+    },
+    {
+      "name": "Robot_bearing_695_5_X13_X4_2",
+      "original_triangles": 9564,
+      "exported_triangles": 2391,
+      "decimation_ratio": 0.25,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 76809,
+      "vertex_count": 4638,
+      "triangle_start": 43400
+    },
+    {
+      "name": "Robot_bushing_6x8x6_1",
+      "original_triangles": 528,
+      "exported_triangles": 528,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 81447,
+      "vertex_count": 564,
+      "triangle_start": 45791
+    },
+    {
+      "name": "Robot_bushing_6x8x6_1_001",
+      "original_triangles": 528,
+      "exported_triangles": 528,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 82011,
+      "vertex_count": 838,
+      "triangle_start": 46319
+    },
+    {
+      "name": "Robot_bushing_6x8x6_2",
+      "original_triangles": 528,
+      "exported_triangles": 528,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 82849,
+      "vertex_count": 564,
+      "triangle_start": 46847
+    },
+    {
+      "name": "Robot_cam_mount_v2_1",
+      "original_triangles": 3818,
+      "exported_triangles": 3818,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 83413,
+      "vertex_count": 5256,
+      "triangle_start": 47375
+    },
+    {
+      "name": "Robot_cam_mount_v2_2",
+      "original_triangles": 3818,
+      "exported_triangles": 3818,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 88669,
+      "vertex_count": 5145,
+      "triangle_start": 51193
+    },
+    {
+      "name": "Robot_counter_bracket_1",
+      "original_triangles": 1626,
+      "exported_triangles": 1626,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 93814,
+      "vertex_count": 2459,
+      "triangle_start": 55011
+    },
+    {
+      "name": "Robot_counter_clamp_platform_1",
+      "original_triangles": 2686,
+      "exported_triangles": 2686,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 96273,
+      "vertex_count": 4063,
+      "triangle_start": 56637
+    },
+    {
+      "name": "Robot_driving_wheel_shaft_v3_1",
+      "original_triangles": 5130,
+      "exported_triangles": 5130,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 100336,
+      "vertex_count": 7059,
+      "triangle_start": 59323
+    },
+    {
+      "name": "Robot_entry_wheel_side_2_entry_wheel_side_1",
+      "original_triangles": 976,
+      "exported_triangles": 976,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 107395,
+      "vertex_count": 1690,
+      "triangle_start": 64453
+    },
+    {
+      "name": "Robot_entry_wheel_side_2_roller_8mm_short_1",
+      "original_triangles": 4164,
+      "exported_triangles": 1457,
+      "decimation_ratio": 0.35,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 109085,
+      "vertex_count": 2215,
+      "triangle_start": 65429
+    },
+    {
+      "name": "Robot_entry_wheel_side_2_roller_pin_4mm_short_1",
+      "original_triangles": 448,
+      "exported_triangles": 448,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 111300,
+      "vertex_count": 670,
+      "triangle_start": 66886
+    },
+    {
+      "name": "Robot_entry_wheel_side_3_entry_wheel_side_1",
+      "original_triangles": 976,
+      "exported_triangles": 976,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 111970,
+      "vertex_count": 1772,
+      "triangle_start": 67334
+    },
+    {
+      "name": "Robot_entry_wheel_side_3_roller_8mm_short_1",
+      "original_triangles": 4164,
+      "exported_triangles": 1457,
+      "decimation_ratio": 0.35,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 113742,
+      "vertex_count": 2207,
+      "triangle_start": 68310
+    },
+    {
+      "name": "Robot_entry_wheel_side_3_roller_pin_4mm_short_1",
+      "original_triangles": 448,
+      "exported_triangles": 448,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 115949,
+      "vertex_count": 634,
+      "triangle_start": 69767
+    },
+    {
+      "name": "Robot_entry_wheel_vertical_1_entry_wheel_1",
+      "original_triangles": 1030,
+      "exported_triangles": 1030,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 116583,
+      "vertex_count": 1696,
+      "triangle_start": 70215
+    },
+    {
+      "name": "Robot_entry_wheel_vertical_1_roller_8mm_10_1",
+      "original_triangles": 6396,
+      "exported_triangles": 2238,
+      "decimation_ratio": 0.35,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 118279,
+      "vertex_count": 2864,
+      "triangle_start": 71245
+    },
+    {
+      "name": "Robot_entry_wheel_vertical_1_roller_pin_4mm_short_1",
+      "original_triangles": 448,
+      "exported_triangles": 448,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 121143,
+      "vertex_count": 534,
+      "triangle_start": 73483
+    },
+    {
+      "name": "Robot_entry_wheel_vertical_2_entry_wheel_1",
+      "original_triangles": 1030,
+      "exported_triangles": 1030,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 121677,
+      "vertex_count": 1696,
+      "triangle_start": 73931
+    },
+    {
+      "name": "Robot_entry_wheel_vertical_2_roller_8mm_10_1",
+      "original_triangles": 6396,
+      "exported_triangles": 2238,
+      "decimation_ratio": 0.35,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 123373,
+      "vertex_count": 2864,
+      "triangle_start": 74961
+    },
+    {
+      "name": "Robot_entry_wheel_vertical_2_roller_pin_4mm_short_1",
+      "original_triangles": 448,
+      "exported_triangles": 448,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 126237,
+      "vertex_count": 534,
+      "triangle_start": 77199
+    },
+    {
+      "name": "Robot_fan_4007_1",
+      "original_triangles": 5600,
+      "exported_triangles": 5598,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 2,
+      "vertex_start": 126771,
+      "vertex_count": 9291,
+      "triangle_start": 77647
+    },
+    {
+      "name": "Robot_lower_clamp_1",
+      "original_triangles": 660,
+      "exported_triangles": 660,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 136062,
+      "vertex_count": 1281,
+      "triangle_start": 83245
+    },
+    {
+      "name": "Robot_M3_ST_x25_1",
+      "original_triangles": 3072,
+      "exported_triangles": 921,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 137343,
+      "vertex_count": 2035,
+      "triangle_start": 83905
+    },
+    {
+      "name": "Robot_M3_ST_x25_2",
+      "original_triangles": 3072,
+      "exported_triangles": 921,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 139378,
+      "vertex_count": 2058,
+      "triangle_start": 84826
+    },
+    {
+      "name": "Robot_M3_ST_x25_3",
+      "original_triangles": 3072,
+      "exported_triangles": 921,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 141436,
+      "vertex_count": 2047,
+      "triangle_start": 85747
+    },
+    {
+      "name": "Robot_M3_ST_x25_4",
+      "original_triangles": 3072,
+      "exported_triangles": 921,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 143483,
+      "vertex_count": 2030,
+      "triangle_start": 86668
+    },
+    {
+      "name": "Robot_M3_x_6_CUP_1",
+      "original_triangles": 520,
+      "exported_triangles": 156,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 145513,
+      "vertex_count": 216,
+      "triangle_start": 87589
+    },
+    {
+      "name": "Robot_M3_x_6_CUP_1_001",
+      "original_triangles": 3422,
+      "exported_triangles": 1026,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 145729,
+      "vertex_count": 1917,
+      "triangle_start": 87745
+    },
+    {
+      "name": "Robot_M3_x_6_CUP_2",
+      "original_triangles": 3422,
+      "exported_triangles": 1026,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 147646,
+      "vertex_count": 1718,
+      "triangle_start": 88771
+    },
+    {
+      "name": "Robot_M3_x_8_CUP_1",
+      "original_triangles": 3224,
+      "exported_triangles": 967,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 149364,
+      "vertex_count": 1861,
+      "triangle_start": 89797
+    },
+    {
+      "name": "Robot_M3_x_8_CUP_2",
+      "original_triangles": 3224,
+      "exported_triangles": 967,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 151225,
+      "vertex_count": 1836,
+      "triangle_start": 90764
+    },
+    {
+      "name": "Robot_M3_x_8_CUP_3",
+      "original_triangles": 3224,
+      "exported_triangles": 966,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 153061,
+      "vertex_count": 1799,
+      "triangle_start": 91731
+    },
+    {
+      "name": "Robot_M3_x_8_CUP_4",
+      "original_triangles": 3224,
+      "exported_triangles": 967,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 154860,
+      "vertex_count": 1804,
+      "triangle_start": 92697
+    },
+    {
+      "name": "Robot_M3_x_10_CUP_1",
+      "original_triangles": 3256,
+      "exported_triangles": 976,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 156664,
+      "vertex_count": 1776,
+      "triangle_start": 93664
+    },
+    {
+      "name": "Robot_main_v7_1",
+      "original_triangles": 5896,
+      "exported_triangles": 5896,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 158440,
+      "vertex_count": 9950,
+      "triangle_start": 94640
+    },
+    {
+      "name": "Robot_motor_mount_1",
+      "original_triangles": 2808,
+      "exported_triangles": 2808,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 168390,
+      "vertex_count": 4897,
+      "triangle_start": 100536
+    },
+    {
+      "name": "Robot_passive_wheel_1_counter_wheel_rack_1",
+      "original_triangles": 2072,
+      "exported_triangles": 2072,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 173287,
+      "vertex_count": 3324,
+      "triangle_start": 103344
+    },
+    {
+      "name": "Robot_passive_wheel_1_M3_x_8_CUP_1",
+      "original_triangles": 3224,
+      "exported_triangles": 967,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 176611,
+      "vertex_count": 1587,
+      "triangle_start": 105416
+    },
+    {
+      "name": "Robot_passive_wheel_1_M3_x_8_CUP_2",
+      "original_triangles": 3224,
+      "exported_triangles": 967,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 178198,
+      "vertex_count": 1602,
+      "triangle_start": 106383
+    },
+    {
+      "name": "Robot_passive_wheel_1_M3_x_8_CUP_3",
+      "original_triangles": 3224,
+      "exported_triangles": 967,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 179800,
+      "vertex_count": 1580,
+      "triangle_start": 107350
+    },
+    {
+      "name": "Robot_passive_wheel_1_M3_x_8_CUP_4",
+      "original_triangles": 3224,
+      "exported_triangles": 967,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 181380,
+      "vertex_count": 1565,
+      "triangle_start": 108317
+    },
+    {
+      "name": "Robot_passive_wheel_1_roller_8mm_10_1",
+      "original_triangles": 6396,
+      "exported_triangles": 2238,
+      "decimation_ratio": 0.35,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 182945,
+      "vertex_count": 3242,
+      "triangle_start": 109284
+    },
+    {
+      "name": "Robot_passive_wheel_1_roller_8mm_long_1",
+      "original_triangles": 5640,
+      "exported_triangles": 1974,
+      "decimation_ratio": 0.35,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 186187,
+      "vertex_count": 2844,
+      "triangle_start": 111522
+    },
+    {
+      "name": "Robot_passive_wheel_1_roller_8mm_long_2",
+      "original_triangles": 5640,
+      "exported_triangles": 1974,
+      "decimation_ratio": 0.35,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 189031,
+      "vertex_count": 2872,
+      "triangle_start": 113496
+    },
+    {
+      "name": "Robot_passive_wheel_1_roller_8mm_long_3",
+      "original_triangles": 5640,
+      "exported_triangles": 1974,
+      "decimation_ratio": 0.35,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 191903,
+      "vertex_count": 2768,
+      "triangle_start": 115470
+    },
+    {
+      "name": "Robot_passive_wheel_1_roller_8mm_long_4",
+      "original_triangles": 5640,
+      "exported_triangles": 1974,
+      "decimation_ratio": 0.35,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 194671,
+      "vertex_count": 2820,
+      "triangle_start": 117444
+    },
+    {
+      "name": "Robot_passive_wheel_1_roller_pin_4mm_45_1",
+      "original_triangles": 384,
+      "exported_triangles": 384,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 197491,
+      "vertex_count": 568,
+      "triangle_start": 119418
+    },
+    {
+      "name": "Robot_passive_wheel_1_roller_pin_4mm_45_2",
+      "original_triangles": 384,
+      "exported_triangles": 384,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 198059,
+      "vertex_count": 570,
+      "triangle_start": 119802
+    },
+    {
+      "name": "Robot_passive_wheel_1_roller_pin_4mm_short_1",
+      "original_triangles": 448,
+      "exported_triangles": 448,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 198629,
+      "vertex_count": 678,
+      "triangle_start": 120186
+    },
+    {
+      "name": "Robot_PCB_1",
+      "original_triangles": 332,
+      "exported_triangles": 332,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 199307,
+      "vertex_count": 524,
+      "triangle_start": 120634
+    },
+    {
+      "name": "Robot_PCB_2",
+      "original_triangles": 332,
+      "exported_triangles": 332,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 199831,
+      "vertex_count": 524,
+      "triangle_start": 120966
+    },
+    {
+      "name": "Robot_PCB_3",
+      "original_triangles": 332,
+      "exported_triangles": 332,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 200355,
+      "vertex_count": 528,
+      "triangle_start": 121298
+    },
+    {
+      "name": "Robot_PCB_fixture_1",
+      "original_triangles": 1728,
+      "exported_triangles": 1728,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 200883,
+      "vertex_count": 3381,
+      "triangle_start": 121630
+    },
+    {
+      "name": "Robot_plastic_bushing_1",
+      "original_triangles": 472,
+      "exported_triangles": 472,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 204264,
+      "vertex_count": 520,
+      "triangle_start": 123358
+    },
+    {
+      "name": "Robot_roller_8mm_10_1",
+      "original_triangles": 6396,
+      "exported_triangles": 2238,
+      "decimation_ratio": 0.35,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 204784,
+      "vertex_count": 3244,
+      "triangle_start": 123830
+    },
+    {
+      "name": "Robot_roller_pin_4mm_short_1",
+      "original_triangles": 448,
+      "exported_triangles": 448,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 208028,
+      "vertex_count": 678,
+      "triangle_start": 126068
+    },
+    {
+      "name": "Robot_rotational_shaft_v2_1",
+      "original_triangles": 1572,
+      "exported_triangles": 1572,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 208706,
+      "vertex_count": 2054,
+      "triangle_start": 126516
+    },
+    {
+      "name": "Robot_side_shell_1",
+      "original_triangles": 9104,
+      "exported_triangles": 9102,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 2,
+      "vertex_start": 210760,
+      "vertex_count": 11617,
+      "triangle_start": 128088
+    },
+    {
+      "name": "Robot_skirt_1",
+      "original_triangles": 2148,
+      "exported_triangles": 2148,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 222377,
+      "vertex_count": 3601,
+      "triangle_start": 137190
+    },
+    {
+      "name": "Robot_sliding_rod_horizontal_1_sliding_ring_1",
+      "original_triangles": 3740,
+      "exported_triangles": 3740,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 225978,
+      "vertex_count": 4384,
+      "triangle_start": 139338
+    },
+    {
+      "name": "Robot_sliding_rod_horizontal_1_sliding_rod_H_v3_1",
+      "original_triangles": 1424,
+      "exported_triangles": 1424,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 230362,
+      "vertex_count": 1828,
+      "triangle_start": 143078
+    },
+    {
+      "name": "Robot_sliding_rod_horizontal_1_spring_6_5IDXH_SA_1",
+      "original_triangles": 58946,
+      "exported_triangles": 8252,
+      "decimation_ratio": 0.14,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 232190,
+      "vertex_count": 9252,
+      "triangle_start": 144502
+    },
+    {
+      "name": "Robot_sliding_rod_horizontal_2_sliding_ring_1",
+      "original_triangles": 3740,
+      "exported_triangles": 3740,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 241442,
+      "vertex_count": 4384,
+      "triangle_start": 152754
+    },
+    {
+      "name": "Robot_sliding_rod_horizontal_2_sliding_rod_H_v3_1",
+      "original_triangles": 1424,
+      "exported_triangles": 1424,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 245826,
+      "vertex_count": 1826,
+      "triangle_start": 156494
+    },
+    {
+      "name": "Robot_sliding_rod_horizontal_2_spring_6_5IDXH_SA_1",
+      "original_triangles": 58946,
+      "exported_triangles": 8252,
+      "decimation_ratio": 0.14,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 247652,
+      "vertex_count": 9268,
+      "triangle_start": 157918
+    },
+    {
+      "name": "Robot_sliding_rod_vertical_1_sliding_ring_1",
+      "original_triangles": 3740,
+      "exported_triangles": 3740,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 256920,
+      "vertex_count": 4580,
+      "triangle_start": 166170
+    },
+    {
+      "name": "Robot_sliding_rod_vertical_1_sliding_rod_v_v4_1",
+      "original_triangles": 1534,
+      "exported_triangles": 1534,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 261500,
+      "vertex_count": 2343,
+      "triangle_start": 169910
+    },
+    {
+      "name": "Robot_sliding_rod_vertical_1_spring_6_5IDXH_SA_1",
+      "original_triangles": 58946,
+      "exported_triangles": 8252,
+      "decimation_ratio": 0.14,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 263843,
+      "vertex_count": 9400,
+      "triangle_start": 171444
+    },
+    {
+      "name": "Robot_spring_spacer_1",
+      "original_triangles": 520,
+      "exported_triangles": 520,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 273243,
+      "vertex_count": 580,
+      "triangle_start": 179696
+    },
+    {
+      "name": "Robot_spring_spacer_1_001",
+      "original_triangles": 9564,
+      "exported_triangles": 2391,
+      "decimation_ratio": 0.25,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 273823,
+      "vertex_count": 4239,
+      "triangle_start": 180216
+    },
+    {
+      "name": "Robot_spring_spacer_2",
+      "original_triangles": 520,
+      "exported_triangles": 520,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 278062,
+      "vertex_count": 580,
+      "triangle_start": 182607
+    },
+    {
+      "name": "Robot_spring_spacer_2_001",
+      "original_triangles": 520,
+      "exported_triangles": 520,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 278642,
+      "vertex_count": 924,
+      "triangle_start": 183127
+    },
+    {
+      "name": "Robot_spring_spacer_3",
+      "original_triangles": 520,
+      "exported_triangles": 520,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 279566,
+      "vertex_count": 580,
+      "triangle_start": 183647
+    },
+    {
+      "name": "Robot_spring_spacer_4",
+      "original_triangles": 520,
+      "exported_triangles": 520,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 280146,
+      "vertex_count": 580,
+      "triangle_start": 184167
+    },
+    {
+      "name": "Robot_swing_connector_1",
+      "original_triangles": 4214,
+      "exported_triangles": 4214,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 280726,
+      "vertex_count": 5174,
+      "triangle_start": 184687
+    },
+    {
+      "name": "Robot_swing_joint_v2_1",
+      "original_triangles": 2988,
+      "exported_triangles": 2988,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 285900,
+      "vertex_count": 4199,
+      "triangle_start": 188901
+    },
+    {
+      "name": "Robot_top_cap_1",
+      "original_triangles": 12454,
+      "exported_triangles": 12454,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 290099,
+      "vertex_count": 19853,
+      "triangle_start": 191889
+    },
+    {
+      "name": "Robot_trans_gears_1_28T_m1_0_10_6D5_5_1",
+      "original_triangles": 2708,
+      "exported_triangles": 2708,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 309952,
+      "vertex_count": 5252,
+      "triangle_start": 204343
+    },
+    {
+      "name": "Robot_trans_gears_1_28T_m1_0_10_6D5_5_2",
+      "original_triangles": 2708,
+      "exported_triangles": 2708,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 315204,
+      "vertex_count": 5254,
+      "triangle_start": 207051
+    },
+    {
+      "name": "Robot_trans_gears_1_bearing_695_5_X13_X4_1",
+      "original_triangles": 9564,
+      "exported_triangles": 2391,
+      "decimation_ratio": 0.25,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 320458,
+      "vertex_count": 4846,
+      "triangle_start": 209759
+    },
+    {
+      "name": "Robot_trans_gears_1_M3_x_8_set_screw_1",
+      "original_triangles": 502,
+      "exported_triangles": 150,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 325304,
+      "vertex_count": 318,
+      "triangle_start": 212150
+    },
+    {
+      "name": "Robot_trans_gears_1_M3_x_8_set_screw_2",
+      "original_triangles": 502,
+      "exported_triangles": 150,
+      "decimation_ratio": 0.3,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 325622,
+      "vertex_count": 318,
+      "triangle_start": 212300
+    },
+    {
+      "name": "Robot_trans_gears_1_mid_shaft_6mm_v2_1",
+      "original_triangles": 996,
+      "exported_triangles": 996,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 325940,
+      "vertex_count": 1658,
+      "triangle_start": 212450
+    },
+    {
+      "name": "Robot_wheel_25_1",
+      "original_triangles": 39510,
+      "exported_triangles": 15804,
+      "decimation_ratio": 0.4,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 327598,
+      "vertex_count": 34336,
+      "triangle_start": 213446
+    },
+    {
+      "name": "Robot_wheel_cap_1",
+      "original_triangles": 1160,
+      "exported_triangles": 1160,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 361934,
+      "vertex_count": 1934,
+      "triangle_start": 229250
+    },
+    {
+      "name": "Robot_wheel_core_1",
+      "original_triangles": 11728,
+      "exported_triangles": 11728,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 0,
+      "vertex_start": 363868,
+      "vertex_count": 17566,
+      "triangle_start": 230410
+    },
+    {
+      "name": "Robot_wheel_shaft_support_v2_1",
+      "original_triangles": 6358,
+      "exported_triangles": 6354,
+      "decimation_ratio": 1,
+      "removed_degenerate_triangles": 4,
+      "vertex_start": 381434,
+      "vertex_count": 10550,
+      "triangle_start": 242138
+    }
+  ]
+}

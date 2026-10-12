@@ -1,0 +1,140 @@
+{
+  "samples": 10,
+  "window_iterations": 200,
+  "source_n_m3": 4720.0,
+  "q_mid_mean_cfm": 0.9999104706265299,
+  "q_bottom_mean_cfm": 1.0027220093694063,
+  "q_top_mean_cfm": 0.9952734270573073,
+  "q_forward_mid_mean_cfm": 1.0183415594127567,
+  "q_reverse_mid_mean_cfm": 0.018431088932674148,
+  "dp_actuator_mean_pa": 4.242934257756301,
+  "air_mean_speed_m_s": 0.017238083010449507,
+  "air_max_speed_m_s": 2.937489893091148,
+  "ranges": {
+    "q_mid_frac": 0.00016838131367279447,
+    "q_bottom_frac": 0.0001679212967409817,
+    "q_top_frac": 0.00016771422683030694,
+    "dp_pa": 2.565193197412441e-05,
+    "max_speed_m_s": 0.00544302057289725,
+    "max_abs_outer_imbalance_frac_of_fan_mass": 4.471544110977802e-05,
+    "max_gross_net_mismatch_frac": 6.324634999159145e-10
+  },
+  "residuals_end": {
+    "res_continuity": 0.0026586,
+    "res_x": 6.0461e-06,
+    "res_y": 5.8728e-06,
+    "res_z": 1.5482e-05
+  },
+  "residuals_start": {
+    "res_continuity": 0.0054467,
+    "res_x": 1.2709e-05,
+    "res_y": 1.1886e-05,
+    "res_z": 3.0736e-05
+  },
+  "checks": {
+    "min_100_unchanged_iterations": true,
+    "min_10_samples": true,
+    "target_error_le_1pct": true,
+    "q_mid_range_le_0p5pct": true,
+    "q_bottom_range_le_0p5pct": true,
+    "q_top_range_le_0p5pct": true,
+    "bottom_top_diff_le_1pct": true,
+    "outer_mass_imbalance_lt_0p1pct_all_samples": true,
+    "gross_net_identity_le_0p5pct": true,
+    "dp_range_le_1pct_or_0p01pa": true,
+    "max_speed_range_le_2pct": true,
+    "velocity_residuals_le_1e-5_at_end": false,
+    "residuals_non_increasing_over_window": true
+  },
+  "all_passed": false,
+  "methods": {
+    "p_v_coupling": {
+      "flow_scheme": "Coupled",
+      "flux_type": "Rhie-Chow: momentum based",
+      "flux_auto_select": true
+    },
+    "spatial_discretization": {
+      "gradient_scheme": "least-square-cell-based",
+      "discretization_scheme": {
+        "mom": "second-order-upwind",
+        "pressure": "presto!"
+      }
+    },
+    "pseudo_time_method": {
+      "formulation": {
+        "coupled_solver": "global-time-step"
+      }
+    },
+    "expert": {
+      "implicit_bodyforce_treatment": false,
+      "velocity_formulation": "absolute",
+      "physical_velocity_formulation": false,
+      "disable_rhie_chow_flux": false,
+      "presto_pressure_scheme": false,
+      "first_to_second_order_blending": 1.0
+    },
+    "high_order_term_relaxation": {
+      "enable": true,
+      "relaxation_factor": 0.25,
+      "select_variables": "flow-variables",
+      "type": "standard"
+    },
+    "warped_face_gradient_correction": {
+      "enable": true,
+      "mode": "fast"
+    }
+  },
+  "controls_p_v": {
+    "explicit_pressure_under_relaxation": 0.5,
+    "explicit_momentum_under_relaxation": 0.5
+  },
+  "pseudo_time_settings": {
+    "verbosity": 0,
+    "time_step_method": {
+      "time_step_method": "automatic",
+      "length_scale_methods": "conservative",
+      "time_step_size_scale_factor": 1.0
+    }
+  },
+  "run_status": "time_budget_reached",
+  "crevice_block": {
+    "center_m": [
+      0.00245,
+      -0.01365,
+      0.0301
+    ],
+    "radius_m": 0.0015,
+    "split_done_in": "064 (zone renamed crevice-block; volume/wall-area conserved; block 1.53 mm3)",
+    "block_fixed_values": {
+      "enable": true,
+      "cylindrical_fixed_var": false,
+      "variables": {
+        "X Velocity": {
+          "option": "value",
+          "value": 0
+        },
+        "Y Velocity": {
+          "option": "value",
+          "value": 0
+        },
+        "Z Velocity": {
+          "option": "value",
+          "value": 0
+        }
+      }
+    },
+    "block_sources": {
+      "enable": false
+    },
+    "plane_areas_mm2": {
+      "stairio-fan-disk-z112000": 914.9446818079862,
+      "stairio-fan-disk-z112500": 914.6143904926874,
+      "stairio-fan-disk-z113000": 914.6335085731027
+    },
+    "plane_area_ok": true,
+    "reports_after": {
+      "q_mid_cfm": 1.0000817387341514,
+      "vmax": 2.936476399687926
+    }
+  }
+}

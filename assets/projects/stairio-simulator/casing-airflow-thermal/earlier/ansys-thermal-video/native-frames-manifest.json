@@ -1,0 +1,1358 @@
+{
+  "context_role": "97 neutral-gray CAD meshes are graphics only, not thermal analysis bodies",
+  "fan_arrow": "Native ANSYS graphical arrow; assumed +Z exhaust direction, not CFD velocity or plume",
+  "context_geometry": "robot-context-mesh.json",
+  "contour": "PLA shell computed temperature; fixed 25..40 C legend",
+  "views": [
+    "whole",
+    "detail"
+  ],
+  "status": "complete",
+  "solver_result_file": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\stairio_transient.rth",
+  "frames": [
+    {
+      "result_set": 1,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_000.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_000.png"
+      },
+      "index": 0,
+      "shell_peak_c": 25,
+      "time_s": 0,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 1,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_001.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_001.png"
+      },
+      "index": 1,
+      "shell_peak_c": 25.46843719482422,
+      "time_s": 5,
+      "shell_min_c": 24.964370727539062
+    },
+    {
+      "result_set": 3,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_002.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_002.png"
+      },
+      "index": 2,
+      "shell_peak_c": 25.90026092529297,
+      "time_s": 15,
+      "shell_min_c": 24.975929260253906
+    },
+    {
+      "result_set": 6,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_003.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_003.png"
+      },
+      "index": 3,
+      "shell_peak_c": 26.39020538330078,
+      "time_s": 30,
+      "shell_min_c": 24.984275817871094
+    },
+    {
+      "result_set": 9,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_004.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_004.png"
+      },
+      "index": 4,
+      "shell_peak_c": 26.828380584716797,
+      "time_s": 45,
+      "shell_min_c": 24.998085021972656
+    },
+    {
+      "result_set": 12,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_005.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_005.png"
+      },
+      "index": 5,
+      "shell_peak_c": 27.25076675415039,
+      "time_s": 60,
+      "shell_min_c": 24.999921798706055
+    },
+    {
+      "result_set": 15,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_006.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_006.png"
+      },
+      "index": 6,
+      "shell_peak_c": 27.651025772094727,
+      "time_s": 75,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 18,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_007.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_007.png"
+      },
+      "index": 7,
+      "shell_peak_c": 28.032819747924805,
+      "time_s": 90,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 21,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_008.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_008.png"
+      },
+      "index": 8,
+      "shell_peak_c": 28.398117065429688,
+      "time_s": 105,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 24,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_009.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_009.png"
+      },
+      "index": 9,
+      "shell_peak_c": 28.748151779174805,
+      "time_s": 120,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 27,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_010.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_010.png"
+      },
+      "index": 10,
+      "shell_peak_c": 29.0848388671875,
+      "time_s": 135,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 30,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_011.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_011.png"
+      },
+      "index": 11,
+      "shell_peak_c": 29.408275604248047,
+      "time_s": 150,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 33,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_012.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_012.png"
+      },
+      "index": 12,
+      "shell_peak_c": 29.718814849853516,
+      "time_s": 165,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 36,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_013.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_013.png"
+      },
+      "index": 13,
+      "shell_peak_c": 30.01703643798828,
+      "time_s": 180,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 39,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_014.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_014.png"
+      },
+      "index": 14,
+      "shell_peak_c": 30.303478240966797,
+      "time_s": 195,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 42,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_015.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_015.png"
+      },
+      "index": 15,
+      "shell_peak_c": 30.578638076782227,
+      "time_s": 210,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 45,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_016.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_016.png"
+      },
+      "index": 16,
+      "shell_peak_c": 30.842985153198242,
+      "time_s": 225,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 48,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_017.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_017.png"
+      },
+      "index": 17,
+      "shell_peak_c": 31.09696388244629,
+      "time_s": 240,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 51,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_018.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_018.png"
+      },
+      "index": 18,
+      "shell_peak_c": 31.347654342651367,
+      "time_s": 255,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 54,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_019.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_019.png"
+      },
+      "index": 19,
+      "shell_peak_c": 31.5889892578125,
+      "time_s": 270,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 57,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_020.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_020.png"
+      },
+      "index": 20,
+      "shell_peak_c": 31.821264266967773,
+      "time_s": 285,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 60,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_021.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_021.png"
+      },
+      "index": 21,
+      "shell_peak_c": 32.0448112487793,
+      "time_s": 300,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 63,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_022.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_022.png"
+      },
+      "index": 22,
+      "shell_peak_c": 32.259952545166016,
+      "time_s": 315,
+      "shell_min_c": 25
+    },
+    {
+      "result_set": 66,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_023.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_023.png"
+      },
+      "index": 23,
+      "shell_peak_c": 32.46699905395508,
+      "time_s": 330,
+      "shell_min_c": 25.000001907348633
+    },
+    {
+      "result_set": 69,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_024.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_024.png"
+      },
+      "index": 24,
+      "shell_peak_c": 32.66624069213867,
+      "time_s": 345,
+      "shell_min_c": 25.000001907348633
+    },
+    {
+      "result_set": 72,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_025.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_025.png"
+      },
+      "index": 25,
+      "shell_peak_c": 32.85810089111328,
+      "time_s": 360,
+      "shell_min_c": 25.000003814697266
+    },
+    {
+      "result_set": 75,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_026.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_026.png"
+      },
+      "index": 26,
+      "shell_peak_c": 33.04290771484375,
+      "time_s": 375,
+      "shell_min_c": 25.0000057220459
+    },
+    {
+      "result_set": 78,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_027.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_027.png"
+      },
+      "index": 27,
+      "shell_peak_c": 33.22078323364258,
+      "time_s": 390,
+      "shell_min_c": 25.00000762939453
+    },
+    {
+      "result_set": 81,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_028.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_028.png"
+      },
+      "index": 28,
+      "shell_peak_c": 33.39197540283203,
+      "time_s": 405,
+      "shell_min_c": 25.000011444091797
+    },
+    {
+      "result_set": 84,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_029.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_029.png"
+      },
+      "index": 29,
+      "shell_peak_c": 33.55673599243164,
+      "time_s": 420,
+      "shell_min_c": 25.000015258789062
+    },
+    {
+      "result_set": 87,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_030.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_030.png"
+      },
+      "index": 30,
+      "shell_peak_c": 33.715301513671875,
+      "time_s": 435,
+      "shell_min_c": 25.00002098083496
+    },
+    {
+      "result_set": 90,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_031.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_031.png"
+      },
+      "index": 31,
+      "shell_peak_c": 33.86797332763672,
+      "time_s": 450,
+      "shell_min_c": 25.000028610229492
+    },
+    {
+      "result_set": 93,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_032.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_032.png"
+      },
+      "index": 32,
+      "shell_peak_c": 34.014984130859375,
+      "time_s": 465,
+      "shell_min_c": 25.000038146972656
+    },
+    {
+      "result_set": 96,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_033.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_033.png"
+      },
+      "index": 33,
+      "shell_peak_c": 34.15648651123047,
+      "time_s": 480,
+      "shell_min_c": 25.000051498413086
+    },
+    {
+      "result_set": 99,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_034.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_034.png"
+      },
+      "index": 34,
+      "shell_peak_c": 34.29269027709961,
+      "time_s": 495,
+      "shell_min_c": 25.000064849853516
+    },
+    {
+      "result_set": 102,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_035.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_035.png"
+      },
+      "index": 35,
+      "shell_peak_c": 34.42378616333008,
+      "time_s": 510,
+      "shell_min_c": 25.000083923339844
+    },
+    {
+      "result_set": 105,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_036.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_036.png"
+      },
+      "index": 36,
+      "shell_peak_c": 34.54997253417969,
+      "time_s": 525,
+      "shell_min_c": 25.000106811523438
+    },
+    {
+      "result_set": 108,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_037.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_037.png"
+      },
+      "index": 37,
+      "shell_peak_c": 34.67142868041992,
+      "time_s": 540,
+      "shell_min_c": 25.000133514404297
+    },
+    {
+      "result_set": 111,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_038.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_038.png"
+      },
+      "index": 38,
+      "shell_peak_c": 34.788333892822266,
+      "time_s": 555,
+      "shell_min_c": 25.000165939331055
+    },
+    {
+      "result_set": 114,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_039.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_039.png"
+      },
+      "index": 39,
+      "shell_peak_c": 34.90085983276367,
+      "time_s": 570,
+      "shell_min_c": 25.00020408630371
+    },
+    {
+      "result_set": 117,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_040.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_040.png"
+      },
+      "index": 40,
+      "shell_peak_c": 35.00917053222656,
+      "time_s": 585,
+      "shell_min_c": 25.000247955322266
+    },
+    {
+      "result_set": 120,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_041.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_041.png"
+      },
+      "index": 41,
+      "shell_peak_c": 35.11342239379883,
+      "time_s": 600,
+      "shell_min_c": 25.00029945373535
+    },
+    {
+      "result_set": 123,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_042.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_042.png"
+      },
+      "index": 42,
+      "shell_peak_c": 35.213768005371094,
+      "time_s": 615,
+      "shell_min_c": 25.00035858154297
+    },
+    {
+      "result_set": 126,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_043.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_043.png"
+      },
+      "index": 43,
+      "shell_peak_c": 35.310359954833984,
+      "time_s": 630,
+      "shell_min_c": 25.000425338745117
+    },
+    {
+      "result_set": 129,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_044.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_044.png"
+      },
+      "index": 44,
+      "shell_peak_c": 35.40333557128906,
+      "time_s": 645,
+      "shell_min_c": 25.00050163269043
+    },
+    {
+      "result_set": 132,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_045.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_045.png"
+      },
+      "index": 45,
+      "shell_peak_c": 35.49283218383789,
+      "time_s": 660,
+      "shell_min_c": 25.000587463378906
+    },
+    {
+      "result_set": 135,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_046.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_046.png"
+      },
+      "index": 46,
+      "shell_peak_c": 35.5789794921875,
+      "time_s": 675,
+      "shell_min_c": 25.00068473815918
+    },
+    {
+      "result_set": 138,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_047.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_047.png"
+      },
+      "index": 47,
+      "shell_peak_c": 35.661903381347656,
+      "time_s": 690,
+      "shell_min_c": 25.000791549682617
+    },
+    {
+      "result_set": 141,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_048.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_048.png"
+      },
+      "index": 48,
+      "shell_peak_c": 35.741729736328125,
+      "time_s": 705,
+      "shell_min_c": 25.000911712646484
+    },
+    {
+      "result_set": 144,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_049.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_049.png"
+      },
+      "index": 49,
+      "shell_peak_c": 35.81856918334961,
+      "time_s": 720,
+      "shell_min_c": 25.00104522705078
+    },
+    {
+      "result_set": 147,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_050.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_050.png"
+      },
+      "index": 50,
+      "shell_peak_c": 35.892539978027344,
+      "time_s": 735,
+      "shell_min_c": 25.001190185546875
+    },
+    {
+      "result_set": 150,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_051.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_051.png"
+      },
+      "index": 51,
+      "shell_peak_c": 35.963748931884766,
+      "time_s": 750,
+      "shell_min_c": 25.00135040283203
+    },
+    {
+      "result_set": 153,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_052.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_052.png"
+      },
+      "index": 52,
+      "shell_peak_c": 36.03230285644531,
+      "time_s": 765,
+      "shell_min_c": 25.00152587890625
+    },
+    {
+      "result_set": 156,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_053.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_053.png"
+      },
+      "index": 53,
+      "shell_peak_c": 36.09829330444336,
+      "time_s": 780,
+      "shell_min_c": 25.0017147064209
+    },
+    {
+      "result_set": 159,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_054.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_054.png"
+      },
+      "index": 54,
+      "shell_peak_c": 36.161827087402344,
+      "time_s": 795,
+      "shell_min_c": 25.001920700073242
+    },
+    {
+      "result_set": 162,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_055.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_055.png"
+      },
+      "index": 55,
+      "shell_peak_c": 36.222991943359375,
+      "time_s": 810,
+      "shell_min_c": 25.00214385986328
+    },
+    {
+      "result_set": 165,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_056.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_056.png"
+      },
+      "index": 56,
+      "shell_peak_c": 36.28187942504883,
+      "time_s": 825,
+      "shell_min_c": 25.002382278442383
+    },
+    {
+      "result_set": 168,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_057.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_057.png"
+      },
+      "index": 57,
+      "shell_peak_c": 36.33857727050781,
+      "time_s": 840,
+      "shell_min_c": 25.002639770507812
+    },
+    {
+      "result_set": 171,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_058.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_058.png"
+      },
+      "index": 58,
+      "shell_peak_c": 36.393165588378906,
+      "time_s": 855,
+      "shell_min_c": 25.002914428710938
+    },
+    {
+      "result_set": 174,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_059.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_059.png"
+      },
+      "index": 59,
+      "shell_peak_c": 36.44572067260742,
+      "time_s": 870,
+      "shell_min_c": 25.00320816040039
+    },
+    {
+      "result_set": 177,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_060.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_060.png"
+      },
+      "index": 60,
+      "shell_peak_c": 36.49633026123047,
+      "time_s": 885,
+      "shell_min_c": 25.00351905822754
+    },
+    {
+      "result_set": 180,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_061.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_061.png"
+      },
+      "index": 61,
+      "shell_peak_c": 36.54505920410156,
+      "time_s": 900,
+      "shell_min_c": 25.00385093688965
+    },
+    {
+      "result_set": 183,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_062.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_062.png"
+      },
+      "index": 62,
+      "shell_peak_c": 36.59197998046875,
+      "time_s": 915,
+      "shell_min_c": 25.004201889038086
+    },
+    {
+      "result_set": 186,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_063.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_063.png"
+      },
+      "index": 63,
+      "shell_peak_c": 36.63716506958008,
+      "time_s": 930,
+      "shell_min_c": 25.00457191467285
+    },
+    {
+      "result_set": 189,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_064.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_064.png"
+      },
+      "index": 64,
+      "shell_peak_c": 36.6806755065918,
+      "time_s": 945,
+      "shell_min_c": 25.004962921142578
+    },
+    {
+      "result_set": 192,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_065.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_065.png"
+      },
+      "index": 65,
+      "shell_peak_c": 36.72257614135742,
+      "time_s": 960,
+      "shell_min_c": 25.005374908447266
+    },
+    {
+      "result_set": 195,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_066.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_066.png"
+      },
+      "index": 66,
+      "shell_peak_c": 36.76293182373047,
+      "time_s": 975,
+      "shell_min_c": 25.005807876586914
+    },
+    {
+      "result_set": 198,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_067.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_067.png"
+      },
+      "index": 67,
+      "shell_peak_c": 36.801795959472656,
+      "time_s": 990,
+      "shell_min_c": 25.00625991821289
+    },
+    {
+      "result_set": 201,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_068.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_068.png"
+      },
+      "index": 68,
+      "shell_peak_c": 36.83922576904297,
+      "time_s": 1005,
+      "shell_min_c": 25.00673484802246
+    },
+    {
+      "result_set": 204,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_069.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_069.png"
+      },
+      "index": 69,
+      "shell_peak_c": 36.875282287597656,
+      "time_s": 1020,
+      "shell_min_c": 25.00722885131836
+    },
+    {
+      "result_set": 207,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_070.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_070.png"
+      },
+      "index": 70,
+      "shell_peak_c": 36.91000747680664,
+      "time_s": 1035,
+      "shell_min_c": 25.00774574279785
+    },
+    {
+      "result_set": 210,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_071.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_071.png"
+      },
+      "index": 71,
+      "shell_peak_c": 36.943458557128906,
+      "time_s": 1050,
+      "shell_min_c": 25.008281707763672
+    },
+    {
+      "result_set": 213,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_072.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_072.png"
+      },
+      "index": 72,
+      "shell_peak_c": 36.97568130493164,
+      "time_s": 1065,
+      "shell_min_c": 25.008840560913086
+    },
+    {
+      "result_set": 216,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_073.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_073.png"
+      },
+      "index": 73,
+      "shell_peak_c": 37.0067253112793,
+      "time_s": 1080,
+      "shell_min_c": 25.00942039489746
+    },
+    {
+      "result_set": 219,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_074.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_074.png"
+      },
+      "index": 74,
+      "shell_peak_c": 37.03662872314453,
+      "time_s": 1095,
+      "shell_min_c": 25.010021209716797
+    },
+    {
+      "result_set": 222,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_075.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_075.png"
+      },
+      "index": 75,
+      "shell_peak_c": 37.0654411315918,
+      "time_s": 1110,
+      "shell_min_c": 25.010643005371094
+    },
+    {
+      "result_set": 225,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_076.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_076.png"
+      },
+      "index": 76,
+      "shell_peak_c": 37.09320068359375,
+      "time_s": 1125,
+      "shell_min_c": 25.01128578186035
+    },
+    {
+      "result_set": 228,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_077.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_077.png"
+      },
+      "index": 77,
+      "shell_peak_c": 37.11994934082031,
+      "time_s": 1140,
+      "shell_min_c": 25.01194953918457
+    },
+    {
+      "result_set": 231,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_078.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_078.png"
+      },
+      "index": 78,
+      "shell_peak_c": 37.14572525024414,
+      "time_s": 1155,
+      "shell_min_c": 25.01263427734375
+    },
+    {
+      "result_set": 234,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_079.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_079.png"
+      },
+      "index": 79,
+      "shell_peak_c": 37.170562744140625,
+      "time_s": 1170,
+      "shell_min_c": 25.013338088989258
+    },
+    {
+      "result_set": 237,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_080.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_080.png"
+      },
+      "index": 80,
+      "shell_peak_c": 37.19449996948242,
+      "time_s": 1185,
+      "shell_min_c": 25.01406478881836
+    },
+    {
+      "result_set": 240,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_081.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_081.png"
+      },
+      "index": 81,
+      "shell_peak_c": 37.217567443847656,
+      "time_s": 1200,
+      "shell_min_c": 25.014808654785156
+    },
+    {
+      "result_set": 243,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_082.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_082.png"
+      },
+      "index": 82,
+      "shell_peak_c": 37.239803314208984,
+      "time_s": 1215,
+      "shell_min_c": 25.015573501586914
+    },
+    {
+      "result_set": 246,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_083.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_083.png"
+      },
+      "index": 83,
+      "shell_peak_c": 37.261234283447266,
+      "time_s": 1230,
+      "shell_min_c": 25.016359329223633
+    },
+    {
+      "result_set": 249,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_084.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_084.png"
+      },
+      "index": 84,
+      "shell_peak_c": 37.281890869140625,
+      "time_s": 1245,
+      "shell_min_c": 25.017162322998047
+    },
+    {
+      "result_set": 252,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_085.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_085.png"
+      },
+      "index": 85,
+      "shell_peak_c": 37.30180740356445,
+      "time_s": 1260,
+      "shell_min_c": 25.017986297607422
+    },
+    {
+      "result_set": 255,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_086.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_086.png"
+      },
+      "index": 86,
+      "shell_peak_c": 37.321006774902344,
+      "time_s": 1275,
+      "shell_min_c": 25.018827438354492
+    },
+    {
+      "result_set": 258,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_087.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_087.png"
+      },
+      "index": 87,
+      "shell_peak_c": 37.33951950073242,
+      "time_s": 1290,
+      "shell_min_c": 25.01968765258789
+    },
+    {
+      "result_set": 261,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_088.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_088.png"
+      },
+      "index": 88,
+      "shell_peak_c": 37.35736846923828,
+      "time_s": 1305,
+      "shell_min_c": 25.020565032958984
+    },
+    {
+      "result_set": 264,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_089.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_089.png"
+      },
+      "index": 89,
+      "shell_peak_c": 37.37458038330078,
+      "time_s": 1320,
+      "shell_min_c": 25.021461486816406
+    },
+    {
+      "result_set": 267,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_090.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_090.png"
+      },
+      "index": 90,
+      "shell_peak_c": 37.391178131103516,
+      "time_s": 1335,
+      "shell_min_c": 25.02237319946289
+    },
+    {
+      "result_set": 270,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_091.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_091.png"
+      },
+      "index": 91,
+      "shell_peak_c": 37.407188415527344,
+      "time_s": 1350,
+      "shell_min_c": 25.023303985595703
+    },
+    {
+      "result_set": 273,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_092.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_092.png"
+      },
+      "index": 92,
+      "shell_peak_c": 37.42262649536133,
+      "time_s": 1365,
+      "shell_min_c": 25.024250030517578
+    },
+    {
+      "result_set": 276,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_093.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_093.png"
+      },
+      "index": 93,
+      "shell_peak_c": 37.43751907348633,
+      "time_s": 1380,
+      "shell_min_c": 25.025211334228516
+    },
+    {
+      "result_set": 279,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_094.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_094.png"
+      },
+      "index": 94,
+      "shell_peak_c": 37.45188522338867,
+      "time_s": 1395,
+      "shell_min_c": 25.02618980407715
+    },
+    {
+      "result_set": 282,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_095.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_095.png"
+      },
+      "index": 95,
+      "shell_peak_c": 37.46574783325195,
+      "time_s": 1410,
+      "shell_min_c": 25.027183532714844
+    },
+    {
+      "result_set": 285,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_096.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_096.png"
+      },
+      "index": 96,
+      "shell_peak_c": 37.47911834716797,
+      "time_s": 1425,
+      "shell_min_c": 25.0281925201416
+    },
+    {
+      "result_set": 288,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_097.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_097.png"
+      },
+      "index": 97,
+      "shell_peak_c": 37.49202346801758,
+      "time_s": 1440,
+      "shell_min_c": 25.029212951660156
+    },
+    {
+      "result_set": 291,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_098.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_098.png"
+      },
+      "index": 98,
+      "shell_peak_c": 37.50447463989258,
+      "time_s": 1455,
+      "shell_min_c": 25.030248641967773
+    },
+    {
+      "result_set": 294,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_099.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_099.png"
+      },
+      "index": 99,
+      "shell_peak_c": 37.51649475097656,
+      "time_s": 1470,
+      "shell_min_c": 25.031295776367188
+    },
+    {
+      "result_set": 297,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_100.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_100.png"
+      },
+      "index": 100,
+      "shell_peak_c": 37.52809524536133,
+      "time_s": 1485,
+      "shell_min_c": 25.032358169555664
+    },
+    {
+      "result_set": 300,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_101.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_101.png"
+      },
+      "index": 101,
+      "shell_peak_c": 37.53929138183594,
+      "time_s": 1500,
+      "shell_min_c": 25.033432006835938
+    },
+    {
+      "result_set": 303,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_102.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_102.png"
+      },
+      "index": 102,
+      "shell_peak_c": 37.55009841918945,
+      "time_s": 1515,
+      "shell_min_c": 25.034517288208008
+    },
+    {
+      "result_set": 306,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_103.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_103.png"
+      },
+      "index": 103,
+      "shell_peak_c": 37.5605354309082,
+      "time_s": 1530,
+      "shell_min_c": 25.035615921020508
+    },
+    {
+      "result_set": 309,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_104.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_104.png"
+      },
+      "index": 104,
+      "shell_peak_c": 37.57061004638672,
+      "time_s": 1545,
+      "shell_min_c": 25.036724090576172
+    },
+    {
+      "result_set": 312,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_105.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_105.png"
+      },
+      "index": 105,
+      "shell_peak_c": 37.58034133911133,
+      "time_s": 1560,
+      "shell_min_c": 25.037843704223633
+    },
+    {
+      "result_set": 315,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_106.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_106.png"
+      },
+      "index": 106,
+      "shell_peak_c": 37.58973693847656,
+      "time_s": 1575,
+      "shell_min_c": 25.03897476196289
+    },
+    {
+      "result_set": 318,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_107.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_107.png"
+      },
+      "index": 107,
+      "shell_peak_c": 37.598812103271484,
+      "time_s": 1590,
+      "shell_min_c": 25.040115356445312
+    },
+    {
+      "result_set": 321,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_108.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_108.png"
+      },
+      "index": 108,
+      "shell_peak_c": 37.607582092285156,
+      "time_s": 1605,
+      "shell_min_c": 25.0412654876709
+    },
+    {
+      "result_set": 324,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_109.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_109.png"
+      },
+      "index": 109,
+      "shell_peak_c": 37.616050720214844,
+      "time_s": 1620,
+      "shell_min_c": 25.042423248291016
+    },
+    {
+      "result_set": 327,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_110.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_110.png"
+      },
+      "index": 110,
+      "shell_peak_c": 37.62423324584961,
+      "time_s": 1635,
+      "shell_min_c": 25.043590545654297
+    },
+    {
+      "result_set": 330,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_111.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_111.png"
+      },
+      "index": 111,
+      "shell_peak_c": 37.63214111328125,
+      "time_s": 1650,
+      "shell_min_c": 25.044767379760742
+    },
+    {
+      "result_set": 333,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_112.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_112.png"
+      },
+      "index": 112,
+      "shell_peak_c": 37.63978576660156,
+      "time_s": 1665,
+      "shell_min_c": 25.04595184326172
+    },
+    {
+      "result_set": 336,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_113.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_113.png"
+      },
+      "index": 113,
+      "shell_peak_c": 37.64717102050781,
+      "time_s": 1680,
+      "shell_min_c": 25.047142028808594
+    },
+    {
+      "result_set": 339,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_114.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_114.png"
+      },
+      "index": 114,
+      "shell_peak_c": 37.65431213378906,
+      "time_s": 1695,
+      "shell_min_c": 25.04833984375
+    },
+    {
+      "result_set": 342,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_115.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_115.png"
+      },
+      "index": 115,
+      "shell_peak_c": 37.66121292114258,
+      "time_s": 1710,
+      "shell_min_c": 25.049545288085938
+    },
+    {
+      "result_set": 345,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_116.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_116.png"
+      },
+      "index": 116,
+      "shell_peak_c": 37.66788864135742,
+      "time_s": 1725,
+      "shell_min_c": 25.050756454467773
+    },
+    {
+      "result_set": 348,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_117.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_117.png"
+      },
+      "index": 117,
+      "shell_peak_c": 37.674339294433594,
+      "time_s": 1740,
+      "shell_min_c": 25.051973342895508
+    },
+    {
+      "result_set": 351,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_118.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_118.png"
+      },
+      "index": 118,
+      "shell_peak_c": 37.68058395385742,
+      "time_s": 1755,
+      "shell_min_c": 25.053194046020508
+    },
+    {
+      "result_set": 354,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_119.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_119.png"
+      },
+      "index": 119,
+      "shell_peak_c": 37.68661880493164,
+      "time_s": 1770,
+      "shell_min_c": 25.05442237854004
+    },
+    {
+      "result_set": 357,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_120.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_120.png"
+      },
+      "index": 120,
+      "shell_peak_c": 37.69245910644531,
+      "time_s": 1785,
+      "shell_min_c": 25.055652618408203
+    },
+    {
+      "result_set": 360,
+      "images": {
+        "detail": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\detail\\frame_121.png",
+        "whole": "[local archive]/Github\\stairio\\apps\\stairio simulator\\evidence\\2026-10-10-ansys-video\\native-frames\\whole\\frame_121.png"
+      },
+      "index": 121,
+      "shell_peak_c": 37.6981086730957,
+      "time_s": 1800,
+      "shell_min_c": 25.056888580322266
+    }
+  ],
+  "frame_count": 122,
+  "renderer": "ANSYS Mechanical 2025 R2 native GUI viewport ExportImage"
+}

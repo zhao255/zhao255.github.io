@@ -1,0 +1,90 @@
+{
+  "schema": "stairio.solution-acceptance/3",
+  "accepted": true,
+  "acceptance_type": "DOCUMENTED ANALYST WAIVER for qualitative use - not a gate pass",
+  "gate_status": "residual_interpretation NOT MET (residuals above the 1e-5 aim; the required explanation/local-error review was not completed). All conservation, target and monitor-stability gates pass.",
+  "accepted_scope": "Qualitative steady, isothermal, laminar airflow pilot at an ASSUMED 1 CFM fan throughflow (the gate file scope is already a qualitative pilot, so this waiver does not narrow scope further).",
+  "source_record": "claude-run/final-gates.json (all_passed=false because of the residual check)",
+  "q_mid_mean_cfm": 0.9999104706265299,
+  "source_n_m3": 4720.0,
+  "window": {
+    "phase": "final-window4-S4720",
+    "iterations": [
+      401,
+      600
+    ],
+    "gate_samples": 10,
+    "native_samples": 40
+  },
+  "checks_from_final_gates": {
+    "min_100_unchanged_iterations": true,
+    "min_10_samples": true,
+    "target_error_le_1pct": true,
+    "q_mid_range_le_0p5pct": true,
+    "q_bottom_range_le_0p5pct": true,
+    "q_top_range_le_0p5pct": true,
+    "bottom_top_diff_le_1pct": true,
+    "outer_mass_imbalance_lt_0p1pct_all_samples": true,
+    "gross_net_identity_le_0p5pct": true,
+    "dp_range_le_1pct_or_0p01pa": true,
+    "max_speed_range_le_2pct": true,
+    "velocity_residuals_le_1e-5_at_end": false,
+    "residuals_end_le_1p05x_first_window_sample (it 600 vs it 420; not a monotonicity test)": true
+  },
+  "window_stats_all_native_samples": {
+    "q_mid_range_frac_of_target": 0.00019491993399683264,
+    "max_abs_outer_imbalance_frac_of_fan_mass": 7.976663085050438e-05,
+    "dp_reported_range_pa": 3.6980757235127726e-05,
+    "peak_speed_range_m_s": 0.006244727468157851
+  },
+  "monitor_threshold_note": "final_window.py used 1 % (dp) and 2 % (peak speed) range thresholds, looser than the gate file monitor_range_target_fraction 0.005; the actual ranges (dp 3.7e-05 Pa = 0.0009 % of mean, peak speed 0.21 %) also pass 0.5 %.",
+  "exceptions": [
+    {
+      "item": "velocity residuals above the 1e-5 aim (z)",
+      "values": {
+        "z_it401": 2.6769e-05,
+        "z_it600": 1.5482e-05,
+        "z_min_last_40_its": [
+          579,
+          1.0764e-05
+        ],
+        "x_it600": 6.0461e-06,
+        "y_it600": 5.8728e-06
+      },
+      "note": "Oscillating (period about 90-100 iterations) with a decaying envelope: log-linear fit -0.21 decades per 100 iterations over 401-600, but z rose from 1.08e-05 (it 579) to 1.55e-05 at it 600."
+    },
+    {
+      "item": "continuity scaled residual about 270x the 1e-5 aim and above the Fluent default 1e-3 check",
+      "values": {
+        "it401": 0.0058383,
+        "it600": 0.0026586,
+        "min_last_40_its": [
+          581,
+          0.0021736
+        ]
+      },
+      "note": "Fluent scales continuity by its largest value in the first five iterations (iteration 2 of the rest start); unscaled residuals were not recorded, so no inflation by scaling is demonstrated. Log-linear fit -0.21 decades per 100 iterations over 401-600; rose at the end of the window. Global outer-box mass imbalance <= 8.0e-05 of fan mass flow in all 40 native samples."
+    },
+    {
+      "item": "mesh quality outside the preferred aim",
+      "note": "Minimum orthogonal quality 0.043 (gate floor 0.01 met, preferred 0.1 not); 53 cells below 0.1; maximum aspect ratio 230. Only the worst cell (2.17, -13.64, 30.07 mm, now inside the frozen crevice block) was located; the other 52 were not located or inspected; maximum skewness not reported."
+    },
+    {
+      "item": "cell resolution in fan actuator, grille, side slots and ~1 mm frame gap not inspected (gate volume requirement not done)"
+    },
+    {
+      "item": "area-weighted fan-plane pressures in the final session",
+      "note": "The original stairio-fan-*-area report definitions read +0.57 % after the session-3 surface refresh, so the reported static rise (4.243 Pa) is low; area-corrected value 4.267 Pa (claude-run/window-native-stats.json). Surface-integral fluxes are unaffected."
+    }
+  ],
+  "local_error_review": "NOT PERFORMED: flow-commands/074 failed (no mass-imbalance cell field without stored cell residuals).",
+  "not_established": [
+    "measured FAN-4007 operating point (pressure-flow curve, RPM, swirl)",
+    "component/casing temperatures, heat transport, safe PLA temperature, physical start-up/heating time (energy off)",
+    "quantitative fresh-air fraction from fan throughflow or external-box flow (needs a tracer / enclosure-opening transport calculation)",
+    "mesh and domain independence; accurate narrow-gap/slot pressure loss and frame-gap bypass (no prism layers; gap resolution not inspected)",
+    "turbulence or unsteady-plume effects"
+  ],
+  "geometry_approximations": "Archived 36GY motor as a sealed envelope; simplified camera envelopes; generic PCB obstacles; fan aperture 914.6 mm2 (2.63 % below the exact CAD annulus) from import tessellation; a 1.53 mm3 crevice between solid parts frozen at zero velocity (not verified as a physical contact).",
+  "history": "v1 (20:48) wrongly cited claude-run/local-error-review.json; v2 corrected that; v3 records the waiver status, residual oscillation, mesh/geometry exceptions and native-sample statistics after an automated Claude Code review (not an independent third-party review)."
+}

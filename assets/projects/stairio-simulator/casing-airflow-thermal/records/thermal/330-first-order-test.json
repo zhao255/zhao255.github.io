@@ -1,0 +1,166 @@
+{
+ "methods_children": [
+  "axisymmetric",
+  "p_v_coupling",
+  "spatial_discretization",
+  "spatial_discretization_parameters",
+  "pseudo_time_method",
+  "transient_formulation",
+  "unsteady_global_time",
+  "accelerated_non_iterative_time_marching",
+  "convergence_acceleration_for_stretched_meshes",
+  "divergence_prevention",
+  "expert",
+  "frozen_flux",
+  "high_order_term_relaxation",
+  "multiphase_numerics",
+  "nb_gradient_boundary_option",
+  "nita",
+  "nita_expert_controls",
+  "overset",
+  "phase_based_vof_discretization",
+  "reduced_rank_extrapolation",
+  "reduced_rank_extrapolation_options",
+  "use_limiter_in_time",
+  "vof_numerics",
+  "warped_face_gradient_correction",
+  "high_speed_numerics",
+  "species_disc_together",
+  "poor_mesh_robustness"
+ ],
+ "methods_state": {
+  "p_v_coupling": {
+   "flow_scheme": "SIMPLEC",
+   "skewness_correction_itr_count": 1,
+   "flux_type": "Rhie-Chow: momentum based",
+   "flux_auto_select": true
+  },
+  "spatial_discretization": {
+   "gradient_scheme": "least-square-cell-based",
+   "discretization_scheme": {
+    "mom": "second-order-upwind",
+    "pressure": "presto!",
+    "temperature": "second-order-upwind"
+   }
+  },
+  "pseudo_time_method": {
+   "formulation": {
+    "segregated_solver": "off"
+   }
+  },
+  "expert": {
+   "implicit_bodyforce_treatment": false,
+   "velocity_formulation": "absolute",
+   "physical_velocity_formulation": false,
+   "disable_rhie_chow_flux": false,
+   "presto_pressure_scheme": false,
+   "first_to_second_order_blending": 1.0
+  },
+  "high_order_term_relaxation": {
+   "enable": true,
+   "relaxation_factor": 0.25,
+   "select_variables": "flow-variables",
+   "type": "standard"
+  },
+  "warped_face_gradient_correction": {
+   "enable": true,
+   "mode": "fast"
+  }
+ },
+ "discretization": {
+  "mom": "second-order-upwind",
+  "pressure": "presto!",
+  "temperature": "first-order-upwind"
+ },
+ "applied": {
+  "motor": {
+   "condition": "isothermal 308.150 K",
+   "zones": 3
+  },
+  "pcb-front": {
+   "condition": "adiabatic",
+   "zones": 34
+  },
+  "pcb-middle": {
+   "condition": "adiabatic",
+   "zones": 34
+  },
+  "pcb-back": {
+   "condition": "adiabatic",
+   "zones": 34
+  },
+  "cameras": {
+   "condition": "adiabatic",
+   "zones": 6
+  }
+ },
+ "history": [
+  {
+   "th-Q-motor": 0.7670965194702148,
+   "th-Tbulk-fanmid": 299.6008605957031,
+   "th-Tmax-air": 329.1744689941406,
+   "th-Tmin-air": 1.0,
+   "th-Q-outer": -0.7670308947563171,
+   "th-Tavg-pcb-back": 299.8659362792969,
+   "th-Tmax-pcb-back": 307.4810791015625,
+   "its": 50
+  },
+  {
+   "th-Q-motor": 0.7670958638191223,
+   "th-Tbulk-fanmid": 299.6008605957031,
+   "th-Tmax-air": 343.0765075683594,
+   "th-Tmin-air": 1.0,
+   "th-Q-outer": -0.7670122981071472,
+   "th-Tavg-pcb-back": 299.8659362792969,
+   "th-Tmax-pcb-back": 307.4811096191406,
+   "its": 100
+  },
+  {
+   "th-Q-motor": 0.7670957446098328,
+   "th-Tbulk-fanmid": 299.6007690429688,
+   "th-Tmax-air": 353.0101013183594,
+   "th-Tmin-air": 1.0,
+   "th-Q-outer": -0.7670305371284485,
+   "th-Tavg-pcb-back": 299.8658447265625,
+   "th-Tmax-pcb-back": 307.4810791015625,
+   "its": 150
+  },
+  {
+   "th-Q-motor": 0.7670960426330566,
+   "th-Tbulk-fanmid": 299.6007690429688,
+   "th-Tmax-air": 355.1812744140625,
+   "th-Tmin-air": 1.0,
+   "th-Q-outer": -0.7669804096221924,
+   "th-Tavg-pcb-back": 299.8658447265625,
+   "th-Tmax-pcb-back": 307.4810791015625,
+   "its": 200
+  },
+  {
+   "th-Q-motor": 0.7670960426330566,
+   "th-Tbulk-fanmid": 299.6007690429688,
+   "th-Tmax-air": 355.1846618652344,
+   "th-Tmin-air": 1.0,
+   "th-Q-outer": -0.7669980525970459,
+   "th-Tavg-pcb-back": 299.8658447265625,
+   "th-Tmax-pcb-back": 307.4810791015625,
+   "its": 250
+  },
+  {
+   "th-Q-motor": 0.7670962810516357,
+   "th-Tbulk-fanmid": 299.6007690429688,
+   "th-Tmax-air": 355.1850280761719,
+   "th-Tmin-air": 1.0,
+   "th-Q-outer": -0.7670106887817383,
+   "th-Tavg-pcb-back": 299.8658447265625,
+   "th-Tmax-pcb-back": 307.4810791015625,
+   "its": 300
+  }
+ ],
+ "second_order_321": {
+  "th-Q-motor": 0.6171883344650269,
+  "th-Tbulk-fanmid": 299.2894287109375,
+  "th-Tmax-air": 860.6411743164062,
+  "th-Tavg-pcb-back": 299.4834594726562,
+  "th-Tmax-pcb-back": 307.3815002441406
+ }
+}

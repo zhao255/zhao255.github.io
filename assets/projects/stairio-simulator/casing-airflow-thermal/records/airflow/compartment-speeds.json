@@ -1,0 +1,48 @@
+{
+  "fluid_zones": [
+    "arch-band-inside",
+    "arch-band-outside",
+    "fan-actuator",
+    "air-fluid-tet-cells"
+  ],
+  "cmp-fanside-y-30-avg": [
+    0.1588319540023804,
+    "m/s"
+  ],
+  "cmp-fanside-y-30-area": [
+    0.004109332803636789,
+    "m^2"
+  ],
+  "cmp-fanside-y-30-vmax": [
+    0.583450436592102,
+    "m/s"
+  ],
+  "cmp-fanside-y-30-wavg": [
+    -0.0099946279078722,
+    "m/s"
+  ],
+  "cmp-boards-y+30-avg": [
+    0.06242448464035988,
+    "m/s"
+  ],
+  "cmp-boards-y+30-area": [
+    0.001848859828896821,
+    "m^2"
+  ],
+  "cmp-boards-y+30-vmax": [
+    0.2976946532726288,
+    "m/s"
+  ],
+  "cmp-boards-y+30-wavg": [
+    0.02614438720047474,
+    "m/s"
+  ],
+  "outer_face_mass_flow_kg_s": {
+    "bottom (z=-80 mm)": 0.0001347921788692474,
+    "top (z=+280 mm)": -0.001566868042573333,
+    "+y side": 0.0001666542375460267,
+    "+x side": 0.0004320120788179338,
+    "-y side": 0.0003869854845106602,
+    "-x side": 0.0004464357916731387
+  }
+}
