@@ -1,35 +1,35 @@
 # ZHAO Xuecen Jack Portfolio
 
-ZHAO Xuecen Jack is a Hong Kong Polytechnic University mechanical engineering graduate focused on robotics, mechatronics, CAD/FEA, AI-assisted engineering, embedded systems, and full-stack technical project delivery.
+ZHAO Xuecen Jack is a Robotics Systems Engineer at Stairio Limited, Hong Kong, and a Hong Kong Polytechnic University mechanical engineering graduate. His work covers robotics, mechatronics, CAD and engineering simulation (ANSYS CFD, Isaac Sim), AI-assisted engineering, embedded systems, and full-stack technical project delivery.
 
-This site is a public engineering portfolio for recruiters, collaborators, professors, and AI/search agents evaluating Jack's hands-on project experience. Key evidence includes fuel-cell robotics, autonomous stairwell inspection, robot competitions, AI education tools, agentic operations software, and CAD/FEA product work.
+This site is a public engineering portfolio for recruiters, collaborators, professors, and AI/search agents evaluating Jack's hands-on project experience. Key evidence includes a fuel-cell robot car, a handrail-riding stairwell inspection robot and its simulator, robot competitions, AI education tools, agentic operations software, and CAD product work.
 
 ## Primary Pages
 
 - Home: https://zhao255.github.io/
-- Technical skills: https://zhao255.github.io/skills/technical/
-- Soft skills and project leadership: https://zhao255.github.io/skills/soft/
+- Skills (section of the home page): https://zhao255.github.io/#skills
 - HK PolyU academic record and recommendation letters: https://zhao255.github.io/education/polyu/
 - Resume PDF: https://zhao255.github.io/assets/resume/ZHAO-XUECEN-Jack-resume.pdf
 
 ## Featured Projects
 
-- Vandi fuel-cell-powered robot car: https://zhao255.github.io/projects/fuel-cell-car/
-- Stairio hardware engineering research work: https://zhao255.github.io/experience/stairio/
-- Stairio Simulator, including the Unreal software twin, Stair Mapper rail reconstruction and camera-planning studies: https://zhao255.github.io/projects/stairio-simulator/
+- Vandi - Fuel-Cell-Powered Robot Car (Final Year Project, 2025 - 2026; three-person team. Jack's part: mechanical design, AI training, simulation, control algorithms and the control front end. Teammates did the fuel chemistry and the electrical and PCB/BMS design): https://zhao255.github.io/projects/fuel-cell-car/
+- Stairio robotics systems engineering work (handrail-riding stairwell inspection robot): https://zhao255.github.io/experience/stairio/
+- Stairio Simulator: testing a handrail inspection robot without the stairwell, with the Unreal software twin, Stair Mapper rail reconstruction and camera-planning studies: https://zhao255.github.io/projects/stairio-simulator/
 - Stairio HR hiring system: https://zhao255.github.io/projects/stairio-hr/
 - Interactive Math Content Generation Platform: https://zhao255.github.io/projects/interactive-math/
 - Lobby OpenClaw AI operations system: https://zhao255.github.io/projects/lobby-openclaw/
 - Car Spoiler Operations, with an interactive original-CAD mechanism and actuator-load study: https://zhao255.github.io/projects/car-spoiler-ops/
 - Auto Sheet & Auto Class, with an interactive course planner and calendar export: https://zhao255.github.io/projects/ai-automation/
-- Robot Basketball Competition team leadership: https://zhao255.github.io/projects/robot-basketball/
-- Smart Navigational Cane: https://zhao255.github.io/projects/smart-cane/
+- Robot Basketball Competition (team leader; the team won first place in the inter-departmental competition between EEE and ME, IC382, 2024–25): https://zhao255.github.io/projects/robot-basketball/
+- 5-DOF Robot Arm FK / IK Study: https://zhao255.github.io/projects/robot-arm-fk-ik/
+- Smart Navigational Cane (concept proposal): https://zhao255.github.io/projects/smart-cane/
 
 ## Expertise Signals
 
-- Education: Bachelor of Engineering in Mechanical Engineering, The Hong Kong Polytechnic University, 2026.
-- Core tools and domains: SolidWorks, ANSYS, COMSOL, ROS, LiDAR, computer vision, embedded control, Raspberry Pi, ESP32, React, TypeScript, Python, AI agents, and product-focused prototyping.
-- Search topics: robotics engineer Hong Kong, HK PolyU mechanical engineering, CAD FEA engineer, mechatronics engineer, AI robotics engineer, SolidWorks ANSYS robotics portfolio, AI-assisted engineering portfolio.
+- Education: BEng (Hons) Mechanical Engineering, The Hong Kong Polytechnic University, Sep 2022 - Jul 2026.
+- Core tools and domains: SolidWorks, ANSYS Fluent (CFD and thermal), ROS 2, LiDAR, computer vision, embedded control, Raspberry Pi, Jetson, ESP32, React, TypeScript, Python, AI agents, and product-focused prototyping.
+- Search topics: robotics engineer Hong Kong, HK PolyU mechanical engineering, CAD engineer, mechatronics engineer, AI robotics engineer, SolidWorks ANSYS robotics portfolio, AI-assisted engineering portfolio.
 
 ## Contact And Profiles
 
