@@ -1,0 +1,1 @@
+import{j as s,a as n}from"./index-BF1GEcWl.js";const r="_view_tdbcl_1",a={view:r};function i({view:e,children:o}){const{mode:t}=n();return s.jsx("div",{"data-view":e,hidden:t!==e,className:a.view,children:o})}function w({children:e}){return s.jsx(i,{view:"goal",children:e})}function u({children:e}){return s.jsx(i,{view:"process",children:e})}export{w as G,u as P};
