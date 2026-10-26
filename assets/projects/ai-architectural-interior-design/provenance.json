@@ -1,0 +1,239 @@
+{
+  "project": "AI-Assisted Architectural & Interior Design",
+  "prepared": "2026-10-23",
+  "note": "Study outputs, not photographs of completed construction. Company-derived studies are prepared for local review; publication rights remain unresolved.",
+  "credits": [
+    "Personal concept scenes and workflow: ZHAO Xuecen Jack.",
+    "Nook furniture, materials and HDRI: Poly Haven contributors, CC0; https://polyhaven.com/license",
+    "Staircase source drawings and church example references: William Artists assessment/reference material; church reconstruction is independent practice.",
+    "Staircase oak maps: Dimitrios Savva / Poly Haven, CC0.",
+    "City source geometry/terrain: Hong Kong Lands Department; contextual features: OpenStreetMap contributors. Geographic visualisation with interpreted facade and lighting details."
+  ],
+  "assets": [
+    {
+      "id": "nook-dim",
+      "source_filename": "hero_A_025x.png",
+      "source_sha256": "6e5ece364dd8936edfb74485cbf846e0b1d8d7db3fb0cd86e4cb0225c3a8b6ec",
+      "source_dimensions": [
+        1600,
+        1200
+      ],
+      "kind": "Native Blender render",
+      "processing": "RGB web delivery copies, proportional resize, no crop or grading",
+      "variants": [
+        {
+          "src": "assets/projects/ai-architectural-interior-design/nook-dim-480.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/nook-dim-960.webp",
+          "width": 960
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/nook-dim-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    {
+      "id": "nook-baseline",
+      "source_filename": "hero_A_100x.png",
+      "source_sha256": "45474b810f310025fcb1672e5dfe0477838d47a8571dff2c7e9d23d21459c011",
+      "source_dimensions": [
+        1600,
+        1200
+      ],
+      "kind": "Native Blender render",
+      "processing": "RGB web delivery copies, proportional resize, no crop or grading",
+      "variants": [
+        {
+          "src": "assets/projects/ai-architectural-interior-design/nook-baseline-480.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/nook-baseline-960.webp",
+          "width": 960
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/nook-baseline-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    {
+      "id": "nook-bright",
+      "source_filename": "hero_A_400x.png",
+      "source_sha256": "79577ece47fc0f000e8ef0612ea347d7af1dc8fefc8bb9f8b2a75e0f8611aec3",
+      "source_dimensions": [
+        1600,
+        1200
+      ],
+      "kind": "Native Blender render",
+      "processing": "RGB web delivery copies, proportional resize, no crop or grading",
+      "variants": [
+        {
+          "src": "assets/projects/ai-architectural-interior-design/nook-bright-480.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/nook-bright-960.webp",
+          "width": 960
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/nook-bright-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    {
+      "id": "church-native",
+      "source_filename": "church-chancel-final-v09-cycles.png",
+      "source_sha256": "ec114bc87718544168a1fbefdd983149f6fff51d6be3f8d227b24561d377b7df",
+      "source_dimensions": [
+        3190,
+        2076
+      ],
+      "kind": "Native Blender render",
+      "processing": "RGB web delivery copies, proportional resize, no crop or grading",
+      "variants": [
+        {
+          "src": "assets/projects/ai-architectural-interior-design/church-native-480.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/church-native-960.webp",
+          "width": 960
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/church-native-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    {
+      "id": "church-ai",
+      "source_filename": "church-chancel-final-v09-realism.png",
+      "source_sha256": "00096c0757cd88ebd248b6c8e4c380328fb9a8a63ce046946e4361fbfebb6717",
+      "source_dimensions": [
+        1555,
+        1012
+      ],
+      "kind": "AI-edited presentation",
+      "processing": "RGB web delivery copies, proportional resize, no crop or grading",
+      "variants": [
+        {
+          "src": "assets/projects/ai-architectural-interior-design/church-ai-480.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/church-ai-960.webp",
+          "width": 960
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/church-ai-1555.webp",
+          "width": 1555
+        }
+      ]
+    },
+    {
+      "id": "stair-hero",
+      "source_filename": "stair-photoreal-hero-v03.png",
+      "source_sha256": "7584f7cadfbc5460384606d3d857641f0dbc72e7a89df4db13fea88090db9154",
+      "source_dimensions": [
+        2560,
+        3200
+      ],
+      "kind": "Native Blender render",
+      "processing": "RGB web delivery copies, proportional resize, no crop or grading",
+      "variants": [
+        {
+          "src": "assets/projects/ai-architectural-interior-design/stair-hero-480.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/stair-hero-960.webp",
+          "width": 960
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/stair-hero-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    {
+      "id": "stair-detail",
+      "source_filename": "stair-photoreal-glass-detail-v03.png",
+      "source_sha256": "65f7513fa35aeb580ffa858718315cad5466620a4c16bc632265dea87f535760",
+      "source_dimensions": [
+        2560,
+        3200
+      ],
+      "kind": "Native Blender render",
+      "processing": "RGB web delivery copies, proportional resize, no crop or grading",
+      "variants": [
+        {
+          "src": "assets/projects/ai-architectural-interior-design/stair-detail-480.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/stair-detail-960.webp",
+          "width": 960
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/stair-detail-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    {
+      "id": "mansion-dusk",
+      "source_filename": "mansion_B_dusk.png",
+      "source_sha256": "9d42d0203f350b2b4186194b86dfa07ee0f575a67730bb777517efa1473726b4",
+      "source_dimensions": [
+        1600,
+        1000
+      ],
+      "kind": "Native Blender render",
+      "processing": "RGB web delivery copies, proportional resize, no crop or grading",
+      "variants": [
+        {
+          "src": "assets/projects/ai-architectural-interior-design/mansion-dusk-480.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/mansion-dusk-960.webp",
+          "width": 960
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/mansion-dusk-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    {
+      "id": "hong-kong-night",
+      "source_filename": "hong_kong_harbour_clean.png",
+      "source_sha256": "f038c588fae2fd3bf22436e4131efc39fb6597814ec18551422365e07e277ae9",
+      "source_dimensions": [
+        3000,
+        2000
+      ],
+      "kind": "Native Blender render",
+      "processing": "RGB web delivery copies, proportional resize, no crop or grading",
+      "variants": [
+        {
+          "src": "assets/projects/ai-architectural-interior-design/hong-kong-night-480.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/hong-kong-night-960.webp",
+          "width": 960
+        },
+        {
+          "src": "assets/projects/ai-architectural-interior-design/hong-kong-night-1600.webp",
+          "width": 1600
+        }
+      ]
+    }
+  ]
+}

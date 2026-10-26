@@ -15,3 +15,4 @@ https://zhao255.github.io/projects/ai-automation/
 https://zhao255.github.io/projects/knife-handle-repair/
 https://zhao255.github.io/education/polyu/
 https://zhao255.github.io/llms.txt
+https://zhao255.github.io/projects/ai-architectural-interior-design/
