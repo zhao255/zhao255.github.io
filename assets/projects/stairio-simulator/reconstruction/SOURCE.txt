@@ -1,0 +1,9 @@
+Stairio field reconstruction showcase
+Source: stair profiles/reconstruction, 30 October 2026.
+8 circular-handrail reconstructions, each with one overall stairwell photograph. Detail close-ups are omitted.
+Profiles ST-01, ST-02, ST-03, ST-05, ST-06 and ST-07 are excluded because their reference images contain measurement markings.
+Display only: ST-09, ST-22 and ST-29 are mirrored along X to match the photographs. The source GLBs and recorded dimensions are unchanged.
+GLB geometry version 4; coordinates in metres.
+Recorded lower-flight dimensions are displayed in their original units.
+Return proportions may use photo estimates; stair context and support placement are estimated. These are simulation studies, not fabrication models or complete surveys.
+Original field records are preserved in the source project.
