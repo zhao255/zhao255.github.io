@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:,">
+  <title>Presenter view | Jack Zhao</title>
+  <link rel="stylesheet" href="presentation.css">
+  <link rel="stylesheet" href="presenter.css">
+  <script src="tech-stacks.js" defer></script>
+  <script src="tech-render.js" defer></script>
+  <script src="project-order.js" defer></script>
+  <script src="presenter.js" defer></script>
+  <script src="recorder.js" defer></script>
+</head>
+<body class="presenter-body">
+  <main class="presenter" aria-label="Presenter view">
+    <header class="pv-bar">
+      <p class="pv-brand">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="9" width="6" height="6" rx="1.5"/><rect x="16" y="2.5" width="6" height="6" rx="1.5"/><rect x="16" y="15.5" width="6" height="6" rx="1.5"/><path d="M8 12 H11.5"/><path d="M11.5 12 V5.5 H16"/><path d="M11.5 12 V18.5 H16"/></svg>
+        Presenter view <span class="pv-private">Only you see this window</span>
+      </p>
+      <button type="button" class="pv-projects" id="projects-button" aria-haspopup="dialog" disabled>Projects</button>
+      <div class="pv-rec" id="rec" aria-label="Screen recorder">
+        <label class="pv-mode"><span class="visually-hidden">Recording type</span>
+          <select id="rec-mode">
+            <option value="screen">Screen + audio</option>
+            <option value="audio">Audio only</option>
+          </select>
+        </label>
+        <label class="pv-check"><input type="checkbox" id="rec-mic" checked> Microphone</label>
+        <label class="pv-check"><input type="checkbox" id="rec-system" checked> System audio</label>
+        <button type="button" id="rec-start" class="rec-start"><i aria-hidden="true"></i>Record screen</button>
+        <span class="rec-live" id="rec-live" hidden><i aria-hidden="true"></i><span id="rec-time">0:00</span><span class="rec-meter" title="Microphone level" aria-hidden="true"><b id="rec-level"></b></span></span>
+        <button type="button" id="rec-pause" hidden>Pause</button>
+        <button type="button" id="rec-stop" class="rec-stop" hidden>Stop and save</button>
+      </div>
+      <div class="pv-clock" aria-label="Talk timer">
+        <span class="pv-elapsed" id="elapsed">0:00</span>
+        <span class="pv-plan" id="plan"></span>
+        <button type="button" id="timer-toggle">Pause</button>
+        <button type="button" id="timer-reset">Reset</button>
+      </div>
+    </header>
+
+    <p class="pv-rec-note" id="rec-note" role="status" hidden></p>
+    <p class="pv-waiting" id="waiting">Waiting for the deck… Keep the presentation open in its own tab or window.</p>
+
+    <section class="pv-main" id="main" hidden>
+      <div class="pv-left">
+        <div class="pv-current">
+          <p class="pv-meta"><span id="count"></span> · <span id="chapter"></span></p>
+          <p class="pv-section" id="section"></p>
+          <h1 id="title"></h1>
+          <p class="pv-timing" id="timing"></p>
+        </div>
+        <nav class="pv-nav" aria-label="Slide navigation">
+          <button type="button" id="previous">← Previous</button>
+          <button type="button" id="next" class="primary">Next →</button>
+        </nav>
+        <p class="pv-next" id="next-slide"></p>
+        <div class="pv-notes">
+          <h2>Speaker notes</h2>
+          <div id="notes"></div>
+        </div>
+      </div>
+      <div class="pv-right">
+        <div class="tech-panel pv-tech" id="tech" tabindex="-1"></div>
+        <p class="pv-empty" id="tech-empty" hidden>No project tools for this slide.</p>
+      </div>
+    </section>
+  </main>
+  <dialog id="projects-dialog" class="pv-dialog" aria-labelledby="projects-title">
+    <div class="dialog-title"><h2 id="projects-title">Choose and order the projects</h2><form method="dialog"><button type="submit">Close</button></form></div>
+    <p class="ranking-intro">Tick the projects to present and drag them into order. The deck updates as soon as you apply.</p>
+    <div id="projects-editor"></div>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex"><meta name="color-scheme" content="dark light">
+  <title>Explore a Stairio inspection</title>
+  <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./panorama.css"><link rel="stylesheet" href="./evidence.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js","three/addons/":"./vendor/addons/"}}</script>
+</head>
+<body>
+  <main id="experience" aria-label="Interactive stairwell inspection">
+    <div id="scene-frame">
+      <div id="map" aria-hidden="true"></div>
+      <div id="floor-scroll" tabindex="0" role="region" aria-label="Stairwell floors. Scroll up for higher floors, down for lower floors. Arrow and Page keys also work."><div id="floor-scroll-content"></div></div>
+      <div id="annotations"><svg id="annotation-leaders" aria-hidden="true"></svg></div>
+      <span id="status" class="sr" role="status">Preparing inspection</span>
+      <nav id="floor-nav" aria-label="Choose a floor"></nav>
+      <div class="bottom-bar">
+        <p class="scroll-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6 4-4 4 4M12 2v20m-4-4 4 4 4-4"/></svg><span data-i18n="hint">Scroll to explore floors</span></p>
+        <div class="view-tools" aria-label="View options">
+          <button id="play" aria-label="Pause inspection"><span id="play-icon">Ⅱ</span></button>
+          <button id="follow" title="Follow robot" aria-label="Follow robot" aria-pressed="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg><span data-i18n="follow">Follow robot</span></button>
+          <button id="fullscreen" title="Enter fullscreen" aria-label="Enter fullscreen"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg><span class="sr" data-i18n="fullscreen">Fullscreen</span></button>
+        </div>
+      </div>
+      <div id="loading" class="loading" role="status"><div class="loading-orbit">360°</div><p data-i18n="loading">Preparing your inspection…</p></div>
+      <div id="error" class="error" hidden><h2 data-i18n="errorTitle">The 3D view could not load.</h2><button id="retry" data-i18n="retry">Try again</button><button id="browse-fallback" hidden data-i18n="browse">Explore 360° captures</button></div>
+      <div id="panorama-host"></div><div id="evidence-host"></div>
+    </div>
+  </main>
+  <script type="module" src="./app.js?v=29"></script>
+  <script>window.addEventListener('error',function(e){if(e.target&&e.target.tagName==='SCRIPT'){document.getElementById('loading').hidden=true;document.getElementById('error').hidden=false;parent.postMessage({type:'stairio:ready'},location.origin)}},true);document.getElementById('retry').onclick=function(){location.reload()};</script>
+  <script src="presentation-bridge.js"></script>
+</body>
+</html>

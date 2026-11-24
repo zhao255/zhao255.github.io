@@ -1,0 +1,44 @@
+.si-pano{--si-lime:#c7ee71;--si-ink:#f4f6ef;--si-panel:rgba(11,16,20,.88);box-sizing:border-box;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:#0b1014;color:var(--si-ink);font-family:Arial,Helvetica,sans-serif;overflow:hidden;color-scheme:dark}
+.si-pano::backdrop{background:rgba(4,8,10,.8)}
+.si-pano *{box-sizing:border-box}.si-pano [hidden]{display:none!important}
+/* Image geometry stays 16:9; any extra viewport space is quiet letterboxing. */
+.si-pano-frame{position:absolute;left:50%;top:50%;width:min(100vw,177.7777778dvh);height:min(100dvh,56.25vw);transform:translate(-50%,-50%);overflow:hidden;container-type:inline-size;background:#0b1014}
+.si-pano-stage,.si-pano-canvas,.si-pano-annotations{position:absolute;inset:0;width:100%;height:100%}
+.si-pano-canvas{display:block;touch-action:none;cursor:grab;transition:opacity .2s}.si-pano-canvas.is-dragging{cursor:grabbing}.si-pano-canvas.is-unavailable{opacity:0}
+.si-pano-canvas:focus-visible{outline:2px solid var(--si-lime);outline-offset:-3px}
+.si-pano-annotations{pointer-events:none;overflow:hidden}
+.si-pano-header{position:absolute;z-index:3;top:0;left:0;right:0;padding:14px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;background:linear-gradient(rgba(7,12,15,.5),transparent);pointer-events:none}
+.si-pano-heading{max-width:calc(100% - 60px);padding:6px 0;text-shadow:0 1px 9px rgba(0,0,0,.85)}
+.si-pano-eyebrow{display:block;color:#d4e5c3;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.si-pano-title{margin:5px 0 0;font-size:17px;font-weight:500;letter-spacing:-.025em;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.si-pano-button{font:inherit;font-size:12px;color:var(--si-ink);background:var(--si-panel);border:1px solid rgba(226,235,225,.2);border-radius:10px;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;padding:10px 13px;cursor:pointer;pointer-events:auto}
+.si-pano-button:focus-visible{outline:2px solid var(--si-lime);outline-offset:3px}.si-pano-button:disabled{opacity:.45;cursor:default}
+/* A small drawn cross in a generous transparent hit target, not a floating pill. */
+.si-pano-close{position:relative;width:44px;height:44px;flex-shrink:0;padding:0;border:0;border-radius:8px;background:transparent;color:#fff}
+.si-pano-close::before,.si-pano-close::after{content:'';position:absolute;top:21px;left:13px;width:18px;height:1.5px;border-radius:1px;background:currentColor;box-shadow:0 0 3px rgba(0,0,0,.9)}
+.si-pano-close::before{transform:rotate(45deg)}.si-pano-close::after{transform:rotate(-45deg)}
+.si-pano-close:hover{background:rgba(10,16,20,.22)}
+.si-pano-marker{position:absolute;z-index:2;transform:translate(-50%,-50%);min-width:28px;min-height:28px;width:28px;height:28px;border:0;border-radius:50%;padding:0;background:transparent;overflow:visible;pointer-events:auto}
+.si-pano-anchor{position:relative;z-index:2;display:block;width:11px;height:11px;border:2px solid #fff4df;border-radius:50%;background:#efaf75;box-shadow:0 0 0 4px rgba(249,185,120,.22),0 2px 12px rgba(0,0,0,.5)}
+.si-pano-marker[data-kind="open_fire_door"] .si-pano-anchor{background:#fa847a;box-shadow:0 0 0 4px rgba(250,132,122,.22),0 2px 12px rgba(0,0,0,.5)}
+.si-pano-marker-link{position:absolute;left:14px;top:14px;height:1px;background:#efbf92;transform-origin:0 50%;pointer-events:none;z-index:0}
+.si-pano-marker-label{position:absolute;z-index:1;width:max-content;max-width:min(210px,calc(100cqw - 32px));padding:8px 11px;background:rgba(11,16,20,.9);border:1px solid rgba(249,185,120,.65);border-radius:7px;color:#fff2dc;font-size:12px;line-height:1.25;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 2px 14px rgba(0,0,0,.2)}
+.si-pano-marker[data-kind="open_fire_door"] .si-pano-marker-label{border-color:rgba(250,132,122,.7)}
+.si-pano-marker:hover .si-pano-marker-label,.si-pano-marker:focus-visible .si-pano-marker-label{background:#17201e;border-color:#ffe0bd}
+.si-pano-message{position:absolute;z-index:4;top:50%;left:50%;transform:translate(-50%,-50%);width:min(340px,calc(100% - 40px));text-align:center;padding:22px;border:1px solid rgba(226,235,225,.14);border-radius:16px;background:rgba(11,16,20,.94);box-shadow:0 12px 50px rgba(0,0,0,.25)}
+.si-pano-message p{font-size:13px;line-height:1.5;margin:12px 0 0}.si-pano-message .si-pano-button{margin-top:14px;color:var(--si-lime)}
+.si-pano-message.is-error .si-pano-spinner{display:none}.si-pano-message.is-error p{margin-top:0}
+.si-pano-spinner{display:inline-block;width:24px;height:24px;border:2px solid rgba(199,238,113,.16);border-top-color:var(--si-lime);border-radius:50%;animation:si-pano-spin .8s linear infinite}
+.si-pano-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@keyframes si-pano-spin{to{transform:rotate(360deg)}}
+@container(max-width:767px){
+  .si-pano-header{padding:6px 8px;gap:8px}.si-pano-heading{padding:6px 0}.si-pano-title{font-size:14px;margin-top:4px}.si-pano-eyebrow{font-size:8px;letter-spacing:.08em}
+  .si-pano-marker-label{max-width:165px;padding:7px 9px;font-size:11px}
+  .si-pano-message{width:min(290px,calc(100% - 24px));padding:14px}.si-pano-message p{font-size:12px;margin-top:8px}.si-pano-message .si-pano-button{margin-top:10px}.si-pano-spinner{width:20px;height:20px}
+}
+@container(max-width:420px){
+  .si-pano-header{padding:2px 4px 0 10px}.si-pano-heading{padding:11px 0}.si-pano-eyebrow{display:none}.si-pano-title{font-size:12px;margin:0;line-height:18px}
+  .si-pano-marker-label{max-width:145px;padding:6px 8px;font-size:10px}
+  .si-pano-message{width:min(275px,calc(100% - 24px));padding:10px;display:flex;align-items:center;justify-content:center;gap:8px}.si-pano-message p{font-size:11px;margin:0}.si-pano-message .si-pano-button{margin:0;min-height:36px;padding:7px 9px;flex-shrink:0}.si-pano-spinner{width:16px;height:16px;flex-shrink:0}
+}
+@media(prefers-reduced-motion:reduce){.si-pano *{transition:none!important}.si-pano-spinner{animation-duration:2s}}

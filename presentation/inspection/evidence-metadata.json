@@ -1,0 +1,185 @@
+{
+  "version": 2,
+  "projection": "rectilinear",
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "note": "Staged Blender evidence. Boxes are projected asset bounds; no confidence or live detection claims.",
+  "items": [
+    {
+      "id": "carton_01",
+      "captureId": "P01R",
+      "title": "Box on the stairs",
+      "titleZh": "楼梯上的纸箱",
+      "kind": "box",
+      "floor": 1,
+      "floorPair": "1–2",
+      "image": "evidence/carton_01.jpg",
+      "bbox": {
+        "left": 0.296309,
+        "top": 0.1585,
+        "width": 0.428286,
+        "height": 0.6885
+      },
+      "view": {
+        "yaw": 140.11894936214503,
+        "pitch": -0.5586398052665792,
+        "hfov": 53.52458367521763
+      },
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "annotationSource": "projected Blender asset bounds",
+      "sourcePanorama": "P01R.png",
+      "sourceRevision": "panorama_v03",
+      "sourceSha256": "78d90d73a9ef8e056e39ff59c0bc72b674867a5c3156de760870ac8369df643a"
+    },
+    {
+      "id": "handcart_01",
+      "captureId": "P02L",
+      "title": "Obstructed stairway",
+      "titleZh": "楼梯通道受阻",
+      "kind": "folded_cart",
+      "floor": 2,
+      "floorPair": "2–3",
+      "image": "evidence/handcart_01.jpg",
+      "bbox": {
+        "left": 0.38743,
+        "top": 0.153,
+        "width": 0.210034,
+        "height": 0.624479
+      },
+      "view": {
+        "yaw": 48.50282705096209,
+        "pitch": -46.478573296810104,
+        "hfov": 81.85088597772067
+      },
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "annotationSource": "projected Blender asset bounds",
+      "sourcePanorama": "P02L.png",
+      "sourceRevision": "panorama_v03",
+      "sourceSha256": "3efc8b862dc8952a109e5140273eb91bbffb8da55af318cb9f7b196433c98e89"
+    },
+    {
+      "id": "spill_01",
+      "captureId": "P02R",
+      "title": "Wet stair tread",
+      "titleZh": "湿滑的楼梯踏步",
+      "kind": "wet_floor",
+      "floor": 2,
+      "floorPair": "2–3",
+      "image": "evidence/spill_01.jpg",
+      "bbox": {
+        "left": 0.36032,
+        "top": 0.194961,
+        "width": 0.218918,
+        "height": 0.652039
+      },
+      "view": {
+        "yaw": 74.71538043212574,
+        "pitch": -57.254374298383794,
+        "hfov": 98.64277727142549
+      },
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "annotationSource": "projected Blender asset bounds",
+      "sourcePanorama": "P02R.png",
+      "sourceRevision": "panorama_v03",
+      "sourceSha256": "568b7a55fbe2fc2dc8dd60fd3acd5562d68a1b5ddaa36e3a7295bb35cd6e2524"
+    },
+    {
+      "id": "fire_door_03",
+      "captureId": "P03L",
+      "title": "Open fire door",
+      "titleZh": "敞开的防火门",
+      "kind": "open_fire_door",
+      "floor": 3,
+      "floorPair": "3–4",
+      "image": "evidence/fire_door_03.jpg",
+      "bbox": {
+        "left": 0.397665,
+        "top": 0.172686,
+        "width": 0.224119,
+        "height": 0.674314
+      },
+      "view": {
+        "yaw": 14.390998609268811,
+        "pitch": -27.83955445433539,
+        "hfov": 64.48928086764867
+      },
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "annotationSource": "projected Blender asset bounds",
+      "sourcePanorama": "P03L.png",
+      "sourceRevision": "panorama_v04_doorhinge",
+      "sourceSha256": "1fde7727bedf07246f6efb99558f4e5d5fbc7fb6ef1e2223d1608d2f430858d0"
+    },
+    {
+      "id": "cable_01",
+      "captureId": "P03R",
+      "title": "Loose cable",
+      "titleZh": "松散的电线",
+      "kind": "loose_cable",
+      "floor": 3,
+      "floorPair": "3–4",
+      "image": "evidence/cable_01.jpg",
+      "bbox": {
+        "left": 0.3999,
+        "top": 0.327099,
+        "width": 0.326891,
+        "height": 0.586045
+      },
+      "view": {
+        "yaw": 121.64363768909426,
+        "pitch": -42.532904883772986,
+        "hfov": 114
+      },
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "annotationSource": "projected Blender asset bounds",
+      "sourcePanorama": "P03R.png",
+      "sourceRevision": "panorama_v03",
+      "sourceSha256": "802b11d32f088efd0d8635c7d8d83a643891f0c8d22f569c051e45498f73db5d"
+    },
+    {
+      "id": "litter_01",
+      "captureId": "P04L",
+      "title": "Litter on the stairs",
+      "titleZh": "楼梯上的散落垃圾",
+      "kind": "paper_litter",
+      "floor": 4,
+      "floorPair": "4–5",
+      "image": "evidence/litter_01.jpg",
+      "bbox": {
+        "left": 0.263391,
+        "top": 0.438369,
+        "width": 0.518609,
+        "height": 0.155944
+      },
+      "view": {
+        "yaw": 140.92231863998924,
+        "pitch": -9.181803317255524,
+        "hfov": 54.4950813794008
+      },
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "annotationSource": "projected Blender asset bounds",
+      "sourcePanorama": "P04L.png",
+      "sourceRevision": "panorama_v03",
+      "sourceSha256": "4ce4c120041f8dc2315363942bc5e4fde44fd086f29e172aefba67294afe0ac4"
+    }
+  ]
+}
