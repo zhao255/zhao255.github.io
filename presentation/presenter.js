@@ -29,8 +29,38 @@
     document.body.dataset.pace = pace;
   }
 
+  // Likely questions sent by your own presentation: grouped, each answer folded under its question.
+  let questionsKey = "";
+  function drawQuestions(groups) {
+    const panel = $("#tech");
+    const search = el("input", "pv-q-search");
+    search.type = "search";
+    search.placeholder = "Filter questions";
+    search.setAttribute("aria-label", "Filter the likely questions");
+    const items = [];
+    const body = groups.flatMap(group => {
+      const head = el("h3", "pv-q-group", group.title);
+      const list = group.items.map(({ q, a }) => {
+        const item = el("details", "pv-q");
+        item.append(el("summary", "", q), el("p", "", a));
+        items.push({ item, head, text: (q + " " + a).toLowerCase() });
+        return item;
+      });
+      return [head, ...list];
+    });
+    search.addEventListener("input", () => {
+      const words = search.value.toLowerCase().split(/\s+/u).filter(Boolean);
+      for (const entry of items) entry.item.hidden = !words.every(word => entry.text.includes(word));
+      for (const head of new Set(items.map(entry => entry.head))) head.hidden = items.every(entry => entry.head !== head || entry.item.hidden);
+    });
+    const count = groups.reduce((sum, group) => sum + group.items.length, 0);
+    panel.replaceChildren(el("h2", "pv-q-title", "Likely questions"), el("p", "pv-q-intro", count + " questions with answers. Only you see these."), search, ...body);
+  }
+
   function render(next) {
-    const changed = !state || state.index !== next.index || state.tech.join() !== next.tech.join();
+    next.questions = Array.isArray(next.questions) ? next.questions : [];
+    const nextQuestionsKey = JSON.stringify(next.questions);
+    const changed = !state || state.index !== next.index || state.tech.join() !== next.tech.join() || questionsKey !== nextQuestionsKey;
     state = next;
     $("#waiting").hidden = true;
     $("#main").hidden = false;
@@ -45,17 +75,20 @@
       ? [el("span", "pv-label", "Next"), el("strong", "", state.next.title), el("span", "pv-next-section", state.next.section)]
       : [el("span", "pv-label", "Last slide")]));
     const notes = $("#notes");
-    notes.replaceChildren(...state.notes.map(paragraph => el("p", "", paragraph)));
+    notes.replaceChildren(...(state.cue ? [el("p", "pv-cue", state.cue)] : []), ...state.notes.map(paragraph => el("p", "", paragraph)));
     if (state.sources) {
       const sources = el("details");
       sources.append(el("summary", "", "Source material"), el("p", "", state.sources));
       notes.append(sources);
     }
     if (changed) {
-      const body = window.techDetail.build(state.tech, { sources: true });
-      $("#tech").replaceChildren(...body);
-      $("#tech").hidden = !body.length;
-      $("#tech-empty").hidden = Boolean(body.length);
+      questionsKey = nextQuestionsKey;
+      const body = state.questions.length ? null : window.techDetail.build(state.tech, { sources: true });
+      if (body) $("#tech").replaceChildren(...body);
+      else drawQuestions(state.questions);
+      const filled = !body || body.length > 0;
+      $("#tech").hidden = !filled;
+      $("#tech-empty").hidden = filled;
       $("#tech").scrollTop = 0;
       $(".pv-left").scrollTop = 0;
     }
@@ -65,24 +98,28 @@
 
   // Project order: the deck sends its chapters; applying here reorders the deck.
   let projects = null;
+  let projectsEditor = null;
   const projectsButton = $("#projects-button");
   const projectsDialog = $("#projects-dialog");
-  projectsButton.addEventListener("click", () => {
-    if (!projects) return;
-    window.projectOrder.editor($("#projects-editor"), {
+  // `order` keeps unapplied changes when the list is redrawn for a project added or removed.
+  function openProjects(order = projects.order) {
+    projectsEditor = window.projectOrder.editor($("#projects-editor"), {
       ...projects,
-      onApply: order => {
+      order,
+      onApply: next => {
         projectsDialog.close();
-        channel.postMessage({ type: "order", order });
+        channel.postMessage({ type: "order", order: next });
       }
     });
-    projectsDialog.showModal();
-  });
+    if (!projectsDialog.open) projectsDialog.showModal();
+  }
+  projectsButton.addEventListener("click", () => { if (projects) openProjects(); });
 
   channel.addEventListener("message", ({ data }) => {
     if (data?.type === "state") render(data);
     if (data?.type === "projects") {
       projects = data;
+      if (projectsDialog.open) openProjects(projectsEditor?.pending());
       projectsButton.disabled = false;
       projectsButton.title = "Choose which projects to show and in what order";
     }

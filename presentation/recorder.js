@@ -1,9 +1,14 @@
 // Screen recorder for the presenter view: the entire screen, the computer's
-// audio output and the microphone, mixed into one video file.
+// audio output and the microphone, mixed into one video file, or the audio alone.
 //
 // Chrome and Edge only give system audio when an entire screen is shared with
-// "Also share system audio" ticked. Long recordings are kept as blob chunks,
-// which the browser spills to disk, and saved when the recording stops.
+// "Also share system audio" ticked. In the Windows presentation app the screen
+// and system audio are captured without asking.
+//
+// Recordings go to a chosen folder: the app writes them with Node, and Chrome
+// and Edge through the File System Access API, with the folder remembered in
+// IndexedDB. Each chunk is written as it arrives. With no folder, the browser
+// asks where to save (or downloads) when the recording stops.
 (()=>{
   "use strict";
 
@@ -18,6 +23,11 @@
   const micBox = $("#rec-mic");
   const systemBox = $("#rec-system");
   const modeSelect = $("#rec-mode");
+  const folderGroup = $("#rec-folder-group");
+  const folderButton = $("#rec-folder");
+  const folderName = $("#rec-folder-name");
+  const folderClear = $("#rec-folder-clear");
+  const app = window.presentationApp?.recordings || null;
   const audioOnly = () => modeSelect.value === "audio";
   const startLabel = startButton.lastChild;
   modeSelect.addEventListener("change", () => {
@@ -32,11 +42,122 @@
 
   let session = null;
 
-  function say(text, tone = "info") {
+  function say(text, tone = "info", action = null) {
     note.textContent = text;
     note.dataset.tone = tone;
     note.hidden = !text;
+    if (action) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = action.label;
+      button.addEventListener("click", action.run);
+      note.append(button);
+    }
   }
+
+  /* ---------- Save folder ---------- */
+
+  // {name, path?, handle?}: path in the app, a directory handle in the browser.
+  let folder = null;
+  const browserFolders = !app && "showDirectoryPicker" in window && "indexedDB" in window;
+
+  function store(mode, action) {
+    return new Promise((resolve, reject) => {
+      const open = indexedDB.open("jack-presentation", 1);
+      open.onupgradeneeded = () => open.result.createObjectStore("handles");
+      open.onerror = () => reject(open.error);
+      open.onsuccess = () => {
+        const request = action(open.result.transaction("handles", mode).objectStore("handles"));
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      };
+    });
+  }
+  const saveHandle = handle => store("readwrite", objects => handle ? objects.put(handle, "recording-folder") : objects.delete("recording-folder"));
+  const loadHandle = () => store("readonly", objects => objects.get("recording-folder"));
+
+  function showFolder() {
+    folderGroup.hidden = !app && !browserFolders;
+    folderName.textContent = folder ? "Save to: " + folder.name : "Choose save folder";
+    folderButton.title = folder
+      ? "Recordings are saved to " + (folder.path || "the folder “" + folder.name + "”") + ". Click to change."
+      : "Choose a folder so recordings save there without asking";
+    folderClear.hidden = !folder || Boolean(app);
+  }
+
+  async function loadFolder() {
+    try {
+      if (app) folder = await app.folder();
+      else if (browserFolders) {
+        const handle = await loadHandle();
+        folder = handle ? { name: handle.name, handle } : null;
+      }
+    } catch {
+      folder = null;
+    }
+    showFolder();
+  }
+
+  async function chooseFolder() {
+    try {
+      if (app) {
+        folder = await app.choose() || folder;
+      } else {
+        const handle = await window.showDirectoryPicker({ id: "presentation-recordings", mode: "readwrite", startIn: folder?.handle || "videos" });
+        folder = { name: handle.name, handle };
+        await saveHandle(handle).catch(() => {});
+      }
+      showFolder();
+      if (folder) say("New recordings will be saved to " + (folder.path || "“" + folder.name + "”") + ".", "done");
+    } catch (error) {
+      if (error.name !== "AbortError") say("That folder couldn’t be used: " + error.message, "warn");
+    }
+  }
+
+  async function clearFolder() {
+    folder = null;
+    await saveHandle(null).catch(() => {});
+    showFolder();
+    say("Recordings will ask where to save when they stop.");
+  }
+
+  // The browser asks again for write access after a restart. That prompt needs
+  // the click that started the recording, so it is asked before anything else.
+  async function folderReady() {
+    if (!folder?.handle) return Boolean(folder);
+    try {
+      const options = { mode: "readwrite" };
+      if (await folder.handle.queryPermission(options) === "granted") return true;
+      return await folder.handle.requestPermission(options) === "granted";
+    } catch {
+      return false;
+    }
+  }
+
+  // A sink writes the recording into the folder chunk by chunk.
+  async function openSink(name) {
+    if (app) {
+      const file = await app.open(name);
+      return {
+        name: file.name,
+        where: folder.path,
+        write: async blob => app.write(file.id, await blob.arrayBuffer()),
+        close: () => app.close(file.id),
+        reveal: () => app.reveal(file.path)
+      };
+    }
+    const handle = await folder.handle.getFileHandle(name, { create: true });
+    const writable = await handle.createWritable();
+    return {
+      name,
+      where: "“" + folder.name + "”",
+      write: blob => writable.write(blob),
+      close: () => writable.close(),
+      abort: () => writable.abort().catch(() => {})
+    };
+  }
+
+  /* ---------- Recording ---------- */
 
   function pickType(audio) {
     const candidates = audio
@@ -47,8 +168,9 @@
 
   function fileName(type) {
     const now = new Date();
-    const stamp = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0")
-      + "-" + String(now.getHours()).padStart(2, "0") + String(now.getMinutes()).padStart(2, "0");
+    const two = value => String(value).padStart(2, "0");
+    const stamp = now.getFullYear() + "-" + two(now.getMonth() + 1) + "-" + two(now.getDate())
+      + "-" + two(now.getHours()) + two(now.getMinutes()) + two(now.getSeconds());
     const extension = type.startsWith("audio/mp4") ? ".m4a" : type.startsWith("audio/") ? ".webm" : type.startsWith("video/mp4") ? ".mp4" : ".webm";
     return "presentation-" + (type.startsWith("audio/") ? "audio-" : "recording-") + stamp + extension;
   }
@@ -58,6 +180,8 @@
     modeSelect.disabled = recording;
     micBox.disabled = recording;
     systemBox.disabled = recording;
+    folderButton.disabled = recording;
+    folderClear.disabled = recording;
     live.hidden = !recording;
     pauseButton.hidden = !recording;
     stopButton.hidden = !recording;
@@ -95,6 +219,9 @@
       say("Tick Microphone, System audio or both to record audio.", "warn");
       return;
     }
+    const warnings = [];
+    const toFolder = folder ? await folderReady() : false;
+    if (folder && !toFolder) warnings.push("No permission to save in “" + folder.name + "”, so you’ll be asked where to save.");
 
     // Screen capture: the picture for a screen recording, and the only way a
     // page can get the computer's sound. In audio-only mode the picture is dropped.
@@ -104,7 +231,7 @@
         say("This browser can’t capture the screen or system audio. Use Chrome or Edge.", "warn");
         return;
       }
-      say(audio
+      if (!app) say(audio
         ? "Chrome needs a screen to share the computer’s sound: choose “Entire screen” and tick “Also share system audio”. Only the sound is kept."
         : wantSystem
           ? "Choose “Entire screen” and tick “Also share system audio” to include the computer’s sound."
@@ -124,10 +251,9 @@
       }
     }
 
-    const warnings = [];
     const surface = display?.getVideoTracks()[0]?.getSettings().displaySurface;
     if (!audio && surface && surface !== "monitor") warnings.push("You picked a " + surface + ", not the entire screen.");
-    if (wantSystem && display && !display.getAudioTracks().length) warnings.push("No system audio: share an entire screen and tick “Also share system audio”.");
+    if (wantSystem && display && !display.getAudioTracks().length) warnings.push(app ? "No system audio was available." : "No system audio: share an entire screen and tick “Also share system audio”.");
     // Keep a stopped video track around only as the signal for "Stop sharing".
     const shareEnded = display ? (display.getAudioTracks()[0] || display.getVideoTracks()[0]) : null;
     if (audio && display) display.getVideoTracks().forEach(track => { if (track !== shareEnded) track.stop(); });
@@ -184,15 +310,35 @@
       return;
     }
 
-    session = { recorder, display, mic, context, analyser, chunks: [], type: recorder.mimeType || type || (audio ? "audio/webm" : "video/webm"), startedAt: performance.now(), pausedAt: null, pausedTotal: 0 };
-    recorder.addEventListener("dataavailable", event => { if (event.data.size) session?.chunks.push(event.data); });
+    const mimeType = recorder.mimeType || type || (audio ? "audio/webm" : "video/webm");
+    let sink = null;
+    if (toFolder) {
+      try {
+        sink = await openSink(fileName(mimeType));
+      } catch (error) {
+        warnings.push("The file couldn’t be created in “" + folder.name + "” (" + error.message + "), so you’ll be asked where to save.");
+      }
+    }
+
+    // Chunks are also kept in memory, so the recording can still be saved
+    // another way if writing to the folder fails part way.
+    session = { recorder, display, mic, context, analyser, sink, writing: Promise.resolve(), writeError: null, chunks: [], type: mimeType, startedAt: performance.now(), pausedAt: null, pausedTotal: 0 };
+    const current = session;
+    recorder.addEventListener("dataavailable", event => {
+      if (!event.data.size) return;
+      current.chunks.push(event.data);
+      if (current.sink && !current.writeError) {
+        current.writing = current.writing.then(() => current.sink.write(event.data)).catch(error => { current.writeError ||= error; });
+      }
+    });
     recorder.addEventListener("stop", () => void finish());
     shareEnded?.addEventListener("ended", () => stop());
     recorder.start(1000);
     setRecordingUi(true);
     pauseButton.textContent = "Pause";
     const sources = [audio ? "" : "screen", display?.getAudioTracks().length ? "system audio" : "", mic ? "microphone" : ""].filter(Boolean).join(", ");
-    say((warnings.length ? warnings.join(" ") + " " : "") + "Recording " + (audio ? "audio only: " : "") + sources + ".", warnings.length ? "warn" : "live");
+    const destination = sink ? " Saving to " + sink.where + " as " + sink.name + "." : "";
+    say((warnings.length ? warnings.join(" ") + " " : "") + "Recording " + (audio ? "audio only: " : "") + sources + "." + destination, warnings.length ? "warn" : "live");
     requestAnimationFrame(tick);
   }
 
@@ -223,8 +369,9 @@
 
   async function finish() {
     if (!session || session.finished) return;
-    session.finished = true;
-    const { display, mic, context, chunks, type, saveWithPicker } = session;
+    const done = session;
+    done.finished = true;
+    const { display, mic, context, chunks, type, sink, saveWithPicker } = done;
     const seconds = elapsed();
     display?.getTracks().forEach(track => track.stop());
     mic?.getTracks().forEach(track => track.stop());
@@ -234,14 +381,30 @@
     const blob = new Blob(chunks, { type: type.split(";")[0] });
     const name = fileName(type);
     const size = (blob.size / 1048576).toFixed(blob.size > 1048576 * 100 ? 0 : 1) + " MB";
-    if (saveWithPicker) {
+    const summary = " (" + clock(seconds) + ", " + size + ").";
+
+    if (sink) {
+      say("Finishing the file…");
+      await done.writing;
+      if (!done.writeError) {
+        try {
+          await sink.close();
+          say("Saved " + sink.name + " to " + sink.where + summary, "done", sink.reveal ? { label: "Show in folder", run: () => sink.reveal() } : null);
+          return;
+        } catch (error) {
+          done.writeError = error;
+        }
+      }
+      await sink.abort?.();
+      say("Writing to the folder failed (" + done.writeError.message + "), so the recording is downloading instead.", "warn");
+    } else if (saveWithPicker) {
       try {
         const extension = name.slice(name.lastIndexOf("."));
         const handle = await window.showSaveFilePicker({ suggestedName: name, types: [{ description: type.startsWith("audio/") ? "Audio" : "Video", accept: { [type.split(";")[0]]: [extension] } }] });
         const writable = await handle.createWritable();
         await writable.write(blob);
         await writable.close();
-        say("Saved " + handle.name + " (" + clock(seconds) + ", " + size + ").", "done");
+        say("Saved " + handle.name + summary, "done");
         return;
       } catch (error) {
         if (error.name !== "AbortError") say("Saving in place failed, so the file is downloading instead.", "warn");
@@ -254,15 +417,18 @@
     link.click();
     link.remove();
     setTimeout(() => URL.revokeObjectURL(link.href), 60_000);
-    say("Downloaded " + name + " (" + clock(seconds) + ", " + size + ").", "done");
+    if (!sink) say("Downloaded " + name + summary, "done");
   }
 
   startButton.addEventListener("click", () => void start());
   pauseButton.addEventListener("click", togglePause);
   stopButton.addEventListener("click", stop);
+  folderButton.addEventListener("click", () => void chooseFolder());
+  folderClear.addEventListener("click", () => void clearFolder());
   window.addEventListener("beforeunload", event => {
     if (!session) return;
     event.preventDefault();
     event.returnValue = "";
   });
+  void loadFolder();
 })();

@@ -147,3 +147,38 @@ body[data-recording="paused"] .rec-live i { background: #f2c46d; }
 }
 .pv-mode select option { color: var(--ink); }
 .pv-mode select:disabled { opacity: .55; cursor: default; }
+
+/* Save folder for recordings */
+.pv-folder { display: inline-flex; align-items: center; gap: .2rem; }
+.pv-folder[hidden] { display: none; }
+.pv-rec .pv-folder button:first-child { max-width: 15rem; }
+#rec-folder-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pv-rec .pv-folder-clear { width: 1.7rem; height: 1.7rem; padding: 0; justify-content: center; font-size: 1rem; line-height: 1; }
+.pv-rec button:disabled { opacity: .55; cursor: default; }
+.pv-rec-note button {
+  margin-left: .5rem;
+  padding: .12rem .6rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+/* The current build's cue from your own presentation, above its talking points. */
+.pv-notes .pv-cue { padding: .8rem 1rem; border-left: 4px solid var(--green); border-radius: 0 8px 8px 0; background: #eaf5ee; font-weight: 600; }
+
+/* Likely questions from your own presentation, in place of the engineering detail. */
+.pv-q-title { margin: 0; color: var(--green); font-size: .78rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+.pv-q-intro { margin: .35rem 0 .8rem; color: var(--muted); font-size: .85rem; }
+.pv-q-search { width: 100%; margin-bottom: .4rem; padding: .5rem .7rem; border: 1px solid var(--line); border-radius: 8px; font: inherit; font-size: .92rem; color: var(--ink); }
+.pv-q-search:focus { border-color: var(--green); outline: 0; }
+.pv-q-group { margin: 1.2rem 0 .3rem; color: var(--ink); font-size: .95rem; font-weight: 750; }
+.pv-q-group[hidden], .pv-q[hidden] { display: none; }
+.pv-q { border-bottom: 1px solid var(--line); }
+.pv-q summary { display: flex; align-items: baseline; gap: .8rem; padding: .55rem .2rem .55rem 0; color: var(--ink); font-size: .95rem; font-weight: 600; line-height: 1.35; cursor: pointer; }
+.pv-q summary:hover { color: var(--green); }
+.pv-q[open] summary { color: var(--green); }
+.pv-q p { margin: 0 0 .8rem 1rem; color: var(--body); font-size: .92rem; line-height: 1.55; }

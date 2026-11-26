@@ -396,7 +396,7 @@ window.presentationSlides = [
     "title": "Stairio 360’s hanging-battery design",
     "section": "STAIRIO / HARDWARE ITERATION",
     "lead": "The selected layout suspends the battery below the rail-mounted camera and drive body.",
-    "notes": "25:00–27:00  |  2 minutes\n\nStart with the physical photo. Point out the compact camera and drive body above the pack and how the hanger places the battery mass below the rail. This is the Stairio 360 packaging direction we chose. Play the eight-second comparison based on the corresponding native CAD in Isaac Sim. With drive continuing, the wheel moved inward. The zero-speed guard at 30° of wheel-centre orbit stopped travel. The model uses a straight rail without supports and estimated tyre contact. The next slide covers a separate sharp-corner study.\n\nSource material\nStairio physical prototype gallery. Stairio rail-only tilt diagnostic, corrected SI runs from 30 October 2026.",
+    "notes": "25:00–27:00  |  2 minutes\n\nStart with the physical photo. Point out the compact camera and drive body above the pack and how the hanger places the battery mass below the rail. This is the Stairio 360 packaging direction we chose. Play the eight-second comparison based on the corresponding native CAD in Isaac Sim. With drive continuing, the wheel moved inward. The zero-speed guard at 30° of wheel-centre orbit stopped travel. The model uses a straight rail without supports and estimated tyre contact. The next three slides compare ways to improve rail capture, using archived Isaac Sim trials.\n\nSource material\nStairio physical prototype gallery. Stairio rail-only tilt diagnostic, corrected SI runs from 30 October 2026.",
     "rows": [
       [
         "Selected physical layout",
@@ -427,36 +427,6 @@ window.presentationSlides = [
           "muted": true,
           "badge": "Isaac Sim"
         }
-      }
-    ]
-  },
-  {
-    "type": "split",
-    "title": "The sharp corner still jammed",
-    "section": "STAIRIO  /  ISAAC SIM MECHANISM STUDIES",
-    "lead": "In a separate sharp-corner study, the simulated mechanism still jammed after the rail mesh was repaired.",
-    "notes": "27:00–29:00  |  2 minutes\n\nThe folded mitre mesh had to be repaired before interpreting contact. The corrected cases still stopped short. Later yaw-release trials pass two stationary holds and fail the three moving cases. A useful candidate needs both clean route completion and stable rail capture. The next three slides compare different ways to improve that, using archived Isaac Sim trials.",
-    "rows": [
-      [
-        "Corrected mitre, same jam",
-        "The leading followers loaded into the outgoing rail while the rear contacts stayed on the incoming rail."
-      ],
-      [
-        "Later revision passed 2 stationary holds",
-        "The yaw-release candidate held flat and vertical for 20 seconds each in the model."
-      ],
-      [
-        "All 3 moving retest cases failed",
-        "The right mitre stalled. The left mitre and vertical link ended in hardware contact."
-      ]
-    ],
-    "sub": null,
-    "images": [
-      {
-        "src": "images/slide-14-1.png",
-        "fit": "contain",
-        "alt": "Recorded travel in sharp-corner simulation with original and corrected meshes",
-        "caption": "The curves level off before the corner, shown by the red line."
       }
     ]
   },
@@ -1080,10 +1050,10 @@ window.presentationSlides = [
     "notes": "Stairio HR is a software project I built alone for Stairio. The idea is to fit AI to the size of the company: a small team needs the administration taken off its hands; a recruiting team needs a better way to find people. Team is in daily use at Stairio. Enterprise is a working prototype.\n\nSource material\nPortfolio Stairio HR page.",
     "images": [
       {
-        "src": "../assets/projects/stairio-hr/workspace-replica.png",
-        "fit": "contain",
-        "alt": "Stairio HR applicant review workspace with fictional applicants",
-        "caption": "The staff workspace, shown with fictional applicants"
+        "embed": "embeds/stairio-hr/index.html?present=1",
+        "designWidth": 1100,
+        "alt": "Interactive Stairio HR demo with fictional applicants: the Team staff workspace and the Enterprise talent search",
+        "caption": "Live demo from the website, with fictional applicants. Try a new application or switch to Enterprise."
       }
     ]
   },

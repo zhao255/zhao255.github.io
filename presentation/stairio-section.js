@@ -28,6 +28,32 @@
     return wrapper;
   }
 
+  // The product clip is fetched and its first frame decoded before the slide
+  // opens, so it starts at once instead of stalling on its poster.
+  let warmVideo=null;
+  function introVideo() {
+    const video=element("video");
+    video.src="media/stairio-intro.mp4";
+    video.poster="images/stairio-intro.webp";
+    video.preload="auto";
+    video.muted=true;
+    video.defaultMuted=true;
+    video.playsInline=true;
+    video.setAttribute("aria-hidden","true");
+    return video;
+  }
+  function prepareIntro() {
+    if(warmVideo)return;
+    warmVideo=introVideo();
+    warmVideo.load();
+  }
+  function takeIntroVideo() {
+    const video=warmVideo||introVideo();
+    warmVideo=null;
+    if(video.currentTime)video.currentTime=0;
+    return video;
+  }
+
   function renderIntro(data, slide, message) {
     const hero=element("div","stairio-hero");
     const brand=wordmark("stairio-brand");
@@ -36,13 +62,7 @@
     const button=element("button","stairio-turn");
     button.type="button";
     button.setAttribute("aria-label","Play Stairio 360 product intro");
-    const video=element("video");
-    video.src="media/stairio-intro.mp4";
-    video.poster="images/stairio-intro.webp";
-    video.preload="metadata";
-    video.muted=true;
-    video.playsInline=true;
-    video.setAttribute("aria-hidden","true");
+    const video=takeIntroVideo();
     const hint=element("span","stairio-turn-hint","Click the robot or press Next");
     button.append(video,hint);
     hero.append(brand,copy,button);
@@ -86,5 +106,5 @@
     return frame;
   }
 
-  window.stairioPresentation={orderedSlides, renderIntro, renderScene};
+  window.stairioPresentation={orderedSlides, prepareIntro, renderIntro, renderScene};
 })();

@@ -31,6 +31,10 @@
         </label>
         <label class="pv-check"><input type="checkbox" id="rec-mic" checked> Microphone</label>
         <label class="pv-check"><input type="checkbox" id="rec-system" checked> System audio</label>
+        <span class="pv-folder" id="rec-folder-group" hidden>
+          <button type="button" id="rec-folder" title="Choose the folder recordings are saved to"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2.5h8.5A1.5 1.5 0 0 1 21 9v8.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/></svg><span id="rec-folder-name">Choose save folder</span></button>
+          <button type="button" id="rec-folder-clear" class="pv-folder-clear" hidden aria-label="Stop using this folder and ask where to save each recording" title="Ask where to save each recording">&times;</button>
+        </span>
         <button type="button" id="rec-start" class="rec-start"><i aria-hidden="true"></i>Record screen</button>
         <span class="rec-live" id="rec-live" hidden><i aria-hidden="true"></i><span id="rec-time">0:00</span><span class="rec-meter" title="Microphone level" aria-hidden="true"><b id="rec-level"></b></span></span>
         <button type="button" id="rec-pause" hidden>Pause</button>
@@ -71,7 +75,7 @@
       </div>
     </section>
   </main>
-  <dialog id="projects-dialog" class="pv-dialog" aria-labelledby="projects-title">
+  <dialog id="projects-dialog" class="pv-dialog project-dialog" aria-labelledby="projects-title">
     <div class="dialog-title"><h2 id="projects-title">Choose and order the projects</h2><form method="dialog"><button type="submit">Close</button></form></div>
     <p class="ranking-intro">Tick the projects to present and drag them into order. The deck updates as soon as you apply.</p>
     <div id="projects-editor"></div>
